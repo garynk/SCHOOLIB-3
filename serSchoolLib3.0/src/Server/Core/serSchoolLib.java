@@ -188,6 +188,41 @@ public class serSchoolLib extends UnicastRemoteObject implements ServerInterface
         return psw_generated;
 
     }
+    public String randomLowerCase(String password){
+    //random letters to lowercase
+        String newPassword;
+       int nOfIterations = ThreadLocalRandom.current().nextInt(1,password.length());
+       StringBuilder sb = new StringBuilder();
+       boolean Selected [] = new boolean[password.length()];
+       int index;
+       char [] passArray = password.toCharArray();
+       while(nOfIterations>0){
+           index = ThreadLocalRandom.current().nextInt(1,passArray.length);
+           if (Character.isUpperCase(passArray[index])){
+           passArray[index] = Character.toLowerCase(passArray[index]);
+           nOfIterations--;
+           }
+       }
+       for (int i=0;i<passArray.length;i++){
+       sb.append(passArray[i]);
+       }
+       newPassword = sb.toString();
+       
+     return newPassword;
+ 
+    
+   
+    }
+     public String addRandomNumbers(String password){
+        
+        int bound = ThreadLocalRandom.current().nextInt(3,7);
+        while (bound>0){
+    password = password + ThreadLocalRandom.current().nextInt(0,9);
+ bound--;
+ }
+        return password;
+        
+    }
 
     public void SendConfirmationCode(String user_id, int type) {
         String code = sqlmanager.getParametricInformationByID("CODICE", type, user_id);
