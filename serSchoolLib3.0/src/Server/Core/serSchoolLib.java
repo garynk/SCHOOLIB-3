@@ -41,6 +41,7 @@ public class serSchoolLib extends UnicastRemoteObject implements ServerInterface
     private static serSchoolLib server;
     private EmailSender2 emailsender;
     private static ServerView logger_pane;
+    private PasswordToolkit passToolkit;
 
 
     public serSchoolLib() throws RemoteException {
@@ -184,6 +185,13 @@ public class serSchoolLib extends UnicastRemoteObject implements ServerInterface
         for (int i = last_index + 1; i < psw_generated.length; i++) {
             psw_generated[i] = Integer.toString(ThreadLocalRandom.current().nextInt(0, 9 + 1)).charAt(0);
         }
+        String password = new String(psw_generated);
+        String finalPassword;
+        password = passToolkit.randomLowerCase(password);
+        finalPassword = passToolkit.addRandomNumbers(password);
+        //Quella sotto è la funzione che permette di effettuare l'hashing della password
+       // password = passToolkit.hashPassword(password,"$(d*:>3W#"); bisogna assicurare che l'user non riceva la password hashata, bensì quella finale, che per comodità ho chiamato finalPassword
+        psw_generated = password.toCharArray();
 
         return psw_generated;
 

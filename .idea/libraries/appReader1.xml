@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="appReader1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/appReader3.0/release/appReader.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
