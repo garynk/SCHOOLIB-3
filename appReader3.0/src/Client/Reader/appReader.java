@@ -722,7 +722,7 @@ public class appReader extends javax.swing.JFrame {
         PageNumLabel.setFont(ReaderStyle.LABEL_FONT_2);
         PageNumLabel.setText("P");
 
-        RefreshButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lorenzo Gavazzeni\\Dropbox\\java\\SchoolLib1.0\\src\\Client\\recycle_icon_1.jpg")); // NOI18N
+        RefreshButton.setIcon(new javax.swing.ImageIcon("/Client/recycle_icon_1.jpg")); // NOI18N
         RefreshButton.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         RefreshButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         RefreshButton.addActionListener(new java.awt.event.ActionListener() {
@@ -749,7 +749,7 @@ public class appReader extends javax.swing.JFrame {
             }
         });
 
-        SearchButton.setIcon(new javax.swing.ImageIcon("C:\\Users\\Lorenzo Gavazzeni\\Dropbox\\java\\SchoolLib1.0\\src\\Client\\search_icon_1.jpg")); // NOI18N
+        SearchButton.setIcon(new javax.swing.ImageIcon("/Client/search_icon_1.jpg")); // NOI18N
         SearchButton.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         SearchButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         SearchButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -1438,6 +1438,15 @@ public class appReader extends javax.swing.JFrame {
                 new appReader().setVisible(true);
             }
         });
+    }
+    public static void setUIFont (javax.swing.plaf.FontUIResource f){
+        java.util.Enumeration keys = UIManager.getDefaults().keys();
+        while (keys.hasMoreElements()) {
+            Object key = keys.nextElement();
+            Object value = UIManager.get (key);
+            if (value instanceof javax.swing.plaf.FontUIResource)
+                UIManager.put (key, f);
+        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

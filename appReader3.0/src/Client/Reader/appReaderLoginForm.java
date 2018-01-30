@@ -7,8 +7,12 @@ package Client.Reader;
 
 import javax.swing.*;
 import javax.swing.border.MatteBorder;
+import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.rmi.RemoteException;
 import java.util.Arrays;
 import java.util.logging.Level;
@@ -21,6 +25,7 @@ import java.util.logging.Logger;
 public class appReaderLoginForm extends javax.swing.JFrame {
 
     public static Reader reader;
+    public static Font f = Font.createFont(Font.TRUETYPE_FONT, new FileInputStream(new File("Font/AvenirNextLTPro-Regular.ttf"))).deriveFont(Font.PLAIN, 13);
 
     /**
      * Creates new form ReaderForm
@@ -731,12 +736,21 @@ public class appReaderLoginForm extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-
-                new appReaderLoginForm().setVisible(true);
+            public void run(){
+                Font f = nul
 
             }
+
         });
+    }
+    public static void setUIFont (javax.swing.plaf.FontUIResource f){
+        java.util.Enumeration keys = UIManager.getDefaults().keys();
+        while (keys.hasMoreElements()) {
+            Object key = keys.nextElement();
+            Object value = UIManager.get (key);
+            if (value instanceof javax.swing.plaf.FontUIResource)
+                UIManager.put (key, f);
+        }
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

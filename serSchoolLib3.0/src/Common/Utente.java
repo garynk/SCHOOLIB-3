@@ -96,6 +96,7 @@ public class Utente implements Serializable {
 
     public char[] GetPassword() {
         return password;
+
     }
 
     public char[] GetCode() {
