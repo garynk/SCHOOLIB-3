@@ -12,6 +12,7 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.rmi.RemoteException;
 import java.util.Arrays;
@@ -25,7 +26,7 @@ import java.util.logging.Logger;
 public class appReaderLoginForm extends javax.swing.JFrame {
 
     public static Reader reader;
-    public static Font f = Font.createFont(Font.TRUETYPE_FONT, new FileInputStream(new File("Font/AvenirNextLTPro-Regular.ttf"))).deriveFont(Font.PLAIN, 13);
+    public static Font f = initFont();
 
     /**
      * Creates new form ReaderForm
@@ -477,6 +478,31 @@ public class appReaderLoginForm extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private static Font initFont()
+    {
+        Font f = null;
+        
+        try {
+            FileInputStream fis = null;
+            
+            try {
+                fis = new FileInputStream(new File(ReaderStyle.FONT_DIR));
+            } catch (FileNotFoundException ex) {
+                Logger.getLogger(appReaderLoginForm.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+            f = Font.createFont(Font.TRUETYPE_FONT, fis).deriveFont(Font.PLAIN, 13);  
+            
+        } catch (FontFormatException ex) {
+            Logger.getLogger(appReaderLoginForm.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(appReaderLoginForm.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return f;
+        
+    }
+    
     private void initLabels() {
         LoginErrorLabel.setVisible(false);
         ConfirmationDiagErrorLabel.setVisible(false);
@@ -737,12 +763,12 @@ public class appReaderLoginForm extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run(){
-                Font f = nul
-
+                new appReaderLoginForm().setVisible(true);
             }
 
         });
     }
+    
     public static void setUIFont (javax.swing.plaf.FontUIResource f){
         java.util.Enumeration keys = UIManager.getDefaults().keys();
         while (keys.hasMoreElements()) {

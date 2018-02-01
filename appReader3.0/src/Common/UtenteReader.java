@@ -6,6 +6,7 @@
 package Common;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  *
@@ -14,12 +15,14 @@ import java.io.Serializable;
 public class UtenteReader extends Utente implements Serializable {
 
     private static final long serialVersionUID = 1L;
+    
+    public static final String[] INQUADRAMENTI_READER_DEAFULT = {"Tecnico","Studente","Docente"};
 
     public static final int Reader_Default_Type_Value = 2;
-
-
+    
     public UtenteReader(String n, String g, String cod, String em, String inq, String num, char[] psw, char[] code) {
         super(n, g, cod, em, inq, num, psw, Reader_Default_Type_Value, code);
     }
+
 
 }

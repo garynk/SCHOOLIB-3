@@ -102,17 +102,15 @@ public class UserChecker {
 
     }
 
-    public int checkInquadramento(String inquadramento) {
+    public int checkInquadramentoClasse(String classe_inq) {
 
-        String inquadramento_tmp = inquadramento.toLowerCase();
+        String inquadramento_tmp = classe_inq.toLowerCase();
 
         if (inquadramento_tmp.isEmpty()) {
             return Checker.EMPTY_CODE;
         }
 
-        if (inquadramento_tmp.equals("studente")
-                || inquadramento_tmp.equals("docente")
-                || inquadramento_tmp.equals("tecnico")) {
+        if (classe_inq.length() == 2) {
             return 0;
         } else {
             return 2;

@@ -6,6 +6,10 @@
 package Client.Reader;
 
 import Common.UtenteReader;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 
 import javax.swing.*;
 import javax.swing.border.MatteBorder;
@@ -22,11 +26,12 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
     /**
      * Creates new form appReaderRegistrationForm
      */
-    private static final int TOTAL_FIELD = 6;
+    private static final int TOTAL_FIELD = 7;
 
     private Reader reader;
     private UtenteReader reader_user;
     private boolean registration_success = false;
+    private boolean need_classe_sezione = false;
 
     Thread SuccessThread = new Thread(new Runnable() {
         @Override
@@ -89,29 +94,30 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
         ErrorPswLabel = new javax.swing.JLabel();
         SuccessLabel = new javax.swing.JLabel();
         InquadramentoLabel = new javax.swing.JLabel();
-        InquadramentoTextField = new javax.swing.JTextField();
         ErrorInquadramentoLabel = new javax.swing.JLabel();
+        InquadramentiComboBox = new javax.swing.JComboBox<>();
+        ClasseSezioneField = new javax.swing.JTextField();
         RegistrationH1 = new javax.swing.JLabel();
         IndietroButton = new javax.swing.JButton();
         RegistrationButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Reader Registration");
-        setBackground(ReaderStyle.BACKGROUD_DEFAULT_1);
+        setBackground(Client.Reader.ReaderStyle.BACKGROUD_DEFAULT_1);
         setPreferredSize(new java.awt.Dimension(790, 510));
         setResizable(false);
         setSize(new java.awt.Dimension(790, 510));
 
-        Layer1.setBackground(ReaderStyle.BACKGROUD_DEFAULT_1);
+        Layer1.setBackground(Client.Reader.ReaderStyle.BACKGROUD_DEFAULT_1);
 
-        Layer2.setBackground(ReaderStyle.BACKGROUD_DEFAULT_2);
+        Layer2.setBackground(Client.Reader.ReaderStyle.BACKGROUD_DEFAULT_2);
         Layer2.setBorder(javax.swing.BorderFactory.createMatteBorder(2, 1, 1, 1, new java.awt.Color(0, 102, 153)));
         Layer2.setName("Layer2"); // NOI18N
 
-        nomeLabel.setFont(ReaderStyle.LABEL_FONT_2);
+        nomeLabel.setFont(Client.Reader.ReaderStyle.LABEL_FONT_2);
         nomeLabel.setText("Nome: ");
 
-        NomeTextField.setBackground(ReaderStyle.BACKGROUD_DEFAULT_2);
+        NomeTextField.setBackground(Client.Reader.ReaderStyle.BACKGROUD_DEFAULT_2);
         NomeTextField.setFont(new java.awt.Font("Delius", 0, 18)); // NOI18N
         NomeTextField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         NomeTextField.setToolTipText("username");
@@ -119,10 +125,10 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
         NomeTextField.setName("usernameTextField"); // NOI18N
         NomeTextField.setSelectionColor(new java.awt.Color(153, 153, 255));
 
-        cognomeLabel.setFont(ReaderStyle.LABEL_FONT_2);
+        cognomeLabel.setFont(Client.Reader.ReaderStyle.LABEL_FONT_2);
         cognomeLabel.setText("Cognome: ");
 
-        CognomeTextField.setBackground(ReaderStyle.BACKGROUD_DEFAULT_2);
+        CognomeTextField.setBackground(Client.Reader.ReaderStyle.BACKGROUD_DEFAULT_2);
         CognomeTextField.setFont(new java.awt.Font("Delius", 0, 18)); // NOI18N
         CognomeTextField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         CognomeTextField.setToolTipText("username");
@@ -130,10 +136,10 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
         CognomeTextField.setName("usernameTextField"); // NOI18N
         CognomeTextField.setSelectionColor(new java.awt.Color(153, 153, 255));
 
-        emailLabel.setFont(ReaderStyle.LABEL_FONT_2);
+        emailLabel.setFont(Client.Reader.ReaderStyle.LABEL_FONT_2);
         emailLabel.setText("Email: ");
 
-        EmailTextField.setBackground(ReaderStyle.BACKGROUD_DEFAULT_2);
+        EmailTextField.setBackground(Client.Reader.ReaderStyle.BACKGROUD_DEFAULT_2);
         EmailTextField.setFont(new java.awt.Font("Delius", 0, 18)); // NOI18N
         EmailTextField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         EmailTextField.setToolTipText("username");
@@ -141,10 +147,10 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
         EmailTextField.setName("usernameTextField"); // NOI18N
         EmailTextField.setSelectionColor(new java.awt.Color(153, 153, 255));
 
-        codicefiscaleLabel.setFont(ReaderStyle.LABEL_FONT_2);
+        codicefiscaleLabel.setFont(Client.Reader.ReaderStyle.LABEL_FONT_2);
         codicefiscaleLabel.setText("Codice fiscale: ");
 
-        CodicefiscaleTextField.setBackground(ReaderStyle.BACKGROUD_DEFAULT_2);
+        CodicefiscaleTextField.setBackground(Client.Reader.ReaderStyle.BACKGROUD_DEFAULT_2);
         CodicefiscaleTextField.setFont(new java.awt.Font("Delius", 0, 18)); // NOI18N
         CodicefiscaleTextField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         CodicefiscaleTextField.setToolTipText("username");
@@ -152,10 +158,10 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
         CodicefiscaleTextField.setName("usernameTextField"); // NOI18N
         CodicefiscaleTextField.setSelectionColor(new java.awt.Color(153, 153, 255));
 
-        telephoneLabel.setFont(ReaderStyle.LABEL_FONT_2);
+        telephoneLabel.setFont(Client.Reader.ReaderStyle.LABEL_FONT_2);
         telephoneLabel.setText("Numero di Telefono: ");
 
-        TelephoneTextField.setBackground(ReaderStyle.BACKGROUD_DEFAULT_2);
+        TelephoneTextField.setBackground(Client.Reader.ReaderStyle.BACKGROUD_DEFAULT_2);
         TelephoneTextField.setFont(new java.awt.Font("Delius", 0, 18)); // NOI18N
         TelephoneTextField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         TelephoneTextField.setToolTipText("username");
@@ -163,84 +169,84 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
         TelephoneTextField.setName("usernameTextField"); // NOI18N
         TelephoneTextField.setSelectionColor(new java.awt.Color(153, 153, 255));
 
-        pswLabel.setFont(ReaderStyle.LABEL_FONT_2);
+        pswLabel.setFont(Client.Reader.ReaderStyle.LABEL_FONT_2);
         pswLabel.setText("Password: ");
 
-        PasswordField.setBackground(ReaderStyle.BACKGROUD_DEFAULT_2);
+        PasswordField.setBackground(Client.Reader.ReaderStyle.BACKGROUD_DEFAULT_2);
         PasswordField.setFont(new java.awt.Font("Delius", 0, 18)); // NOI18N
         PasswordField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         PasswordField.setToolTipText("password");
         PasswordField.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
-        PasswordField.setEchoChar('\u2022');
+        PasswordField.setEchoChar('•');
         PasswordField.setName("passwordTextField"); // NOI18N
         PasswordField.setSelectionColor(new java.awt.Color(153, 153, 255));
 
-        ErrorNomeLabel.setFont(ReaderStyle.EXCEPTION_FONT);
-        ErrorNomeLabel.setForeground(ReaderStyle.EXCEPTION_COLOR);
+        ErrorNomeLabel.setFont(Client.Reader.ReaderStyle.EXCEPTION_FONT);
+        ErrorNomeLabel.setForeground(Client.Reader.ReaderStyle.EXCEPTION_COLOR);
         ErrorNomeLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ErrorNomeLabel.setLabelFor(NomeTextField);
         ErrorNomeLabel.setText("eccezione nome");
         ErrorNomeLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        ErrorCognomeLabel.setFont(ReaderStyle.EXCEPTION_FONT);
-        ErrorCognomeLabel.setForeground(ReaderStyle.EXCEPTION_COLOR);
+        ErrorCognomeLabel.setFont(Client.Reader.ReaderStyle.EXCEPTION_FONT);
+        ErrorCognomeLabel.setForeground(Client.Reader.ReaderStyle.EXCEPTION_COLOR);
         ErrorCognomeLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ErrorCognomeLabel.setLabelFor(CognomeTextField);
         ErrorCognomeLabel.setText("eccezione cognome");
         ErrorCognomeLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        ErrorCodiceFiscaleLabel.setFont(ReaderStyle.EXCEPTION_FONT);
-        ErrorCodiceFiscaleLabel.setForeground(ReaderStyle.EXCEPTION_COLOR);
+        ErrorCodiceFiscaleLabel.setFont(Client.Reader.ReaderStyle.EXCEPTION_FONT);
+        ErrorCodiceFiscaleLabel.setForeground(Client.Reader.ReaderStyle.EXCEPTION_COLOR);
         ErrorCodiceFiscaleLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ErrorCodiceFiscaleLabel.setLabelFor(CodicefiscaleTextField);
         ErrorCodiceFiscaleLabel.setText("eccezione codiceFis");
         ErrorCodiceFiscaleLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        ErrorEmailLabel.setFont(ReaderStyle.EXCEPTION_FONT);
-        ErrorEmailLabel.setForeground(ReaderStyle.EXCEPTION_COLOR);
+        ErrorEmailLabel.setFont(Client.Reader.ReaderStyle.EXCEPTION_FONT);
+        ErrorEmailLabel.setForeground(Client.Reader.ReaderStyle.EXCEPTION_COLOR);
         ErrorEmailLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ErrorEmailLabel.setLabelFor(EmailTextField);
         ErrorEmailLabel.setText("eccezione email");
         ErrorEmailLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        ErrorNumTelLabel.setFont(ReaderStyle.EXCEPTION_FONT);
-        ErrorNumTelLabel.setForeground(ReaderStyle.EXCEPTION_COLOR);
+        ErrorNumTelLabel.setFont(Client.Reader.ReaderStyle.EXCEPTION_FONT);
+        ErrorNumTelLabel.setForeground(Client.Reader.ReaderStyle.EXCEPTION_COLOR);
         ErrorNumTelLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ErrorNumTelLabel.setLabelFor(TelephoneTextField);
         ErrorNumTelLabel.setText("eccezione numTel");
         ErrorNumTelLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        ErrorPswLabel.setFont(ReaderStyle.EXCEPTION_FONT);
-        ErrorPswLabel.setForeground(ReaderStyle.EXCEPTION_COLOR);
+        ErrorPswLabel.setFont(Client.Reader.ReaderStyle.EXCEPTION_FONT);
+        ErrorPswLabel.setForeground(Client.Reader.ReaderStyle.EXCEPTION_COLOR);
         ErrorPswLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ErrorPswLabel.setLabelFor(PasswordField);
         ErrorPswLabel.setText("eccezione psw");
         ErrorPswLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        SuccessLabel.setFont(ReaderStyle.SUCCESS_LABEL_FONT);
-        SuccessLabel.setForeground(ReaderStyle.SUCCESS_COLOR);
+        SuccessLabel.setFont(Client.Reader.ReaderStyle.SUCCESS_LABEL_FONT);
+        SuccessLabel.setForeground(Client.Reader.ReaderStyle.SUCCESS_COLOR);
         SuccessLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         SuccessLabel.setLabelFor(RegistrationButton);
         SuccessLabel.setText("successo");
         SuccessLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        InquadramentoLabel.setFont(ReaderStyle.LABEL_FONT_2);
+        InquadramentoLabel.setFont(Client.Reader.ReaderStyle.LABEL_FONT_2);
         InquadramentoLabel.setText("Inquadramento:");
 
-        InquadramentoTextField.setBackground(ReaderStyle.BACKGROUD_DEFAULT_2);
-        InquadramentoTextField.setFont(new java.awt.Font("Delius", 0, 18)); // NOI18N
-        InquadramentoTextField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        InquadramentoTextField.setToolTipText("username");
-        InquadramentoTextField.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
-        InquadramentoTextField.setName("usernameTextField"); // NOI18N
-        InquadramentoTextField.setSelectionColor(new java.awt.Color(153, 153, 255));
-
-        ErrorInquadramentoLabel.setFont(ReaderStyle.EXCEPTION_FONT);
-        ErrorInquadramentoLabel.setForeground(ReaderStyle.EXCEPTION_COLOR);
+        ErrorInquadramentoLabel.setFont(Client.Reader.ReaderStyle.EXCEPTION_FONT);
+        ErrorInquadramentoLabel.setForeground(Client.Reader.ReaderStyle.EXCEPTION_COLOR);
         ErrorInquadramentoLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ErrorInquadramentoLabel.setLabelFor(TelephoneTextField);
         ErrorInquadramentoLabel.setText("eccezione inquadr");
         ErrorInquadramentoLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        InquadramentiComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(UtenteReader.INQUADRAMENTI_READER_DEAFULT));
+
+        ClasseSezioneField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ClasseSezioneFieldActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout Layer2Layout = new javax.swing.GroupLayout(Layer2);
         Layer2.setLayout(Layer2Layout);
@@ -271,11 +277,14 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
                 .addGroup(Layer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(ErrorInquadramentoLabel)
                     .addComponent(InquadramentoLabel)
-                    .addComponent(InquadramentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ErrorCodiceFiscaleLabel)
                     .addComponent(codicefiscaleLabel)
-                    .addComponent(CodicefiscaleTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30))
+                    .addComponent(CodicefiscaleTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(Layer2Layout.createSequentialGroup()
+                        .addComponent(InquadramentiComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(ClasseSezioneField, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(34, 34, 34))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Layer2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(SuccessLabel)
@@ -311,7 +320,9 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
                             .addGroup(Layer2Layout.createSequentialGroup()
                                 .addComponent(InquadramentoLabel)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(InquadramentoTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(Layer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(InquadramentiComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(ClasseSezioneField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(ErrorInquadramentoLabel))))
                     .addGroup(Layer2Layout.createSequentialGroup()
@@ -337,14 +348,14 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        RegistrationH1.setFont(ReaderStyle.BIG_TITLE_FONT);
+        RegistrationH1.setFont(Client.Reader.ReaderStyle.BIG_TITLE_FONT);
         RegistrationH1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         RegistrationH1.setText("Reader Registration");
         RegistrationH1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         RegistrationH1.setName("RegistrationH1"); // NOI18N
 
-        IndietroButton.setBackground(ReaderStyle.BACKGROUD_DEFAULT_2);
-        IndietroButton.setFont(ReaderStyle.BUTTON_FONT);
+        IndietroButton.setBackground(Client.Reader.ReaderStyle.BACKGROUD_DEFAULT_2);
+        IndietroButton.setFont(Client.Reader.ReaderStyle.BUTTON_FONT);
         IndietroButton.setForeground(new java.awt.Color(51, 51, 51));
         IndietroButton.setText("Indietro");
         IndietroButton.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, new java.awt.Color(102, 102, 102)));
@@ -358,8 +369,8 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
             }
         });
 
-        RegistrationButton.setBackground(ReaderStyle.BACKGROUD_DEFAULT_2);
-        RegistrationButton.setFont(ReaderStyle.BUTTON_FONT);
+        RegistrationButton.setBackground(Client.Reader.ReaderStyle.BACKGROUD_DEFAULT_2);
+        RegistrationButton.setFont(Client.Reader.ReaderStyle.BUTTON_FONT);
         RegistrationButton.setForeground(new java.awt.Color(51, 51, 51));
         RegistrationButton.setText("Registrati");
         RegistrationButton.setBorder(javax.swing.BorderFactory.createEtchedBorder(null, new java.awt.Color(102, 102, 102)));
@@ -383,24 +394,24 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
                 .addComponent(RegistrationH1, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(Layer1Layout.createSequentialGroup()
-                .addGap(127, 127, 127)
+                .addGap(142, 142, 142)
                 .addComponent(IndietroButton, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(RegistrationButton, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(91, 91, 91))
+                .addGap(117, 117, 117))
         );
         Layer1Layout.setVerticalGroup(
             Layer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Layer1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(RegistrationH1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Layer2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(Layer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(RegistrationButton, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(IndietroButton, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(30, Short.MAX_VALUE))
+                    .addComponent(IndietroButton, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RegistrationButton, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -414,13 +425,17 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
             .addComponent(Layer1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        getAccessibleContext().setAccessibleName("Reader Registration");
-
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void initLabels() {
+        
+        ClasseSezioneField.setVisible(true);
+        ClasseSezioneField.setEnabled(false);
+        
+        InquadramentiComboBox.addItemListener(SelectedStudentItemListener());
+        
         ErrorNomeLabel.setVisible(false);
         ErrorCognomeLabel.setVisible(false);
         ErrorCodiceFiscaleLabel.setVisible(false);
@@ -550,16 +565,23 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
             correct++;
         }
 
-        controller = reader.checker.userChecker.checkInquadramento(InquadramentoTextField.getText());
+        if(need_classe_sezione){
+        controller = reader.checker.userChecker.checkInquadramentoClasse(ClasseSezioneField.getText());
+        }
+        else controller = 0;
+        
         if (controller != 0) {
             if (controller == 1) {
                 RefreshGenericLabel(ErrorInquadramentoLabel, ErrorInquadramentoLabel.getForeground(), "è vuoto");
             }
             if (controller == 2) {
-                RefreshGenericLabel(ErrorInquadramentoLabel, ErrorInquadramentoLabel.getForeground(), "inquadramento non valido");
+                RefreshGenericLabel(ErrorInquadramentoLabel, ErrorInquadramentoLabel.getForeground(), "deve essere: <num><lettera>");
             }
 
         } else {
+            ClasseSezioneField.setBorder(ReaderStyle.DEFAULT_MATTE_REGISTRATION);
+            ErrorInquadramentoLabel.setVisible(false);
+            correct++;
         }
 
         controller = reader.checker.userChecker.checkNumero(TelephoneTextField.getText());
@@ -618,7 +640,7 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
                 CognomeTextField.getText(),
                 CodicefiscaleTextField.getText(),
                 EmailTextField.getText(),
-                InquadramentoTextField.getText(),
+                InquadramentiComboBox.getSelectedItem().toString() + ClasseSezioneField.getText(),
                 TelephoneTextField.getText(),
                 PasswordField.getPassword(),
                 reader.GenerateUserCode(CodicefiscaleTextField.getText())
@@ -628,6 +650,34 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
 
     }
 
+    ItemListener SelectedStudentItemListener()
+    {
+        ItemListener return_Listener = new ItemListener() {
+            @Override
+            public void itemStateChanged(ItemEvent e) {
+                
+                Object selected = InquadramentiComboBox.getSelectedItem();
+                
+                SwingUtilities.invokeLater(()->{
+                    
+                if( selected.toString().equals("Studente"))
+                {
+                    ClasseSezioneField.setEnabled(true);
+                    need_classe_sezione = true;
+                    
+                }
+                else{
+                    ClasseSezioneField.setEnabled(false);
+                    need_classe_sezione = false;
+                }
+                
+                });
+            }
+        };
+        
+        return return_Listener;            
+    }
+    
     private void IndietroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IndietroButtonActionPerformed
 
         appReaderLoginForm loginForm = new appReaderLoginForm();
@@ -701,6 +751,10 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
 
     }//GEN-LAST:event_RegistrationButtonActionPerformed
 
+    private void ClasseSezioneFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClasseSezioneFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ClasseSezioneFieldActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -744,6 +798,7 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField ClasseSezioneField;
     private javax.swing.JTextField CodicefiscaleTextField;
     private javax.swing.JTextField CognomeTextField;
     private javax.swing.JTextField EmailTextField;
@@ -755,8 +810,8 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
     private javax.swing.JLabel ErrorNumTelLabel;
     private javax.swing.JLabel ErrorPswLabel;
     private javax.swing.JButton IndietroButton;
+    private javax.swing.JComboBox<String> InquadramentiComboBox;
     private javax.swing.JLabel InquadramentoLabel;
-    private javax.swing.JTextField InquadramentoTextField;
     private javax.swing.JPanel Layer1;
     private javax.swing.JPanel Layer2;
     private javax.swing.JTextField NomeTextField;

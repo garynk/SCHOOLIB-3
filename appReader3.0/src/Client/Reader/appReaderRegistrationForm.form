@@ -61,11 +61,11 @@
                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="127" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="142" max="-2" attributes="0"/>
                   <Component id="IndietroButton" min="-2" pref="128" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
                   <Component id="RegistrationButton" min="-2" pref="128" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="117" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -74,14 +74,14 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="RegistrationH1" min="-2" pref="62" max="-2" attributes="0"/>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Component id="Layer2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="RegistrationButton" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
                       <Component id="IndietroButton" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
+                      <Component id="RegistrationButton" alignment="3" min="-2" pref="48" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="30" max="32767" attributes="0"/>
+                  <EmptySpace pref="42" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -133,12 +133,16 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="ErrorInquadramentoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="InquadramentoLabel" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="InquadramentoTextField" alignment="0" min="-2" pref="192" max="-2" attributes="0"/>
                           <Component id="ErrorCodiceFiscaleLabel" min="-2" max="-2" attributes="0"/>
                           <Component id="codicefiscaleLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="CodicefiscaleTextField" alignment="0" min="-2" pref="170" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="InquadramentiComboBox" min="-2" pref="137" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="ClasseSezioneField" min="-2" pref="41" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
@@ -182,7 +186,10 @@
                                   <Group type="102" attributes="0">
                                       <Component id="InquadramentoLabel" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="InquadramentoTextField" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="InquadramentiComboBox" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                                          <Component id="ClasseSezioneField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="ErrorInquadramentoLabel" min="-2" max="-2" attributes="0"/>
                                   </Group>
@@ -513,27 +520,6 @@
                 <Property name="text" type="java.lang.String" value="Inquadramento:"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="InquadramentoTextField">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="Client.Reader.ReaderStyle.BACKGROUD_DEFAULT_2" type="code"/>
-                </Property>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Delius" size="18" style="0"/>
-                </Property>
-                <Property name="horizontalAlignment" type="int" value="2"/>
-                <Property name="toolTipText" type="java.lang.String" value="username"/>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-                    <MatteColorBorder bottom="1" left="0" right="0" top="0"/>
-                  </Border>
-                </Property>
-                <Property name="name" type="java.lang.String" value="usernameTextField" noResource="true"/>
-                <Property name="selectionColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="99" red="99" type="rgb"/>
-                </Property>
-              </Properties>
-            </Component>
             <Component class="javax.swing.JLabel" name="ErrorInquadramentoLabel">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
@@ -549,6 +535,21 @@
                 <Property name="text" type="java.lang.String" value="eccezione inquadr"/>
                 <Property name="horizontalTextPosition" type="int" value="0"/>
               </Properties>
+            </Component>
+            <Component class="javax.swing.JComboBox" name="InquadramentiComboBox">
+              <Properties>
+                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(UtenteReader.INQUADRAMENTI_READER_DEAFULT)" type="code"/>
+                </Property>
+              </Properties>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JTextField" name="ClasseSezioneField">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ClasseSezioneFieldActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

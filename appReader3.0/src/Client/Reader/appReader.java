@@ -1240,7 +1240,7 @@ public class appReader extends javax.swing.JFrame {
             RefreshGenericLabel(ModifyReporterLabel, ReaderStyle.EXCEPTION_COLOR, "Formato Numero non valido");
         }
 
-        if (check.userChecker.checkInquadramento(ModifyInquadTextField.getText()) == 0) {
+/*        if (check.userChecker.checkInquadramento(ModifyInquadTextField.getText()) == 0) {
             local_reader.UpdateUserInfo(local_reader.GetParamUser().GetUserID(), "INQUADRAMENTO", ModifyInquadTextField.getText(), local_reader.GetDefaultType());
 
             success_message = success_message + "INQUADRAMENTO -> " + ModifyInquadTextField.getText() + "\n";
@@ -1250,7 +1250,7 @@ public class appReader extends javax.swing.JFrame {
             ModifyInquadTextField.setBorder(exceptionborder);
 
             RefreshGenericLabel(ModifyReporterLabel, ReaderStyle.EXCEPTION_COLOR, "Formato Inquadramento non valido");
-        }
+        }*/
 
         if (modified > 0) {
             RefreshGenericLabel(ModifyReporterLabel, ReaderStyle.SUCCESS_COLOR, success_message);

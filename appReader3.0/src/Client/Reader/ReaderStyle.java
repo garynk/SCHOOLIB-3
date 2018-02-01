@@ -15,7 +15,10 @@ import java.awt.*;
 
 public class ReaderStyle {
 
-    private static String FONT_NAME = "Delius";
+    // public ReaderStyale(Font f){this.f = f;}
+    
+    public static String FONT_DIR = "Font/AvenirNextLTPro-Regular.ttf";
+    private static String FONT_NAME = "Avenir Next";
 
     public static final java.awt.Color BACKGROUD_DEFAULT_1 = new java.awt.Color(211, 93, 72);
     public static final java.awt.Color BACKGROUD_DEFAULT_2 = new java.awt.Color(225, 129, 108);

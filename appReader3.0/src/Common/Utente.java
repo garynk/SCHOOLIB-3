@@ -1,6 +1,8 @@
 package Common;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import jdk.nashorn.internal.runtime.arrays.ArrayLikeIterator;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -32,7 +34,7 @@ public class Utente implements Serializable {
         cognome = "null";
         codice_fiscale = "null";
         email = "null";
-        inquadramento = "null";
+//        inquadramento = "null";
         numero_telefono = "null";
         password = "null".toCharArray();
         code = "null".toCharArray();
@@ -46,7 +48,7 @@ public class Utente implements Serializable {
         cognome = "null";
         codice_fiscale = "null";
         email = "null";
-        inquadramento = "null";
+   //     inquadramento = "null";
         numero_telefono = "null";
         password = "null".toCharArray();
         code = "null".toCharArray();
@@ -60,12 +62,13 @@ public class Utente implements Serializable {
         USER_TYPE = type;
     }
 
-    public Utente(String n, String g, String cod, String em, String inq, String num, char[] psw, int type, char[] c) {
+    public Utente(String n, String g, String cod, String em, String inq , String num, char[] psw, int type, char[] c) {
+        
         nome = n;
         cognome = g;
         codice_fiscale = cod;
         email = em.toLowerCase();
-        inquadramento = inq.toLowerCase();
+        inquadramento = inq;
         numero_telefono = num;
         password = psw;
         code = c;
