@@ -32,7 +32,22 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="6160">
               <caret line="761" column="11" lean-forward="false" selection-start-line="761" selection-start-column="11" selection-end-line="761" selection-end-column="11" />
-              <folding />
+              <folding>
+                <element signature="e#0#43433#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#1280#1369#0" expanded="false" />
+                <element signature="e#5439#5440#0" expanded="false" />
+                <element signature="e#5511#5512#0" expanded="false" />
+                <element signature="e#10898#10899#0" expanded="false" />
+                <element signature="e#10969#10970#0" expanded="false" />
+                <element signature="e#17630#17631#0" expanded="false" />
+                <element signature="e#17694#17695#0" expanded="false" />
+                <element signature="e#20698#20699#0" expanded="false" />
+                <element signature="e#20768#20769#0" expanded="false" />
+                <element signature="e#21595#21596#0" expanded="false" />
+                <element signature="e#21659#21660#0" expanded="false" />
+                <element signature="e#40247#40334#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -78,9 +93,10 @@
       <file leaf-file-name="appLibrarian.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Client/Librarian/appLibrarian.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="700" column="58" lean-forward="false" selection-start-line="700" selection-start-column="58" selection-end-line="700" selection-end-column="58" />
+            <state relative-caret-position="267">
+              <caret line="3294" column="8" lean-forward="false" selection-start-line="3294" selection-start-column="8" selection-end-line="3294" selection-end-column="79" />
               <folding>
+                <element signature="e#2073#2162#0" expanded="true" />
                 <element signature="method#initBackEnd#0;class#appLibrarian#0" expanded="false" />
                 <element signature="method#initErrorNewBookLabels#0;class#appLibrarian#0" expanded="false" />
                 <element signature="method#initErrorNewUserLabels#0;class#appLibrarian#0" expanded="false" />
@@ -107,20 +123,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="462">
               <caret line="38" column="33" lean-forward="false" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
-              <folding>
-                <element signature="e#0#12918#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#1620#1621#0" expanded="false" />
-                <element signature="e#1649#1650#0" expanded="false" />
-                <element signature="e#1863#1864#0" expanded="false" />
-                <element signature="e#1914#1915#0" expanded="false" />
-                <element signature="e#4525#4526#0" expanded="false" />
-                <element signature="e#4551#4552#0" expanded="false" />
-                <element signature="e#4592#4593#0" expanded="false" />
-                <element signature="e#4628#4629#0" expanded="false" />
-                <element signature="e#4668#4669#0" expanded="false" />
-                <element signature="e#4728#4729#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -175,11 +178,9 @@
       <file leaf-file-name="Checker.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Checker/Checker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
+            <state relative-caret-position="252">
               <caret line="16" column="40" lean-forward="false" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#511#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -187,11 +188,9 @@
       <file leaf-file-name="UserChecker.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Checker/UserChecker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="38" column="23" lean-forward="false" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#4033#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="88">
+              <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -200,27 +199,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>updateus</find>
-      <find>updateuserreg</find>
-      <find>updateuserregi</find>
-      <find>updateuserre</find>
-      <find>updateuserr</find>
-      <find>updateuserR</find>
-      <find>updateuser</find>
-      <find>updateuse</find>
-      <find>libro</find>
-      <find>Prenotazioni</find>
-      <find>crea</find>
-      <find>Reader</find>
-      <find>concrete</find>
-      <find>jdialog</find>
-      <find>dialog</find>
-      <find>creanuovaprenotazion</find>
-      <find>creanuovaPrenotazionerButton</find>
-      <find>attivapre</find>
-      <find>prestito</find>
-      <find>prestitobuttonac</find>
-      <find>disattiva</find>
       <find>prestitobutton</find>
       <find>EnableDisablePrestitoButton</find>
       <find>BookTableModel</find>
@@ -230,6 +208,27 @@
       <find>INVOKE</find>
       <find>invok</find>
       <find>refresh</find>
+      <find>Con</find>
+      <find>ConfermaB</find>
+      <find>ConfermaBu</find>
+      <find>ConfermaButt</find>
+      <find>ConfermaBut</find>
+      <find>C</find>
+      <find>EsciBu</find>
+      <find>EsciB</find>
+      <find>Esci</find>
+      <find>Es</find>
+      <find>M</find>
+      <find>Modif</find>
+      <find>ModifyE</find>
+      <find>ModifyEd</find>
+      <find>ModifyEsci</find>
+      <find>ModifyEsc</find>
+      <find>ModifyEs</find>
+      <find>Conferma</find>
+      <find>ModifyConfirm</find>
+      <find>ModifyConfirmButtonAc</find>
+      <find>Modify</find>
     </findStrings>
     <replaceStrings>
       <replace>LibrarianStyle</replace>
@@ -254,8 +253,8 @@
         <option value="$PROJECT_DIR$/src/Client/Librarian/Librarian.java" />
         <option value="$PROJECT_DIR$/src/Checker/BookChecker.java" />
         <option value="$PROJECT_DIR$/src/Checker/Checker.java" />
-        <option value="$PROJECT_DIR$/src/Checker/UserChecker.java" />
         <option value="$PROJECT_DIR$/src/Client/Librarian/appLibrarianLoginForm.java" />
+        <option value="$PROJECT_DIR$/src/Checker/UserChecker.java" />
         <option value="$PROJECT_DIR$/src/Client/Librarian/appLibrarian.java" />
       </list>
     </option>
@@ -264,10 +263,10 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="229" />
-    <option name="y" value="157" />
-    <option name="width" value="1741" />
-    <option name="height" value="888" />
+    <option name="x" value="98" />
+    <option name="y" value="15" />
+    <option name="width" value="2015" />
+    <option name="height" value="1023" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -416,7 +415,7 @@
     <property name="GenerateAntBuildDialog.generateSingleFile" value="true" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="applibrarianWIN" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../TO_MODappreader3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../appReader3.0" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -737,25 +736,25 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="229" y="157" width="1741" height="888" extended-state="1" />
-    <editor active="true" />
+    <frame x="98" y="15" width="2015" height="1023" extended-state="1" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3258278" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3247191" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956573" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26754966" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22696629" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32064247" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17953964" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32713348" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17766295" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -768,7 +767,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20110446" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32713348" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -835,20 +833,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
           <caret line="61" column="28" lean-forward="false" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#12918#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1620#1621#0" expanded="false" />
-            <element signature="e#1649#1650#0" expanded="false" />
-            <element signature="e#1863#1864#0" expanded="false" />
-            <element signature="e#1914#1915#0" expanded="false" />
-            <element signature="e#4525#4526#0" expanded="false" />
-            <element signature="e#4551#4552#0" expanded="false" />
-            <element signature="e#4592#4593#0" expanded="false" />
-            <element signature="e#4628#4629#0" expanded="false" />
-            <element signature="e#4668#4669#0" expanded="false" />
-            <element signature="e#4728#4729#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -883,6 +868,7 @@
         <state relative-caret-position="7038">
           <caret line="440" column="50" lean-forward="false" selection-start-line="440" selection-start-column="50" selection-end-line="440" selection-end-column="50" />
           <folding>
+            <element signature="e#2073#2162#0" expanded="true" />
             <element signature="method#initBackEnd#0;class#appLibrarian#0" expanded="false" />
             <element signature="method#initErrorNewBookLabels#0;class#appLibrarian#0" expanded="false" />
             <element signature="method#initErrorNewUserLabels#0;class#appLibrarian#0" expanded="false" />
@@ -897,7 +883,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#43433#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1280#1369#0" expanded="false" />
+            <element signature="e#5439#5440#0" expanded="false" />
+            <element signature="e#5511#5512#0" expanded="false" />
+            <element signature="e#10898#10899#0" expanded="false" />
+            <element signature="e#10969#10970#0" expanded="false" />
+            <element signature="e#17630#17631#0" expanded="false" />
+            <element signature="e#17694#17695#0" expanded="false" />
+            <element signature="e#20698#20699#0" expanded="false" />
+            <element signature="e#20768#20769#0" expanded="false" />
+            <element signature="e#21595#21596#0" expanded="false" />
+            <element signature="e#21659#21660#0" expanded="false" />
+            <element signature="e#40247#40334#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -935,20 +936,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
           <caret line="61" column="28" lean-forward="false" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#12918#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1620#1621#0" expanded="false" />
-            <element signature="e#1649#1650#0" expanded="false" />
-            <element signature="e#1863#1864#0" expanded="false" />
-            <element signature="e#1914#1915#0" expanded="false" />
-            <element signature="e#4525#4526#0" expanded="false" />
-            <element signature="e#4551#4552#0" expanded="false" />
-            <element signature="e#4592#4593#0" expanded="false" />
-            <element signature="e#4628#4629#0" expanded="false" />
-            <element signature="e#4668#4669#0" expanded="false" />
-            <element signature="e#4728#4729#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -983,6 +971,7 @@
         <state relative-caret-position="7480">
           <caret line="440" column="50" lean-forward="true" selection-start-line="440" selection-start-column="50" selection-end-line="440" selection-end-column="50" />
           <folding>
+            <element signature="e#2073#2162#0" expanded="true" />
             <element signature="method#initBackEnd#0;class#appLibrarian#0" expanded="false" />
             <element signature="method#initErrorNewBookLabels#0;class#appLibrarian#0" expanded="false" />
             <element signature="method#initErrorNewUserLabels#0;class#appLibrarian#0" expanded="false" />
@@ -997,7 +986,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#43433#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1280#1369#0" expanded="false" />
+            <element signature="e#5439#5440#0" expanded="false" />
+            <element signature="e#5511#5512#0" expanded="false" />
+            <element signature="e#10898#10899#0" expanded="false" />
+            <element signature="e#10969#10970#0" expanded="false" />
+            <element signature="e#17630#17631#0" expanded="false" />
+            <element signature="e#17694#17695#0" expanded="false" />
+            <element signature="e#20698#20699#0" expanded="false" />
+            <element signature="e#20768#20769#0" expanded="false" />
+            <element signature="e#21595#21596#0" expanded="false" />
+            <element signature="e#21659#21660#0" expanded="false" />
+            <element signature="e#40247#40334#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1035,20 +1039,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
           <caret line="61" column="28" lean-forward="false" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#12918#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1620#1621#0" expanded="false" />
-            <element signature="e#1649#1650#0" expanded="false" />
-            <element signature="e#1863#1864#0" expanded="false" />
-            <element signature="e#1914#1915#0" expanded="false" />
-            <element signature="e#4525#4526#0" expanded="false" />
-            <element signature="e#4551#4552#0" expanded="false" />
-            <element signature="e#4592#4593#0" expanded="false" />
-            <element signature="e#4628#4629#0" expanded="false" />
-            <element signature="e#4668#4669#0" expanded="false" />
-            <element signature="e#4728#4729#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1083,6 +1074,7 @@
         <state relative-caret-position="7157">
           <caret line="447" column="45" lean-forward="false" selection-start-line="447" selection-start-column="45" selection-end-line="447" selection-end-column="45" />
           <folding>
+            <element signature="e#2073#2162#0" expanded="true" />
             <element signature="method#initBackEnd#0;class#appLibrarian#0" expanded="false" />
             <element signature="method#initErrorNewBookLabels#0;class#appLibrarian#0" expanded="false" />
             <element signature="method#initErrorNewUserLabels#0;class#appLibrarian#0" expanded="false" />
@@ -1097,7 +1089,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1224">
           <caret line="82" column="62" lean-forward="false" selection-start-line="82" selection-start-column="62" selection-end-line="82" selection-end-column="62" />
-          <folding />
+          <folding>
+            <element signature="e#0#43433#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1280#1369#0" expanded="false" />
+            <element signature="e#5439#5440#0" expanded="false" />
+            <element signature="e#5511#5512#0" expanded="false" />
+            <element signature="e#10898#10899#0" expanded="false" />
+            <element signature="e#10969#10970#0" expanded="false" />
+            <element signature="e#17630#17631#0" expanded="false" />
+            <element signature="e#17694#17695#0" expanded="false" />
+            <element signature="e#20698#20699#0" expanded="false" />
+            <element signature="e#20768#20769#0" expanded="false" />
+            <element signature="e#21595#21596#0" expanded="false" />
+            <element signature="e#21659#21660#0" expanded="false" />
+            <element signature="e#40247#40334#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1121,6 +1128,7 @@
         <state relative-caret-position="9894">
           <caret line="2958" column="45" lean-forward="false" selection-start-line="2958" selection-start-column="45" selection-end-line="2958" selection-end-column="45" />
           <folding>
+            <element signature="e#2073#2162#0" expanded="true" />
             <element signature="method#initBackEnd#0;class#appLibrarian#0" expanded="false" />
             <element signature="method#initErrorNewBookLabels#0;class#appLibrarian#0" expanded="false" />
             <element signature="method#initErrorNewUserLabels#0;class#appLibrarian#0" expanded="false" />
@@ -1135,20 +1143,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="19" column="17" lean-forward="false" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#12918#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1620#1621#0" expanded="false" />
-            <element signature="e#1649#1650#0" expanded="false" />
-            <element signature="e#1863#1864#0" expanded="false" />
-            <element signature="e#1914#1915#0" expanded="false" />
-            <element signature="e#4525#4526#0" expanded="false" />
-            <element signature="e#4551#4552#0" expanded="false" />
-            <element signature="e#4592#4593#0" expanded="false" />
-            <element signature="e#4628#4629#0" expanded="false" />
-            <element signature="e#4668#4669#0" expanded="false" />
-            <element signature="e#4728#4729#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1281,44 +1276,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Checker/Checker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="16" column="40" lean-forward="false" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#511#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Checker/UserChecker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="38" column="23" lean-forward="false" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#4033#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Client/Librarian/Librarian.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="38" column="33" lean-forward="false" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#12918#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#1620#1621#0" expanded="false" />
-            <element signature="e#1649#1650#0" expanded="false" />
-            <element signature="e#1863#1864#0" expanded="false" />
-            <element signature="e#1914#1915#0" expanded="false" />
-            <element signature="e#4525#4526#0" expanded="false" />
-            <element signature="e#4551#4552#0" expanded="false" />
-            <element signature="e#4592#4593#0" expanded="false" />
-            <element signature="e#4628#4629#0" expanded="false" />
-            <element signature="e#4668#4669#0" expanded="false" />
-            <element signature="e#4728#4729#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1326,7 +1288,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6160">
           <caret line="761" column="11" lean-forward="false" selection-start-line="761" selection-start-column="11" selection-end-line="761" selection-end-column="11" />
-          <folding />
+          <folding>
+            <element signature="e#0#43433#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1280#1369#0" expanded="false" />
+            <element signature="e#5439#5440#0" expanded="false" />
+            <element signature="e#5511#5512#0" expanded="false" />
+            <element signature="e#10898#10899#0" expanded="false" />
+            <element signature="e#10969#10970#0" expanded="false" />
+            <element signature="e#17630#17631#0" expanded="false" />
+            <element signature="e#17694#17695#0" expanded="false" />
+            <element signature="e#20698#20699#0" expanded="false" />
+            <element signature="e#20768#20769#0" expanded="false" />
+            <element signature="e#21595#21596#0" expanded="false" />
+            <element signature="e#21659#21660#0" expanded="false" />
+            <element signature="e#40247#40334#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1372,11 +1349,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Checker/Checker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="16" column="40" lean-forward="false" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Checker/UserChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Client/Librarian/appLibrarian.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="700" column="58" lean-forward="false" selection-start-line="700" selection-start-column="58" selection-end-line="700" selection-end-column="58" />
+        <state relative-caret-position="267">
+          <caret line="3294" column="8" lean-forward="false" selection-start-line="3294" selection-start-column="8" selection-end-line="3294" selection-end-column="79" />
           <folding>
+            <element signature="e#2073#2162#0" expanded="true" />
             <element signature="method#initBackEnd#0;class#appLibrarian#0" expanded="false" />
             <element signature="method#initErrorNewBookLabels#0;class#appLibrarian#0" expanded="false" />
             <element signature="method#initErrorNewUserLabels#0;class#appLibrarian#0" expanded="false" />

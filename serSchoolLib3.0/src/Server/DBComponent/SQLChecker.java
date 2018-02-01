@@ -109,6 +109,8 @@ public class SQLChecker extends Thread{
 
         try {
 
+            System.out.println("PORCO DEMONIO: " + table_check);
+
             conn = supporter.enstablishConnection();
             conn.setAutoCommit(false);
 
@@ -121,9 +123,13 @@ public class SQLChecker extends Thread{
 
             result.next();
 
+            System.out.println("PORCO DEMONIO: " + result.getArray("psw").toString());
+            System.out.println("PORCO DEMONIO: " + supporter.normalizePsw(Arrays.toString(pass)));
+
             conn.close();
 
             logger.Write("SQL: Confronto di password per: " + user_id);
+
 
             return result.getArray("psw").toString().equals(supporter.normalizePsw(Arrays.toString(pass)));
 

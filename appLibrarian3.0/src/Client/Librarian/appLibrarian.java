@@ -8,6 +8,7 @@ package Client.Librarian;
 import Checker.Checker;
 import Common.Libro;
 import Common.Utente;
+import Common.UtenteLibrarian;
 import Common.UtenteReader;
 
 import javax.swing.*;
@@ -3291,7 +3292,9 @@ public class appLibrarian extends javax.swing.JFrame {
 
         boolean changeable = false;
 
-        if (local_librarian.MatchingUserID_Password(local_librarian.GetID(), OldPasswordTxtField.getPassword(), local_librarian.getUser().GetUserType())) {
+        System.out.println(Arrays.toString(OldPasswordTxtField.getPassword()));
+
+        if (local_librarian.MatchingUserID_Password(local_librarian.GetID(), OldPasswordTxtField.getPassword(), UtenteLibrarian.Librarian_Default_Type_Value)) {
             if (check.userChecker.checkPassword(NewPasswordTextField.getPassword()) == 0) {
                 changeable = true;
             } else {
@@ -3311,7 +3314,7 @@ public class appLibrarian extends javax.swing.JFrame {
         }
 
         if (changeable) {
-            local_librarian.UpdateUserPassword(local_librarian.GetID(), NewPasswordTextField.getPassword(), local_librarian.getUser().GetUserType());
+            local_librarian.UpdateUserPassword(local_librarian.GetID(), NewPasswordTextField.getPassword(), UtenteLibrarian.Librarian_Default_Type_Value);
 
             RefreshGenericLabel(ModifyReporterLabel, LibrarianStyle.SUCCESS_COLOR, "Password Cambiata con Successo");
 
@@ -3321,16 +3324,7 @@ public class appLibrarian extends javax.swing.JFrame {
                 Logger.getLogger(appLibrarian.class.getName()).log(Level.SEVERE, null, ex);
             }
 
-            SetModifyDialog();
-
-            ModifyDialog.getParent().setVisible(false);
-            ModifyDialog.removeWindowListener(ModifyDialog.getWindowListeners()[0]);
-            ModifyDialog.dispose();
-
-            this.setVisible(false);
-            this.dispose();
-
-            new appLibrarianLoginForm().setVisible(true);
+            System.exit(0);
         }
 
     }//GEN-LAST:event_PSWConfirmButtonActionPerformed
@@ -3407,14 +3401,16 @@ public class appLibrarian extends javax.swing.JFrame {
 
                 this.setVisible(false);
                 this.dispose();
-
+                SetModifyDialog();
                 new appLibrarianLoginForm().setVisible(true);
+
             } else {
 
                 local_librarian.SendNewInformation(local_librarian.getUser().GetUserID(), success_message, local_librarian.GetDefaultType());
 
                 ModifyDialog.setVisible(false);
                 SetModifyDialog();
+
                 this.setEnabled(true);
             }
         } else {

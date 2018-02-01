@@ -110,13 +110,7 @@ public class UserChecker {
             return Checker.EMPTY_CODE;
         }
 
-        if (inquadramento_tmp.equals("studente")
-                || inquadramento_tmp.equals("docente")
-                || inquadramento_tmp.equals("tecnico")) {
-            return 0;
-        } else {
-            return 2;
-        }
+        return 0;
 
     }
 
