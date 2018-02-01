@@ -251,8 +251,6 @@ public class appLibrarian extends javax.swing.JFrame {
         SearchButton = new javax.swing.JButton();
         SearchTextField = new javax.swing.JTextField();
         statisticheButton = new javax.swing.JButton();
-        OutputLabel = new javax.swing.JPanel();
-        Console = new javax.swing.JLabel();
         EliminaOption = new javax.swing.JOptionPane(YES_NO_OPTION);
 
         ModifyDialog.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -2193,25 +2191,6 @@ public class appLibrarian extends javax.swing.JFrame {
 
         SearchTextField.getAccessibleContext().setAccessibleName("SearchTextField");
 
-        OutputLabel.setBackground(appMainPanel.getBackground());
-        OutputLabel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-
-        Console.setBackground(OutputLabel.getBackground());
-        Console.setFont(LibrarianStyle.OUTPUT_DEFAULT_FONT);
-        Console.setText("output text here");
-
-        javax.swing.GroupLayout OutputLabelLayout = new javax.swing.GroupLayout(OutputLabel);
-        OutputLabel.setLayout(OutputLabelLayout);
-        OutputLabelLayout.setHorizontalGroup(
-            OutputLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(OutputLabelLayout.createSequentialGroup()
-                .addComponent(Console, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        OutputLabelLayout.setVerticalGroup(
-            OutputLabelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Console, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
 
         javax.swing.GroupLayout appMainPanelLayout = new javax.swing.GroupLayout(appMainPanel);
         appMainPanel.setLayout(appMainPanelLayout);
@@ -2246,7 +2225,6 @@ public class appLibrarian extends javax.swing.JFrame {
                                         .addComponent(NextPageButton)))))
                         .addContainerGap(22, Short.MAX_VALUE))))
             .addGroup(appMainPanelLayout.createSequentialGroup()
-                .addComponent(OutputLabel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         appMainPanelLayout.setVerticalGroup(
@@ -2279,7 +2257,7 @@ public class appLibrarian extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(OptionsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(OutputLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                )
         );
 
         UserContextPanel.getAccessibleContext().setAccessibleName("UserContextPanel");
@@ -2339,7 +2317,6 @@ public class appLibrarian extends javax.swing.JFrame {
 
             } catch (InterruptedException ex) {
                 Logger.getLogger(appLibrarianRegistrationForm.class.getName()).log(Level.SEVERE, null, ex);
-                RefreshGenericLabel(Console, LibrarianStyle.EXCEPTION_COLOR, "Inserimento Libro Fallito");
             }
 
         }
@@ -2394,8 +2371,7 @@ public class appLibrarian extends javax.swing.JFrame {
         disattivaPrestitoButton.setEnabled(false);
         
         mostraErrorLabel.setVisible(false);
-        
-        RefreshGenericLabel(Console, java.awt.Color.BLACK, "Interfaccia Default Caricata");
+
         
         
     }
@@ -2412,7 +2388,7 @@ public class appLibrarian extends javax.swing.JFrame {
         LinguaError.setVisible(false);
         ScaffaleError.setVisible(false);
         
-        RefreshGenericLabel(Console, java.awt.Color.BLACK, "Interfaccia newBook Caricata");
+
 
     }
     
@@ -2425,7 +2401,7 @@ public class appLibrarian extends javax.swing.JFrame {
         newuserErrorInquadLabel.setVisible(false);
         newuserErrorNumTelLabel.setVisible(false);
         
-        RefreshGenericLabel(Console, java.awt.Color.BLACK, "Interfaccia Nuovo Utente Caricata");        
+
     }
 
     private void NormalizejTable(javax.swing.JTable generic_table,
@@ -2484,7 +2460,6 @@ public class appLibrarian extends javax.swing.JFrame {
                 next_associated.setEnabled(true);
             }
 
-            RefreshGenericLabel(Console, java.awt.Color.BLACK, "Normalizzo Tabella Libri"); 
             
         }
     }
@@ -2798,8 +2773,7 @@ public class appLibrarian extends javax.swing.JFrame {
         AskinDeletingOptionPane.setEnabled(false);
 
         SetModifyCloseSafe();
-        
-        RefreshGenericLabel(Console, java.awt.Color.BLACK, "Interfaccia Modifica Caricata"); 
+
     }
 
     private void SetAddBookDialog() {
@@ -2817,8 +2791,7 @@ public class appLibrarian extends javax.swing.JFrame {
         ReporterNewBookLabel.setVisible(false);
 
         SetAddBookCloseSafe();
-        
-        RefreshGenericLabel(Console, java.awt.Color.BLACK, "Interfaccia Nuovo Libro Caricata"); 
+
     }
     
     private void SetAddNewUserDialog()
@@ -2831,8 +2804,7 @@ public class appLibrarian extends javax.swing.JFrame {
         newUserTelefonoTxtField.setText("");
         
         newuserSuccessLabel.setVisible(false); 
-        
-        RefreshGenericLabel(Console, java.awt.Color.BLACK, "Interfaccia Nuovo Utente Caricata"); 
+
         
     }
 
@@ -3070,7 +3042,6 @@ public class appLibrarian extends javax.swing.JFrame {
             correct++;
         }
 
-        RefreshGenericLabel(Console, java.awt.Color.BLACK, "Verifico Credenziali Nuovo Libro"); 
         
         return correct == TOTAL_BOOK_FIELD;
     }
@@ -3209,8 +3180,7 @@ public class appLibrarian extends javax.swing.JFrame {
             newuserErrorNumTelLabel.setVisible(false);
             correct++;
         }
-        
-        RefreshGenericLabel(Console, java.awt.Color.BLACK, "Verifico Credenziali Nuovo Utente"); 
+
 
         return correct == NEWUSER_TOTAL_FIELD;
 
@@ -3292,7 +3262,6 @@ public class appLibrarian extends javax.swing.JFrame {
 
         boolean changeable = false;
 
-        System.out.println(Arrays.toString(OldPasswordTxtField.getPassword()));
 
         if (local_librarian.MatchingUserID_Password(local_librarian.GetID(), OldPasswordTxtField.getPassword(), UtenteLibrarian.Librarian_Default_Type_Value)) {
             if (check.userChecker.checkPassword(NewPasswordTextField.getPassword()) == 0) {
@@ -3489,8 +3458,7 @@ public class appLibrarian extends javax.swing.JFrame {
             BooksTable.revalidate();
             BooksTable.getParent().repaint();
             BooksTable.repaint();
-            
-            RefreshGenericLabel(Console, java.awt.Color.BLACK, "Libro: " + Selected_ISBN + " eliminato");
+
             
         } else {
             EliminaOption.setVisible(false);
@@ -3576,7 +3544,6 @@ public class appLibrarian extends javax.swing.JFrame {
             }
         } catch (RemoteException ex) {
             Logger.getLogger(appLibrarian.class.getName()).log(Level.SEVERE, null, ex);
-            RefreshGenericLabel(Console, LibrarianStyle.EXCEPTION_COLOR, "Errore Comunicazione Server"); 
         }
 
         PageTableIndex = 0;
@@ -3591,13 +3558,9 @@ public class appLibrarian extends javax.swing.JFrame {
 
     private void AnnullaNewBookButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnnullaNewBookButtonActionPerformed
 
-        addNewBookDialog.setVisible(false);
-        addNewBookDialog.setEnabled(false);
+        addNewBookDialog.dispatchEvent(new WindowEvent(addNewBookDialog,WindowEvent.WINDOW_CLOSING));
 
         SetAddBookDialog();
-
-        addNewBookDialog.getParent().setEnabled(true);
-        addNewBookDialog.getParent().setVisible(true);
 
     }//GEN-LAST:event_AnnullaNewBookButtonActionPerformed
 
@@ -3686,8 +3649,7 @@ public class appLibrarian extends javax.swing.JFrame {
 
                             prestitoErrorLabel.setVisible(false);
                             prestitoTextField.setText("");
-                            
-                            RefreshGenericLabel(Console, java.awt.Color.BLACK, "Prestito Iniziato con Successo"); 
+
                             
                         } else {
 
@@ -3932,11 +3894,10 @@ public class appLibrarian extends javax.swing.JFrame {
                 }
 
             } else {
-                RefreshGenericLabel(Console, LibrarianStyle.EXCEPTION_COLOR, "Errore creazione utente: Parametri non corretti");
+
             }
         } catch (RemoteException ex) {
             Logger.getLogger(appLibrarian.class.getName()).log(Level.SEVERE, null, ex);
-            RefreshGenericLabel(Console, LibrarianStyle.EXCEPTION_COLOR, "Connessione persa");
         }
     }//GEN-LAST:event_RegistrationButtonActionPerformed
 
@@ -4103,7 +4064,6 @@ public class appLibrarian extends javax.swing.JFrame {
     private javax.swing.JTextField CodeTextField;
     private javax.swing.JLabel CodiceLabel;
     private javax.swing.JLabel CognomeLabel;
-    private javax.swing.JLabel Console;
     private javax.swing.JButton DeleteAccButton;
     private javax.swing.JLabel DynamicCodice;
     private javax.swing.JLabel DynamicCognome;
@@ -4144,7 +4104,6 @@ public class appLibrarian extends javax.swing.JFrame {
     private javax.swing.JLabel NumeroLabel;
     private javax.swing.JPasswordField OldPasswordTxtField;
     private javax.swing.JPanel OptionsPanel;
-    private javax.swing.JPanel OutputLabel;
     private javax.swing.JButton PSWConfirmButton;
     private javax.swing.JLabel PageNumLabel;
     private javax.swing.JPanel PasswordModifyContext;
