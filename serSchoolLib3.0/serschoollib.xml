@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>	1.	<?xml version="1.0" encoding="UTF-8"?>
-	<project name="serschoollib" default="all">	2.	<project name="serschoollib" default="all">
+<?xml version="1.0" encoding="UTF-8"?>
+	<project name="serschoollib" default="all">
  <!-- properties condition definition -->
-  <condition property="isMac">
+      <target name="all"></target>
+      <condition property="isMac">
     <os family="mac" />
   </condition>
 
@@ -71,7 +72,7 @@
   </target>
   
   </fileset>
-  </path>
+  </project>
   
   <property name="project.jdk.home" value="${jdk.home.1.8}"/>
   <property name="project.jdk.bin" value="${jdk.bin.1.8}"/>

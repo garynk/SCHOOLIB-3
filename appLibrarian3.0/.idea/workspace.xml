@@ -30,8 +30,8 @@
       <file leaf-file-name="appLibrarianLoginForm.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Client/Librarian/appLibrarianLoginForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="761" column="11" lean-forward="true" selection-start-line="761" selection-start-column="11" selection-end-line="761" selection-end-column="11" />
+            <state relative-caret-position="6160">
+              <caret line="761" column="11" lean-forward="false" selection-start-line="761" selection-start-column="11" selection-end-line="761" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -40,18 +40,8 @@
       <file leaf-file-name="UtenteReader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Common/UtenteReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="17" column="53" lean-forward="false" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Utente.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Common/Utente.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+            <state relative-caret-position="418">
+              <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -60,10 +50,26 @@
       <file leaf-file-name="appLibrarianRegistrationForm.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Client/Librarian/appLibrarianRegistrationForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2271">
+            <state relative-caret-position="3608">
               <caret line="510" column="82" lean-forward="false" selection-start-line="510" selection-start-column="82" selection-end-line="510" selection-end-column="82" />
               <folding>
+                <element signature="e#0#37246#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#798#1400#0" expanded="false" />
+                <element signature="e#1399#1400#0" expanded="false" />
+                <element signature="e#1796#1885#0" expanded="false" />
                 <element signature="method#initComponents#0;class#appLibrarianRegistrationForm#0" expanded="false" />
+                <element signature="e#19437#19624#0" expanded="false" />
+                <element signature="e#19623#19624#0" expanded="false" />
+                <element signature="e#20324#20515#0" expanded="false" />
+                <element signature="e#20514#20515#0" expanded="false" />
+                <element signature="e#24305#24592#0" expanded="false" />
+                <element signature="e#24591#24592#0" expanded="false" />
+                <element signature="e#32018#32553#0" expanded="false" />
+                <element signature="e#32552#32553#0" expanded="false" />
+                <element signature="e#34088#34175#0" expanded="false" />
+                <element signature="e#35595#35956#0" expanded="false" />
+                <element signature="e#35955#35956#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -72,13 +78,9 @@
       <file leaf-file-name="appLibrarian.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Client/Librarian/appLibrarian.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="3925" column="113" lean-forward="false" selection-start-line="3925" selection-start-column="113" selection-end-line="3925" selection-end-column="113" />
+            <state relative-caret-position="205">
+              <caret line="700" column="58" lean-forward="false" selection-start-line="700" selection-start-column="58" selection-end-line="700" selection-end-column="58" />
               <folding>
-                <element signature="e#2042#2131#0" expanded="true" />
-                <element signature="e#141630#141631#0" expanded="true" />
-                <element signature="e#141695#141696#0" expanded="true" />
-                <element signature="method#run#0;class#155933:156705" expanded="false" />
                 <element signature="method#initBackEnd#0;class#appLibrarian#0" expanded="false" />
                 <element signature="method#initErrorNewBookLabels#0;class#appLibrarian#0" expanded="false" />
                 <element signature="method#initErrorNewUserLabels#0;class#appLibrarian#0" expanded="false" />
@@ -90,12 +92,35 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="UtenteLibrarian.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Common/UtenteLibrarian.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="18" column="61" lean-forward="false" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Librarian.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Client/Librarian/Librarian.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
+            <state relative-caret-position="462">
               <caret line="38" column="33" lean-forward="false" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
-              <folding />
+              <folding>
+                <element signature="e#0#12918#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#1620#1621#0" expanded="false" />
+                <element signature="e#1649#1650#0" expanded="false" />
+                <element signature="e#1863#1864#0" expanded="false" />
+                <element signature="e#1914#1915#0" expanded="false" />
+                <element signature="e#4525#4526#0" expanded="false" />
+                <element signature="e#4551#4552#0" expanded="false" />
+                <element signature="e#4592#4593#0" expanded="false" />
+                <element signature="e#4628#4629#0" expanded="false" />
+                <element signature="e#4668#4669#0" expanded="false" />
+                <element signature="e#4728#4729#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,9 +128,34 @@
       <file leaf-file-name="Libro.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Common/Libro.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
+            <state relative-caret-position="220">
               <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-              <folding />
+              <folding>
+                <element signature="e#0#3384#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#2519#2520#0" expanded="false" />
+                <element signature="e#2553#2554#0" expanded="false" />
+                <element signature="e#2591#2592#0" expanded="false" />
+                <element signature="e#2619#2620#0" expanded="false" />
+                <element signature="e#2650#2651#0" expanded="false" />
+                <element signature="e#2677#2678#0" expanded="false" />
+                <element signature="e#2710#2711#0" expanded="false" />
+                <element signature="e#2739#2740#0" expanded="false" />
+                <element signature="e#2772#2773#0" expanded="false" />
+                <element signature="e#2801#2802#0" expanded="false" />
+                <element signature="e#2840#2841#0" expanded="false" />
+                <element signature="e#2876#2877#0" expanded="false" />
+                <element signature="e#2911#2912#0" expanded="false" />
+                <element signature="e#2948#2949#0" expanded="false" />
+                <element signature="e#3157#3158#0" expanded="false" />
+                <element signature="e#3189#3190#0" expanded="false" />
+                <element signature="e#3222#3223#0" expanded="false" />
+                <element signature="e#3251#3252#0" expanded="false" />
+                <element signature="e#3283#3284#0" expanded="false" />
+                <element signature="e#3314#3315#0" expanded="false" />
+                <element signature="e#3348#3349#0" expanded="false" />
+                <element signature="e#3379#3380#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -113,10 +163,10 @@
       <file leaf-file-name="BookChecker.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Checker/BookChecker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3150">
+            <state relative-caret-position="3300">
               <caret line="154" column="9" lean-forward="false" selection-start-line="154" selection-start-column="9" selection-end-line="154" selection-end-column="9" />
               <folding>
-                <marker date="1508148166000" expanded="true" signature="2978:3236" ph="{...}" />
+                <element signature="e#0#3240#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -125,10 +175,10 @@
       <file leaf-file-name="Checker.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Checker/Checker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
+            <state relative-caret-position="264">
               <caret line="16" column="40" lean-forward="false" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
               <folding>
-                <marker date="1508148166000" expanded="true" signature="474:507" ph="{...}" />
+                <element signature="e#0#511#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -137,9 +187,11 @@
       <file leaf-file-name="UserChecker.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Checker/UserChecker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
+            <state relative-caret-position="748">
               <caret line="38" column="23" lean-forward="false" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
-              <folding />
+              <folding>
+                <element signature="e#0#4033#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -212,8 +264,8 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="62" />
-    <option name="y" value="113" />
+    <option name="x" value="229" />
+    <option name="y" value="157" />
     <option name="width" value="1741" />
     <option name="height" value="888" />
   </component>
@@ -232,8 +284,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -357,6 +407,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -364,7 +416,7 @@
     <property name="GenerateAntBuildDialog.generateSingleFile" value="true" />
     <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="applibrarianWIN" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../TO_MODappreader3" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -685,7 +737,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="62" y="113" width="1741" height="888" extended-state="0" />
+    <frame x="229" y="157" width="1741" height="888" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -697,14 +749,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956573" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26754966" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26754966" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20110446" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20285544" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32064247" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17766295" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -716,6 +767,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20110446" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32713348" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -778,18 +830,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../serSchoolLib3.0/serschoollibWIN.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3145">
-          <caret line="185" column="11" lean-forward="false" selection-start-line="185" selection-start-column="11" selection-end-line="185" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../serSchoolLib3.0/serschoollibWIN.xml" />
     <entry file="file://$PROJECT_DIR$/src/Client/Librarian/Librarian.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
           <caret line="61" column="28" lean-forward="false" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
-          <folding />
+          <folding>
+            <element signature="e#0#12918#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1620#1621#0" expanded="false" />
+            <element signature="e#1649#1650#0" expanded="false" />
+            <element signature="e#1863#1864#0" expanded="false" />
+            <element signature="e#1914#1915#0" expanded="false" />
+            <element signature="e#4525#4526#0" expanded="false" />
+            <element signature="e#4551#4552#0" expanded="false" />
+            <element signature="e#4592#4593#0" expanded="false" />
+            <element signature="e#4628#4629#0" expanded="false" />
+            <element signature="e#4668#4669#0" expanded="false" />
+            <element signature="e#4728#4729#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -798,7 +857,23 @@
         <state relative-caret-position="5508">
           <caret line="339" column="60" lean-forward="false" selection-start-line="339" selection-start-column="60" selection-end-line="339" selection-end-column="60" />
           <folding>
+            <element signature="e#0#37246#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#798#1400#0" expanded="false" />
+            <element signature="e#1399#1400#0" expanded="false" />
+            <element signature="e#1796#1885#0" expanded="false" />
             <element signature="method#initComponents#0;class#appLibrarianRegistrationForm#0" expanded="false" />
+            <element signature="e#19437#19624#0" expanded="false" />
+            <element signature="e#19623#19624#0" expanded="false" />
+            <element signature="e#20324#20515#0" expanded="false" />
+            <element signature="e#20514#20515#0" expanded="false" />
+            <element signature="e#24305#24592#0" expanded="false" />
+            <element signature="e#24591#24592#0" expanded="false" />
+            <element signature="e#32018#32553#0" expanded="false" />
+            <element signature="e#32552#32553#0" expanded="false" />
+            <element signature="e#34088#34175#0" expanded="false" />
+            <element signature="e#35595#35956#0" expanded="false" />
+            <element signature="e#35955#35956#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -808,10 +883,6 @@
         <state relative-caret-position="7038">
           <caret line="440" column="50" lean-forward="false" selection-start-line="440" selection-start-column="50" selection-end-line="440" selection-end-column="50" />
           <folding>
-            <element signature="e#2042#2131#0" expanded="true" />
-            <element signature="e#141630#141631#0" expanded="true" />
-            <element signature="e#141695#141696#0" expanded="true" />
-            <element signature="method#run#0;class#155933:156705" expanded="false" />
             <element signature="method#initBackEnd#0;class#appLibrarian#0" expanded="false" />
             <element signature="method#initErrorNewBookLabels#0;class#appLibrarian#0" expanded="false" />
             <element signature="method#initErrorNewUserLabels#0;class#appLibrarian#0" expanded="false" />
@@ -859,18 +930,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../serSchoolLib3.0/serschoollibWIN.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3145">
-          <caret line="185" column="11" lean-forward="false" selection-start-line="185" selection-start-column="11" selection-end-line="185" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../serSchoolLib3.0/serschoollibWIN.xml" />
     <entry file="file://$PROJECT_DIR$/src/Client/Librarian/Librarian.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
           <caret line="61" column="28" lean-forward="false" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
-          <folding />
+          <folding>
+            <element signature="e#0#12918#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1620#1621#0" expanded="false" />
+            <element signature="e#1649#1650#0" expanded="false" />
+            <element signature="e#1863#1864#0" expanded="false" />
+            <element signature="e#1914#1915#0" expanded="false" />
+            <element signature="e#4525#4526#0" expanded="false" />
+            <element signature="e#4551#4552#0" expanded="false" />
+            <element signature="e#4592#4593#0" expanded="false" />
+            <element signature="e#4628#4629#0" expanded="false" />
+            <element signature="e#4668#4669#0" expanded="false" />
+            <element signature="e#4728#4729#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -879,7 +957,23 @@
         <state relative-caret-position="5508">
           <caret line="339" column="60" lean-forward="false" selection-start-line="339" selection-start-column="60" selection-end-line="339" selection-end-column="60" />
           <folding>
+            <element signature="e#0#37246#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#798#1400#0" expanded="false" />
+            <element signature="e#1399#1400#0" expanded="false" />
+            <element signature="e#1796#1885#0" expanded="false" />
             <element signature="method#initComponents#0;class#appLibrarianRegistrationForm#0" expanded="false" />
+            <element signature="e#19437#19624#0" expanded="false" />
+            <element signature="e#19623#19624#0" expanded="false" />
+            <element signature="e#20324#20515#0" expanded="false" />
+            <element signature="e#20514#20515#0" expanded="false" />
+            <element signature="e#24305#24592#0" expanded="false" />
+            <element signature="e#24591#24592#0" expanded="false" />
+            <element signature="e#32018#32553#0" expanded="false" />
+            <element signature="e#32552#32553#0" expanded="false" />
+            <element signature="e#34088#34175#0" expanded="false" />
+            <element signature="e#35595#35956#0" expanded="false" />
+            <element signature="e#35955#35956#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -889,10 +983,6 @@
         <state relative-caret-position="7480">
           <caret line="440" column="50" lean-forward="true" selection-start-line="440" selection-start-column="50" selection-end-line="440" selection-end-column="50" />
           <folding>
-            <element signature="e#2042#2131#0" expanded="true" />
-            <element signature="e#141630#141631#0" expanded="true" />
-            <element signature="e#141695#141696#0" expanded="true" />
-            <element signature="method#run#0;class#155933:156705" expanded="false" />
             <element signature="method#initBackEnd#0;class#appLibrarian#0" expanded="false" />
             <element signature="method#initErrorNewBookLabels#0;class#appLibrarian#0" expanded="false" />
             <element signature="method#initErrorNewUserLabels#0;class#appLibrarian#0" expanded="false" />
@@ -940,18 +1030,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../serSchoolLib3.0/serschoollibWIN.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3145">
-          <caret line="185" column="11" lean-forward="false" selection-start-line="185" selection-start-column="11" selection-end-line="185" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../serSchoolLib3.0/serschoollibWIN.xml" />
     <entry file="file://$PROJECT_DIR$/src/Client/Librarian/Librarian.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
           <caret line="61" column="28" lean-forward="false" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
-          <folding />
+          <folding>
+            <element signature="e#0#12918#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1620#1621#0" expanded="false" />
+            <element signature="e#1649#1650#0" expanded="false" />
+            <element signature="e#1863#1864#0" expanded="false" />
+            <element signature="e#1914#1915#0" expanded="false" />
+            <element signature="e#4525#4526#0" expanded="false" />
+            <element signature="e#4551#4552#0" expanded="false" />
+            <element signature="e#4592#4593#0" expanded="false" />
+            <element signature="e#4628#4629#0" expanded="false" />
+            <element signature="e#4668#4669#0" expanded="false" />
+            <element signature="e#4728#4729#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -960,7 +1057,23 @@
         <state relative-caret-position="5559">
           <caret line="339" column="60" lean-forward="false" selection-start-line="339" selection-start-column="60" selection-end-line="339" selection-end-column="60" />
           <folding>
+            <element signature="e#0#37246#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#798#1400#0" expanded="false" />
+            <element signature="e#1399#1400#0" expanded="false" />
+            <element signature="e#1796#1885#0" expanded="false" />
             <element signature="method#initComponents#0;class#appLibrarianRegistrationForm#0" expanded="false" />
+            <element signature="e#19437#19624#0" expanded="false" />
+            <element signature="e#19623#19624#0" expanded="false" />
+            <element signature="e#20324#20515#0" expanded="false" />
+            <element signature="e#20514#20515#0" expanded="false" />
+            <element signature="e#24305#24592#0" expanded="false" />
+            <element signature="e#24591#24592#0" expanded="false" />
+            <element signature="e#32018#32553#0" expanded="false" />
+            <element signature="e#32552#32553#0" expanded="false" />
+            <element signature="e#34088#34175#0" expanded="false" />
+            <element signature="e#35595#35956#0" expanded="false" />
+            <element signature="e#35955#35956#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -970,10 +1083,6 @@
         <state relative-caret-position="7157">
           <caret line="447" column="45" lean-forward="false" selection-start-line="447" selection-start-column="45" selection-end-line="447" selection-end-column="45" />
           <folding>
-            <element signature="e#2042#2131#0" expanded="true" />
-            <element signature="e#141630#141631#0" expanded="true" />
-            <element signature="e#141695#141696#0" expanded="true" />
-            <element signature="method#run#0;class#155933:156705" expanded="false" />
             <element signature="method#initBackEnd#0;class#appLibrarian#0" expanded="false" />
             <element signature="method#initErrorNewBookLabels#0;class#appLibrarian#0" expanded="false" />
             <element signature="method#initErrorNewUserLabels#0;class#appLibrarian#0" expanded="false" />
@@ -999,13 +1108,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../serSchoolLib3.0/serschoollibWIN.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3315">
-          <caret line="195" column="9" lean-forward="true" selection-start-line="179" selection-start-column="0" selection-end-line="195" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../serSchoolLib3.0/serschoollibWIN.xml" />
     <entry file="file://$PROJECT_DIR$/applibrarianWIN.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1018,10 +1121,6 @@
         <state relative-caret-position="9894">
           <caret line="2958" column="45" lean-forward="false" selection-start-line="2958" selection-start-column="45" selection-end-line="2958" selection-end-column="45" />
           <folding>
-            <element signature="e#2042#2131#0" expanded="true" />
-            <element signature="e#141630#141631#0" expanded="true" />
-            <element signature="e#141695#141696#0" expanded="true" />
-            <element signature="method#run#0;class#155933:156705" expanded="false" />
             <element signature="method#initBackEnd#0;class#appLibrarian#0" expanded="false" />
             <element signature="method#initErrorNewBookLabels#0;class#appLibrarian#0" expanded="false" />
             <element signature="method#initErrorNewUserLabels#0;class#appLibrarian#0" expanded="false" />
@@ -1036,7 +1135,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="19" column="17" lean-forward="false" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
-          <folding />
+          <folding>
+            <element signature="e#0#12918#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1620#1621#0" expanded="false" />
+            <element signature="e#1649#1650#0" expanded="false" />
+            <element signature="e#1863#1864#0" expanded="false" />
+            <element signature="e#1914#1915#0" expanded="false" />
+            <element signature="e#4525#4526#0" expanded="false" />
+            <element signature="e#4551#4552#0" expanded="false" />
+            <element signature="e#4592#4593#0" expanded="false" />
+            <element signature="e#4628#4629#0" expanded="false" />
+            <element signature="e#4668#4669#0" expanded="false" />
+            <element signature="e#4728#4729#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1045,7 +1157,23 @@
         <state relative-caret-position="5508">
           <caret line="339" column="60" lean-forward="false" selection-start-line="339" selection-start-column="60" selection-end-line="339" selection-end-column="60" />
           <folding>
+            <element signature="e#0#37246#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#798#1400#0" expanded="false" />
+            <element signature="e#1399#1400#0" expanded="false" />
+            <element signature="e#1796#1885#0" expanded="false" />
             <element signature="method#initComponents#0;class#appLibrarianRegistrationForm#0" expanded="false" />
+            <element signature="e#19437#19624#0" expanded="false" />
+            <element signature="e#19623#19624#0" expanded="false" />
+            <element signature="e#20324#20515#0" expanded="false" />
+            <element signature="e#20514#20515#0" expanded="false" />
+            <element signature="e#24305#24592#0" expanded="false" />
+            <element signature="e#24591#24592#0" expanded="false" />
+            <element signature="e#32018#32553#0" expanded="false" />
+            <element signature="e#32552#32553#0" expanded="false" />
+            <element signature="e#34088#34175#0" expanded="false" />
+            <element signature="e#35595#35956#0" expanded="false" />
+            <element signature="e#35955#35956#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1058,13 +1186,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../serSchoolLib3.0/serschoollibWIN.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3145">
-          <caret line="185" column="11" lean-forward="false" selection-start-line="185" selection-start-column="11" selection-end-line="185" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../serSchoolLib3.0/serschoollibWIN.xml" />
     <entry file="file://$PROJECT_DIR$/appLibrarian3.0.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1101,14 +1223,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Common/UtenteLibrarian.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="18" column="61" lean-forward="false" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Server/ServerInterface.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1116,17 +1230,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Common/UtenteReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="17" column="53" lean-forward="false" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Common/Utente.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
+        <state relative-caret-position="616">
           <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
         </state>
@@ -1134,75 +1240,143 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Common/Libro.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
+        <state relative-caret-position="220">
           <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#0#3384#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2519#2520#0" expanded="false" />
+            <element signature="e#2553#2554#0" expanded="false" />
+            <element signature="e#2591#2592#0" expanded="false" />
+            <element signature="e#2619#2620#0" expanded="false" />
+            <element signature="e#2650#2651#0" expanded="false" />
+            <element signature="e#2677#2678#0" expanded="false" />
+            <element signature="e#2710#2711#0" expanded="false" />
+            <element signature="e#2739#2740#0" expanded="false" />
+            <element signature="e#2772#2773#0" expanded="false" />
+            <element signature="e#2801#2802#0" expanded="false" />
+            <element signature="e#2840#2841#0" expanded="false" />
+            <element signature="e#2876#2877#0" expanded="false" />
+            <element signature="e#2911#2912#0" expanded="false" />
+            <element signature="e#2948#2949#0" expanded="false" />
+            <element signature="e#3157#3158#0" expanded="false" />
+            <element signature="e#3189#3190#0" expanded="false" />
+            <element signature="e#3222#3223#0" expanded="false" />
+            <element signature="e#3251#3252#0" expanded="false" />
+            <element signature="e#3283#3284#0" expanded="false" />
+            <element signature="e#3314#3315#0" expanded="false" />
+            <element signature="e#3348#3349#0" expanded="false" />
+            <element signature="e#3379#3380#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Checker/BookChecker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3150">
+        <state relative-caret-position="3300">
           <caret line="154" column="9" lean-forward="false" selection-start-line="154" selection-start-column="9" selection-end-line="154" selection-end-column="9" />
           <folding>
-            <marker date="1508148166000" expanded="true" signature="2978:3236" ph="{...}" />
+            <element signature="e#0#3240#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Checker/Checker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
+        <state relative-caret-position="264">
           <caret line="16" column="40" lean-forward="false" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
           <folding>
-            <marker date="1508148166000" expanded="true" signature="474:507" ph="{...}" />
+            <element signature="e#0#511#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Checker/UserChecker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
+        <state relative-caret-position="748">
           <caret line="38" column="23" lean-forward="false" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
-          <folding />
+          <folding>
+            <element signature="e#0#4033#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Client/Librarian/Librarian.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
+        <state relative-caret-position="462">
           <caret line="38" column="33" lean-forward="false" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
-          <folding />
+          <folding>
+            <element signature="e#0#12918#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1620#1621#0" expanded="false" />
+            <element signature="e#1649#1650#0" expanded="false" />
+            <element signature="e#1863#1864#0" expanded="false" />
+            <element signature="e#1914#1915#0" expanded="false" />
+            <element signature="e#4525#4526#0" expanded="false" />
+            <element signature="e#4551#4552#0" expanded="false" />
+            <element signature="e#4592#4593#0" expanded="false" />
+            <element signature="e#4628#4629#0" expanded="false" />
+            <element signature="e#4668#4669#0" expanded="false" />
+            <element signature="e#4728#4729#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Client/Librarian/appLibrarianLoginForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="761" column="11" lean-forward="true" selection-start-line="761" selection-start-column="11" selection-end-line="761" selection-end-column="11" />
+        <state relative-caret-position="6160">
+          <caret line="761" column="11" lean-forward="false" selection-start-line="761" selection-start-column="11" selection-end-line="761" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Client/Librarian/appLibrarianRegistrationForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2271">
+        <state relative-caret-position="3608">
           <caret line="510" column="82" lean-forward="false" selection-start-line="510" selection-start-column="82" selection-end-line="510" selection-end-column="82" />
           <folding>
+            <element signature="e#0#37246#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#798#1400#0" expanded="false" />
+            <element signature="e#1399#1400#0" expanded="false" />
+            <element signature="e#1796#1885#0" expanded="false" />
             <element signature="method#initComponents#0;class#appLibrarianRegistrationForm#0" expanded="false" />
+            <element signature="e#19437#19624#0" expanded="false" />
+            <element signature="e#19623#19624#0" expanded="false" />
+            <element signature="e#20324#20515#0" expanded="false" />
+            <element signature="e#20514#20515#0" expanded="false" />
+            <element signature="e#24305#24592#0" expanded="false" />
+            <element signature="e#24591#24592#0" expanded="false" />
+            <element signature="e#32018#32553#0" expanded="false" />
+            <element signature="e#32552#32553#0" expanded="false" />
+            <element signature="e#34088#34175#0" expanded="false" />
+            <element signature="e#35595#35956#0" expanded="false" />
+            <element signature="e#35955#35956#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Common/UtenteLibrarian.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="18" column="61" lean-forward="false" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Common/UtenteReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Client/Librarian/appLibrarian.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="3925" column="113" lean-forward="false" selection-start-line="3925" selection-start-column="113" selection-end-line="3925" selection-end-column="113" />
+        <state relative-caret-position="205">
+          <caret line="700" column="58" lean-forward="false" selection-start-line="700" selection-start-column="58" selection-end-line="700" selection-end-column="58" />
           <folding>
-            <element signature="e#2042#2131#0" expanded="true" />
-            <element signature="e#141630#141631#0" expanded="true" />
-            <element signature="e#141695#141696#0" expanded="true" />
-            <element signature="method#run#0;class#155933:156705" expanded="false" />
             <element signature="method#initBackEnd#0;class#appLibrarian#0" expanded="false" />
             <element signature="method#initErrorNewBookLabels#0;class#appLibrarian#0" expanded="false" />
             <element signature="method#initErrorNewUserLabels#0;class#appLibrarian#0" expanded="false" />
