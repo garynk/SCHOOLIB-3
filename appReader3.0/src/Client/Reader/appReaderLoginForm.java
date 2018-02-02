@@ -26,23 +26,23 @@ import java.util.logging.Logger;
 public class appReaderLoginForm extends javax.swing.JFrame {
 
     public static Reader reader;
-    public static Font f = initFont();
 
     /**
      * Creates new form ReaderForm
      */
     public appReaderLoginForm() {
 
-        try {
 
+        try {
             reader = new Reader();
 
         } catch (RemoteException ex) {
             Logger.getLogger(appReaderLoginForm.class.getName()).log(Level.SEVERE, null, ex);
         }
-
+        initFont();
         initComponents();
         initLabels();
+
 
         reader.SendCommunicationServer("[READER] client nuovo aperto");
         
@@ -478,28 +478,15 @@ public class appReaderLoginForm extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private static Font initFont()
+    private static void initFont()
     {
-        Font f = null;
-        
-        try {
-            FileInputStream fis = null;
-            
-            try {
-                fis = new FileInputStream(new File(ReaderStyle.FONT_DIR));
-            } catch (FileNotFoundException ex) {
-                Logger.getLogger(appReaderLoginForm.class.getName()).log(Level.SEVERE, null, ex);
-            }
-            
-            f = Font.createFont(Font.TRUETYPE_FONT, fis).deriveFont(Font.PLAIN, 13);  
-            
-        } catch (FontFormatException ex) {
-            Logger.getLogger(appReaderLoginForm.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(appReaderLoginForm.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-        return f;
+        File plainPath = new File("Font/avnext.ttf");
+        File boldPath = new File("Font/avnextbld.ttf");
+        File italicPath = new File("Font/avnextit.ttf");
+        FontConfig FontSettingSetter = new FontConfig(plainPath,boldPath,italicPath);
+        FontSettingSetter.setupPlain();
+        FontSettingSetter.setupBold();
+        FontSettingSetter.setupItalic();
         
     }
     
