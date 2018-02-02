@@ -63,7 +63,7 @@ public class Utente implements Serializable {
         return cognome;
     }
 
-    public String GetUserID() {
+    public String getUserID() {
         return codice_fiscale;
     }
 

@@ -5,7 +5,7 @@
     <Property name="defaultCloseOperation" type="int" value="3"/>
     <Property name="title" type="java.lang.String" value="Librarian Registration"/>
     <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-      <Connection code="Client.Reader.ReaderStyle.BACKGROUD_DEFAULT_1" type="code"/>
+      <Connection code="LibrarianStyle.BACKGROUD_DEFAULT_1" type="code"/>
     </Property>
     <Property name="resizable" type="boolean" value="false"/>
   </Properties>
@@ -222,7 +222,7 @@
             <Component class="javax.swing.JLabel" name="nomeLabel">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="Client.Reader.ReaderStyle.LABEL_FONT_2" type="code"/>
+                  <Connection code="LibrarianStyle.LABEL_FONT_2" type="code"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Nome: "/>
               </Properties>
@@ -251,7 +251,7 @@
             <Component class="javax.swing.JLabel" name="cognomeLabel">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="Client.Reader.ReaderStyle.LABEL_FONT_2" type="code"/>
+                  <Connection code="LibrarianStyle.LABEL_FONT_2" type="code"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Cognome: "/>
               </Properties>
@@ -280,7 +280,7 @@
             <Component class="javax.swing.JLabel" name="emailLabel">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="Client.Reader.ReaderStyle.LABEL_FONT_2" type="code"/>
+                  <Connection code="LibrarianStyle.LABEL_FONT_2" type="code"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Email: "/>
               </Properties>
@@ -309,7 +309,7 @@
             <Component class="javax.swing.JLabel" name="codicefiscaleLabel">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="Client.Reader.ReaderStyle.LABEL_FONT_2" type="code"/>
+                  <Connection code="LibrarianStyle.LABEL_FONT_2" type="code"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Codice fiscale: "/>
               </Properties>
@@ -338,7 +338,7 @@
             <Component class="javax.swing.JLabel" name="telephoneLabel">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="Client.Reader.ReaderStyle.LABEL_FONT_2" type="code"/>
+                  <Connection code="LibrarianStyle.LABEL_FONT_2" type="code"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Numero di Telefono: "/>
               </Properties>
@@ -367,7 +367,7 @@
             <Component class="javax.swing.JLabel" name="pswLabel">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="Client.Reader.ReaderStyle.LABEL_FONT_2" type="code"/>
+                  <Connection code="LibrarianStyle.LABEL_FONT_2" type="code"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Password: "/>
               </Properties>
@@ -399,10 +399,10 @@
             <Component class="javax.swing.JLabel" name="ErrorNomeLabel">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="Client.Reader.ReaderStyle.EXCEPTION_FONT" type="code"/>
+                  <Connection code="LibrarianStyle.EXCEPTION_FONT" type="code"/>
                 </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="Client.Reader.ReaderStyle.EXCEPTION_COLOR" type="code"/>
+                  <Connection code="LibrarianStyle.EXCEPTION_COLOR" type="code"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
@@ -415,10 +415,10 @@
             <Component class="javax.swing.JLabel" name="ErrorCognomeLabel">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="Client.Reader.ReaderStyle.EXCEPTION_FONT" type="code"/>
+                  <Connection code="LibrarianStyle.EXCEPTION_FONT" type="code"/>
                 </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="Client.Reader.ReaderStyle.EXCEPTION_COLOR" type="code"/>
+                  <Connection code="LibrarianStyle.EXCEPTION_COLOR" type="code"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
@@ -431,10 +431,10 @@
             <Component class="javax.swing.JLabel" name="ErrorCodiceFiscaleLabel">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="Client.Reader.ReaderStyle.EXCEPTION_FONT" type="code"/>
+                  <Connection code="LibrarianStyle.EXCEPTION_FONT" type="code"/>
                 </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="Client.Reader.ReaderStyle.EXCEPTION_COLOR" type="code"/>
+                  <Connection code="LibrarianStyle.EXCEPTION_COLOR" type="code"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
@@ -447,10 +447,10 @@
             <Component class="javax.swing.JLabel" name="ErrorEmailLabel">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="Client.Reader.ReaderStyle.EXCEPTION_FONT" type="code"/>
+                  <Connection code="LibrarianStyle.EXCEPTION_FONT" type="code"/>
                 </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="Client.Reader.ReaderStyle.EXCEPTION_COLOR" type="code"/>
+                  <Connection code="LibrarianStyle.EXCEPTION_COLOR" type="code"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
@@ -463,10 +463,10 @@
             <Component class="javax.swing.JLabel" name="ErrorNumTelLabel">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="Client.Reader.ReaderStyle.EXCEPTION_FONT" type="code"/>
+                  <Connection code="LibrarianStyle.EXCEPTION_FONT" type="code"/>
                 </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="Client.Reader.ReaderStyle.EXCEPTION_COLOR" type="code"/>
+                  <Connection code="LibrarianStyle.EXCEPTION_COLOR" type="code"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
@@ -479,10 +479,10 @@
             <Component class="javax.swing.JLabel" name="ErrorPswLabel">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="Client.Reader.ReaderStyle.EXCEPTION_FONT" type="code"/>
+                  <Connection code="LibrarianStyle.EXCEPTION_FONT" type="code"/>
                 </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="Client.Reader.ReaderStyle.EXCEPTION_COLOR" type="code"/>
+                  <Connection code="LibrarianStyle.EXCEPTION_COLOR" type="code"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
@@ -495,10 +495,10 @@
             <Component class="javax.swing.JLabel" name="SuccessLabel">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="Client.Reader.ReaderStyle.SUCCESS_LABEL_FONT" type="code"/>
+                  <Connection code="LibrarianStyle.SUCCESS_LABEL_FONT" type="code"/>
                 </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="Client.Reader.ReaderStyle.SUCCESS_COLOR" type="code"/>
+                  <Connection code="LibrarianStyle.SUCCESS_COLOR" type="code"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
@@ -513,7 +513,7 @@
         <Component class="javax.swing.JLabel" name="RegistrationH1">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="Client.Reader.ReaderStyle.BIG_TITLE_FONT" type="code"/>
+              <Connection code="LibrarianStyle.BIG_TITLE_FONT" type="code"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="Librarian Registration"/>
@@ -527,7 +527,7 @@
               <Connection code="LibrarianStyle.BUTTON_DEFAULT_COLOR" type="code"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="Client.Reader.ReaderStyle.BUTTON_FONT" type="code"/>
+              <Connection code="LibrarianStyle.BUTTON_FONT" type="code"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="33" green="33" red="33" type="rgb"/>
@@ -559,7 +559,7 @@
               <Connection code="LibrarianStyle.BUTTON_DEFAULT_COLOR" type="code"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="Client.Reader.ReaderStyle.BUTTON_FONT" type="code"/>
+              <Connection code="LibrarianStyle.BUTTON_FONT" type="code"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="33" green="33" red="33" type="rgb"/>

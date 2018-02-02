@@ -77,8 +77,6 @@ public class appLibrarianLoginForm extends javax.swing.JFrame {
         passForgotLabel1 = new javax.swing.JLabel();
         RegistrationButton = new javax.swing.JButton();
         JoinInButton = new javax.swing.JButton();
-        CommunicationPanel = new javax.swing.JPanel();
-        CommunicationLabel = new javax.swing.JLabel();
 
         ConfirmationCodeDialog.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         ConfirmationCodeDialog.setTitle("Account Activation");
@@ -432,29 +430,6 @@ public class appLibrarianLoginForm extends javax.swing.JFrame {
         PasswordTextField.getAccessibleContext().setAccessibleName("passwordTextField");
         UsernameTextField.getAccessibleContext().setAccessibleName("usernameTextField");
 
-        CommunicationPanel.setBackground(Layer1.getBackground());
-
-        CommunicationLabel.setBackground(Layer1.getBackground());
-        CommunicationLabel.setFont(LibrarianStyle.OUTPUT_DEFAULT_FONT);
-        CommunicationLabel.setText("communication to user field");
-
-        javax.swing.GroupLayout CommunicationPanelLayout = new javax.swing.GroupLayout(CommunicationPanel);
-        CommunicationPanel.setLayout(CommunicationPanelLayout);
-        CommunicationPanelLayout.setHorizontalGroup(
-            CommunicationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CommunicationPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(CommunicationLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        CommunicationPanelLayout.setVerticalGroup(
-            CommunicationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(CommunicationPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(CommunicationLabel)
-                .addContainerGap())
-        );
-
         javax.swing.GroupLayout Layer1Layout = new javax.swing.GroupLayout(Layer1);
         Layer1.setLayout(Layer1Layout);
         Layer1Layout.setHorizontalGroup(
@@ -466,9 +441,7 @@ public class appLibrarianLoginForm extends javax.swing.JFrame {
                         .addComponent(LoginLibH1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(Layer1Layout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addGroup(Layer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Layer2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CommunicationPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addComponent(Layer2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(40, Short.MAX_VALUE))
         );
         Layer1Layout.setVerticalGroup(
@@ -478,9 +451,7 @@ public class appLibrarianLoginForm extends javax.swing.JFrame {
                 .addComponent(LoginLibH1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(Layer2, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(CommunicationPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -491,7 +462,9 @@ public class appLibrarianLoginForm extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Layer1, javax.swing.GroupLayout.DEFAULT_SIZE, 435, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(Layer1, javax.swing.GroupLayout.DEFAULT_SIZE, 411, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         getAccessibleContext().setAccessibleName("appLibrarianLoginForm");
@@ -542,7 +515,6 @@ public class appLibrarianLoginForm extends javax.swing.JFrame {
         MatteBorder exceptionborder = new MatteBorder(0, 0, 1, 0, LibrarianStyle.EXCEPTION_COLOR);
 
         int controller = librarian.Login_Confirmation(UsernameTextField.getText(), PasswordTextField.getPassword(), librarian.GetDefaultType());
-        UpdateLabel(CommunicationLabel,LibrarianStyle.EXCEPTION_COLOR,"verifico campi log in");
         
         
         if (controller != 0) {
@@ -559,8 +531,7 @@ public class appLibrarianLoginForm extends javax.swing.JFrame {
 
                 UpdateLabel(LoginErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Errore: Password Errata");
             }
-            
-            UpdateLabel(CommunicationLabel,LibrarianStyle.EXCEPTION_COLOR,"Errore log in");
+
             
         } else {
             return true;
@@ -763,8 +734,6 @@ public class appLibrarianLoginForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel CommunicationLabel;
-    private javax.swing.JPanel CommunicationPanel;
     private javax.swing.JPanel ConfirmDiagLayer1;
     private javax.swing.JDialog ConfirmationCodeDialog;
     private javax.swing.JTextField ConfirmationCodeField;

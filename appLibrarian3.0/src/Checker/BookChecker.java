@@ -110,25 +110,6 @@ public class BookChecker {
         return 0;
     }
 
-    public int checkCategoria(String categoria) {
-
-        if (categoria.isEmpty()) {
-            return Checker.EMPTY_CODE;
-        }
-
-        for (int i = 0; i < categoria.length(); i++) {
-            if (Character.isDigit(categoria.charAt(i))) {
-                return 2;
-            }
-        }
-
-        if (!Libro.Categorie_List.contains(categoria.toLowerCase())) {
-            return 3;
-        }
-
-        return 0;
-    }
-
     public int checkLingua(String lingua) {
         if (lingua.isEmpty()) {
             return Checker.EMPTY_CODE;

@@ -28,15 +28,15 @@ public class ReaderStyle {
     public static final java.awt.Color SUCCESS_COLOR = new java.awt.Color(0, 153, 0);
     public static final java.awt.Color DEFAULT_BORDER_COLOR = new java.awt.Color(0, 0, 0);
 
-    public static final java.awt.Font BIG_TITLE_FONT = new java.awt.Font(FONT_NAME_ITALIC, Font.ITALIC, 30);
-    public static final java.awt.Font MEDIUM_TITLE_FONT = new java.awt.Font(FONT_NAME_ITALIC, Font.ITALIC, 18);
+    public static final java.awt.Font BIG_TITLE_FONT = new java.awt.Font(FONT_NAME_ITALIC, Font.ITALIC, 37);
+    public static final java.awt.Font MEDIUM_TITLE_FONT = new java.awt.Font(FONT_NAME_ITALIC, Font.ITALIC, 24);
     public static final java.awt.Font LABEL_FONT = new java.awt.Font(FONT_NAME_BOLD, Font.BOLD, 15);
-    public static final java.awt.Font LABEL_FONT_2 = new java.awt.Font(FONT_NAME_PLAIN, Font.PLAIN, 12);
-    public static final java.awt.Font LABEL_FONT_3 = new java.awt.Font(FONT_NAME_PLAIN, Font.PLAIN, 13);
+    public static final java.awt.Font LABEL_FONT_2 = new java.awt.Font(FONT_NAME_PLAIN, Font.PLAIN, 13);
+    public static final java.awt.Font LABEL_FONT_3 = new java.awt.Font(FONT_NAME_PLAIN, Font.PLAIN, 14);
     public static final java.awt.Font DISCORSIVE_LABEL_FONT = new java.awt.Font(FONT_NAME_PLAIN, Font.PLAIN, 13);
-    public static final java.awt.Font BUTTON_FONT = new java.awt.Font(FONT_NAME_BOLD, Font.BOLD, 11);
+    public static final java.awt.Font BUTTON_FONT = new java.awt.Font(FONT_NAME_BOLD, Font.BOLD, 13);
     public static final java.awt.Font EXCEPTION_FONT = new java.awt.Font(FONT_NAME_BOLD, Font.BOLD, 12);
-    public static final java.awt.Font SUCCESS_LABEL_FONT = new java.awt.Font(FONT_NAME_BOLD, Font.BOLD, 14);
+    public static final java.awt.Font SUCCESS_LABEL_FONT = new java.awt.Font(FONT_NAME_BOLD, Font.BOLD, 13);
 
     public static final MatteBorder DEFAULT_MATTE_REGISTRATION = new MatteBorder(0, 0, 1, 0, DEFAULT_BORDER_COLOR);
 

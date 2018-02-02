@@ -20,6 +20,7 @@ import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.rmi.RemoteException;
@@ -37,7 +38,7 @@ import static javax.swing.JOptionPane.YES_NO_OPTION;
 public class appLibrarian extends javax.swing.JFrame {
 
     private static final int MAX_ROW_PER_PAGE = 10;
-    private static final int TOTAL_BOOK_FIELD = 9;
+    private static final int TOTAL_BOOK_FIELD = 8;
 
     private Vector<Vector<Vector<Object>>> page_vector;
     private Vector<String> Columns;
@@ -127,7 +128,6 @@ public class appLibrarian extends javax.swing.JFrame {
         staticLabelRistampa = new javax.swing.JLabel();
         RistampaTextField = new javax.swing.JTextField();
         staticLabelCategoria = new javax.swing.JLabel();
-        CategoriaTextField = new javax.swing.JTextField();
         staticLabelLingua = new javax.swing.JLabel();
         LinguaTextField = new javax.swing.JTextField();
         staticLabelScaffale = new javax.swing.JLabel();
@@ -142,9 +142,11 @@ public class appLibrarian extends javax.swing.JFrame {
         CategoriaError = new javax.swing.JLabel();
         LinguaError = new javax.swing.JLabel();
         ScaffaleError = new javax.swing.JLabel();
-        AddBookButton = new javax.swing.JButton();
+        CategorieComboBox = new javax.swing.JComboBox<>();
+        newBookLayer3 = new javax.swing.JPanel();
         AnnullaNewBookButton = new javax.swing.JButton();
         ReporterNewBookLabel = new javax.swing.JLabel();
+        AddBookButton = new javax.swing.JButton();
         newUserDialog = new javax.swing.JDialog(this);
         newUserPanel1 = new javax.swing.JPanel();
         newUserPanel2 = new javax.swing.JPanel();
@@ -286,7 +288,7 @@ public class appLibrarian extends javax.swing.JFrame {
 
         DynamicLabelID.setBackground(ModifyLayer1.getBackground());
         DynamicLabelID.setFont(UserLockedInfo.getFont());
-        DynamicLabelID.setText(local_librarian.getUser().GetUserID());
+        DynamicLabelID.setText(local_librarian.getUser().getUserID());
 
         staticLabelNome.setBackground(ModifyLayer1.getBackground());
         staticLabelNome.setFont(UserLockedInfo.getFont());
@@ -663,10 +665,11 @@ public class appLibrarian extends javax.swing.JFrame {
         addNewBookDialog.setAlwaysOnTop(true);
         addNewBookDialog.setBackground(LibrarianStyle.BACKGROUD_DEFAULT_1);
         addNewBookDialog.setFocusable(false);
-        addNewBookDialog.setMinimumSize(new java.awt.Dimension(428, 615));
+        addNewBookDialog.setMinimumSize(new java.awt.Dimension(428, 670));
         addNewBookDialog.setModalExclusionType(java.awt.Dialog.ModalExclusionType.APPLICATION_EXCLUDE);
+        addNewBookDialog.setPreferredSize(new java.awt.Dimension(428, 670));
         addNewBookDialog.setResizable(false);
-        addNewBookDialog.setSize(new java.awt.Dimension(428, 615));
+        addNewBookDialog.setSize(new java.awt.Dimension(428, 670));
 
         newBookLayer1.setBackground(addNewBookDialog.getBackground());
         newBookLayer1.setFont(LibrarianStyle.LABEL_FONT_2);
@@ -732,16 +735,9 @@ public class appLibrarian extends javax.swing.JFrame {
         RistampaTextField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         RistampaTextField.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(102, 102, 102)));
 
-
         staticLabelCategoria.setBackground(ModifyLayer1.getBackground());
         staticLabelCategoria.setFont(UserLockedInfo.getFont());
         staticLabelCategoria.setText("Categoria: ");
-
-        CategoriaTextField.setBackground(newBookLayer2.getBackground());
-        CategoriaTextField.setFont(LibrarianStyle.LABEL_FONT_3);
-        CategoriaTextField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        CategoriaTextField.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(102, 102, 102)));
-
 
         staticLabelLingua.setBackground(ModifyLayer1.getBackground());
         staticLabelLingua.setFont(UserLockedInfo.getFont());
@@ -751,7 +747,6 @@ public class appLibrarian extends javax.swing.JFrame {
         LinguaTextField.setFont(LibrarianStyle.LABEL_FONT_3);
         LinguaTextField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         LinguaTextField.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(102, 102, 102)));
-
 
         staticLabelScaffale.setBackground(ModifyLayer1.getBackground());
         staticLabelScaffale.setFont(UserLockedInfo.getFont());
@@ -811,6 +806,8 @@ public class appLibrarian extends javax.swing.JFrame {
         ScaffaleError.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ScaffaleError.setText("•");
 
+        CategorieComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(Libro.Categorie_List));
+
         javax.swing.GroupLayout newBookLayer2Layout = new javax.swing.GroupLayout(newBookLayer2);
         newBookLayer2.setLayout(newBookLayer2Layout);
         newBookLayer2Layout.setHorizontalGroup(
@@ -844,18 +841,16 @@ public class appLibrarian extends javax.swing.JFrame {
                             .addComponent(staticLabelAutore, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(staticLabelEditrice, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(newBookLayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(newBookLayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(ScaffaleTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(LinguaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(CategoriaTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(RistampaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(PubblicazTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(EditriceTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, newBookLayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(TitoloTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(CodeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(AutoreTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(newBookLayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(ScaffaleTextField)
+                            .addComponent(LinguaTextField)
+                            .addComponent(RistampaTextField)
+                            .addComponent(PubblicazTextField)
+                            .addComponent(EditriceTextField)
+                            .addComponent(TitoloTextField)
+                            .addComponent(CodeTextField)
+                            .addComponent(AutoreTextField)
+                            .addComponent(CategorieComboBox, 0, 138, Short.MAX_VALUE))
                         .addGap(67, 67, 67))))
         );
         newBookLayer2Layout.setVerticalGroup(
@@ -893,9 +888,9 @@ public class appLibrarian extends javax.swing.JFrame {
                     .addComponent(RistampaError, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(newBookLayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(staticLabelCategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CategoriaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CategoriaError, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(staticLabelCategoria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(CategoriaError, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(CategorieComboBox, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(newBookLayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(staticLabelLingua, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -906,21 +901,12 @@ public class appLibrarian extends javax.swing.JFrame {
                     .addComponent(staticLabelScaffale, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ScaffaleTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ScaffaleError, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
+                .addGap(30, 30, 30)
                 .addComponent(optionalFieldsLabel)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
-        AddBookButton.setBackground(LibrarianStyle.BUTTON_DEFAULT_COLOR);
-        AddBookButton.setFont(LibrarianStyle.BUTTON_FONT);
-        AddBookButton.setText("Aggiungi");
-        AddBookButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        AddBookButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        AddBookButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AddBookButtonActionPerformed(evt);
-            }
-        });
+        newBookLayer3.setBackground(LibrarianStyle.BACKGROUD_DEFAULT_1);
 
         AnnullaNewBookButton.setBackground(LibrarianStyle.BUTTON_DEFAULT_COLOR);
         AnnullaNewBookButton.setFont(LibrarianStyle.BUTTON_FONT);
@@ -938,45 +924,67 @@ public class appLibrarian extends javax.swing.JFrame {
         ReporterNewBookLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ReporterNewBookLabel.setText("reporterrrrrrrrrrrrr");
 
+        AddBookButton.setBackground(LibrarianStyle.BUTTON_DEFAULT_COLOR);
+        AddBookButton.setFont(LibrarianStyle.BUTTON_FONT);
+        AddBookButton.setText("Aggiungi");
+        AddBookButton.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        AddBookButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        AddBookButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AddBookButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout newBookLayer3Layout = new javax.swing.GroupLayout(newBookLayer3);
+        newBookLayer3.setLayout(newBookLayer3Layout);
+        newBookLayer3Layout.setHorizontalGroup(
+            newBookLayer3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, newBookLayer3Layout.createSequentialGroup()
+                .addContainerGap(41, Short.MAX_VALUE)
+                .addGroup(newBookLayer3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(ReporterNewBookLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(newBookLayer3Layout.createSequentialGroup()
+                        .addComponent(AnnullaNewBookButton, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(83, 83, 83)
+                        .addComponent(AddBookButton, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(72, 72, 72))
+        );
+        newBookLayer3Layout.setVerticalGroup(
+            newBookLayer3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, newBookLayer3Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(ReporterNewBookLabel)
+                .addGap(30, 30, 30)
+                .addGroup(newBookLayer3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(AddBookButton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AnnullaNewBookButton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout newBookLayer1Layout = new javax.swing.GroupLayout(newBookLayer1);
         newBookLayer1.setLayout(newBookLayer1Layout);
         newBookLayer1Layout.setHorizontalGroup(
             newBookLayer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(newBookLayer2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(newBookLayer1Layout.createSequentialGroup()
-                .addGroup(newBookLayer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(newBookLayer1Layout.createSequentialGroup()
-                        .addGroup(newBookLayer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(newBookLayer1Layout.createSequentialGroup()
-                                .addGap(26, 26, 26)
-                                .addComponent(ModifyTitle1, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(newBookLayer1Layout.createSequentialGroup()
-                                .addGap(67, 67, 67)
-                                .addGroup(newBookLayer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(ReporterNewBookLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addGroup(newBookLayer1Layout.createSequentialGroup()
-                                        .addComponent(AnnullaNewBookButton, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(83, 83, 83)
-                                        .addComponent(AddBookButton, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(0, 63, Short.MAX_VALUE))
-                    .addGroup(newBookLayer1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(newBookLayer2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap())
+                .addGap(26, 26, 26)
+                .addComponent(ModifyTitle1, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, newBookLayer1Layout.createSequentialGroup()
+                .addContainerGap(31, Short.MAX_VALUE)
+                .addComponent(newBookLayer3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18))
         );
         newBookLayer1Layout.setVerticalGroup(
             newBookLayer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(newBookLayer1Layout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addComponent(ModifyTitle1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(26, 26, 26)
                 .addComponent(newBookLayer2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38)
-                .addComponent(ReporterNewBookLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
-                .addGroup(newBookLayer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(AddBookButton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(AnnullaNewBookButton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(25, 25, 25))
+                .addGap(18, 18, 18)
+                .addComponent(newBookLayer3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(49, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout addNewBookDialogLayout = new javax.swing.GroupLayout(addNewBookDialog.getContentPane());
@@ -1279,7 +1287,6 @@ public class appLibrarian extends javax.swing.JFrame {
         StatisticheDialog.setBackground(LibrarianStyle.BACKGROUD_DEFAULT_1);
         StatisticheDialog.setMinimumSize(new java.awt.Dimension(988, 504));
         StatisticheDialog.setName("AppLibrarian-Statistiche"); // NOI18N
-        StatisticheDialog.setPreferredSize(new java.awt.Dimension(988, 504));
         StatisticheDialog.setResizable(false);
 
         StatisticheLayer1.setBackground(LibrarianStyle.BACKGROUD_DEFAULT_1);
@@ -1422,11 +1429,6 @@ public class appLibrarian extends javax.swing.JFrame {
         StatisticheUserIDTextField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         StatisticheUserIDTextField.setText("readerID");
         StatisticheUserIDTextField.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
-        StatisticheUserIDTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                StatisticheUserIDTextFieldActionPerformed(evt);
-            }
-        });
 
         statiticheUserPrestitiButton.setBackground(LibrarianStyle.BUTTON_DEFAULT_COLOR);
         statiticheUserPrestitiButton.setFont(LibrarianStyle.BUTTON_FONT);
@@ -1530,7 +1532,6 @@ public class appLibrarian extends javax.swing.JFrame {
         statsPreviousPageTableButton.setBackground(LibrarianStyle.BUTTON_DEFAULT_COLOR);
         statsPreviousPageTableButton.setFont(LibrarianStyle.BUTTON_FONT);
         statsPreviousPageTableButton.setText("< prev");
-
 
         statsNextPageTableButton.setBackground(LibrarianStyle.BUTTON_DEFAULT_COLOR);
         statsNextPageTableButton.setFont(LibrarianStyle.BUTTON_FONT);
@@ -1649,7 +1650,7 @@ public class appLibrarian extends javax.swing.JFrame {
         CodiceLabel.setText("Codice: ");
 
         DynamicCodice.setFont(UserContextPanel.getFont());
-        DynamicCodice.setText(local_librarian.getUser().GetUserID());
+        DynamicCodice.setText(local_librarian.getUser().getUserID());
 
         NomeLabel.setFont(UserContextPanel.getFont());
         NomeLabel.setText("Nome:");
@@ -1943,11 +1944,6 @@ public class appLibrarian extends javax.swing.JFrame {
         prestitoTextField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         prestitoTextField.setText("readerID");
         prestitoTextField.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
-        prestitoTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                prestitoTextFieldActionPerformed(evt);
-            }
-        });
 
         prestitoErrorLabel.setBackground(newBookLayer2.getBackground());
         prestitoErrorLabel.setFont(LibrarianStyle.POINT_CUSTOM_FONT);
@@ -2191,7 +2187,6 @@ public class appLibrarian extends javax.swing.JFrame {
 
         SearchTextField.getAccessibleContext().setAccessibleName("SearchTextField");
 
-
         javax.swing.GroupLayout appMainPanelLayout = new javax.swing.GroupLayout(appMainPanel);
         appMainPanel.setLayout(appMainPanelLayout);
         appMainPanelLayout.setHorizontalGroup(
@@ -2224,8 +2219,6 @@ public class appLibrarian extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(NextPageButton)))))
                         .addContainerGap(22, Short.MAX_VALUE))))
-            .addGroup(appMainPanelLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE))
         );
         appMainPanelLayout.setVerticalGroup(
             appMainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2256,8 +2249,7 @@ public class appLibrarian extends javax.swing.JFrame {
                 .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(OptionsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                )
+                .addGap(60, 60, 60))
         );
 
         UserContextPanel.getAccessibleContext().setAccessibleName("UserContextPanel");
@@ -2277,18 +2269,18 @@ public class appLibrarian extends javax.swing.JFrame {
             .addComponent(appMainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGap(0, 388, Short.MAX_VALUE)
                     .addComponent(EliminaOption, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 389, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(appMainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(appMainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 677, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 303, Short.MAX_VALUE)
+                    .addGap(0, 289, Short.MAX_VALUE)
                     .addComponent(EliminaOption, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 313, Short.MAX_VALUE)))
+                    .addGap(0, 298, Short.MAX_VALUE)))
         );
 
         EliminaOption.getAccessibleContext().setAccessibleName("");
@@ -2351,6 +2343,8 @@ public class appLibrarian extends javax.swing.JFrame {
         SetAddNewUserDialog();
         
         EncapsulateRadioButton();
+
+        SetNewBookCategoriesComboBox();
 
         EliminaButton.setEnabled(false);
         EliminaOption.setVisible(false);
@@ -2547,6 +2541,11 @@ public class appLibrarian extends javax.swing.JFrame {
 
         });
 
+    }
+
+    private void SetNewBookCategoriesComboBox()
+    {
+        CategorieComboBox.setBackground(LibrarianStyle.BACKGROUD_DEFAULT_2);
     }
 
     private void EnableDisableDeleteButton() {
@@ -2784,7 +2783,6 @@ public class appLibrarian extends javax.swing.JFrame {
         EditriceTextField.setText("");
         PubblicazTextField.setText("");
         RistampaTextField.setText("");
-        CategoriaTextField.setText("");
         LinguaTextField.setText("");
         ScaffaleTextField.setText("");
 
@@ -2804,8 +2802,7 @@ public class appLibrarian extends javax.swing.JFrame {
         newUserTelefonoTxtField.setText("");
         
         newuserSuccessLabel.setVisible(false); 
-
-        
+ 
     }
 
     private void RefreshGenericLabel(javax.swing.JLabel label_toUpadte, java.awt.Color color, String to_display) {
@@ -2977,25 +2974,6 @@ public class appLibrarian extends javax.swing.JFrame {
             correct++;
         }
 
-        controller = local_librarian.checker.bookChecker.checkCategoria(CategoriaTextField.getText());
-        if (controller != 0) {
-            CategoriaTextField.setBorder(exceptionBorder);
-
-            if (controller == 1) {
-                RefreshTooltipLabel(CategoriaError, LibrarianStyle.EXCEPTION_COLOR, "è vuoto");
-            }
-            if (controller == 2) {
-                RefreshTooltipLabel(CategoriaError, LibrarianStyle.EXCEPTION_COLOR, "non può contenere numeri !");
-            }
-            if (controller == 3) {
-                RefreshTooltipLabel(CategoriaError, LibrarianStyle.EXCEPTION_COLOR, "categoria non ammessa");
-            }
-        } else {
-            CategoriaTextField.setBorder(default_border);
-            RefreshTooltipLabel(CategoriaError, LibrarianStyle.SUCCESS_COLOR, CORRECT_TOLLTIP);
-
-            correct++;
-        }
 
         controller = local_librarian.checker.bookChecker.checkLingua(LinguaTextField.getText());
         if (controller != 0) {
@@ -3309,7 +3287,7 @@ public class appLibrarian extends javax.swing.JFrame {
         String success_message = "Informazioni Aggiornate: ";
 
         if (check.userChecker.checkEmail(ModifyEmailTextField.getText()) == 0) {
-            local_librarian.UpdateUserInfo(local_librarian.getUser().GetUserID(), "EMAIL", ModifyEmailTextField.getText(), local_librarian.GetDefaultType());
+            local_librarian.UpdateUserInfo(local_librarian.getUser().getUserID(), "EMAIL", ModifyEmailTextField.getText(), local_librarian.GetDefaultType());
 
             success_message = success_message + "EMAIL -> " + ModifyEmailTextField.getText() + "\n";
             modified++;
@@ -3324,7 +3302,7 @@ public class appLibrarian extends javax.swing.JFrame {
         }
 
         if (check.userChecker.checkNumero(ModifyNumberTextField.getText()) == 0) {
-            local_librarian.UpdateUserInfo(local_librarian.getUser().GetUserID(), "NUMERO", ModifyNumberTextField.getText(), local_librarian.GetDefaultType());
+            local_librarian.UpdateUserInfo(local_librarian.getUser().getUserID(), "NUMERO", ModifyNumberTextField.getText(), local_librarian.GetDefaultType());
 
             success_message = success_message + "NUMERO -> " + ModifyNumberTextField.getText() + "\n";
             modified++;
@@ -3336,7 +3314,7 @@ public class appLibrarian extends javax.swing.JFrame {
         }
 
         if (check.userChecker.checkInquadramento(ModifyInquadTextField.getText()) == 0) {
-            local_librarian.UpdateUserInfo(local_librarian.getUser().GetUserID(), "INQUADRAMENTO", ModifyInquadTextField.getText(), local_librarian.GetDefaultType());
+            local_librarian.UpdateUserInfo(local_librarian.getUser().getUserID(), "INQUADRAMENTO", ModifyInquadTextField.getText(), local_librarian.GetDefaultType());
 
             success_message = success_message + "INQUADRAMENTO -> " + ModifyInquadTextField.getText() + "\n";
             modified++;
@@ -3357,12 +3335,12 @@ public class appLibrarian extends javax.swing.JFrame {
             }
 
             if (CoreMod) {
-                local_librarian.UpdateUserInfo(local_librarian.getUser().GetUserID(), "CONFIRMED", "0", local_librarian.GetDefaultType());
-                local_librarian.UpdateUserInfo(local_librarian.getUser().GetUserID(), "CODICE", Arrays.toString(local_librarian.GenerateUserCode(local_librarian.getUser().GetUserID())), local_librarian.GetDefaultType());
-                local_librarian.UpdateUserInfo(local_librarian.getUser().GetUserID(), "TENTATIVI", "5", local_librarian.GetDefaultType());
+                local_librarian.UpdateUserInfo(local_librarian.getUser().getUserID(), "CONFIRMED", "0", local_librarian.GetDefaultType());
+                local_librarian.UpdateUserInfo(local_librarian.getUser().getUserID(), "CODICE", Arrays.toString(local_librarian.GenerateUserCode(local_librarian.getUser().getUserID())), local_librarian.GetDefaultType());
+                local_librarian.UpdateUserInfo(local_librarian.getUser().getUserID(), "TENTATIVI", "5", local_librarian.GetDefaultType());
 
-                local_librarian.SendNewInformation(local_librarian.getUser().GetUserID(), success_message, local_librarian.GetDefaultType());
-                local_librarian.SendConfirmationCode(local_librarian.getUser().GetUserID(), local_librarian.GetDefaultType());
+                local_librarian.SendNewInformation(local_librarian.getUser().getUserID(), success_message, local_librarian.GetDefaultType());
+                local_librarian.SendConfirmationCode(local_librarian.getUser().getUserID(), local_librarian.GetDefaultType());
 
                 ModifyDialog.getParent().setVisible(false);
                 ModifyDialog.removeWindowListener(ModifyDialog.getWindowListeners()[0]);
@@ -3375,7 +3353,7 @@ public class appLibrarian extends javax.swing.JFrame {
 
             } else {
 
-                local_librarian.SendNewInformation(local_librarian.getUser().GetUserID(), success_message, local_librarian.GetDefaultType());
+                local_librarian.SendNewInformation(local_librarian.getUser().getUserID(), success_message, local_librarian.GetDefaultType());
 
                 ModifyDialog.setVisible(false);
                 SetModifyDialog();
@@ -3383,6 +3361,7 @@ public class appLibrarian extends javax.swing.JFrame {
                 this.setEnabled(true);
             }
         } else {
+            SetModifyDialog();
         }
 
     }//GEN-LAST:event_ModifyConfirmButtonActionPerformed
@@ -3409,7 +3388,7 @@ public class appLibrarian extends javax.swing.JFrame {
 
         if (result == AskinDeletingOptionPane.YES_OPTION) {
 
-            local_librarian.DeleteUserAccount(local_librarian.getUser().GetUserID(), "USERID", local_librarian.getUser().GetUserType());
+            local_librarian.DeleteUserAccount(local_librarian.getUser().getUserID(), "USERID", local_librarian.getUser().GetUserType());
             AskinDeletingOptionPane.setVisible(false);
             ModifyDialog.setVisible(false);
             this.setVisible(false);
@@ -3490,7 +3469,7 @@ public class appLibrarian extends javax.swing.JFrame {
                             AutoreTextField.getText(),
                             EditriceTextField.getText(),
                             PubblicazTextField.getText(),
-                            CategoriaTextField.getText(),
+                            CategorieComboBox.getSelectedItem().toString(),
                             LinguaTextField.getText());
 
                     book_creation_success = local_librarian.InsertNewBook(libro);
@@ -3503,7 +3482,7 @@ public class appLibrarian extends javax.swing.JFrame {
                             EditriceTextField.getText(),
                             PubblicazTextField.getText(),
                             RistampaTextField.getText(),
-                            CategoriaTextField.getText(),
+                            CategorieComboBox.getSelectedItem().toString(),
                             LinguaTextField.getText());
 
                     book_creation_success = local_librarian.InsertNewBook(libro);
@@ -3515,7 +3494,7 @@ public class appLibrarian extends javax.swing.JFrame {
                             AutoreTextField.getText(),
                             EditriceTextField.getText(),
                             PubblicazTextField.getText(),
-                            CategoriaTextField.getText(),
+                             CategorieComboBox.getSelectedItem().toString(),
                             LinguaTextField.getText(),
                             Integer.parseInt(ScaffaleTextField.getText()));
 
@@ -3530,7 +3509,7 @@ public class appLibrarian extends javax.swing.JFrame {
                             EditriceTextField.getText(),
                             PubblicazTextField.getText(),
                             RistampaTextField.getText(),
-                            CategoriaTextField.getText(),
+                            CategorieComboBox.getSelectedItem().toString(),
                             LinguaTextField.getText(),
                             Integer.parseInt(ScaffaleTextField.getText()));
 
@@ -3684,9 +3663,6 @@ public class appLibrarian extends javax.swing.JFrame {
 
     }//GEN-LAST:event_prestitoButtonActionPerformed
 
-    private void prestitoTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prestitoTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_prestitoTextFieldActionPerformed
 
     private void creanuovaPrenotazioneTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_creanuovaPrenotazioneTextFieldActionPerformed
         // TODO add your handling code here:
@@ -3885,9 +3861,9 @@ public class appLibrarian extends javax.swing.JFrame {
                     
                     local_librarian.InserUser(generico);
                     
-                    local_librarian.SendCommunicationServer("[LIB-" + local_librarian.GetID() + "] Creazione nuovo Utente: *" + generico.GetUserID() + "* Completata");
+                    local_librarian.SendCommunicationServer("[LIB-" + local_librarian.GetID() + "] Creazione nuovo Utente: *" + generico.getUserID() + "* Completata");
                     
-                    local_librarian.SendNewPassword(generico.GetUserID(), generico.GetUserType());
+                    local_librarian.SendNewPassword(generico.getUserID(), generico.GetUserType());
 
                 } catch (RemoteException ex) {
                     Logger.getLogger(appLibrarian.class.getName()).log(Level.SEVERE, null, ex);
@@ -3909,10 +3885,6 @@ public class appLibrarian extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_statisticheButtonActionPerformed
-
-    private void StatisticheUserIDTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StatisticheUserIDTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_StatisticheUserIDTextFieldActionPerformed
 
     private void statiticheUserPrestitiButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statiticheUserPrestitiButtonActionPerformed
         
@@ -4059,7 +4031,7 @@ public class appLibrarian extends javax.swing.JFrame {
     private javax.swing.JTextField AutoreTextField;
     private javax.swing.JTable BooksTable;
     private javax.swing.JLabel CategoriaError;
-    private javax.swing.JTextField CategoriaTextField;
+    private javax.swing.JComboBox<String> CategorieComboBox;
     private javax.swing.JLabel CodeError;
     private javax.swing.JTextField CodeTextField;
     private javax.swing.JLabel CodiceLabel;
@@ -4170,6 +4142,7 @@ public class appLibrarian extends javax.swing.JFrame {
     private javax.swing.JButton mostraWithSortingButton;
     private javax.swing.JPanel newBookLayer1;
     private javax.swing.JPanel newBookLayer2;
+    private javax.swing.JPanel newBookLayer3;
     private javax.swing.JLabel newPswLabel;
     private javax.swing.JTextField newUserCodiceTxtField;
     private javax.swing.JTextField newUserCognomeTxtField;

@@ -14,20 +14,13 @@ import java.util.List;
  * @author Lorenzo Gavazzeni
  *
  */
-public class Libro {
+public class Libro implements Serializable{
+
+    private static final long serialVersionUID = 1L;
 
     public static final int OBJ_TYPE = 3;
 
-    public static final List<String> Categorie_List = new ArrayList<String>() {
-        {
-            add("matematica");
-            add("letteratura");
-            add("romanzo");
-            add("saggi");
-            add("cucina");
-            add("didattica");
-        }
-    };
+    public static final String[] Categorie_List =  {"saggi","romanzi","matematica","arte","letteratura inglese","letteratura italiana","grammatica"};
 
     private String ISBN;
     private String Titolo;
@@ -38,6 +31,8 @@ public class Libro {
     private String Categoria;
     private String Lingua;
     private int Scaffale;
+
+    public Libro(){}
 
     public Libro(String _isbn, String tit, String aut, String c_ed, String anno_pubb, String catg, String lin) {
         ISBN = _isbn;

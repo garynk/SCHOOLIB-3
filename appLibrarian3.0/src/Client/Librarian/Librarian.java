@@ -68,8 +68,8 @@ public class Librarian extends UnicastRemoteObject {
 
     public String GetID() {
 
-        if (!utente.GetUserID().equals("null")) {
-            return utente.GetUserID();
+        if (!utente.getUserID().equals("null")) {
+            return utente.getUserID();
         } else {
             return "000";
         }
