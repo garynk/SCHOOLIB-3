@@ -174,7 +174,7 @@ public class appReader extends javax.swing.JFrame {
 
         DynamicLabelNome.setBackground(ModifyLayer1.getBackground());
         DynamicLabelNome.setFont(UserLockedInfo.getFont());
-        DynamicLabelNome.setText(local_reader.GetParamUser().GetNome());
+        DynamicLabelNome.setText(local_reader.GetParamUser().getNome());
 
         staticLabelCognome.setBackground(ModifyLayer1.getBackground());
         staticLabelCognome.setFont(UserLockedInfo.getFont());
@@ -182,7 +182,7 @@ public class appReader extends javax.swing.JFrame {
 
         DynamicLabelCognome.setBackground(ModifyLayer1.getBackground());
         DynamicLabelCognome.setFont(UserLockedInfo.getFont());
-        DynamicLabelCognome.setText(local_reader.GetParamUser().GetCognome());
+        DynamicLabelCognome.setText(local_reader.GetParamUser().getCognome());
 
         javax.swing.GroupLayout UserLockedInfoLayout = new javax.swing.GroupLayout(UserLockedInfo);
         UserLockedInfo.setLayout(UserLockedInfoLayout);
@@ -228,7 +228,7 @@ public class appReader extends javax.swing.JFrame {
 
         DynamicLabelNumber.setBackground(ModifyLayer1.getBackground());
         DynamicLabelNumber.setFont(UserLockedInfo.getFont());
-        DynamicLabelNumber.setText(local_reader.GetParamUser().GetNumeroTelefono());
+        DynamicLabelNumber.setText(local_reader.GetParamUser().getNumeroTelefono());
 
         staticLabelInquadramento.setBackground(ModifyLayer1.getBackground());
         staticLabelInquadramento.setFont(UserLockedInfo.getFont());
@@ -236,7 +236,7 @@ public class appReader extends javax.swing.JFrame {
 
         DynamicLabelInquadramento.setBackground(ModifyLayer1.getBackground());
         DynamicLabelInquadramento.setFont(UserLockedInfo.getFont());
-        DynamicLabelInquadramento.setText(local_reader.GetParamUser().GetInquadramento());
+        DynamicLabelInquadramento.setText(local_reader.GetParamUser().getInquadramento());
 
         staticLabelEmail.setBackground(ModifyLayer1.getBackground());
         staticLabelEmail.setFont(UserLockedInfo.getFont());
@@ -244,7 +244,7 @@ public class appReader extends javax.swing.JFrame {
 
         DynamicLabelEmail.setBackground(ModifyLayer1.getBackground());
         DynamicLabelEmail.setFont(UserLockedInfo.getFont());
-        DynamicLabelEmail.setText(local_reader.GetParamUser().GetEmail());
+        DynamicLabelEmail.setText(local_reader.GetParamUser().getEmail());
 
         ModifyEmailTextField.setBackground(UserEditableInfo.getBackground());
         ModifyEmailTextField.setFont(ReaderStyle.LABEL_FONT_3);
@@ -551,7 +551,7 @@ public class appReader extends javax.swing.JFrame {
         RuoloLabel.setText("Ruolo: ");
 
         DynamicRuolo.setFont(UserContextPanel.getFont());
-        DynamicRuolo.setText(local_reader.GetParamUser().GetInquadramento());
+        DynamicRuolo.setText(local_reader.GetParamUser().getInquadramento());
 
         CodiceLabel.setFont(UserContextPanel.getFont());
         CodiceLabel.setText("Codice: ");
@@ -563,25 +563,25 @@ public class appReader extends javax.swing.JFrame {
         NomeLabel.setText("Nome:");
 
         DynamicNome.setFont(UserContextPanel.getFont());
-        DynamicNome.setText(local_reader.GetParamUser().GetNome());
+        DynamicNome.setText(local_reader.GetParamUser().getNome());
 
         CognomeLabel.setFont(UserContextPanel.getFont());
         CognomeLabel.setText("Cognome: ");
 
         DynamicCognome.setFont(UserContextPanel.getFont());
-        DynamicCognome.setText(local_reader.GetParamUser().GetCognome());
+        DynamicCognome.setText(local_reader.GetParamUser().getCognome());
 
         EmailLabel.setFont(UserContextPanel.getFont());
         EmailLabel.setText("Email: ");
 
         DynamicEmail.setFont(UserContextPanel.getFont());
-        DynamicEmail.setText(local_reader.GetParamUser().GetEmail());
+        DynamicEmail.setText(local_reader.GetParamUser().getEmail());
 
         NumeroLabel.setFont(UserContextPanel.getFont());
         NumeroLabel.setText("Numero: ");
 
         DynamicNumero.setFont(UserContextPanel.getFont());
-        DynamicNumero.setText(local_reader.GetParamUser().GetNumeroTelefono());
+        DynamicNumero.setText(local_reader.GetParamUser().getNumeroTelefono());
 
         TitleUserLabel.setFont(ReaderStyle.LABEL_FONT);
         TitleUserLabel.setText("DATI UTENTE:");
@@ -902,30 +902,30 @@ public class appReader extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void initBackEnd() throws RemoteException {
-        NormalizejTable(BooksTable,PreviousButton,NextPageButton,PageNumLabel,PageTableIndex,local_reader.BuilderBookTableModel());
+        normalizejTable(BooksTable,PreviousButton,NextPageButton,PageNumLabel,PageTableIndex,local_reader.builderBookTableModel());
         BooksTable.repaint();
 
-        SetPrenotaBookTableListener();
-        SetDisdiciBookTableListener();
+        setPrenotaBookTableListener();
+        setDisdiciBookTableListener();
 
-        SetCurrentPage(PageNumLabel,PageTableIndex);
+        setCurrentPage(PageNumLabel,PageTableIndex);
 
-        SetModifyDialog();
+        setModifyDialog();
 
         PrenotaButton.setEnabled(false);
         DisdiciButton.setEnabled(false);
 
     }
 
-   private void NormalizejTable(javax.swing.JTable generic_table,
-            javax.swing.JButton prev_associated,
-            javax.swing.JButton next_associated,
-            javax.swing.JLabel page_index_label,
-            int page_num,
-            DefaultTableModel model) {
+   private void normalizejTable(javax.swing.JTable generic_table,
+                                javax.swing.JButton prev_associated,
+                                javax.swing.JButton next_associated,
+                                javax.swing.JLabel page_index_label,
+                                int page_num,
+                                DefaultTableModel model) {
 
         PageTableIndex = 0;
-        SetCurrentPage( page_index_label, page_num);
+        setCurrentPage( page_index_label, page_num);
 
         Columns = new Vector<>();
 
@@ -976,7 +976,7 @@ public class appReader extends javax.swing.JFrame {
         }
     }
 
-    private void SetPrenotaBookTableListener() {
+    private void setPrenotaBookTableListener() {
         BooksTable.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
             @Override
             public void valueChanged(ListSelectionEvent e) {
@@ -991,7 +991,7 @@ public class appReader extends javax.swing.JFrame {
         });
     }
 
-    private void SetDisdiciBookTableListener() {
+    private void setDisdiciBookTableListener() {
         BooksTable.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
             @Override
             public void valueChanged(ListSelectionEvent e) {
@@ -999,7 +999,7 @@ public class appReader extends javax.swing.JFrame {
                 SwingUtilities.invokeLater(() -> {
                             String selected_ISBN = getSelectedISBNFromBooksTable();
 
-                            if (local_reader.Check_Existing_Easy_PrenPres(selected_ISBN, local_reader.GetParamUser().GetUserID(), 4)) {
+                            if (local_reader.checkExistingEasyPrenPres(selected_ISBN, local_reader.GetParamUser().GetUserID(), 4)) {
                                 DisdiciButton.setEnabled(true);
                             } else {
                                 DisdiciButton.setEnabled(false);
@@ -1009,7 +1009,7 @@ public class appReader extends javax.swing.JFrame {
         });
     }
 
-    private void SetModifyCloseSafe() {
+    private void setModifyCloseSafe() {
         ModifyDialog.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosed(WindowEvent e) {
@@ -1019,12 +1019,12 @@ public class appReader extends javax.swing.JFrame {
         });
     }
 
-     private void SetCurrentPage(javax.swing.JLabel label_page_num, int index) {
+     private void setCurrentPage(javax.swing.JLabel label_page_num, int index) {
         label_page_num.setText(Integer.toString(index + 1));
     }
 
 
-    private void SetModifyDialog() {
+    private void setModifyDialog() {
 
         OldPasswordTxtField.setText("");
         NewPasswordTextField.setText("");
@@ -1037,7 +1037,7 @@ public class appReader extends javax.swing.JFrame {
         AskinDeletingOptionPane.setVisible(false);
         AskinDeletingOptionPane.setEnabled(false);
 
-        SetModifyCloseSafe();
+        setModifyCloseSafe();
     }
 
     private String getSelectedISBNFromBooksTable()
@@ -1096,7 +1096,7 @@ public class appReader extends javax.swing.JFrame {
 
     private void SearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchButtonActionPerformed
 
-        NormalizejTable(BooksTable,PreviousButton,NextPageButton,PageNumLabel,PageTableIndex,local_reader.GetLookedBooks(SearchTextField.getText()));
+        normalizejTable(BooksTable,PreviousButton,NextPageButton,PageNumLabel,PageTableIndex,local_reader.getLookedBooks(SearchTextField.getText()));
 
         BooksTable.revalidate();
         BooksTable.getParent().repaint();
@@ -1119,7 +1119,7 @@ public class appReader extends javax.swing.JFrame {
 
         PreviousButton.setEnabled(true);
 
-        SetCurrentPage(PageNumLabel,PageTableIndex);
+        setCurrentPage(PageNumLabel,PageTableIndex);
 
         BooksTable.getSelectionModel().clearSelection();
         BooksTable.revalidate();
@@ -1141,7 +1141,7 @@ public class appReader extends javax.swing.JFrame {
 
         NextPageButton.setEnabled(true);
 
-        SetCurrentPage(PageNumLabel,PageTableIndex);
+        setCurrentPage(PageNumLabel,PageTableIndex);
 
         BooksTable.getSelectionModel().clearSelection();
 
@@ -1159,10 +1159,10 @@ public class appReader extends javax.swing.JFrame {
         boolean changeable = false;
 
         System.out.println("PORCO DEMONIO: " + Arrays.toString(OldPasswordTxtField.getPassword()));
-        System.out.println("PORCO DEMONIO: " + local_reader.GetID());
-        System.out.println("PORCO DEMONIO: " + local_reader.GetType() + " -- " + local_reader.GetParamUser().GetUserType());
+        System.out.println("PORCO DEMONIO: " + local_reader.getID());
+        System.out.println("PORCO DEMONIO: " + local_reader.getType() + " -- " + local_reader.GetParamUser().getUserType());
 
-        if (local_reader.MatchingUserID_Password(local_reader.GetID(), OldPasswordTxtField.getPassword(), UtenteReader.Reader_Default_Type_Value)) {
+        if (local_reader.matchingUserIDPassword(local_reader.getID(), OldPasswordTxtField.getPassword(), UtenteReader.Reader_Default_Type_Value)) {
             if (check.userChecker.checkPassword(NewPasswordTextField.getPassword()) == 0) {
                 changeable = true;
             } else {
@@ -1182,10 +1182,10 @@ public class appReader extends javax.swing.JFrame {
         }
 
         if (changeable) {
-            local_reader.UpdateUserPassword(local_reader.GetID(), NewPasswordTextField.getPassword(), UtenteReader.Reader_Default_Type_Value);
+            local_reader.updateUserPassword(local_reader.getID(), NewPasswordTextField.getPassword(), UtenteReader.Reader_Default_Type_Value);
 
             RefreshGenericLabel(ModifyReporterLabel, ReaderStyle.SUCCESS_COLOR, "Password Cambiata con Successo");
-            local_reader.SendCommunicationServer("[READER-" + local_reader.GetID() + "] password modificata con successo");
+            local_reader.sendCommunicationServer("[READER-" + local_reader.getID() + "] password modificata con successo");
 
             try {
                 Thread.sleep(1600);
@@ -1250,7 +1250,7 @@ public class appReader extends javax.swing.JFrame {
 
         if (modified > 0) {
             RefreshGenericLabel(ModifyReporterLabel, ReaderStyle.SUCCESS_COLOR, success_message);
-            local_reader.SendCommunicationServer("[READER-" + local_reader.GetID() + "] campi modificati: " + success_message);
+            local_reader.sendCommunicationServer("[READER-" + local_reader.getID() + "] campi modificati: " + success_message);
 
             try {
                 Thread.sleep(1000);
@@ -1260,11 +1260,11 @@ public class appReader extends javax.swing.JFrame {
 
             if (CoreMod) {
                 local_reader.UpdateUserInfo(local_reader.GetParamUser().GetUserID(), "CONFIRMED", "0", local_reader.GetDefaultType());
-                local_reader.UpdateUserInfo(local_reader.GetParamUser().GetUserID(), "CODICE", Arrays.toString(local_reader.GenerateUserCode(local_reader.GetParamUser().GetUserID())), local_reader.GetDefaultType());
+                local_reader.UpdateUserInfo(local_reader.GetParamUser().GetUserID(), "CODICE", Arrays.toString(local_reader.generateUserCode(local_reader.GetParamUser().GetUserID())), local_reader.GetDefaultType());
                 local_reader.UpdateUserInfo(local_reader.GetParamUser().GetUserID(), "TENTATIVI", "5", local_reader.GetDefaultType());
 
-                local_reader.SendNewInformation(local_reader.GetParamUser().GetUserID(), success_message, local_reader.GetDefaultType());
-                local_reader.SendConfirmationCode(local_reader.GetParamUser().GetUserID(), local_reader.GetDefaultType());
+                local_reader.sendNewInformation(local_reader.GetParamUser().GetUserID(), success_message, local_reader.GetDefaultType());
+                local_reader.sendConfirmationCode(local_reader.GetParamUser().GetUserID(), local_reader.GetDefaultType());
 
                 ModifyDialog.getParent().setVisible(false);
                 ModifyDialog.removeWindowListener(ModifyDialog.getWindowListeners()[0]);
@@ -1276,10 +1276,10 @@ public class appReader extends javax.swing.JFrame {
                 new appReaderLoginForm().setVisible(true);
             } else {
 
-                local_reader.SendNewInformation(local_reader.GetParamUser().GetUserID(), success_message, local_reader.GetDefaultType());
+                local_reader.sendNewInformation(local_reader.GetParamUser().GetUserID(), success_message, local_reader.GetDefaultType());
 
                 ModifyDialog.setVisible(false);
-                SetModifyDialog();
+                setModifyDialog();
                 this.setEnabled(true);
             }
         } else {
@@ -1292,7 +1292,7 @@ public class appReader extends javax.swing.JFrame {
         ModifyDialog.setVisible(false);
         ModifyDialog.setEnabled(false);
 
-        SetModifyDialog();
+        setModifyDialog();
 
         ModifyDialog.getParent().setEnabled(true);
         ModifyDialog.getParent().setVisible(true);
@@ -1309,8 +1309,8 @@ public class appReader extends javax.swing.JFrame {
 
         if (result == AskinDeletingOptionPane.YES_OPTION) {
 
-            local_reader.DeleteUserAccount(local_reader.GetParamUser().GetUserID(), "USERID", local_reader.GetParamUser().GetUserType());
-            local_reader.SendCommunicationServer("[READER-" + local_reader.GetID() + "] utente cancellato da utente");
+            local_reader.deleteUserAccount(local_reader.GetParamUser().GetUserID(), "USERID", local_reader.GetParamUser().getUserType());
+            local_reader.sendCommunicationServer("[READER-" + local_reader.getID() + "] utente cancellato da utente");
             
             AskinDeletingOptionPane.setVisible(false);
             ModifyDialog.setVisible(false);
@@ -1332,7 +1332,7 @@ public class appReader extends javax.swing.JFrame {
 
         PageTableIndex = 0;
 
-        NormalizejTable(BooksTable,PreviousButton,NextPageButton,PageNumLabel,PageTableIndex,local_reader.BuilderBookTableModel());
+        normalizejTable(BooksTable,PreviousButton,NextPageButton,PageNumLabel,PageTableIndex,local_reader.builderBookTableModel());
         BooksTable.revalidate();
         BooksTable.getParent().repaint();
         BooksTable.repaint();
@@ -1341,7 +1341,7 @@ public class appReader extends javax.swing.JFrame {
 
     private void PrenotaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrenotaButtonActionPerformed
 
-        if (local_reader.Count_PrenotazioniPrestitiByID(local_reader.GetID(), 4) > local_reader.GetMaxPrenotazioni() && local_reader.GetPrestitoSconfinantebyID(local_reader.GetID()))
+        if (local_reader.countPrenotazioniPrestitiByID(local_reader.getID(), 4) > local_reader.getMaxPrenotazioni() && local_reader.getPrestitoSconfinantebyID(local_reader.getID()))
         {
             JOptionPane.showMessageDialog(new JFrame(),"Limite prenotazioni superato, oppure prestito sconfinante");
             
@@ -1355,8 +1355,8 @@ public class appReader extends javax.swing.JFrame {
 
             String selected_ISBN = getSelectedISBNFromBooksTable();
 
-            local_reader.InsertPrenotazione(selected_ISBN, local_reader.GetParamUser().GetUserID());
-            local_reader.SendCommunicationServer("[READER-" + local_reader.GetID() + "] prenota libro: *" + selected_ISBN);
+            local_reader.insertPrenotazione(selected_ISBN, local_reader.GetParamUser().GetUserID());
+            local_reader.sendCommunicationServer("[READER-" + local_reader.getID() + "] prenota libro: *" + selected_ISBN);
         }
 
     }//GEN-LAST:event_PrenotaButtonActionPerformed
@@ -1371,29 +1371,29 @@ public class appReader extends javax.swing.JFrame {
 
         String selected_ISBN = getSelectedISBNFromBooksTable();
 
-        local_reader.DeletePrestitoPrenotazioneByISBNByID(Integer.parseInt(selected_ISBN.trim()), Integer.parseInt(local_reader.GetParamUser().GetUserID()), 4);
-        local_reader.SendCommunicationServer("[READER-" + local_reader.GetID() + "] disdice prenotazione libro: *" + selected_ISBN);
+        local_reader.deletePrestitoPrenotazioneByISBNByID(Integer.parseInt(selected_ISBN.trim()), Integer.parseInt(local_reader.GetParamUser().GetUserID()), 4);
+        local_reader.sendCommunicationServer("[READER-" + local_reader.getID() + "] disdice prenotazione libro: *" + selected_ISBN);
 
     }//GEN-LAST:event_DisdiciButtonActionPerformed
 
     private void prenotazioniButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prenotazioniButtonActionPerformed
         
-        if (local_reader.Count_PrenotazioniPrestitiByID(local_reader.GetID(), 4) == 0)
+        if (local_reader.countPrenotazioniPrestitiByID(local_reader.getID(), 4) == 0)
         {}
         else
         {
-            NormalizejTable(BooksTable,PreviousButton,NextPageButton,PageNumLabel,PageTableIndex,local_reader.GetPrenotazioniPrestitiByUserID(local_reader.GetID(),3));
+            normalizejTable(BooksTable,PreviousButton,NextPageButton,PageNumLabel,PageTableIndex,local_reader.getPrenotazioniPrestitiByUserID(local_reader.getID(),3));
             BooksTable.repaint();
         }
     }//GEN-LAST:event_prenotazioniButtonActionPerformed
 
     private void prestitiButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prestitiButtonActionPerformed
         
-         if (local_reader.Count_PrenotazioniPrestitiByID(local_reader.GetID(), 4) == 0)
+         if (local_reader.countPrenotazioniPrestitiByID(local_reader.getID(), 4) == 0)
         {}
         else
         {
-            NormalizejTable(BooksTable,PreviousButton,NextPageButton,PageNumLabel,PageTableIndex,local_reader.GetPrenotazioniPrestitiByUserID(local_reader.GetID(),2));
+            normalizejTable(BooksTable,PreviousButton,NextPageButton,PageNumLabel,PageTableIndex,local_reader.getPrenotazioniPrestitiByUserID(local_reader.getID(),2));
             BooksTable.repaint();
         }
     }//GEN-LAST:event_prestitiButtonActionPerformed

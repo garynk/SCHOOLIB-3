@@ -20,7 +20,6 @@ import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.ItemEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.rmi.RemoteException;
@@ -296,7 +295,7 @@ public class appLibrarian extends javax.swing.JFrame {
 
         DynamicLabelNome.setBackground(ModifyLayer1.getBackground());
         DynamicLabelNome.setFont(UserLockedInfo.getFont());
-        DynamicLabelNome.setText(local_librarian.getUser().GetNome());
+        DynamicLabelNome.setText(local_librarian.getUser().getNome());
 
         staticLabelCognome.setBackground(ModifyLayer1.getBackground());
         staticLabelCognome.setFont(UserLockedInfo.getFont());
@@ -304,7 +303,7 @@ public class appLibrarian extends javax.swing.JFrame {
 
         DynamicLabelCognome.setBackground(ModifyLayer1.getBackground());
         DynamicLabelCognome.setFont(UserLockedInfo.getFont());
-        DynamicLabelCognome.setText(local_librarian.getUser().GetCognome());
+        DynamicLabelCognome.setText(local_librarian.getUser().getCognome());
 
         javax.swing.GroupLayout UserLockedInfoLayout = new javax.swing.GroupLayout(UserLockedInfo);
         UserLockedInfo.setLayout(UserLockedInfoLayout);
@@ -350,7 +349,7 @@ public class appLibrarian extends javax.swing.JFrame {
 
         DynamicLabelNumber.setBackground(ModifyLayer1.getBackground());
         DynamicLabelNumber.setFont(UserLockedInfo.getFont());
-        DynamicLabelNumber.setText(local_librarian.getUser().GetNumeroTelefono());
+        DynamicLabelNumber.setText(local_librarian.getUser().getNumeroTelefono());
 
         staticLabelInquadramento.setBackground(ModifyLayer1.getBackground());
         staticLabelInquadramento.setFont(UserLockedInfo.getFont());
@@ -358,7 +357,7 @@ public class appLibrarian extends javax.swing.JFrame {
 
         DynamicLabelInquadramento.setBackground(ModifyLayer1.getBackground());
         DynamicLabelInquadramento.setFont(UserLockedInfo.getFont());
-        DynamicLabelInquadramento.setText(local_librarian.getUser().GetInquadramento());
+        DynamicLabelInquadramento.setText(local_librarian.getUser().getInquadramento());
 
         staticLabelEmail.setBackground(ModifyLayer1.getBackground());
         staticLabelEmail.setFont(UserLockedInfo.getFont());
@@ -366,7 +365,7 @@ public class appLibrarian extends javax.swing.JFrame {
 
         DynamicLabelEmail.setBackground(ModifyLayer1.getBackground());
         DynamicLabelEmail.setFont(UserLockedInfo.getFont());
-        DynamicLabelEmail.setText(local_librarian.getUser().GetEmail());
+        DynamicLabelEmail.setText(local_librarian.getUser().getEmail());
 
         ModifyEmailTextField.setBackground(UserEditableInfo.getBackground());
         ModifyEmailTextField.setFont(LibrarianStyle.LABEL_FONT_3);
@@ -1644,7 +1643,7 @@ public class appLibrarian extends javax.swing.JFrame {
         RuoloLabel.setText("Ruolo: ");
 
         DynamicRuolo.setFont(UserContextPanel.getFont());
-        DynamicRuolo.setText(local_librarian.getUser().GetInquadramento());
+        DynamicRuolo.setText(local_librarian.getUser().getInquadramento());
 
         CodiceLabel.setFont(UserContextPanel.getFont());
         CodiceLabel.setText("Codice: ");
@@ -1656,25 +1655,25 @@ public class appLibrarian extends javax.swing.JFrame {
         NomeLabel.setText("Nome:");
 
         DynamicNome.setFont(UserContextPanel.getFont());
-        DynamicNome.setText(local_librarian.getUser().GetNome());
+        DynamicNome.setText(local_librarian.getUser().getNome());
 
         CognomeLabel.setFont(UserContextPanel.getFont());
         CognomeLabel.setText("Cognome: ");
 
         DynamicCognome.setFont(UserContextPanel.getFont());
-        DynamicCognome.setText(local_librarian.getUser().GetCognome());
+        DynamicCognome.setText(local_librarian.getUser().getCognome());
 
         EmailLabel.setFont(UserContextPanel.getFont());
         EmailLabel.setText("Email: ");
 
         DynamicEmail.setFont(UserContextPanel.getFont());
-        DynamicEmail.setText(local_librarian.getUser().GetEmail());
+        DynamicEmail.setText(local_librarian.getUser().getEmail());
 
         NumeroLabel.setFont(UserContextPanel.getFont());
         NumeroLabel.setText("Numero: ");
 
         DynamicNumero.setFont(UserContextPanel.getFont());
-        DynamicNumero.setText(local_librarian.getUser().GetNumeroTelefono());
+        DynamicNumero.setText(local_librarian.getUser().getNumeroTelefono());
 
         TitleUserLabel.setFont(LibrarianStyle.LABEL_FONT);
         TitleUserLabel.setText("DATI UTENTE:");
@@ -2296,12 +2295,12 @@ public class appLibrarian extends javax.swing.JFrame {
             try {
                 if (book_creation_success) {
 
-                    RefreshGenericLabel(ReporterNewBookLabel, LibrarianStyle.SUCCESS_COLOR, "Libro Aggiunto con Successo");
+                    refreshGenericLabel(ReporterNewBookLabel, LibrarianStyle.SUCCESS_COLOR, "Libro Aggiunto con Successo");
 
                     Thread.sleep(1000);
 
                     addNewBookDialog.setVisible(false);
-                    SetAddBookDialog();
+                    setAddBookDialog();
 
                 } else { }
                 
@@ -2316,35 +2315,35 @@ public class appLibrarian extends javax.swing.JFrame {
 
     private void initBackEnd() throws RemoteException {
         
-        NormalizejTable(BooksTable,PreviousButton,NextPageButton,PageNumLabel,PageTableIndex,local_librarian.BuilderBookTableModel());
+        normalizejTable(BooksTable,PreviousButton,NextPageButton,PageNumLabel,PageTableIndex,local_librarian.builderBookTableModel());
         BooksTable.repaint();
 
         initErrorNewBookLabels();
         initErrorNewUserLabels();
 
-        SetBookTableListener();
-        SetDeleteBookButtonListener();
-        SetDeleteUserTextField();
+        setBookTableListener();
+        setDeleteBookButtonListener();
+        setDeleteUserTextField();
 
-        SetDisdiciTableListener();
+        setDisdiciTableListener();
 
-        SetNuovaPrenotazUserTextField();
-        SetNuovaPrenotazTableListener();
+        setNuovaPrenotazUserTextField();
+        setNuovaPrenotazTableListener();
 
-        SetPrestitoTableListener();
-        SetPrestitoUserTextField();
-        SetRiconsegnaTableListener();
+        setPrestitoTableListener();
+        setPrestitoUserTextField();
+        setRiconsegnaTableListener();
 
-        SetCurrentPage(PageNumLabel,PageTableIndex);
-        SetCurrentPage(statsPageNumTableLabel, StatsPageIndex);
+        setCurrentPage(PageNumLabel,PageTableIndex);
+        setCurrentPage(statsPageNumTableLabel, StatsPageIndex);
 
-        SetModifyDialog();
-        SetAddBookDialog();
-        SetAddNewUserDialog();
+        setModifyDialog();
+        setAddBookDialog();
+        setAddNewUserDialog();
         
-        EncapsulateRadioButton();
+        encapsulateRadioButton();
 
-        SetNewBookCategoriesComboBox();
+        setNewBookCategoriesComboBox();
 
         EliminaButton.setEnabled(false);
         EliminaOption.setVisible(false);
@@ -2398,15 +2397,15 @@ public class appLibrarian extends javax.swing.JFrame {
 
     }
 
-    private void NormalizejTable(javax.swing.JTable generic_table,
-            javax.swing.JButton prev_associated,
-            javax.swing.JButton next_associated,
-            javax.swing.JLabel page_index_label,
-            int page_num,
-            DefaultTableModel model) {
+    private void normalizejTable(javax.swing.JTable generic_table,
+                                 javax.swing.JButton prev_associated,
+                                 javax.swing.JButton next_associated,
+                                 javax.swing.JLabel page_index_label,
+                                 int page_num,
+                                 DefaultTableModel model) {
 
         PageTableIndex = 0;
-        SetCurrentPage( page_index_label, page_num);
+        setCurrentPage( page_index_label, page_num);
 
         Columns = new Vector<>();
 
@@ -2483,7 +2482,7 @@ public class appLibrarian extends javax.swing.JFrame {
         return row_elements[0];
     }
 
-    private void SetBookTableListener() {
+    private void setBookTableListener() {
         BooksTable.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
             @Override
             public void valueChanged(ListSelectionEvent e) {
@@ -2498,7 +2497,7 @@ public class appLibrarian extends javax.swing.JFrame {
         });
     }
 
-    private void SetDeleteBookButtonListener() {
+    private void setDeleteBookButtonListener() {
         EliminaButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -2508,7 +2507,7 @@ public class appLibrarian extends javax.swing.JFrame {
         });
     }
 
-    private void SetModifyCloseSafe() {
+    private void setModifyCloseSafe() {
         ModifyDialog.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosed(WindowEvent e) {
@@ -2518,37 +2517,37 @@ public class appLibrarian extends javax.swing.JFrame {
         });
     }
 
-    private void SetDeleteUserTextField() {
+    private void setDeleteUserTextField() {
         deleteUserTextField.getDocument().addDocumentListener(new DocumentListener() {
 
             @Override
             public void insertUpdate(DocumentEvent e) {
-                EnableDisableDeleteButton();
-                EnableDisablecreateUserButton();
+                enableDisableDeleteButton();
+                enableDisablecreateUserButton();
             }
 
             @Override
             public void removeUpdate(DocumentEvent e) {
-                EnableDisableDeleteButton();
-                EnableDisablecreateUserButton();
+                enableDisableDeleteButton();
+                enableDisablecreateUserButton();
             }
 
             @Override
             public void changedUpdate(DocumentEvent e) {
-                EnableDisableDeleteButton();
-                EnableDisablecreateUserButton();
+                enableDisableDeleteButton();
+                enableDisablecreateUserButton();
             }
 
         });
 
     }
 
-    private void SetNewBookCategoriesComboBox()
+    private void setNewBookCategoriesComboBox()
     {
         CategorieComboBox.setBackground(LibrarianStyle.BACKGROUD_DEFAULT_2);
     }
 
-    private void EnableDisableDeleteButton() {
+    private void enableDisableDeleteButton() {
         if (deleteUserTextField.getText().isEmpty()) {
             deleteUserButton.setEnabled(false);
         } else {
@@ -2557,7 +2556,7 @@ public class appLibrarian extends javax.swing.JFrame {
 
     }
     
-    private void EnableDisablecreateUserButton() {
+    private void enableDisablecreateUserButton() {
         if (deleteUserTextField.getText().isEmpty()) {
             creaReaderButton.setEnabled(false);
         } else {
@@ -2566,7 +2565,7 @@ public class appLibrarian extends javax.swing.JFrame {
 
     }
 
-    private void SetDisdiciTableListener() {
+    private void setDisdiciTableListener() {
         BooksTable.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
             @Override
             public void valueChanged(ListSelectionEvent e) {
@@ -2581,7 +2580,7 @@ public class appLibrarian extends javax.swing.JFrame {
         });
     }
 
-    private void SetNuovaPrenotazTableListener() {
+    private void setNuovaPrenotazTableListener() {
         BooksTable.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
             @Override
             public void valueChanged(ListSelectionEvent e) {
@@ -2596,35 +2595,35 @@ public class appLibrarian extends javax.swing.JFrame {
         });
     }
 
-    private void SetNuovaPrenotazUserTextField() {
+    private void setNuovaPrenotazUserTextField() {
         creanuovaPrenotazioneTextField.getDocument().addDocumentListener(new DocumentListener() {
 
             @Override
             public void insertUpdate(DocumentEvent e) {
-                EnableDisableCreaNuovaButton();
-                EnableDisableVisualizzaButton();
-                EnableDisableDisdiciButton();
+                enableDisableCreaNuovaButton();
+                enableDisableVisualizzaButton();
+                enableDisableDisdiciButton();
             }
 
             @Override
             public void removeUpdate(DocumentEvent e) {
-                EnableDisableCreaNuovaButton();
-                EnableDisableVisualizzaButton();
-                EnableDisableDisdiciButton();
+                enableDisableCreaNuovaButton();
+                enableDisableVisualizzaButton();
+                enableDisableDisdiciButton();
             }
 
             @Override
             public void changedUpdate(DocumentEvent e) {
-                EnableDisableCreaNuovaButton();
-                EnableDisableVisualizzaButton();
-                EnableDisableDisdiciButton();
+                enableDisableCreaNuovaButton();
+                enableDisableVisualizzaButton();
+                enableDisableDisdiciButton();
             }
 
         });
 
     }
 
-    private void EnableDisableCreaNuovaButton() {
+    private void enableDisableCreaNuovaButton() {
         if (creanuovaPrenotazioneTextField.getText().isEmpty()) {
             creanuovaPrenotazionerButton.setEnabled(false);
         } else {
@@ -2633,7 +2632,7 @@ public class appLibrarian extends javax.swing.JFrame {
 
     }
 
-    private void EnableDisableVisualizzaButton() {
+    private void enableDisableVisualizzaButton() {
         if (creanuovaPrenotazioneTextField.getText().isEmpty()) {
             visualizzaPrenotazioneButton.setEnabled(false);
         } else {
@@ -2642,7 +2641,7 @@ public class appLibrarian extends javax.swing.JFrame {
 
     }
 
-    private void EnableDisableDisdiciButton() {
+    private void enableDisableDisdiciButton() {
         if (creanuovaPrenotazioneTextField.getText().isEmpty()) {
             disdiciPrenotazionerButton.setEnabled(false);
         } else {
@@ -2651,7 +2650,7 @@ public class appLibrarian extends javax.swing.JFrame {
 
     }
 
-    private void SetPrestitoTableListener() {
+    private void setPrestitoTableListener() {
         BooksTable.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
             @Override
             public void valueChanged(ListSelectionEvent e) {
@@ -2666,7 +2665,7 @@ public class appLibrarian extends javax.swing.JFrame {
         });
     }
 
-    private void SetRiconsegnaTableListener() {
+    private void setRiconsegnaTableListener() {
         BooksTable.getSelectionModel().addListSelectionListener(new ListSelectionListener() {
             @Override
             public void valueChanged(ListSelectionEvent e) {
@@ -2681,35 +2680,35 @@ public class appLibrarian extends javax.swing.JFrame {
         });
     }
 
-    private void SetPrestitoUserTextField() {
+    private void setPrestitoUserTextField() {
         prestitoTextField.getDocument().addDocumentListener(new DocumentListener() {
 
             @Override
             public void insertUpdate(DocumentEvent e) {
-                EnableDisablePrestitoButton();
-                EnableDisableRiconsegnaButton();
-                EnableDisableDisattivaButton();
+                enableDisablePrestitoButton();
+                enableDisableRiconsegnaButton();
+                enableDisableDisattivaButton();
             }
 
             @Override
             public void removeUpdate(DocumentEvent e) {
-                EnableDisablePrestitoButton();
-                EnableDisableRiconsegnaButton();
-                EnableDisableDisattivaButton();
+                enableDisablePrestitoButton();
+                enableDisableRiconsegnaButton();
+                enableDisableDisattivaButton();
             }
 
             @Override
             public void changedUpdate(DocumentEvent e) {
-                EnableDisablePrestitoButton();
-                EnableDisableRiconsegnaButton();
-                EnableDisableDisattivaButton();
+                enableDisablePrestitoButton();
+                enableDisableRiconsegnaButton();
+                enableDisableDisattivaButton();
             }
 
         });
 
     }
 
-    private void EnableDisablePrestitoButton() {
+    private void enableDisablePrestitoButton() {
         if (prestitoTextField.getText().isEmpty()) {
             prestitoButton.setEnabled(false);
         } else {
@@ -2717,7 +2716,7 @@ public class appLibrarian extends javax.swing.JFrame {
         }
     }
 
-    private void EnableDisableDisattivaButton() {
+    private void enableDisableDisattivaButton() {
         if (prestitoTextField.getText().isEmpty() || getSelectedISBNFromBooksTable().isEmpty()) {
             disattivaPrestitoButton.setEnabled(false);
         } else {
@@ -2725,7 +2724,7 @@ public class appLibrarian extends javax.swing.JFrame {
         }
     }
 
-    private void EnableDisableRiconsegnaButton() {
+    private void enableDisableRiconsegnaButton() {
         if (prestitoTextField.getText().isEmpty()) {
             riconsegnaButton.setEnabled(false);
         } else {
@@ -2733,7 +2732,7 @@ public class appLibrarian extends javax.swing.JFrame {
         }
     }
     
-    private void EncapsulateRadioButton()
+    private void encapsulateRadioButton()
     {
         ButtonGroup radio_selection = new ButtonGroup();
         
@@ -2743,11 +2742,11 @@ public class appLibrarian extends javax.swing.JFrame {
         
     }
 
-    private void SetCurrentPage(javax.swing.JLabel label_page_num, int index) {
+    private void setCurrentPage(javax.swing.JLabel label_page_num, int index) {
         label_page_num.setText(Integer.toString(index + 1));
     }
 
-    private void SetAddBookCloseSafe() {
+    private void setAddBookCloseSafe() {
         addNewBookDialog.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosed(WindowEvent e) {
@@ -2758,7 +2757,7 @@ public class appLibrarian extends javax.swing.JFrame {
     }
     
 
-    private void SetModifyDialog() {
+    private void setModifyDialog() {
 
         OldPasswordTxtField.setText("");
         NewPasswordTextField.setText("");
@@ -2771,11 +2770,11 @@ public class appLibrarian extends javax.swing.JFrame {
         AskinDeletingOptionPane.setVisible(false);
         AskinDeletingOptionPane.setEnabled(false);
 
-        SetModifyCloseSafe();
+        setModifyCloseSafe();
 
     }
 
-    private void SetAddBookDialog() {
+    private void setAddBookDialog() {
 
         CodeTextField.setText("");
         TitoloTextField.setText("");
@@ -2788,11 +2787,13 @@ public class appLibrarian extends javax.swing.JFrame {
 
         ReporterNewBookLabel.setVisible(false);
 
-        SetAddBookCloseSafe();
+        initErrorNewBookLabels();
+
+        setAddBookCloseSafe();
 
     }
     
-    private void SetAddNewUserDialog()
+    private void setAddNewUserDialog()
     {
         newUserCodiceTxtField.setText("");
         newUserCognomeTxtField.setText("");
@@ -2800,12 +2801,14 @@ public class appLibrarian extends javax.swing.JFrame {
         newUserInquadField.setText("");
         newUserNomeTxtField.setText("");
         newUserTelefonoTxtField.setText("");
+
+        initErrorNewUserLabels();
         
         newuserSuccessLabel.setVisible(false); 
  
     }
 
-    private void RefreshGenericLabel(javax.swing.JLabel label_toUpadte, java.awt.Color color, String to_display) {
+    private void refreshGenericLabel(javax.swing.JLabel label_toUpadte, java.awt.Color color, String to_display) {
         SwingUtilities.invokeLater(
                 new Runnable() {
 
@@ -2822,7 +2825,7 @@ public class appLibrarian extends javax.swing.JFrame {
 
     }
 
-    private void RefreshTooltipLabel(javax.swing.JLabel label_toUpadte, java.awt.Color color, String to_display) {
+    private void refreshTooltipLabel(javax.swing.JLabel label_toUpadte, java.awt.Color color, String to_display) {
         SwingUtilities.invokeLater(
                 new Runnable() {
 
@@ -2839,7 +2842,7 @@ public class appLibrarian extends javax.swing.JFrame {
 
     }
 
-    private boolean CheckBookFields() throws RemoteException {
+    private boolean checkBookFields() throws RemoteException {
         final String CORRECT_TOLLTIP = "corretto";
 
         int controller;
@@ -2853,21 +2856,21 @@ public class appLibrarian extends javax.swing.JFrame {
             CodeTextField.setBorder(exceptionBorder);
 
             if (controller == 1) {
-                RefreshTooltipLabel(CodeError, LibrarianStyle.EXCEPTION_COLOR, "è vuoto");
+                refreshTooltipLabel(CodeError, LibrarianStyle.EXCEPTION_COLOR, "è vuoto");
             }
             if (controller == 2) {
-                RefreshTooltipLabel(CodeError, LibrarianStyle.EXCEPTION_COLOR, "deve essere di 3 caratteri");
+                refreshTooltipLabel(CodeError, LibrarianStyle.EXCEPTION_COLOR, "deve essere di 3 caratteri");
             }
             if (controller == 3) {
-                RefreshTooltipLabel(CodeError, LibrarianStyle.EXCEPTION_COLOR, "deve contenere solo numeri");
+                refreshTooltipLabel(CodeError, LibrarianStyle.EXCEPTION_COLOR, "deve contenere solo numeri");
             }
 
-        } else if (local_librarian.CheckParametricExisting("ISBN", CodeTextField.getText(), Libro.OBJ_TYPE)) {
-            RefreshTooltipLabel(CodeError, LibrarianStyle.EXCEPTION_COLOR, "Libro già nel catalogo");
+        } else if (local_librarian.checkParametricExisting("ISBN", CodeTextField.getText(), Libro.OBJ_TYPE)) {
+            refreshTooltipLabel(CodeError, LibrarianStyle.EXCEPTION_COLOR, "Libro già nel catalogo");
         } else {
 
             CodeTextField.setBorder(default_border);
-            RefreshTooltipLabel(CodeError, LibrarianStyle.SUCCESS_COLOR, CORRECT_TOLLTIP);
+            refreshTooltipLabel(CodeError, LibrarianStyle.SUCCESS_COLOR, CORRECT_TOLLTIP);
 
             correct++;
         }
@@ -2877,15 +2880,15 @@ public class appLibrarian extends javax.swing.JFrame {
             TitoloTextField.setBorder(exceptionBorder);
 
             if (controller == 1) {
-                RefreshTooltipLabel(TitleError, LibrarianStyle.EXCEPTION_COLOR, "è vuoto");
+                refreshTooltipLabel(TitleError, LibrarianStyle.EXCEPTION_COLOR, "è vuoto");
             }
             if (controller == 2) {
-                RefreshTooltipLabel(TitleError, LibrarianStyle.EXCEPTION_COLOR, "troppo lungo !");
+                refreshTooltipLabel(TitleError, LibrarianStyle.EXCEPTION_COLOR, "troppo lungo !");
             }
         } else {
 
             TitoloTextField.setBorder(default_border);
-            RefreshTooltipLabel(TitleError, LibrarianStyle.SUCCESS_COLOR, CORRECT_TOLLTIP);
+            refreshTooltipLabel(TitleError, LibrarianStyle.SUCCESS_COLOR, CORRECT_TOLLTIP);
 
             correct++;
         }
@@ -2895,18 +2898,18 @@ public class appLibrarian extends javax.swing.JFrame {
             AutoreTextField.setBorder(exceptionBorder);
 
             if (controller == 1) {
-                RefreshTooltipLabel(AutorError, LibrarianStyle.EXCEPTION_COLOR, "è vuoto");
+                refreshTooltipLabel(AutorError, LibrarianStyle.EXCEPTION_COLOR, "è vuoto");
             }
             if (controller == 2) {
-                RefreshTooltipLabel(AutorError, LibrarianStyle.EXCEPTION_COLOR, "troppo lungo !");
+                refreshTooltipLabel(AutorError, LibrarianStyle.EXCEPTION_COLOR, "troppo lungo !");
             }
             if (controller == 3) {
-                RefreshTooltipLabel(AutorError, LibrarianStyle.EXCEPTION_COLOR, "deve contenere solo lettere !");
+                refreshTooltipLabel(AutorError, LibrarianStyle.EXCEPTION_COLOR, "deve contenere solo lettere !");
             }
         } else {
 
             AutoreTextField.setBorder(default_border);
-            RefreshTooltipLabel(AutorError, LibrarianStyle.SUCCESS_COLOR, CORRECT_TOLLTIP);
+            refreshTooltipLabel(AutorError, LibrarianStyle.SUCCESS_COLOR, CORRECT_TOLLTIP);
 
             correct++;
         }
@@ -2916,14 +2919,14 @@ public class appLibrarian extends javax.swing.JFrame {
             EditriceTextField.setBorder(exceptionBorder);
 
             if (controller == 1) {
-                RefreshTooltipLabel(EditriceError, LibrarianStyle.EXCEPTION_COLOR, "è vuoto!");
+                refreshTooltipLabel(EditriceError, LibrarianStyle.EXCEPTION_COLOR, "è vuoto!");
             }
             if (controller == 2) {
-                RefreshTooltipLabel(EditriceError, LibrarianStyle.EXCEPTION_COLOR, "troppo lungo!");
+                refreshTooltipLabel(EditriceError, LibrarianStyle.EXCEPTION_COLOR, "troppo lungo!");
             }
         } else {
             EditriceTextField.setBorder(default_border);
-            RefreshTooltipLabel(EditriceError, LibrarianStyle.SUCCESS_COLOR, CORRECT_TOLLTIP);
+            refreshTooltipLabel(EditriceError, LibrarianStyle.SUCCESS_COLOR, CORRECT_TOLLTIP);
 
             correct++;
         }
@@ -2933,17 +2936,17 @@ public class appLibrarian extends javax.swing.JFrame {
             PubblicazTextField.setBorder(exceptionBorder);
 
             if (controller == 1) {
-                RefreshTooltipLabel(AnnoError, LibrarianStyle.EXCEPTION_COLOR, "è vuoto!");
+                refreshTooltipLabel(AnnoError, LibrarianStyle.EXCEPTION_COLOR, "è vuoto!");
             }
             if (controller == 2) {
-                RefreshTooltipLabel(AnnoError, LibrarianStyle.EXCEPTION_COLOR, "lunghezza richiesta: 4");
+                refreshTooltipLabel(AnnoError, LibrarianStyle.EXCEPTION_COLOR, "lunghezza richiesta: 4");
             }
             if (controller == 3) {
-                RefreshTooltipLabel(AnnoError, LibrarianStyle.EXCEPTION_COLOR, "deve contenere solo numeri");
+                refreshTooltipLabel(AnnoError, LibrarianStyle.EXCEPTION_COLOR, "deve contenere solo numeri");
             }
         } else {
             PubblicazTextField.setBorder(default_border);
-            RefreshTooltipLabel(AnnoError, LibrarianStyle.SUCCESS_COLOR, CORRECT_TOLLTIP);
+            refreshTooltipLabel(AnnoError, LibrarianStyle.SUCCESS_COLOR, CORRECT_TOLLTIP);
 
             correct++;
         }
@@ -2956,20 +2959,20 @@ public class appLibrarian extends javax.swing.JFrame {
                 RistampaTextField.setBorder(exceptionBorder);
 
                 if (controller == 2) {
-                    RefreshTooltipLabel(RistampaError, LibrarianStyle.EXCEPTION_COLOR, "troppo corto, minimo: 4");
+                    refreshTooltipLabel(RistampaError, LibrarianStyle.EXCEPTION_COLOR, "troppo corto, minimo: 4");
                 }
                 if (controller == 3) {
-                    RefreshTooltipLabel(RistampaError, LibrarianStyle.EXCEPTION_COLOR, "deve contenere solo numeri");
+                    refreshTooltipLabel(RistampaError, LibrarianStyle.EXCEPTION_COLOR, "deve contenere solo numeri");
                 }
             } else {
                 RistampaTextField.setBorder(default_border);
-                RefreshTooltipLabel(RistampaError, LibrarianStyle.SUCCESS_COLOR, CORRECT_TOLLTIP);
+                refreshTooltipLabel(RistampaError, LibrarianStyle.SUCCESS_COLOR, CORRECT_TOLLTIP);
 
                 correct++;
             }
         } else {
             RistampaTextField.setBorder(default_border);
-            RefreshTooltipLabel(RistampaError, LibrarianStyle.SUCCESS_COLOR, CORRECT_TOLLTIP);
+            refreshTooltipLabel(RistampaError, LibrarianStyle.SUCCESS_COLOR, CORRECT_TOLLTIP);
 
             correct++;
         }
@@ -2980,15 +2983,15 @@ public class appLibrarian extends javax.swing.JFrame {
             LinguaTextField.setBorder(exceptionBorder);
 
             if (controller == 1) {
-                RefreshTooltipLabel(LinguaError, LibrarianStyle.EXCEPTION_COLOR, "è vuoto");
+                refreshTooltipLabel(LinguaError, LibrarianStyle.EXCEPTION_COLOR, "è vuoto");
             }
             if (controller == 2) {
-                RefreshTooltipLabel(LinguaError, LibrarianStyle.EXCEPTION_COLOR, "non può contenere numeri !");
+                refreshTooltipLabel(LinguaError, LibrarianStyle.EXCEPTION_COLOR, "non può contenere numeri !");
             }
 
         } else {
             LinguaTextField.setBorder(default_border);
-            RefreshTooltipLabel(LinguaError, LibrarianStyle.SUCCESS_COLOR, CORRECT_TOLLTIP);
+            refreshTooltipLabel(LinguaError, LibrarianStyle.SUCCESS_COLOR, CORRECT_TOLLTIP);
 
             correct++;
         }
@@ -3001,21 +3004,21 @@ public class appLibrarian extends javax.swing.JFrame {
                 ScaffaleTextField.setBorder(exceptionBorder);
 
                 if (controller == 2) {
-                    RefreshTooltipLabel(ScaffaleError, LibrarianStyle.EXCEPTION_COLOR, "troppo lungo, max 2");
+                    refreshTooltipLabel(ScaffaleError, LibrarianStyle.EXCEPTION_COLOR, "troppo lungo, max 2");
                 }
                 if (controller == 3) {
-                    RefreshTooltipLabel(ScaffaleError, LibrarianStyle.EXCEPTION_COLOR, "deve contenere un numero");
+                    refreshTooltipLabel(ScaffaleError, LibrarianStyle.EXCEPTION_COLOR, "deve contenere un numero");
                 }
 
             } else {
                 ScaffaleTextField.setBorder(default_border);
-                RefreshTooltipLabel(ScaffaleError, LibrarianStyle.SUCCESS_COLOR, CORRECT_TOLLTIP);
+                refreshTooltipLabel(ScaffaleError, LibrarianStyle.SUCCESS_COLOR, CORRECT_TOLLTIP);
 
                 correct++;
             }
         } else {
             ScaffaleTextField.setBorder(default_border);
-            RefreshTooltipLabel(ScaffaleError, LibrarianStyle.SUCCESS_COLOR, CORRECT_TOLLTIP);
+            refreshTooltipLabel(ScaffaleError, LibrarianStyle.SUCCESS_COLOR, CORRECT_TOLLTIP);
 
             correct++;
         }
@@ -3024,7 +3027,7 @@ public class appLibrarian extends javax.swing.JFrame {
         return correct == TOTAL_BOOK_FIELD;
     }
     
-    private boolean CheckAllnewUserField() throws RemoteException {
+    private boolean checkAllnewUserField() throws RemoteException {
         
         final int NEWUSER_TOTAL_FIELD = 6;
         
@@ -3039,13 +3042,13 @@ public class appLibrarian extends javax.swing.JFrame {
             newUserNomeTxtField.setBorder(exceptionborder);
 
             if (controller == 1) {
-                RefreshGenericLabel(newuserErrorNomeLabel, newuserErrorNomeLabel.getForeground(), "è vuoto");
+                refreshGenericLabel(newuserErrorNomeLabel, newuserErrorNomeLabel.getForeground(), "è vuoto");
             }
             if (controller == 2) {
-                RefreshGenericLabel(newuserErrorNomeLabel, newuserErrorNomeLabel.getForeground(), "limite caratteri superato");
+                refreshGenericLabel(newuserErrorNomeLabel, newuserErrorNomeLabel.getForeground(), "limite caratteri superato");
             }
             if (controller == 3) {
-                RefreshGenericLabel(newuserErrorNomeLabel, newuserErrorNomeLabel.getForeground(), "ammesse solo lettere");
+                refreshGenericLabel(newuserErrorNomeLabel, newuserErrorNomeLabel.getForeground(), "ammesse solo lettere");
             }
         } else {
             newUserNomeTxtField.setBorder(LibrarianStyle.DEFAULT_MATTE_REGISTRATION);
@@ -3058,13 +3061,13 @@ public class appLibrarian extends javax.swing.JFrame {
             newUserCognomeTxtField.setBorder(exceptionborder);
 
             if (controller == 1) {
-                RefreshGenericLabel(newuserErrorCognomeLabel, newuserErrorCognomeLabel.getForeground(), "è vuoto");
+                refreshGenericLabel(newuserErrorCognomeLabel, newuserErrorCognomeLabel.getForeground(), "è vuoto");
             }
             if (controller == 2) {
-                RefreshGenericLabel(newuserErrorCognomeLabel, newuserErrorCognomeLabel.getForeground(), "limite caratteri superato");
+                refreshGenericLabel(newuserErrorCognomeLabel, newuserErrorCognomeLabel.getForeground(), "limite caratteri superato");
             }
             if (controller == 3) {
-                RefreshGenericLabel(newuserErrorCognomeLabel, newuserErrorCognomeLabel.getForeground(), "ammesse solo lettere");
+                refreshGenericLabel(newuserErrorCognomeLabel, newuserErrorCognomeLabel.getForeground(), "ammesse solo lettere");
             }
         } else {
             newUserCognomeTxtField.setBorder(LibrarianStyle.DEFAULT_MATTE_REGISTRATION);
@@ -3078,16 +3081,16 @@ public class appLibrarian extends javax.swing.JFrame {
             newUserCodiceTxtField.setBorder(exceptionborder);
 
             if (controller == 1) {
-                RefreshGenericLabel(newuserErrorCodiceLabel, newuserErrorCodiceLabel.getForeground(), "è vuoto");
+                refreshGenericLabel(newuserErrorCodiceLabel, newuserErrorCodiceLabel.getForeground(), "è vuoto");
             }
             if (controller == 2) {
-                RefreshGenericLabel(newuserErrorCodiceLabel, newuserErrorCodiceLabel.getForeground(), "troppo corto, minimo: 4");
+                refreshGenericLabel(newuserErrorCodiceLabel, newuserErrorCodiceLabel.getForeground(), "troppo corto, minimo: 4");
             }
             if (controller == 3) {
-                RefreshGenericLabel(newuserErrorCodiceLabel, newuserErrorCodiceLabel.getForeground(), "troppo lungo, massimo: 5");
+                refreshGenericLabel(newuserErrorCodiceLabel, newuserErrorCodiceLabel.getForeground(), "troppo lungo, massimo: 5");
             }
-        } else if (local_librarian.CheckParametricExisting("USERID", newUserCodiceTxtField.getText(), 2)) {
-            RefreshGenericLabel(newuserErrorCodiceLabel, newuserErrorCodiceLabel.getForeground(), "ERRORE: utente già esistente");
+        } else if (local_librarian.checkParametricExisting("USERID", newUserCodiceTxtField.getText(), 2)) {
+            refreshGenericLabel(newuserErrorCodiceLabel, newuserErrorCodiceLabel.getForeground(), "ERRORE: utente già esistente");
         } else {
             newUserCodiceTxtField.setBorder(LibrarianStyle.DEFAULT_MATTE_REGISTRATION);
             newuserErrorCodiceLabel.setVisible(false);
@@ -3099,22 +3102,22 @@ public class appLibrarian extends javax.swing.JFrame {
             newUserEmailTxtField.setBorder(exceptionborder);
 
             if (controller == 1) {
-                RefreshGenericLabel(newuserErrorEmailLabel, newuserErrorEmailLabel.getForeground(), "è vuoto");
+                refreshGenericLabel(newuserErrorEmailLabel, newuserErrorEmailLabel.getForeground(), "è vuoto");
             }
             if (controller == 2) {
-                RefreshGenericLabel(newuserErrorEmailLabel, newuserErrorEmailLabel.getForeground(), "superata lunghezza max: 30");
+                refreshGenericLabel(newuserErrorEmailLabel, newuserErrorEmailLabel.getForeground(), "superata lunghezza max: 30");
             }
             if (controller == 3) {
-                RefreshGenericLabel(newuserErrorEmailLabel, newuserErrorEmailLabel.getForeground(), "errore format, manca: @");
+                refreshGenericLabel(newuserErrorEmailLabel, newuserErrorEmailLabel.getForeground(), "errore format, manca: @");
             }
             if (controller == 4) {
-                RefreshGenericLabel(newuserErrorEmailLabel, newuserErrorEmailLabel.getForeground(), "troppi simboli '@'");
+                refreshGenericLabel(newuserErrorEmailLabel, newuserErrorEmailLabel.getForeground(), "troppi simboli '@'");
             }
             if (controller == 5) {
-                RefreshGenericLabel(newuserErrorEmailLabel, newuserErrorEmailLabel.getForeground(), "nessun carattere prima di '@'");
+                refreshGenericLabel(newuserErrorEmailLabel, newuserErrorEmailLabel.getForeground(), "nessun carattere prima di '@'");
             }
             if (controller == 6) {
-                RefreshGenericLabel(newuserErrorEmailLabel, newuserErrorEmailLabel.getForeground(), "errore formato, manca: '.'");
+                refreshGenericLabel(newuserErrorEmailLabel, newuserErrorEmailLabel.getForeground(), "errore formato, manca: '.'");
             }
         } else {
             newUserEmailTxtField.setBorder(LibrarianStyle.DEFAULT_MATTE_REGISTRATION);
@@ -3127,10 +3130,10 @@ public class appLibrarian extends javax.swing.JFrame {
             newUserInquadField.setBorder(exceptionborder);
             
             if (controller == 1) {
-                RefreshGenericLabel(newuserErrorInquadLabel, newuserErrorInquadLabel.getForeground(), "è vuoto");
+                refreshGenericLabel(newuserErrorInquadLabel, newuserErrorInquadLabel.getForeground(), "è vuoto");
             }
             if (controller == 2) {
-                RefreshGenericLabel(newuserErrorInquadLabel, newuserErrorInquadLabel.getForeground(), "inquadramento non valido");
+                refreshGenericLabel(newuserErrorInquadLabel, newuserErrorInquadLabel.getForeground(), "inquadramento non valido");
             }
 
         } else {
@@ -3144,13 +3147,13 @@ public class appLibrarian extends javax.swing.JFrame {
             newUserTelefonoTxtField.setBorder(exceptionborder);
 
             if (controller == 1) {
-                RefreshGenericLabel(newuserErrorNumTelLabel, newuserErrorNumTelLabel.getForeground(), "è vuoto");
+                refreshGenericLabel(newuserErrorNumTelLabel, newuserErrorNumTelLabel.getForeground(), "è vuoto");
             }
             if (controller == 2) {
-                RefreshGenericLabel(newuserErrorNumTelLabel, newuserErrorNumTelLabel.getForeground(), "lunghezza massima superata: 15");
+                refreshGenericLabel(newuserErrorNumTelLabel, newuserErrorNumTelLabel.getForeground(), "lunghezza massima superata: 15");
             }
             if (controller == 3) {
-                RefreshGenericLabel(newuserErrorNumTelLabel, newuserErrorNumTelLabel.getForeground(), "deve contenere solo numeri");
+                refreshGenericLabel(newuserErrorNumTelLabel, newuserErrorNumTelLabel.getForeground(), "deve contenere solo numeri");
             }
 
         } else {
@@ -3176,7 +3179,7 @@ public class appLibrarian extends javax.swing.JFrame {
 
     private void SearchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SearchButtonActionPerformed
 
-        NormalizejTable(BooksTable,PreviousButton,NextPageButton,PageNumLabel,PageTableIndex,local_librarian.GetLookedBooks(SearchTextField.getText()));
+        normalizejTable(BooksTable,PreviousButton,NextPageButton,PageNumLabel,PageTableIndex,local_librarian.getLookedBooks(SearchTextField.getText()));
         
         BooksTable.revalidate();
         BooksTable.getParent().repaint();
@@ -3199,7 +3202,7 @@ public class appLibrarian extends javax.swing.JFrame {
 
         PreviousButton.setEnabled(true);
 
-        SetCurrentPage(PageNumLabel,PageTableIndex);
+        setCurrentPage(PageNumLabel,PageTableIndex);
         EliminaButton.setEnabled(false);
 
         BooksTable.getSelectionModel().clearSelection();
@@ -3222,7 +3225,7 @@ public class appLibrarian extends javax.swing.JFrame {
 
         NextPageButton.setEnabled(true);
 
-        SetCurrentPage(PageNumLabel,PageTableIndex);
+        setCurrentPage(PageNumLabel,PageTableIndex);
         EliminaButton.setEnabled(false);
 
         BooksTable.getSelectionModel().clearSelection();
@@ -3241,19 +3244,19 @@ public class appLibrarian extends javax.swing.JFrame {
         boolean changeable = false;
 
 
-        if (local_librarian.MatchingUserID_Password(local_librarian.GetID(), OldPasswordTxtField.getPassword(), UtenteLibrarian.Librarian_Default_Type_Value)) {
+        if (local_librarian.matchingUserIDPassword(local_librarian.getID(), OldPasswordTxtField.getPassword(), UtenteLibrarian.Librarian_Default_Type_Value)) {
             if (check.userChecker.checkPassword(NewPasswordTextField.getPassword()) == 0) {
                 changeable = true;
             } else {
 
-                RefreshGenericLabel(ModifyReporterLabel, LibrarianStyle.EXCEPTION_COLOR, "Password nuova Errata");
+                refreshGenericLabel(ModifyReporterLabel, LibrarianStyle.EXCEPTION_COLOR, "Password nuova Errata");
 
                 NewPasswordTextField.setBorder(exceptionborder);
 
                 return;
             }
         } else {
-            RefreshGenericLabel(ModifyReporterLabel, LibrarianStyle.EXCEPTION_COLOR, "Password Vecchia non corrisponde");
+            refreshGenericLabel(ModifyReporterLabel, LibrarianStyle.EXCEPTION_COLOR, "Password Vecchia non corrisponde");
 
             OldPasswordTxtField.setBorder(exceptionborder);
 
@@ -3261,9 +3264,9 @@ public class appLibrarian extends javax.swing.JFrame {
         }
 
         if (changeable) {
-            local_librarian.UpdateUserPassword(local_librarian.GetID(), NewPasswordTextField.getPassword(), UtenteLibrarian.Librarian_Default_Type_Value);
+            local_librarian.updateUserPassword(local_librarian.getID(), NewPasswordTextField.getPassword(), UtenteLibrarian.Librarian_Default_Type_Value);
 
-            RefreshGenericLabel(ModifyReporterLabel, LibrarianStyle.SUCCESS_COLOR, "Password Cambiata con Successo");
+            refreshGenericLabel(ModifyReporterLabel, LibrarianStyle.SUCCESS_COLOR, "Password Cambiata con Successo");
 
             try {
                 Thread.sleep(1600);
@@ -3287,7 +3290,7 @@ public class appLibrarian extends javax.swing.JFrame {
         String success_message = "Informazioni Aggiornate: ";
 
         if (check.userChecker.checkEmail(ModifyEmailTextField.getText()) == 0) {
-            local_librarian.UpdateUserInfo(local_librarian.getUser().getUserID(), "EMAIL", ModifyEmailTextField.getText(), local_librarian.GetDefaultType());
+            local_librarian.updateUserInfo(local_librarian.getUser().getUserID(), "EMAIL", ModifyEmailTextField.getText(), local_librarian.getDefaultType());
 
             success_message = success_message + "EMAIL -> " + ModifyEmailTextField.getText() + "\n";
             modified++;
@@ -3297,12 +3300,12 @@ public class appLibrarian extends javax.swing.JFrame {
         } else {
             ModifyEmailTextField.setBorder(exceptionborder);
 
-            RefreshGenericLabel(ModifyReporterLabel, LibrarianStyle.EXCEPTION_COLOR, "Fromato Email non Valido");
+            refreshGenericLabel(ModifyReporterLabel, LibrarianStyle.EXCEPTION_COLOR, "Fromato Email non Valido");
 
         }
 
         if (check.userChecker.checkNumero(ModifyNumberTextField.getText()) == 0) {
-            local_librarian.UpdateUserInfo(local_librarian.getUser().getUserID(), "NUMERO", ModifyNumberTextField.getText(), local_librarian.GetDefaultType());
+            local_librarian.updateUserInfo(local_librarian.getUser().getUserID(), "NUMERO", ModifyNumberTextField.getText(), local_librarian.getDefaultType());
 
             success_message = success_message + "NUMERO -> " + ModifyNumberTextField.getText() + "\n";
             modified++;
@@ -3310,11 +3313,11 @@ public class appLibrarian extends javax.swing.JFrame {
         } else {
             ModifyNumberTextField.setBorder(exceptionborder);
 
-            RefreshGenericLabel(ModifyReporterLabel, LibrarianStyle.EXCEPTION_COLOR, "Formato Numero non valido");
+            refreshGenericLabel(ModifyReporterLabel, LibrarianStyle.EXCEPTION_COLOR, "Formato Numero non valido");
         }
 
         if (check.userChecker.checkInquadramento(ModifyInquadTextField.getText()) == 0) {
-            local_librarian.UpdateUserInfo(local_librarian.getUser().getUserID(), "INQUADRAMENTO", ModifyInquadTextField.getText(), local_librarian.GetDefaultType());
+            local_librarian.updateUserInfo(local_librarian.getUser().getUserID(), "INQUADRAMENTO", ModifyInquadTextField.getText(), local_librarian.getDefaultType());
 
             success_message = success_message + "INQUADRAMENTO -> " + ModifyInquadTextField.getText() + "\n";
             modified++;
@@ -3322,11 +3325,11 @@ public class appLibrarian extends javax.swing.JFrame {
         } else {
             ModifyInquadTextField.setBorder(exceptionborder);
 
-            RefreshGenericLabel(ModifyReporterLabel, LibrarianStyle.EXCEPTION_COLOR, "Formato Inquadramento non valido");
+            refreshGenericLabel(ModifyReporterLabel, LibrarianStyle.EXCEPTION_COLOR, "Formato Inquadramento non valido");
         }
 
         if (modified > 0) {
-            RefreshGenericLabel(ModifyReporterLabel, LibrarianStyle.SUCCESS_COLOR, success_message);
+            refreshGenericLabel(ModifyReporterLabel, LibrarianStyle.SUCCESS_COLOR, success_message);
 
             try {
                 Thread.sleep(1000);
@@ -3335,12 +3338,12 @@ public class appLibrarian extends javax.swing.JFrame {
             }
 
             if (CoreMod) {
-                local_librarian.UpdateUserInfo(local_librarian.getUser().getUserID(), "CONFIRMED", "0", local_librarian.GetDefaultType());
-                local_librarian.UpdateUserInfo(local_librarian.getUser().getUserID(), "CODICE", Arrays.toString(local_librarian.GenerateUserCode(local_librarian.getUser().getUserID())), local_librarian.GetDefaultType());
-                local_librarian.UpdateUserInfo(local_librarian.getUser().getUserID(), "TENTATIVI", "5", local_librarian.GetDefaultType());
+                local_librarian.updateUserInfo(local_librarian.getUser().getUserID(), "CONFIRMED", "0", local_librarian.getDefaultType());
+                local_librarian.updateUserInfo(local_librarian.getUser().getUserID(), "CODICE", Arrays.toString(local_librarian.generateUserCode(local_librarian.getUser().getUserID())), local_librarian.getDefaultType());
+                local_librarian.updateUserInfo(local_librarian.getUser().getUserID(), "TENTATIVI", "5", local_librarian.getDefaultType());
 
-                local_librarian.SendNewInformation(local_librarian.getUser().getUserID(), success_message, local_librarian.GetDefaultType());
-                local_librarian.SendConfirmationCode(local_librarian.getUser().getUserID(), local_librarian.GetDefaultType());
+                local_librarian.sendNewInformation(local_librarian.getUser().getUserID(), success_message, local_librarian.getDefaultType());
+                local_librarian.sendConfirmationCode(local_librarian.getUser().getUserID(), local_librarian.getDefaultType());
 
                 ModifyDialog.getParent().setVisible(false);
                 ModifyDialog.removeWindowListener(ModifyDialog.getWindowListeners()[0]);
@@ -3348,20 +3351,20 @@ public class appLibrarian extends javax.swing.JFrame {
 
                 this.setVisible(false);
                 this.dispose();
-                SetModifyDialog();
+                setModifyDialog();
                 new appLibrarianLoginForm().setVisible(true);
 
             } else {
 
-                local_librarian.SendNewInformation(local_librarian.getUser().getUserID(), success_message, local_librarian.GetDefaultType());
+                local_librarian.sendNewInformation(local_librarian.getUser().getUserID(), success_message, local_librarian.getDefaultType());
 
                 ModifyDialog.setVisible(false);
-                SetModifyDialog();
+                setModifyDialog();
 
                 this.setEnabled(true);
             }
         } else {
-            SetModifyDialog();
+            setModifyDialog();
         }
 
     }//GEN-LAST:event_ModifyConfirmButtonActionPerformed
@@ -3371,7 +3374,7 @@ public class appLibrarian extends javax.swing.JFrame {
         ModifyDialog.setVisible(false);
         ModifyDialog.setEnabled(false);
 
-        SetModifyDialog();
+        setModifyDialog();
 
         ModifyDialog.getParent().setEnabled(true);
         ModifyDialog.getParent().setVisible(true);
@@ -3388,7 +3391,7 @@ public class appLibrarian extends javax.swing.JFrame {
 
         if (result == AskinDeletingOptionPane.YES_OPTION) {
 
-            local_librarian.DeleteUserAccount(local_librarian.getUser().getUserID(), "USERID", local_librarian.getUser().GetUserType());
+            local_librarian.deleteUserAccount(local_librarian.getUser().getUserID(), "USERID", local_librarian.getUser().getUserType());
             AskinDeletingOptionPane.setVisible(false);
             ModifyDialog.setVisible(false);
             this.setVisible(false);
@@ -3423,17 +3426,17 @@ public class appLibrarian extends javax.swing.JFrame {
         if (result == EliminaOption.YES_OPTION) {
             int to_delete_isbn = Integer.parseInt(Selected_ISBN.trim());
 
-            if (local_librarian.Check_Existing_Easy_PrenPres(Selected_ISBN, "", 4));
+            if (local_librarian.checkExistingEasyPrenPres(Selected_ISBN, "", 4));
             {
-                for (String user_id : local_librarian.GetUserIDFromPrenPrest_byISBN(Selected_ISBN, 4)) {
-                    local_librarian.SendDeletedPrenotazioneEmail(user_id, Selected_ISBN, 2);
+                for (String user_id : local_librarian.getUserIDFromPrenPrestByISBN(Selected_ISBN, 4)) {
+                    local_librarian.sendDeletedPrenotazioneEmail(user_id, Selected_ISBN, 2);
                 }
             }
 
-            local_librarian.DeleteBook_byISBN(to_delete_isbn);
+            local_librarian.deleteBookByISBN(to_delete_isbn);
 
             EliminaOption.setVisible(false);
-            NormalizejTable(BooksTable,PreviousButton,NextPageButton,PageNumLabel,PageTableIndex,local_librarian.BuilderBookTableModel());
+            normalizejTable(BooksTable,PreviousButton,NextPageButton,PageNumLabel,PageTableIndex,local_librarian.builderBookTableModel());
             BooksTable.revalidate();
             BooksTable.getParent().repaint();
             BooksTable.repaint();
@@ -3461,7 +3464,7 @@ public class appLibrarian extends javax.swing.JFrame {
         String codice_and_title;
         
         try {
-            if (CheckBookFields()) {
+            if (checkBookFields()) {
                 if (RistampaTextField.getText().isEmpty() && ScaffaleTextField.getText().isEmpty()) {
                     Libro libro = new Libro(
                             CodeTextField.getText(),
@@ -3472,8 +3475,8 @@ public class appLibrarian extends javax.swing.JFrame {
                             CategorieComboBox.getSelectedItem().toString(),
                             LinguaTextField.getText());
 
-                    book_creation_success = local_librarian.InsertNewBook(libro);
-                    codice_and_title = libro.GetISBN() + ", '" + libro.GetTitolo() + "' ";
+                    book_creation_success = local_librarian.insertNewBook(libro);
+                    codice_and_title = libro.getISBN() + ", '" + libro.getTitolo() + "' ";
                 } else if (!RistampaTextField.getText().isEmpty() && ScaffaleTextField.getText().isEmpty()) {
                     Libro libro = new Libro(
                             CodeTextField.getText(),
@@ -3485,8 +3488,8 @@ public class appLibrarian extends javax.swing.JFrame {
                             CategorieComboBox.getSelectedItem().toString(),
                             LinguaTextField.getText());
 
-                    book_creation_success = local_librarian.InsertNewBook(libro);
-                    codice_and_title = libro.GetISBN() + ", '" + libro.GetTitolo() + "' ";
+                    book_creation_success = local_librarian.insertNewBook(libro);
+                    codice_and_title = libro.getISBN() + ", '" + libro.getTitolo() + "' ";
                 } else if (RistampaTextField.getText().isEmpty() && !ScaffaleTextField.getText().isEmpty()) {
                     Libro libro = new Libro(
                             CodeTextField.getText(),
@@ -3498,8 +3501,8 @@ public class appLibrarian extends javax.swing.JFrame {
                             LinguaTextField.getText(),
                             Integer.parseInt(ScaffaleTextField.getText()));
 
-                    book_creation_success = local_librarian.InsertNewBook(libro);
-                    codice_and_title = libro.GetISBN() + ", '" + libro.GetTitolo() + "' ";
+                    book_creation_success = local_librarian.insertNewBook(libro);
+                    codice_and_title = libro.getISBN() + ", '" + libro.getTitolo() + "' ";
                 } else {
 
                     Libro libro = new Libro(
@@ -3513,12 +3516,14 @@ public class appLibrarian extends javax.swing.JFrame {
                             LinguaTextField.getText(),
                             Integer.parseInt(ScaffaleTextField.getText()));
 
-                    book_creation_success = local_librarian.InsertNewBook(libro);
-                    codice_and_title = libro.GetISBN() + ", '" + libro.GetTitolo() + "' ";
+                    book_creation_success = local_librarian.insertNewBook(libro);
+                    codice_and_title = libro.getISBN() + ", '" + libro.getTitolo() + "' ";
                 }
 
-                local_librarian.SendCommunicationServer("[LIB-" + local_librarian.GetID() + "] Aggiunge Libro: " + codice_and_title);
+                local_librarian.sendCommunicationServer("[LIB-" + local_librarian.getID() + "] Aggiunge Libro: " + codice_and_title);
                 BookInsertSuccessThread.start();
+
+                setAddBookDialog();
 
             }
         } catch (RemoteException ex) {
@@ -3526,9 +3531,11 @@ public class appLibrarian extends javax.swing.JFrame {
         }
 
         PageTableIndex = 0;
-        SetCurrentPage(PageNumLabel,PageTableIndex);
+        setCurrentPage(PageNumLabel,PageTableIndex);
 
         BooksTable.setModel(new DefaultTableModel(page_vector.elementAt(PageTableIndex), Columns));
+
+        setAddBookDialog();
 
         this.setEnabled(true);
         this.revalidate();
@@ -3539,7 +3546,7 @@ public class appLibrarian extends javax.swing.JFrame {
 
         addNewBookDialog.dispatchEvent(new WindowEvent(addNewBookDialog,WindowEvent.WINDOW_CLOSING));
 
-        SetAddBookDialog();
+        setAddBookDialog();
 
     }//GEN-LAST:event_AnnullaNewBookButtonActionPerformed
 
@@ -3547,7 +3554,7 @@ public class appLibrarian extends javax.swing.JFrame {
 
         PageTableIndex = 0;
 
-        NormalizejTable(BooksTable,PreviousButton,NextPageButton,PageNumLabel,PageTableIndex,local_librarian.BuilderBookTableModel());
+        normalizejTable(BooksTable,PreviousButton,NextPageButton,PageNumLabel,PageTableIndex,local_librarian.builderBookTableModel());
         BooksTable.revalidate();
         BooksTable.getParent().repaint();
         BooksTable.repaint();
@@ -3557,31 +3564,31 @@ public class appLibrarian extends javax.swing.JFrame {
     private void riconsegnaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_riconsegnaButtonActionPerformed
 
         if (local_librarian.checker.userChecker.checkCodiceFiscale(prestitoTextField.getText()) != 0) {
-            RefreshTooltipLabel(prestitoErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Formato utente non valido ");
-        } else if (local_librarian.CheckParametricExisting("USERID", prestitoTextField.getText(), 2)) {
+            refreshTooltipLabel(prestitoErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Formato utente non valido ");
+        } else if (local_librarian.checkParametricExisting("USERID", prestitoTextField.getText(), 2)) {
 
             String selected_ISBN = getSelectedISBNFromBooksTable();
 
-            if (local_librarian.Check_Existing_Easy_PrenPres(selected_ISBN, prestitoTextField.getText(), 5)) {
-                local_librarian.InsertPrestitoStorico(selected_ISBN, prestitoTextField.getText());
-                local_librarian.DeletePrestitoPrenotazioneByISBNByID(Integer.parseInt(selected_ISBN.trim()), Integer.parseInt(prestitoTextField.getText().trim()), 5);
-                local_librarian.UpdateBookStatus(selected_ISBN, 1);
+            if (local_librarian.checkExistingEasyPrenPres(selected_ISBN, prestitoTextField.getText(), 5)) {
+                local_librarian.insertPrestitoStorico(selected_ISBN, prestitoTextField.getText());
+                local_librarian.deletePrestitoPrenotazioneByISBNByID(Integer.parseInt(selected_ISBN.trim()), Integer.parseInt(prestitoTextField.getText().trim()), 5);
+                local_librarian.updateBookStatus(selected_ISBN, 1);
 
-                Vector<String> UserToGetUpdated = local_librarian.GetUserIDFromPrenPrest_byISBN(selected_ISBN, 4);
+                Vector<String> UserToGetUpdated = local_librarian.getUserIDFromPrenPrestByISBN(selected_ISBN, 4);
 
                 if (UserToGetUpdated.size() < 1) {
-                    local_librarian.UpdateBookStatus(selected_ISBN, 1);
+                    local_librarian.updateBookStatus(selected_ISBN, 1);
                 } else {
 
-                    local_librarian.SendLibroDisponibileEmail(UserToGetUpdated.elementAt(0), selected_ISBN, 2);
-                    local_librarian.SendCommunicationServer("[LIB-" + local_librarian.GetID() + "] Riconsegnato Libro: " + selected_ISBN);
+                    local_librarian.sendLibroDisponibileEmail(UserToGetUpdated.elementAt(0), selected_ISBN, 2);
+                    local_librarian.sendCommunicationServer("[LIB-" + local_librarian.getID() + "] Riconsegnato Libro: " + selected_ISBN);
                 }
 
             } else {
-                RefreshTooltipLabel(prestitoErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Prestito non attivo");
+                refreshTooltipLabel(prestitoErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Prestito non attivo");
             }
         } else {
-            RefreshTooltipLabel(prestitoErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Utente non nel DB");
+            refreshTooltipLabel(prestitoErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Utente non nel DB");
         }
 
     }//GEN-LAST:event_riconsegnaButtonActionPerformed
@@ -3590,35 +3597,35 @@ public class appLibrarian extends javax.swing.JFrame {
 
         if (local_librarian.checker.userChecker.checkCodiceFiscale(prestitoTextField.getText()) != 0)
         {
-            RefreshTooltipLabel(prestitoErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Formato utente non valido ");
+            refreshTooltipLabel(prestitoErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Formato utente non valido ");
         } 
-        else if (local_librarian.CheckParametricExisting("USERID", prestitoTextField.getText(), 2))
+        else if (local_librarian.checkParametricExisting("USERID", prestitoTextField.getText(), 2))
         {
             String selected_ISBN = getSelectedISBNFromBooksTable();
 
-            if (local_librarian.Check_Existing_Easy_PrenPres(selected_ISBN, prestitoTextField.getText(), 5))
+            if (local_librarian.checkExistingEasyPrenPres(selected_ISBN, prestitoTextField.getText(), 5))
             {
-                RefreshTooltipLabel(prestitoErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Prestito già attivo");
+                refreshTooltipLabel(prestitoErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Prestito già attivo");
             } 
-            else if (local_librarian.GetBookInformationbyISBN("DISPONIBILE", selected_ISBN).equals("1"))
+            else if (local_librarian.getBookInformationbyISBN("DISPONIBILE", selected_ISBN).equals("1"))
             {
-                if (local_librarian.Count_PrenotazioniPrestitiByID(prestitoTextField.getText(), 5) < local_librarian.GetMaxPrenotazioni())
+                if (local_librarian.countPrenotazioniPrestitiByID(prestitoTextField.getText(), 5) < local_librarian.getMaxPrenotazioni())
                 {
-                    if (local_librarian.GetPrestitoSconfinantebyID(prestitoTextField.getText()))
+                    if (local_librarian.getPrestitoSconfinantebyID(prestitoTextField.getText()))
                     {
-                        RefreshTooltipLabel(prestitoErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Utente Sconfinante");
+                        refreshTooltipLabel(prestitoErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Utente Sconfinante");
                         return;
                     }
-                    if (local_librarian.GetUserIDFromPrenPrest_byISBN(selected_ISBN, 4).size() > 0)
+                    if (local_librarian.getUserIDFromPrenPrestByISBN(selected_ISBN, 4).size() > 0)
                     {
-                        if (local_librarian.GetUserIDFromPrenPrest_byISBN(selected_ISBN, 4).elementAt(0).equals(prestitoTextField.getText()))
+                        if (local_librarian.getUserIDFromPrenPrestByISBN(selected_ISBN, 4).elementAt(0).equals(prestitoTextField.getText()))
                         {
-                            local_librarian.InsertPrestito(selected_ISBN, prestitoTextField.getText());
-                            local_librarian.UpdateBookStatus(selected_ISBN, 0);
-                            local_librarian.DeletePrestitoPrenotazioneByISBNByID(Integer.parseInt(selected_ISBN.trim()), Integer.parseInt(prestitoTextField.getText().trim()), 4);
+                            local_librarian.insertPrestito(selected_ISBN, prestitoTextField.getText());
+                            local_librarian.updateBookStatus(selected_ISBN, 0);
+                            local_librarian.deletePrestitoPrenotazioneByISBNByID(Integer.parseInt(selected_ISBN.trim()), Integer.parseInt(prestitoTextField.getText().trim()), 4);
 
-                            RefreshTooltipLabel(prestitoErrorLabel, LibrarianStyle.SUCCESS_COLOR, "Prestito attivato");
-                            local_librarian.SendCommunicationServer("[LIB-" + local_librarian.GetID() + "] Attiva nuovo Prestito a: " + prestitoTextField.getText());
+                            refreshTooltipLabel(prestitoErrorLabel, LibrarianStyle.SUCCESS_COLOR, "Prestito attivato");
+                            local_librarian.sendCommunicationServer("[LIB-" + local_librarian.getID() + "] Attiva nuovo Prestito a: " + prestitoTextField.getText());
 
                             try {
                                 Thread.sleep(600);
@@ -3632,15 +3639,15 @@ public class appLibrarian extends javax.swing.JFrame {
                             
                         } else {
 
-                            RefreshTooltipLabel(prestitoErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Utente non registrato in Prenotazione");
+                            refreshTooltipLabel(prestitoErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Utente non registrato in Prenotazione");
                         }
                     } else
                     {
-                        local_librarian.InsertPrestito(selected_ISBN, prestitoTextField.getText());
-                        local_librarian.UpdateBookStatus(selected_ISBN, 0);
+                        local_librarian.insertPrestito(selected_ISBN, prestitoTextField.getText());
+                        local_librarian.updateBookStatus(selected_ISBN, 0);
                         
 
-                        RefreshTooltipLabel(prestitoErrorLabel, LibrarianStyle.SUCCESS_COLOR, "Prestito attivato");
+                        refreshTooltipLabel(prestitoErrorLabel, LibrarianStyle.SUCCESS_COLOR, "Prestito attivato");
 
                         try {
                             Thread.sleep(600);
@@ -3652,13 +3659,13 @@ public class appLibrarian extends javax.swing.JFrame {
                         prestitoTextField.setText("");
                     }
                 } else {
-                    RefreshTooltipLabel(creanuovaPrenotazioneErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Limite Prestiti Raggiunto");
+                    refreshTooltipLabel(creanuovaPrenotazioneErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Limite Prestiti Raggiunto");
                 }
             } else {
-                RefreshTooltipLabel(creanuovaPrenotazioneErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Libro non Prenotabile");
+                refreshTooltipLabel(creanuovaPrenotazioneErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Libro non Prenotabile");
             }
         } else {
-            RefreshTooltipLabel(prestitoErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Utente non nel DB");
+            refreshTooltipLabel(prestitoErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Utente non nel DB");
         }
 
     }//GEN-LAST:event_prestitoButtonActionPerformed
@@ -3672,15 +3679,15 @@ public class appLibrarian extends javax.swing.JFrame {
 
         if (local_librarian.checker.userChecker.checkCodiceFiscale(creanuovaPrenotazioneTextField.getText()) != 0)
         {
-            RefreshTooltipLabel(creanuovaPrenotazioneErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Formato utente non valido");
+            refreshTooltipLabel(creanuovaPrenotazioneErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Formato utente non valido");
         }
-        else if (local_librarian.Count_PrenotazioniPrestitiByID(creanuovaPrenotazioneTextField.getText(), 4) == 0)
+        else if (local_librarian.countPrenotazioniPrestitiByID(creanuovaPrenotazioneTextField.getText(), 4) == 0)
         {
-            RefreshTooltipLabel(creanuovaPrenotazioneErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Nessuna Prenotazione Presente");
+            refreshTooltipLabel(creanuovaPrenotazioneErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Nessuna Prenotazione Presente");
         }
         else
         {
-            NormalizejTable(BooksTable,PreviousButton,NextPageButton,PageNumLabel,PageTableIndex,local_librarian.GetPrenotazioniPrestitiByUserID(creanuovaPrenotazioneTextField.getText(),3));
+            normalizejTable(BooksTable,PreviousButton,NextPageButton,PageNumLabel,PageTableIndex,local_librarian.getPrenotazioniPrestitiByUserID(creanuovaPrenotazioneTextField.getText(),3));
             BooksTable.repaint();
         }
 
@@ -3690,28 +3697,28 @@ public class appLibrarian extends javax.swing.JFrame {
 
         if (local_librarian.checker.userChecker.checkCodiceFiscale(creanuovaPrenotazioneTextField.getText()) != 0)
         {
-            RefreshTooltipLabel(creanuovaPrenotazioneErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Formato non valido");
+            refreshTooltipLabel(creanuovaPrenotazioneErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Formato non valido");
         }
-        else if (local_librarian.Count_PrenotazioniPrestitiByID(creanuovaPrenotazioneTextField.getText(), 4) > local_librarian.GetMaxPrenotazioni())
+        else if (local_librarian.countPrenotazioniPrestitiByID(creanuovaPrenotazioneTextField.getText(), 4) > local_librarian.getMaxPrenotazioni())
         {
-            RefreshTooltipLabel(creanuovaPrenotazioneErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Raggiunto Massimo Prenotazioni");
+            refreshTooltipLabel(creanuovaPrenotazioneErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Raggiunto Massimo Prenotazioni");
         }
-        else if (local_librarian.CheckParametricExisting("USERID", creanuovaPrenotazioneTextField.getText(), 2))
+        else if (local_librarian.checkParametricExisting("USERID", creanuovaPrenotazioneTextField.getText(), 2))
         {
 
             String selected_ISBN = getSelectedISBNFromBooksTable();
 
-            if (local_librarian.Check_Existing_Easy_PrenPres(selected_ISBN, creanuovaPrenotazioneTextField.getText(), 4))
+            if (local_librarian.checkExistingEasyPrenPres(selected_ISBN, creanuovaPrenotazioneTextField.getText(), 4))
             {
-                RefreshTooltipLabel(creanuovaPrenotazioneErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Prenotazione già esistente");
+                refreshTooltipLabel(creanuovaPrenotazioneErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Prenotazione già esistente");
             } 
             else
             {
 
-                local_librarian.InsertPrenotazione(selected_ISBN, creanuovaPrenotazioneTextField.getText());
+                local_librarian.insertPrenotazione(selected_ISBN, creanuovaPrenotazioneTextField.getText());
 
-                RefreshTooltipLabel(creanuovaPrenotazioneErrorLabel, LibrarianStyle.SUCCESS_COLOR, "Prenotazione Creata");
-                local_librarian.SendCommunicationServer("[LIB-" + local_librarian.GetID() + "] Crea Nuova Prenotazione per: " + creanuovaPrenotazioneTextField.getText());
+                refreshTooltipLabel(creanuovaPrenotazioneErrorLabel, LibrarianStyle.SUCCESS_COLOR, "Prenotazione Creata");
+                local_librarian.sendCommunicationServer("[LIB-" + local_librarian.getID() + "] Crea Nuova Prenotazione per: " + creanuovaPrenotazioneTextField.getText());
 
                 try {
                     Thread.sleep(600);
@@ -3724,7 +3731,7 @@ public class appLibrarian extends javax.swing.JFrame {
             }
         } else
         {
-            RefreshTooltipLabel(creanuovaPrenotazioneErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Utente non nel DB");
+            refreshTooltipLabel(creanuovaPrenotazioneErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Utente non nel DB");
         }
     }//GEN-LAST:event_creanuovaPrenotazionerButtonActionPerformed
 
@@ -3732,15 +3739,15 @@ public class appLibrarian extends javax.swing.JFrame {
 
         if (local_librarian.checker.userChecker.checkCodiceFiscale(creanuovaPrenotazioneTextField.getText()) != 0)
         {
-            RefreshTooltipLabel(creanuovaPrenotazioneErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Formato non valido");
+            refreshTooltipLabel(creanuovaPrenotazioneErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Formato non valido");
         }
-        else if (local_librarian.CheckParametricExisting("USERID", creanuovaPrenotazioneTextField.getText(), 2))
+        else if (local_librarian.checkParametricExisting("USERID", creanuovaPrenotazioneTextField.getText(), 2))
         {
             String selected_ISBN = getSelectedISBNFromBooksTable();
 
-            local_librarian.DeletePrestitoPrenotazioneByISBNByID(Integer.parseInt(selected_ISBN.trim()), Integer.parseInt(creanuovaPrenotazioneTextField.getText().trim()), 4);
+            local_librarian.deletePrestitoPrenotazioneByISBNByID(Integer.parseInt(selected_ISBN.trim()), Integer.parseInt(creanuovaPrenotazioneTextField.getText().trim()), 4);
 
-            RefreshTooltipLabel(creanuovaPrenotazioneErrorLabel, LibrarianStyle.SUCCESS_COLOR, "Prenotazione Eliminata");
+            refreshTooltipLabel(creanuovaPrenotazioneErrorLabel, LibrarianStyle.SUCCESS_COLOR, "Prenotazione Eliminata");
 
             try {
                 Thread.sleep(600);
@@ -3752,7 +3759,7 @@ public class appLibrarian extends javax.swing.JFrame {
             creanuovaPrenotazioneTextField.setText("");
 
         } else {
-            RefreshTooltipLabel(creanuovaPrenotazioneErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Utente non nel DB");
+            refreshTooltipLabel(creanuovaPrenotazioneErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Utente non nel DB");
         }
 
     }//GEN-LAST:event_disdiciPrenotazionerButtonActionPerformed
@@ -3760,15 +3767,15 @@ public class appLibrarian extends javax.swing.JFrame {
     private void deleteUserButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteUserButtonActionPerformed
 
         if (local_librarian.checker.userChecker.checkCodiceFiscale(deleteUserTextField.getText()) != 0) {
-            RefreshTooltipLabel(deleteUserIDErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Formato non valido");
-        } else if (local_librarian.CheckParametricExisting("USERID", deleteUserTextField.getText(), 2)) {
+            refreshTooltipLabel(deleteUserIDErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Formato non valido");
+        } else if (local_librarian.checkParametricExisting("USERID", deleteUserTextField.getText(), 2)) {
             
-            local_librarian.DeleteUserAccount(deleteUserTextField.getText(), "USERID", 2);
+            local_librarian.deleteUserAccount(deleteUserTextField.getText(), "USERID", 2);
 
-            RefreshTooltipLabel(deleteUserIDErrorLabel, LibrarianStyle.SUCCESS_COLOR, "Utente Eliminato");
-            local_librarian.SendCommunicationServer("[LIB-" + local_librarian.GetID() + "] Elimina Utente: " + deleteUserTextField.getText());
+            refreshTooltipLabel(deleteUserIDErrorLabel, LibrarianStyle.SUCCESS_COLOR, "Utente Eliminato");
+            local_librarian.sendCommunicationServer("[LIB-" + local_librarian.getID() + "] Elimina Utente: " + deleteUserTextField.getText());
         } else {
-            RefreshTooltipLabel(deleteUserIDErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Utente non nel DB");
+            refreshTooltipLabel(deleteUserIDErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Utente non nel DB");
         }
 
         try {
@@ -3784,21 +3791,21 @@ public class appLibrarian extends javax.swing.JFrame {
     private void disattivaPrestitoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_disattivaPrestitoButtonActionPerformed
 
         if (local_librarian.checker.userChecker.checkCodiceFiscale(prestitoTextField.getText()) != 0) {
-            RefreshTooltipLabel(prestitoErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Formato utente non valido ");
-        } else if (local_librarian.CheckParametricExisting("USERID", prestitoTextField.getText(), 2)) {
+            refreshTooltipLabel(prestitoErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Formato utente non valido ");
+        } else if (local_librarian.checkParametricExisting("USERID", prestitoTextField.getText(), 2)) {
 
             String selected_ISBN = getSelectedISBNFromBooksTable();
 
-            if (local_librarian.Check_Existing_Easy_PrenPres(selected_ISBN, prestitoTextField.getText(), 5)) {
-                local_librarian.DeletePrestitoPrenotazioneByISBNByID(Integer.parseInt(selected_ISBN.trim()), Integer.parseInt(prestitoTextField.getText().trim()), 5);
+            if (local_librarian.checkExistingEasyPrenPres(selected_ISBN, prestitoTextField.getText(), 5)) {
+                local_librarian.deletePrestitoPrenotazioneByISBNByID(Integer.parseInt(selected_ISBN.trim()), Integer.parseInt(prestitoTextField.getText().trim()), 5);
 
-                RefreshTooltipLabel(prestitoErrorLabel, LibrarianStyle.SUCCESS_COLOR, "Prestito Eliminato");
-                local_librarian.SendCommunicationServer("[LIB-" + local_librarian.GetID() + "] Prestito Eliminato per: " + selected_ISBN);
+                refreshTooltipLabel(prestitoErrorLabel, LibrarianStyle.SUCCESS_COLOR, "Prestito Eliminato");
+                local_librarian.sendCommunicationServer("[LIB-" + local_librarian.getID() + "] Prestito Eliminato per: " + selected_ISBN);
             } else {
-                RefreshTooltipLabel(prestitoErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Prestito non Presente");
+                refreshTooltipLabel(prestitoErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Prestito non Presente");
             }
         } else {
-            RefreshTooltipLabel(prestitoErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Utente non nel DB");
+            refreshTooltipLabel(prestitoErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Utente non nel DB");
         }
 
     }//GEN-LAST:event_disattivaPrestitoButtonActionPerformed
@@ -3806,15 +3813,16 @@ public class appLibrarian extends javax.swing.JFrame {
     private void creaReaderButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_creaReaderButtonActionPerformed
         
         if (local_librarian.checker.userChecker.checkCodiceFiscale(deleteUserTextField.getText()) != 0) {
-            RefreshTooltipLabel(deleteUserIDErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Formato non valido");
-        } else if(!local_librarian.CheckParametricExisting("USERID", deleteUserTextField.getText(), 2)){
+            refreshTooltipLabel(deleteUserIDErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Formato non valido");
+        } else if(!local_librarian.checkParametricExisting("USERID", deleteUserTextField.getText(), 2)){
                         
             newUserDialog.setVisible(true);
             newUserDialog.setAlwaysOnTop(true);
             
             newUserCodiceTxtField.setText(deleteUserTextField.getText());
         }
-        else{RefreshTooltipLabel(deleteUserIDErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Utente già nel DB");}
+        else{
+            refreshTooltipLabel(deleteUserIDErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Utente già nel DB");}
 
         try {
             Thread.sleep(600);
@@ -3832,7 +3840,7 @@ public class appLibrarian extends javax.swing.JFrame {
         newUserDialog.setVisible(false);
         newUserDialog.setEnabled(false);
 
-        SetAddNewUserDialog();
+        setAddNewUserDialog();
 
         newUserDialog.getParent().setEnabled(true);
         newUserDialog.getParent().setVisible(true);
@@ -3844,7 +3852,7 @@ public class appLibrarian extends javax.swing.JFrame {
     private void RegistrationButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrationButtonActionPerformed
 
         try {
-            if (CheckAllnewUserField()) {
+            if (checkAllnewUserField()) {
                 try {
 
                     String code = newUserCodiceTxtField.getText();
@@ -3854,16 +3862,18 @@ public class appLibrarian extends javax.swing.JFrame {
                     String tel = newUserTelefonoTxtField.getText();
                     String email = newUserEmailTxtField.getText();
                     
-                    char[] newuserpsw = local_librarian.GeneratePassword();
-                    char[] newusercode = local_librarian.GenerateUserCode(newUserCodiceTxtField.getText());
+                    char[] newuserpsw = local_librarian.generatePassword();
+                    char[] newusercode = local_librarian.generateUserCode(newUserCodiceTxtField.getText());
                     
                     Utente generico = new UtenteReader(nome, cognome, code, email, inquadr, tel, newuserpsw, newusercode );
                     
-                    local_librarian.InserUser(generico);
+                    local_librarian.inserUser(generico);
                     
-                    local_librarian.SendCommunicationServer("[LIB-" + local_librarian.GetID() + "] Creazione nuovo Utente: *" + generico.getUserID() + "* Completata");
+                    local_librarian.sendCommunicationServer("[LIB-" + local_librarian.getID() + "] Creazione nuovo Utente: *" + generico.getUserID() + "* Completata");
                     
-                    local_librarian.SendNewPassword(generico.getUserID(), generico.GetUserType());
+                    local_librarian.sendNewPassword(generico.getUserID(), generico.getUserType());
+
+                    setAddNewUserDialog();
 
                 } catch (RemoteException ex) {
                     Logger.getLogger(appLibrarian.class.getName()).log(Level.SEVERE, null, ex);
@@ -3891,15 +3901,15 @@ public class appLibrarian extends javax.swing.JFrame {
         
         if (local_librarian.checker.userChecker.checkCodiceFiscale(StatisticheUserIDTextField.getText()) != 0) {
             
-            RefreshTooltipLabel(statisticheUserError, LibrarianStyle.EXCEPTION_COLOR, "Formato non valido");
+            refreshTooltipLabel(statisticheUserError, LibrarianStyle.EXCEPTION_COLOR, "Formato non valido");
             
-        } else if (local_librarian.CheckParametricExisting("USERID", StatisticheUserIDTextField.getText(), 2)) {
+        } else if (local_librarian.checkParametricExisting("USERID", StatisticheUserIDTextField.getText(), 2)) {
             
-            NormalizejTable(statsTable,statsPreviousPageTableButton,statsNextPageTableButton,statsPageNumTableLabel,StatsPageIndex,local_librarian.GetPrenotazioniPrestitiByUserID(StatisticheUserIDTextField.getText(), 2));
+            normalizejTable(statsTable,statsPreviousPageTableButton,statsNextPageTableButton,statsPageNumTableLabel,StatsPageIndex,local_librarian.getPrenotazioniPrestitiByUserID(StatisticheUserIDTextField.getText(), 2));
             
         } else {
             
-            RefreshTooltipLabel(statisticheUserError, LibrarianStyle.EXCEPTION_COLOR, "Utente non nel DB");
+            refreshTooltipLabel(statisticheUserError, LibrarianStyle.EXCEPTION_COLOR, "Utente non nel DB");
         }
 
         try {
@@ -3916,14 +3926,14 @@ public class appLibrarian extends javax.swing.JFrame {
         
          
         if (local_librarian.checker.userChecker.checkCodiceFiscale(StatisticheUserIDTextField.getText()) != 0) {
-            RefreshTooltipLabel(statisticheUserError, LibrarianStyle.EXCEPTION_COLOR, "Formato non valido");
+            refreshTooltipLabel(statisticheUserError, LibrarianStyle.EXCEPTION_COLOR, "Formato non valido");
             
-        } else if (local_librarian.CheckParametricExisting("USERID", StatisticheUserIDTextField.getText(), 2)) {
+        } else if (local_librarian.checkParametricExisting("USERID", StatisticheUserIDTextField.getText(), 2)) {
             
-            NormalizejTable(statsTable,statsPreviousPageTableButton,statsNextPageTableButton,statsPageNumTableLabel,StatsPageIndex,local_librarian.GetPrenotazioniPrestitiByUserID(StatisticheUserIDTextField.getText(), 3));
+            normalizejTable(statsTable,statsPreviousPageTableButton,statsNextPageTableButton,statsPageNumTableLabel,StatsPageIndex,local_librarian.getPrenotazioniPrestitiByUserID(StatisticheUserIDTextField.getText(), 3));
  
         } else {
-            RefreshTooltipLabel(statisticheUserError, LibrarianStyle.EXCEPTION_COLOR, "Utente non nel DB");
+            refreshTooltipLabel(statisticheUserError, LibrarianStyle.EXCEPTION_COLOR, "Utente non nel DB");
         }
 
         try {
@@ -3945,13 +3955,13 @@ public class appLibrarian extends javax.swing.JFrame {
 
     private void statiticheGeneraliPrestitiButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statiticheGeneraliPrestitiButtonActionPerformed
         
-        NormalizejTable(statsTable,statsPreviousPageTableButton,statsNextPageTableButton,statsPageNumTableLabel,StatsPageIndex,local_librarian.GetPrenotazioniPrestitiByUserID(null, 2));
+        normalizejTable(statsTable,statsPreviousPageTableButton,statsNextPageTableButton,statsPageNumTableLabel,StatsPageIndex,local_librarian.getPrenotazioniPrestitiByUserID(null, 2));
         
     }//GEN-LAST:event_statiticheGeneraliPrestitiButtonActionPerformed
 
     private void statiticheGeneraliStoricoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statiticheGeneraliStoricoButtonActionPerformed
         
-        NormalizejTable(statsTable,statsPreviousPageTableButton,statsNextPageTableButton,statsPageNumTableLabel,StatsPageIndex,local_librarian.GetPrenotazioniPrestitiByUserID(null, 1));
+        normalizejTable(statsTable,statsPreviousPageTableButton,statsNextPageTableButton,statsPageNumTableLabel,StatsPageIndex,local_librarian.getPrenotazioniPrestitiByUserID(null, 1));
     }//GEN-LAST:event_statiticheGeneraliStoricoButtonActionPerformed
 
     private void perinquadramentoRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_perinquadramentoRadioButtonActionPerformed
@@ -3962,27 +3972,27 @@ public class appLibrarian extends javax.swing.JFrame {
        
         if(percategoriaRadioButton.isSelected())
         {
-            NormalizejTable(statsTable,statsPreviousPageTableButton,statsNextPageTableButton,statsPageNumTableLabel,StatsPageIndex,local_librarian.GetClassificaLibri(1));
+            normalizejTable(statsTable,statsPreviousPageTableButton,statsNextPageTableButton,statsPageNumTableLabel,StatsPageIndex,local_librarian.getClassificaLibri(1));
         }
         else if(perinquadramentoRadioButton.isSelected())
         {
 
-            NormalizejTable(statsTable,statsPreviousPageTableButton,statsNextPageTableButton,statsPageNumTableLabel,StatsPageIndex,local_librarian.GetClassificaLibri(2));
+            normalizejTable(statsTable,statsPreviousPageTableButton,statsNextPageTableButton,statsPageNumTableLabel,StatsPageIndex,local_librarian.getClassificaLibri(2));
         }
         else if(assolutaRadioButton.isSelected())
         {
 
-            NormalizejTable(statsTable,statsPreviousPageTableButton,statsNextPageTableButton,statsPageNumTableLabel,StatsPageIndex,local_librarian.GetClassificaLibri(3));
+            normalizejTable(statsTable,statsPreviousPageTableButton,statsNextPageTableButton,statsPageNumTableLabel,StatsPageIndex,local_librarian.getClassificaLibri(3));
         }
         else
         {
-            RefreshTooltipLabel(mostraErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Solo 1 categoria Ammessa");
+            refreshTooltipLabel(mostraErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Solo 1 categoria Ammessa");
         }
     }//GEN-LAST:event_mostraWithSortingButtonActionPerformed
 
     private void statiticheGeneraliPrenotazioniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_statiticheGeneraliPrenotazioniActionPerformed
       
-        NormalizejTable(statsTable,statsPreviousPageTableButton,statsNextPageTableButton,statsPageNumTableLabel,StatsPageIndex,local_librarian.GetPrenotazioniPrestitiByUserID(null, 3));
+        normalizejTable(statsTable,statsPreviousPageTableButton,statsNextPageTableButton,statsPageNumTableLabel,StatsPageIndex,local_librarian.getPrenotazioniPrestitiByUserID(null, 3));
     }//GEN-LAST:event_statiticheGeneraliPrenotazioniActionPerformed
 
     /**

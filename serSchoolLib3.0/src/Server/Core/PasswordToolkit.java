@@ -17,7 +17,13 @@ import java.util.concurrent.ThreadLocalRandom;
 public class PasswordToolkit {
 
 
-
+    /**
+     * data una password in ingresso rendere un numero random in posizione random di caratteri minuscoli
+     *
+     * @param password la password da modifiare
+     *
+     * @return la password modificata
+     * */
     public String randomLowerCase(String password){
         //random letters to lowercase
         String newPassword;
@@ -43,6 +49,13 @@ public class PasswordToolkit {
 
     }
 
+    /**
+     * aggiunge alla password in ingresso dei numeri randomici
+     *
+     * @param password la password su cui aggiungere
+     *
+     * @return la password modificata
+     * */
     public String addRandomNumbers(String password){
 
         int bound = ThreadLocalRandom.current().nextInt(3,7);
@@ -55,6 +68,13 @@ public class PasswordToolkit {
     }
 
 
+    /**
+     * esegue un Hash della password in ingresso
+     *
+     * @param password la password su cui effettuare Hash
+     *
+     * @return la password modificata
+     * */
     public String hashPassword(String password, String salt){
         String generatedPassword = "";
         try {

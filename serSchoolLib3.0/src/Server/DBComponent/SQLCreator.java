@@ -17,6 +17,13 @@ public class SQLCreator extends Thread{
 
     SQLSupporter supporter;
 
+    /**
+     * Costruttore di Classe, estente Thread, si occupa di generare tutte le tabelle all'inizio dell'esecuzione del programma
+     * con previo controllo di esistenza di tale tabella
+     *
+     * @param support Oggetto SQLSupporter per ottenere le operazioni utili
+     * @param log Oggetto ServerView per gestire gli Output
+     * */
     public SQLCreator(SQLSupporter support, ServerView log)
     {
         supporter = support;
@@ -84,17 +91,17 @@ public class SQLCreator extends Thread{
                 stmt.executeQuery(sql);
                 stmt.close();
 
-                logger.Write("SQL: Tabella *" + table_name + "* Creata con successo");
+                logger.write("SQL: Tabella *" + table_name + "* Creata con successo");
 
                 conn.close();
 
             } catch (Exception e) {
                 System.err.println(e.getClass().getName() + ": " + e.getMessage());
 
-                logger.Write("*Errore SQL: Statment Creazione Tabella *" + table_name + "* ");
+                logger.write("*Errore SQL: Statment Creazione Tabella *" + table_name + "* ");
             }
         } else {
-            logger.Write("*SQL: Tabella *" + table_name + "* già presente \n Skipping...");
+            logger.write("*SQL: Tabella *" + table_name + "* già presente \n Skipping...");
         }
 
     }
@@ -126,17 +133,17 @@ public class SQLCreator extends Thread{
                 stmt.executeUpdate(sql);
                 stmt.close();
 
-                logger.Write("SQL: Tabella *" + table_name + "* Creata con successo");
+                logger.write("SQL: Tabella *" + table_name + "* Creata con successo");
 
                 conn.close();
 
             } catch (Exception e) {
                 System.err.println(e.getClass().getName() + ": " + e.getMessage());
 
-                logger.Write("*Errore SQL: Statment Creazione Tabella *" + table_name + "* ");
+                logger.write("*Errore SQL: Statment Creazione Tabella *" + table_name + "* ");
             }
         } else {
-            logger.Write("*SQL: Tabella *" + table_name + "* già presente \n Skipping...");
+            logger.write("*SQL: Tabella *" + table_name + "* già presente \n Skipping...");
         }
 
     }
@@ -170,10 +177,10 @@ public class SQLCreator extends Thread{
             } catch (Exception e) {
                 System.err.println(e.getClass().getName() + ": " + e.getMessage());
 
-                logger.Write("*Errore SQL: Statment Creazione Tabella *" + table_name + "* ");
+                logger.write("*Errore SQL: Statment Creazione Tabella *" + table_name + "* ");
             }
         } else {
-            logger.Write("*SQL: Tabella *" + table_name + "* già presente \n Skipping...");
+            logger.write("*SQL: Tabella *" + table_name + "* già presente \n Skipping...");
         }
 
     }
@@ -209,10 +216,10 @@ public class SQLCreator extends Thread{
             } catch (Exception e) {
                 System.err.println(e.getClass().getName() + ": " + e.getMessage());
 
-                logger.Write("*Errore SQL: Statment Creazione Tabella *" + table_name + "* ");
+                logger.write("*Errore SQL: Statment Creazione Tabella *" + table_name + "* ");
             }
         } else {
-            logger.Write("*SQL: Tabella *" + table_name + "* già presente \n Skipping...");
+            logger.write("*SQL: Tabella *" + table_name + "* già presente \n Skipping...");
         }
 
     }
@@ -243,10 +250,10 @@ public class SQLCreator extends Thread{
             } catch (Exception e) {
                 System.err.println(e.getClass().getName() + ": " + e.getMessage());
 
-                logger.Write("*Errore SQL: Statment Creazione Tabella *" + table_name + "* ");
+                logger.write("*Errore SQL: Statment Creazione Tabella *" + table_name + "* ");
             }
         } else {
-            logger.Write("*SQL: Tabella *" + table_name + "* già presente \n Skipping...");
+            logger.write("*SQL: Tabella *" + table_name + "* già presente \n Skipping...");
         }
 
     }
@@ -271,7 +278,7 @@ public class SQLCreator extends Thread{
             e.printStackTrace();
         }
 
-        logger.Write("OmniaCreation completed.");
+        logger.write("OmniaCreation completed.");
 
     }
 }

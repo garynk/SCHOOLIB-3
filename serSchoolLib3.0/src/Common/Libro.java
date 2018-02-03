@@ -94,27 +94,27 @@ public class Libro implements Serializable{
         Scaffale = s;
     }
 
-    public String GetISBN() {
+    public String getISBN() {
         return ISBN;
     }
 
-    public String GetTitolo() {
+    public String getTitolo() {
         return Titolo;
     }
 
-    public String GetAutore() {
+    public String getAutore() {
         return Autore;
     }
 
-    public String GetCasaEditrice() {
+    public String getCasaEditrice() {
         return Casa_Editrice;
     }
 
-    public String GetAnnoPubb() {
+    public String getAnnoPubb() {
         return Anno_Pubblicaz;
     }
 
-    public String GetAnnoRistampa() {
+    public String getAnnoRistampa() {
         if (!Anno_Ristampa.isEmpty()) {
             return Anno_Ristampa;
         } else {
@@ -122,19 +122,19 @@ public class Libro implements Serializable{
         }
     }
 
-    public String GetCategoria() {
+    public String getCategoria() {
         return Categoria;
     }
 
-    public String GetLingua() {
+    public String getLingua() {
         return Lingua;
     }
 
-    public int GetScaffale() {
+    public int getScaffale() {
         return Scaffale;
     }
 
-    public int GetObjectType() {
+    public int getObjectType() {
         return OBJ_TYPE;
     }
 

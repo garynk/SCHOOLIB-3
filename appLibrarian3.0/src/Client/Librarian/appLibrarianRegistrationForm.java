@@ -407,7 +407,7 @@ public class appLibrarianRegistrationForm extends javax.swing.JFrame {
         SuccessLabel.setVisible(false);
     }
 
-    private void RefreshGenericLabel(javax.swing.JLabel label_toUpadte, java.awt.Color color, String to_display) {
+    private void refreshGenericLabel(javax.swing.JLabel label_toUpadte, java.awt.Color color, String to_display) {
         try {
             Thread.sleep(400);
         } catch (InterruptedException ex) {
@@ -429,7 +429,7 @@ public class appLibrarianRegistrationForm extends javax.swing.JFrame {
 
     }
 
-    private boolean CheckAllField() throws RemoteException {
+    private boolean checkAllField() throws RemoteException {
         int controller;
         int correct = 0;
 
@@ -442,13 +442,13 @@ public class appLibrarianRegistrationForm extends javax.swing.JFrame {
             NomeTextField.setBorder(exceptionborder);
 
             if (controller == 1) {
-                RefreshGenericLabel(ErrorNomeLabel, ErrorNomeLabel.getForeground(), "è vuoto");
+                refreshGenericLabel(ErrorNomeLabel, ErrorNomeLabel.getForeground(), "è vuoto");
             }
             if (controller == 2) {
-                RefreshGenericLabel(ErrorNomeLabel, ErrorNomeLabel.getForeground(), "limite caratteri superato");
+                refreshGenericLabel(ErrorNomeLabel, ErrorNomeLabel.getForeground(), "limite caratteri superato");
             }
             if (controller == 3) {
-                RefreshGenericLabel(ErrorNomeLabel, ErrorNomeLabel.getForeground(), "ammesse solo lettere");
+                refreshGenericLabel(ErrorNomeLabel, ErrorNomeLabel.getForeground(), "ammesse solo lettere");
             }
         } else {
             NomeTextField.setBorder(LibrarianStyle.DEFAULT_MATTE_REGISTRATION);
@@ -461,13 +461,13 @@ public class appLibrarianRegistrationForm extends javax.swing.JFrame {
             CognomeTextField.setBorder(exceptionborder);
 
             if (controller == 1) {
-                RefreshGenericLabel(ErrorCognomeLabel, ErrorCognomeLabel.getForeground(), "è vuoto");
+                refreshGenericLabel(ErrorCognomeLabel, ErrorCognomeLabel.getForeground(), "è vuoto");
             }
             if (controller == 2) {
-                RefreshGenericLabel(ErrorCognomeLabel, ErrorCognomeLabel.getForeground(), "limite caratteri superato");
+                refreshGenericLabel(ErrorCognomeLabel, ErrorCognomeLabel.getForeground(), "limite caratteri superato");
             }
             if (controller == 3) {
-                RefreshGenericLabel(ErrorCognomeLabel, ErrorCognomeLabel.getForeground(), "ammesse solo lettere");
+                refreshGenericLabel(ErrorCognomeLabel, ErrorCognomeLabel.getForeground(), "ammesse solo lettere");
             }
         } else {
             CognomeTextField.setBorder(LibrarianStyle.DEFAULT_MATTE_REGISTRATION);
@@ -481,16 +481,16 @@ public class appLibrarianRegistrationForm extends javax.swing.JFrame {
             CodicefiscaleTextField.setBorder(exceptionborder);
 
             if (controller == 1) {
-                RefreshGenericLabel(ErrorCodiceFiscaleLabel, ErrorCodiceFiscaleLabel.getForeground(), "è vuoto");
+                refreshGenericLabel(ErrorCodiceFiscaleLabel, ErrorCodiceFiscaleLabel.getForeground(), "è vuoto");
             }
             if (controller == 2) {
-                RefreshGenericLabel(ErrorCodiceFiscaleLabel, ErrorCodiceFiscaleLabel.getForeground(), "troppo corto, minimo: 4");
+                refreshGenericLabel(ErrorCodiceFiscaleLabel, ErrorCodiceFiscaleLabel.getForeground(), "troppo corto, minimo: 4");
             }
             if (controller == 3) {
-                RefreshGenericLabel(ErrorCodiceFiscaleLabel, ErrorCodiceFiscaleLabel.getForeground(), "troppo lungo, massimo: 5");
+                refreshGenericLabel(ErrorCodiceFiscaleLabel, ErrorCodiceFiscaleLabel.getForeground(), "troppo lungo, massimo: 5");
             }
-        } else if (librarian.CheckParametricExisting("USERID", CodicefiscaleTextField.getText(), librarian.GetDefaultType())) {
-            RefreshGenericLabel(ErrorCodiceFiscaleLabel, ErrorCodiceFiscaleLabel.getForeground(), "ERRORE: utente già esistente");
+        } else if (librarian.checkParametricExisting("USERID", CodicefiscaleTextField.getText(), librarian.getDefaultType())) {
+            refreshGenericLabel(ErrorCodiceFiscaleLabel, ErrorCodiceFiscaleLabel.getForeground(), "ERRORE: utente già esistente");
         } else {
             CodicefiscaleTextField.setBorder(LibrarianStyle.DEFAULT_MATTE_REGISTRATION);
             ErrorCodiceFiscaleLabel.setVisible(false);
@@ -502,22 +502,22 @@ public class appLibrarianRegistrationForm extends javax.swing.JFrame {
             EmailTextField.setBorder(exceptionborder);
 
             if (controller == 1) {
-                RefreshGenericLabel(ErrorEmailLabel, ErrorEmailLabel.getForeground(), "è vuoto");
+                refreshGenericLabel(ErrorEmailLabel, ErrorEmailLabel.getForeground(), "è vuoto");
             }
             if (controller == 2) {
-                RefreshGenericLabel(ErrorEmailLabel, ErrorEmailLabel.getForeground(), "superata lunghezza max: 30");
+                refreshGenericLabel(ErrorEmailLabel, ErrorEmailLabel.getForeground(), "superata lunghezza max: 30");
             }
             if (controller == 3) {
-                RefreshGenericLabel(ErrorEmailLabel, ErrorEmailLabel.getForeground(), "errore format, manca: @");
+                refreshGenericLabel(ErrorEmailLabel, ErrorEmailLabel.getForeground(), "errore format, manca: @");
             }
             if (controller == 4) {
-                RefreshGenericLabel(ErrorEmailLabel, ErrorEmailLabel.getForeground(), "troppi simboli '@'");
+                refreshGenericLabel(ErrorEmailLabel, ErrorEmailLabel.getForeground(), "troppi simboli '@'");
             }
             if (controller == 5) {
-                RefreshGenericLabel(ErrorEmailLabel, ErrorEmailLabel.getForeground(), "nessun carattere prima di '@'");
+                refreshGenericLabel(ErrorEmailLabel, ErrorEmailLabel.getForeground(), "nessun carattere prima di '@'");
             }
             if (controller == 6) {
-                RefreshGenericLabel(ErrorEmailLabel, ErrorEmailLabel.getForeground(), "errore formato, manca: '.'");
+                refreshGenericLabel(ErrorEmailLabel, ErrorEmailLabel.getForeground(), "errore formato, manca: '.'");
             }
         } else {
             EmailTextField.setBorder(LibrarianStyle.DEFAULT_MATTE_REGISTRATION);
@@ -530,13 +530,13 @@ public class appLibrarianRegistrationForm extends javax.swing.JFrame {
             TelephoneTextField.setBorder(exceptionborder);
 
             if (controller == 1) {
-                RefreshGenericLabel(ErrorNumTelLabel, ErrorNumTelLabel.getForeground(), "è vuoto");
+                refreshGenericLabel(ErrorNumTelLabel, ErrorNumTelLabel.getForeground(), "è vuoto");
             }
             if (controller == 2) {
-                RefreshGenericLabel(ErrorNumTelLabel, ErrorNumTelLabel.getForeground(), "lunghezza massima superata: 15");
+                refreshGenericLabel(ErrorNumTelLabel, ErrorNumTelLabel.getForeground(), "lunghezza massima superata: 15");
             }
             if (controller == 3) {
-                RefreshGenericLabel(ErrorNumTelLabel, ErrorNumTelLabel.getForeground(), "deve contenere solo numeri");
+                refreshGenericLabel(ErrorNumTelLabel, ErrorNumTelLabel.getForeground(), "deve contenere solo numeri");
             }
 
         } else {
@@ -551,19 +551,19 @@ public class appLibrarianRegistrationForm extends javax.swing.JFrame {
             PasswordField.setBorder(exceptionborder);
 
             if (controller == 1) {
-                RefreshGenericLabel(ErrorPswLabel, ErrorPswLabel.getForeground(), "è vuoto");
+                refreshGenericLabel(ErrorPswLabel, ErrorPswLabel.getForeground(), "è vuoto");
             }
             if (controller == 2) {
-                RefreshGenericLabel(ErrorPswLabel, ErrorPswLabel.getForeground(), "lunghezza minima: 6");
+                refreshGenericLabel(ErrorPswLabel, ErrorPswLabel.getForeground(), "lunghezza minima: 6");
             }
             if (controller == 3) {
-                RefreshGenericLabel(ErrorPswLabel, ErrorPswLabel.getForeground(), "serve almeno un numero");
+                refreshGenericLabel(ErrorPswLabel, ErrorPswLabel.getForeground(), "serve almeno un numero");
             }
             if (controller == 4) {
-                RefreshGenericLabel(ErrorPswLabel, ErrorPswLabel.getForeground(), "serve almeno una maiuscola");
+                refreshGenericLabel(ErrorPswLabel, ErrorPswLabel.getForeground(), "serve almeno una maiuscola");
             }
             if (controller == 5) {
-                RefreshGenericLabel(ErrorPswLabel, ErrorPswLabel.getForeground(), "lunghezza massima superata: 15");
+                refreshGenericLabel(ErrorPswLabel, ErrorPswLabel.getForeground(), "lunghezza massima superata: 15");
             }
         } else {
             PasswordField.setBorder(LibrarianStyle.DEFAULT_MATTE_REGISTRATION);
@@ -575,7 +575,7 @@ public class appLibrarianRegistrationForm extends javax.swing.JFrame {
 
     }
 
-    private void BuildUser() throws RemoteException {
+    private void buildUser() throws RemoteException {
         librarian_user = new UtenteLibrarian(
                 NomeTextField.getText(),
                 CognomeTextField.getText(),
@@ -583,10 +583,10 @@ public class appLibrarianRegistrationForm extends javax.swing.JFrame {
                 EmailTextField.getText(),
                 TelephoneTextField.getText(),
                 PasswordField.getPassword(),
-                librarian.GenerateUserCode(CodicefiscaleTextField.getText())
+                librarian.generateUserCode(CodicefiscaleTextField.getText())
         );
 
-        librarian.SetUtente(librarian_user);
+        librarian.setUtente(librarian_user);
 
     }
 
@@ -598,7 +598,7 @@ public class appLibrarianRegistrationForm extends javax.swing.JFrame {
 
     }//GEN-LAST:event_IndietroButtonActionPerformed
 
-    private void SuccessLabelChange(String message, java.awt.Color color) {
+    private void successLabelChange(String message, java.awt.Color color) {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
@@ -624,24 +624,24 @@ public class appLibrarianRegistrationForm extends javax.swing.JFrame {
     private void RegistrationButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrationButtonActionPerformed
 
         try {
-            if (CheckAllField()) {
+            if (checkAllField()) {
                 try {
 
-                    BuildUser();
+                    buildUser();
 
-                    if (librarian.InserUser(librarian_user)) {
+                    if (librarian.inserUser(librarian_user)) {
 
-                        librarian.SendConfirmationCode(librarian.GetID(), librarian.GetDefaultType());
+                        librarian.sendConfirmationCode(librarian.getID(), librarian.getDefaultType());
 
-                        SuccessLabelChange("Profilo creato, controlla le mail", LibrarianStyle.SUCCESS_COLOR);
-                        librarian.SendCommunicationServer("Nuovo Utente tipo Librarian, ID: " + librarian.GetID());
+                        successLabelChange("Profilo creato, controlla le mail", LibrarianStyle.SUCCESS_COLOR);
+                        librarian.sendCommunicationServer("Nuovo Utente tipo Librarian, ID: " + librarian.getID());
                         
                         registration_success = true;
 
                         SuccessThread.start();
                     } else {
 
-                        SuccessLabelChange("Errore nella serializzazione", LibrarianStyle.EXCEPTION_COLOR);
+                        successLabelChange("Errore nella serializzazione", LibrarianStyle.EXCEPTION_COLOR);
 
                     }
 

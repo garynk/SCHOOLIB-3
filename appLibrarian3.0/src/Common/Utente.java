@@ -55,11 +55,11 @@ public class Utente implements Serializable {
         confirmed = 0;
     }
 
-    public String GetNome() {
+    public String getNome() {
         return nome;
     }
 
-    public String GetCognome() {
+    public String getCognome() {
         return cognome;
     }
 
@@ -67,27 +67,27 @@ public class Utente implements Serializable {
         return codice_fiscale;
     }
 
-    public String GetEmail() {
+    public String getEmail() {
         return email;
     }
 
-    public String GetInquadramento() {
+    public String getInquadramento() {
         return inquadramento;
     }
 
-    public String GetNumeroTelefono() {
+    public String getNumeroTelefono() {
         return numero_telefono;
     }
 
-    public int GetUserType() {
+    public int getUserType() {
         return USER_TYPE;
     }
 
-    public void SetUserID(String id) {
+    public void setUserID(String id) {
         codice_fiscale = id;
     }
 
-    public void SetType(int type) {
+    public void setType(int type) {
         USER_TYPE = type;
     }
 

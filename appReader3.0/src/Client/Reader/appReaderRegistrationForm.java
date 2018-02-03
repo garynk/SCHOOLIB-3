@@ -6,8 +6,7 @@
 package Client.Reader;
 
 import Common.UtenteReader;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 
@@ -434,7 +433,7 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
         ClasseSezioneField.setVisible(true);
         ClasseSezioneField.setEnabled(false);
         
-        InquadramentiComboBox.addItemListener(SelectedStudentItemListener());
+        InquadramentiComboBox.addItemListener(selectedStudentItemListener());
         
         ErrorNomeLabel.setVisible(false);
         ErrorCognomeLabel.setVisible(false);
@@ -447,7 +446,7 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
         SuccessLabel.setVisible(false);
     }
 
-    private void RefreshGenericLabel(javax.swing.JLabel label_toUpadte, java.awt.Color color, String to_display) {
+    private void refreshGenericLabel(javax.swing.JLabel label_toUpadte, java.awt.Color color, String to_display) {
         try {
             Thread.sleep(400);
         } catch (InterruptedException ex) {
@@ -470,7 +469,7 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
 
     }
 
-    private boolean CheckAllField() throws RemoteException {
+    private boolean checkAllField() throws RemoteException {
         int controller;
         int correct = 0;
 
@@ -482,13 +481,13 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
             NomeTextField.setBorder(exceptionborder);
 
             if (controller == 1) {
-                RefreshGenericLabel(ErrorNomeLabel, ErrorNomeLabel.getForeground(), "è vuoto");
+                refreshGenericLabel(ErrorNomeLabel, ErrorNomeLabel.getForeground(), "è vuoto");
             }
             if (controller == 2) {
-                RefreshGenericLabel(ErrorNomeLabel, ErrorNomeLabel.getForeground(), "limite caratteri superato");
+                refreshGenericLabel(ErrorNomeLabel, ErrorNomeLabel.getForeground(), "limite caratteri superato");
             }
             if (controller == 3) {
-                RefreshGenericLabel(ErrorNomeLabel, ErrorNomeLabel.getForeground(), "ammesse solo lettere");
+                refreshGenericLabel(ErrorNomeLabel, ErrorNomeLabel.getForeground(), "ammesse solo lettere");
             }
         } else {
             NomeTextField.setBorder(ReaderStyle.DEFAULT_MATTE_REGISTRATION);
@@ -501,13 +500,13 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
             CognomeTextField.setBorder(exceptionborder);
 
             if (controller == 1) {
-                RefreshGenericLabel(ErrorCognomeLabel, ErrorCognomeLabel.getForeground(), "è vuoto");
+                refreshGenericLabel(ErrorCognomeLabel, ErrorCognomeLabel.getForeground(), "è vuoto");
             }
             if (controller == 2) {
-                RefreshGenericLabel(ErrorCognomeLabel, ErrorCognomeLabel.getForeground(), "limite caratteri superato");
+                refreshGenericLabel(ErrorCognomeLabel, ErrorCognomeLabel.getForeground(), "limite caratteri superato");
             }
             if (controller == 3) {
-                RefreshGenericLabel(ErrorCognomeLabel, ErrorCognomeLabel.getForeground(), "ammesse solo lettere");
+                refreshGenericLabel(ErrorCognomeLabel, ErrorCognomeLabel.getForeground(), "ammesse solo lettere");
             }
         } else {
             CognomeTextField.setBorder(ReaderStyle.DEFAULT_MATTE_REGISTRATION);
@@ -521,16 +520,16 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
             CodicefiscaleTextField.setBorder(exceptionborder);
 
             if (controller == 1) {
-                RefreshGenericLabel(ErrorCodiceFiscaleLabel, ErrorCodiceFiscaleLabel.getForeground(), "è vuoto");
+                refreshGenericLabel(ErrorCodiceFiscaleLabel, ErrorCodiceFiscaleLabel.getForeground(), "è vuoto");
             }
             if (controller == 2) {
-                RefreshGenericLabel(ErrorCodiceFiscaleLabel, ErrorCodiceFiscaleLabel.getForeground(), "troppo corto, minimo: 4");
+                refreshGenericLabel(ErrorCodiceFiscaleLabel, ErrorCodiceFiscaleLabel.getForeground(), "troppo corto, minimo: 4");
             }
             if (controller == 3) {
-                RefreshGenericLabel(ErrorCodiceFiscaleLabel, ErrorCodiceFiscaleLabel.getForeground(), "troppo lungo, massimo: 5");
+                refreshGenericLabel(ErrorCodiceFiscaleLabel, ErrorCodiceFiscaleLabel.getForeground(), "troppo lungo, massimo: 5");
             }
-        } else if (reader.CheckParametricExisting("USERID", CodicefiscaleTextField.getText(), reader.GetType())) {
-            RefreshGenericLabel(ErrorCodiceFiscaleLabel, ErrorCodiceFiscaleLabel.getForeground(), "ERRORE: utente già esistente");
+        } else if (reader.checkParametricExisting("USERID", CodicefiscaleTextField.getText(), reader.getType())) {
+            refreshGenericLabel(ErrorCodiceFiscaleLabel, ErrorCodiceFiscaleLabel.getForeground(), "ERRORE: utente già esistente");
         } else {
             CodicefiscaleTextField.setBorder(ReaderStyle.DEFAULT_MATTE_REGISTRATION);
             ErrorCodiceFiscaleLabel.setVisible(false);
@@ -542,22 +541,22 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
             EmailTextField.setBorder(exceptionborder);
 
             if (controller == 1) {
-                RefreshGenericLabel(ErrorEmailLabel, ErrorEmailLabel.getForeground(), "è vuoto");
+                refreshGenericLabel(ErrorEmailLabel, ErrorEmailLabel.getForeground(), "è vuoto");
             }
             if (controller == 2) {
-                RefreshGenericLabel(ErrorEmailLabel, ErrorEmailLabel.getForeground(), "superata lunghezza max: 30");
+                refreshGenericLabel(ErrorEmailLabel, ErrorEmailLabel.getForeground(), "superata lunghezza max: 30");
             }
             if (controller == 3) {
-                RefreshGenericLabel(ErrorEmailLabel, ErrorEmailLabel.getForeground(), "errore format, manca: @");
+                refreshGenericLabel(ErrorEmailLabel, ErrorEmailLabel.getForeground(), "errore format, manca: @");
             }
             if (controller == 4) {
-                RefreshGenericLabel(ErrorEmailLabel, ErrorEmailLabel.getForeground(), "troppi simboli '@'");
+                refreshGenericLabel(ErrorEmailLabel, ErrorEmailLabel.getForeground(), "troppi simboli '@'");
             }
             if (controller == 5) {
-                RefreshGenericLabel(ErrorEmailLabel, ErrorEmailLabel.getForeground(), "nessun carattere prima di '@'");
+                refreshGenericLabel(ErrorEmailLabel, ErrorEmailLabel.getForeground(), "nessun carattere prima di '@'");
             }
             if (controller == 6) {
-                RefreshGenericLabel(ErrorEmailLabel, ErrorEmailLabel.getForeground(), "errore formato, manca: '.'");
+                refreshGenericLabel(ErrorEmailLabel, ErrorEmailLabel.getForeground(), "errore formato, manca: '.'");
             }
         } else {
             EmailTextField.setBorder(ReaderStyle.DEFAULT_MATTE_REGISTRATION);
@@ -572,10 +571,10 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
         
         if (controller != 0) {
             if (controller == 1) {
-                RefreshGenericLabel(ErrorInquadramentoLabel, ErrorInquadramentoLabel.getForeground(), "è vuoto");
+                refreshGenericLabel(ErrorInquadramentoLabel, ErrorInquadramentoLabel.getForeground(), "è vuoto");
             }
             if (controller == 2) {
-                RefreshGenericLabel(ErrorInquadramentoLabel, ErrorInquadramentoLabel.getForeground(), "deve essere: <num><lettera>");
+                refreshGenericLabel(ErrorInquadramentoLabel, ErrorInquadramentoLabel.getForeground(), "deve essere: <num><lettera>");
             }
 
         } else {
@@ -589,13 +588,13 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
             TelephoneTextField.setBorder(exceptionborder);
 
             if (controller == 1) {
-                RefreshGenericLabel(ErrorNumTelLabel, ErrorNumTelLabel.getForeground(), "è vuoto");
+                refreshGenericLabel(ErrorNumTelLabel, ErrorNumTelLabel.getForeground(), "è vuoto");
             }
             if (controller == 2) {
-                RefreshGenericLabel(ErrorNumTelLabel, ErrorNumTelLabel.getForeground(), "lunghezza massima superata: 15");
+                refreshGenericLabel(ErrorNumTelLabel, ErrorNumTelLabel.getForeground(), "lunghezza massima superata: 15");
             }
             if (controller == 3) {
-                RefreshGenericLabel(ErrorNumTelLabel, ErrorNumTelLabel.getForeground(), "deve contenere solo numeri");
+                refreshGenericLabel(ErrorNumTelLabel, ErrorNumTelLabel.getForeground(), "deve contenere solo numeri");
             }
 
         } else {
@@ -610,19 +609,19 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
             PasswordField.setBorder(exceptionborder);
 
             if (controller == 1) {
-                RefreshGenericLabel(ErrorPswLabel, ErrorPswLabel.getForeground(), "è vuoto");
+                refreshGenericLabel(ErrorPswLabel, ErrorPswLabel.getForeground(), "è vuoto");
             }
             if (controller == 2) {
-                RefreshGenericLabel(ErrorPswLabel, ErrorPswLabel.getForeground(), "lunghezza minima: 6");
+                refreshGenericLabel(ErrorPswLabel, ErrorPswLabel.getForeground(), "lunghezza minima: 6");
             }
             if (controller == 3) {
-                RefreshGenericLabel(ErrorPswLabel, ErrorPswLabel.getForeground(), "serve almeno un numero");
+                refreshGenericLabel(ErrorPswLabel, ErrorPswLabel.getForeground(), "serve almeno un numero");
             }
             if (controller == 4) {
-                RefreshGenericLabel(ErrorPswLabel, ErrorPswLabel.getForeground(), "serve almeno una maiuscola");
+                refreshGenericLabel(ErrorPswLabel, ErrorPswLabel.getForeground(), "serve almeno una maiuscola");
             }
             if (controller == 5) {
-                RefreshGenericLabel(ErrorPswLabel, ErrorPswLabel.getForeground(), "lunghezza massima superata: 15");
+                refreshGenericLabel(ErrorPswLabel, ErrorPswLabel.getForeground(), "lunghezza massima superata: 15");
             }
         } else {
             PasswordField.setBorder(ReaderStyle.DEFAULT_MATTE_REGISTRATION);
@@ -634,7 +633,7 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
 
     }
 
-    private void BuildUser() throws RemoteException {
+    private void buildUser() throws RemoteException {
         
          String tmp_inq;
                     
@@ -649,14 +648,14 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
                 tmp_inq,
                 TelephoneTextField.getText(),
                 PasswordField.getPassword(),
-                reader.GenerateUserCode(CodicefiscaleTextField.getText())
+                reader.generateUserCode(CodicefiscaleTextField.getText())
         );
 
-        reader.SetUtente(reader_user);
+        reader.setUtente(reader_user);
 
     }
 
-    ItemListener SelectedStudentItemListener()
+    ItemListener selectedStudentItemListener()
     {
         ItemListener return_Listener = new ItemListener() {
             @Override
@@ -693,7 +692,7 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
 
     }//GEN-LAST:event_IndietroButtonActionPerformed
 
-    private void SuccessLabelChange(String message, java.awt.Color color) {
+    private void successLabelChange(String message, java.awt.Color color) {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
@@ -720,24 +719,24 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
 
 
         try {
-            if (CheckAllField()) {
+            if (checkAllField()) {
                 try {
 
-                    BuildUser();
+                    buildUser();
 
-                    if (reader.InserUser()) {
+                    if (reader.inserUser()) {
 
-                        reader.SendConfirmationCode(reader.GetParamUser().GetUserID(), reader.GetDefaultType());
+                        reader.sendConfirmationCode(reader.GetParamUser().GetUserID(), reader.GetDefaultType());
 
-                        SuccessLabelChange("Profilo creato, controlla le mail", ReaderStyle.SUCCESS_COLOR);
-                        reader.SendCommunicationServer("[READER-" + reader.GetID() + "] utente registrato, profilo creato");
+                        successLabelChange("Profilo creato, controlla le mail", ReaderStyle.SUCCESS_COLOR);
+                        reader.sendCommunicationServer("[READER-" + reader.getID() + "] utente registrato, profilo creato");
 
                         registration_success = true;
 
                         SuccessThread.start();
                     } else {
 
-                        SuccessLabelChange("Errore nella serializzazione", ReaderStyle.EXCEPTION_COLOR);
+                        successLabelChange("Errore nella serializzazione", ReaderStyle.EXCEPTION_COLOR);
 
                     }
 

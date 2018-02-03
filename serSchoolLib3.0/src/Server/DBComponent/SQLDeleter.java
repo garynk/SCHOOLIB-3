@@ -19,13 +19,27 @@ public class SQLDeleter extends Thread{
 
     SQLSupporter supporter;
 
+    /**
+     * Costruttore di classe
+     *
+     * @param support Oggetto SQLSupporter per avere le operazioni generali
+     * @param log Oggetto ServerView per gestire gli output
+     * */
     public SQLDeleter(SQLSupporter support, ServerView log)
     {
         supporter = support;
         logger = log;
     }
 
-
+    /**
+     * Metodo per cancellare un Utente di qualsiasi tipo
+     *
+     * @param user_id ID utente da cancellare
+     * @param field il campo ID utente da confrontare
+     * @param type il tipo di utente da cancellare (LIB/READ)
+     *
+     * @return boolean true se a buon fine, false altrimenti
+     * */
     synchronized public boolean deleteUserAccount(String user_id, String field, int type) throws Exception {
         String table = supporter.defineTablebyType(type);
 
@@ -44,18 +58,25 @@ public class SQLDeleter extends Thread{
             conn.commit();
             conn.close();
 
-            logger.Write("SQL: Utente: " + user_id + " - ELIMINATO");
+            logger.write("SQL: Utente: " + user_id + " - ELIMINATO");
 
             return correct > 1;
 
         } catch (SQLException ex) {
             Logger.getLogger(SQLCORE.class.getName()).log(Level.SEVERE, null, ex);
-            logger.Write("*Errore SQL: deleteUserAccount fallisce per userid: " + user_id  + " -> " + ex.getMessage());
+            logger.write("*Errore SQL: deleteUserAccount fallisce per userid: " + user_id  + " -> " + ex.getMessage());
         }
 
         return false;
     }
 
+    /**
+     * Metodo per cancellare un Libro dalla tabella
+     *
+     * @param isbn ISBN del libro da cancellare
+     *
+     * @return boolean true se a buon fine, false altrimenti
+     * */
     synchronized public boolean deleteBookByISBN(int isbn) throws Exception {
         try {
 
@@ -72,18 +93,27 @@ public class SQLDeleter extends Thread{
             conn.commit();
             conn.close();
 
-            logger.Write("SQL: Libro: " + isbn + " - ELIMINATO");
+            logger.write("SQL: Libro: " + isbn + " - ELIMINATO");
 
             return true;
 
         } catch (SQLException ex) {
             Logger.getLogger(SQLCORE.class.getName()).log(Level.SEVERE, null, ex);
-            logger.Write("*Errore SQL:  deleteBookByISBN fallisce per isbn: " + isbn  + " -> " + ex.getMessage());
+            logger.write("*Errore SQL:  deleteBookByISBN fallisce per isbn: " + isbn  + " -> " + ex.getMessage());
         }
 
         return false;
     }
 
+    /**
+     * Elimina una Prenotazione a partire da un isbn, un ID utente
+     *
+     * @param isbn ISBN del libro della prenotazione da cancellare
+     * @param userid ID utente dell'utente della prenotazione da cancellare
+     * @param type tipo di utente per differenziare le tabelle
+     *
+     * @return boolean true se a buon fine, false altrimenti
+     * */
     synchronized public boolean deletePrenotazioneByISBNByID(int isbn, int userid, int type) throws Exception {
         String table = supporter.defineTablebyType(type);
 
@@ -103,13 +133,13 @@ public class SQLDeleter extends Thread{
             conn.commit();
             conn.close();
 
-            logger.Write("SQL: Prenotazione: *" + userid + " | " + isbn + "* - ELIMINATA");
+            logger.write("SQL: Prenotazione: *" + userid + " | " + isbn + "* - ELIMINATA");
 
             return true;
 
         } catch (SQLException ex) {
             Logger.getLogger(SQLCORE.class.getName()).log(Level.SEVERE, null, ex);
-            logger.Write("*Errore SQL:  deletePrenotazioneByISBNByID fallisce per isbn: " + isbn  + " e userid: " + userid + " -> " + ex.getMessage());
+            logger.write("*Errore SQL:  deletePrenotazioneByISBNByID fallisce per isbn: " + isbn  + " e userid: " + userid + " -> " + ex.getMessage());
         }
 
         return false;

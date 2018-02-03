@@ -15,8 +15,6 @@ import java.awt.*;
 
 public class ReaderStyle {
 
-    // public ReaderStyale(Font f){this.f = f;}
-
     private static String FONT_NAME_PLAIN = "AvenirNext LT Pro Regular";
     private static String FONT_NAME_BOLD = "AvenirNext LT Pro Bold";
     private static String FONT_NAME_ITALIC = "AvenirNext LT Pro Cn";

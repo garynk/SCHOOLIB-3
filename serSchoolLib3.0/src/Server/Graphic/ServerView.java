@@ -203,15 +203,20 @@ public class ServerView extends javax.swing.JFrame {
 
         } catch (RemoteException ex) {
             java.util.logging.Logger.getLogger(ServerView.class.getName()).log(Level.SEVERE, null, ex);
-            WriteException("** ERRORE FATALE ** - IMPOSSIBILE GENERARE IL SERVER");
+            writeException("** ERRORE FATALE ** - IMPOSSIBILE GENERARE IL SERVER");
             return;
         }
 
-        server.SetLogger(this);
+        server.setLogger(this);
 
     }
 
-    public String GetHourMinuteString()
+    /**
+     * Ritorna una Stringa con il formato ORA:MINUTO corrente
+     *
+     * @return String con formato ORA:MINUTO
+     * */
+    public String getHourMinuteString()
     {
         Date date = new Date();
         
@@ -226,8 +231,14 @@ public class ServerView extends javax.swing.JFrame {
         return hour_minute;
                 
     }
-    
-    public void Write(String writeme)
+
+    /**
+     * Scrive nella console del server la String in ingresso writeme
+     *
+     * @param writeme
+     *
+     * */
+    public void write(String writeme)
     {
         
         StyledDocument styled = Logger.getStyledDocument();
@@ -240,7 +251,7 @@ public class ServerView extends javax.swing.JFrame {
         
         try {
             
-            styled.insertString(styled.getLength(),"[" + GetHourMinuteString() + "] " + writeme + "\n", attributeSet);
+            styled.insertString(styled.getLength(),"[" + getHourMinuteString() + "] " + writeme + "\n", attributeSet);
             
         } catch (BadLocationException ex) {
             java.util.logging.Logger.getLogger(ServerView.class.getName()).log(Level.SEVERE, null, ex);
@@ -248,7 +259,13 @@ public class ServerView extends javax.swing.JFrame {
         
     }
 
-    public void WriteException(String writeme)
+    /**
+     * Scrive nella console del server una eccezione con la String in ingresso writeme
+     *
+     * @param writeme
+     *
+     * */
+    public void writeException(String writeme)
     {
 
         StyledDocument styled = Logger.getStyledDocument();
@@ -261,7 +278,7 @@ public class ServerView extends javax.swing.JFrame {
 
         try {
 
-            styled.insertString(styled.getLength(),"[" + GetHourMinuteString() + "] " +writeme + "\n", attributeSet);
+            styled.insertString(styled.getLength(),"[" + getHourMinuteString() + "] " +writeme + "\n", attributeSet);
 
         } catch (BadLocationException ex) {
             java.util.logging.Logger.getLogger(ServerView.class.getName()).log(Level.SEVERE, null, ex);
@@ -280,16 +297,16 @@ public class ServerView extends javax.swing.JFrame {
 
                     String s = new String(passwordTextField.getPassword());
 
-                    Write("Loading...");
-                    if(!server.SetEmailMasterUser(emailTextField.getText()))
+                    write("Loading...");
+                    if(!server.setEmailMasterUser(emailTextField.getText()))
                     {
-                        WriteException("Dominio Email Errato");
+                        writeException("Dominio Email Errato");
                     }
                     else {
-                        server.SetPasswordMasterUser(s);
+                        server.setPasswordMasterUser(s);
 
-                        Write(">> Credenziali Corrette <<");
-                        Write("Accesso in corso ...");
+                        write(">> Credenziali Corrette <<");
+                        write("Accesso in corso ...");
 
                         for(Component c : HeaderPanel.getComponents())
                         {
@@ -304,7 +321,7 @@ public class ServerView extends javax.swing.JFrame {
                 }
                 else
                 {
-                    WriteException("Errore, credenziali errate");
+                    writeException("Errore, credenziali errate");
                     return;
                 }
             }

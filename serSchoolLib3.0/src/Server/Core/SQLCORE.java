@@ -34,6 +34,11 @@ public class SQLCORE extends Thread {
     private static SQLDeleter Deleter;
     private static SQLCounter Counter;
 
+    /**
+     * Genera tutti gli oggetti SQL e stabilisce una connessione
+     *
+     * @param slogg oggetto ServerView per gestire tutti gli output
+     * */
     public SQLCORE(ServerView slogg)
     {
         logger = slogg;
@@ -52,16 +57,19 @@ public class SQLCORE extends Thread {
             Deleter = new SQLDeleter(Supporter, slogg);
             Counter = new SQLCounter(Supporter, slogg);
 
-            logger.Write("SQL Manager - connection enstablished 2/2");
+            logger.write("SQL Manager - connection enstablished 2/2");
 
 
         } catch (Exception e) {
             e.printStackTrace();
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
-            logger.Write("*Errore Connessione SQL (SQL context)" + e.getMessage());
+            logger.write("*Errore Connessione SQL (SQL context)" + e.getMessage());
         }
     }
 
+    /**
+     * Genera tutte le tabelle
+     */
     public void omniaTableCreation(){
 
         Creator.start();

@@ -38,7 +38,7 @@ public class appLibrarianLoginForm extends javax.swing.JFrame {
         initComponents();
         initLabels();
         
-        librarian.SendCommunicationServer("[LIB] nuovo client aperto");
+        librarian.sendCommunicationServer("[LIB] nuovo client aperto");
 
     }
 
@@ -479,11 +479,11 @@ public class appLibrarianLoginForm extends javax.swing.JFrame {
         ConfirmationDiagErrorLabel.setVisible(false);
         forgotErrorLabel.setVisible(false);
 
-        SetConfirmDialogCloseSafe();
-        SetForgotPsWDialogCloseSafe();
+        setConfirmDialogCloseSafe();
+        setForgotPsWDialogCloseSafe();
     }
 
-    private void SetConfirmDialogCloseSafe() {
+    private void setConfirmDialogCloseSafe() {
         ConfirmationCodeDialog.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosed(WindowEvent e) {
@@ -493,7 +493,7 @@ public class appLibrarianLoginForm extends javax.swing.JFrame {
         });
     }
 
-    private void SetForgotPsWDialogCloseSafe() {
+    private void setForgotPsWDialogCloseSafe() {
         ForgotPasswordDialog.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosed(WindowEvent e) {
@@ -503,33 +503,33 @@ public class appLibrarianLoginForm extends javax.swing.JFrame {
         });
     }
 
-    private void UpdateLabel(javax.swing.JLabel label_to_update, java.awt.Color foreground_color, String message) {
+    private void updateLabel(javax.swing.JLabel label_to_update, java.awt.Color foreground_color, String message) {
         label_to_update.setForeground(foreground_color);
         label_to_update.setText(message);
         label_to_update.setVisible(true);
 
     }
 
-    private boolean CheckField() throws RemoteException {
+    private boolean checkField() throws RemoteException {
 
         MatteBorder exceptionborder = new MatteBorder(0, 0, 1, 0, LibrarianStyle.EXCEPTION_COLOR);
 
-        int controller = librarian.Login_Confirmation(UsernameTextField.getText(), PasswordTextField.getPassword(), librarian.GetDefaultType());
+        int controller = librarian.loginConfirmation(UsernameTextField.getText(), PasswordTextField.getPassword(), librarian.getDefaultType());
         
         
         if (controller != 0) {
             if (controller == -1) {
-                UpdateLabel(LoginErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Errore Sconosciuto");
+                updateLabel(LoginErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Errore Sconosciuto");
             }
             if (controller == 1) {
                 UsernameTextField.setBorder(exceptionborder);
 
-                UpdateLabel(LoginErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Errore: Username Errato");
+                updateLabel(LoginErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Errore: Username Errato");
             }
             if (controller == 2) {
                 PasswordTextField.setBorder(exceptionborder);
 
-                UpdateLabel(LoginErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Errore: Password Errata");
+                updateLabel(LoginErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Errore: Password Errata");
             }
 
             
@@ -552,26 +552,26 @@ public class appLibrarianLoginForm extends javax.swing.JFrame {
 
         try {
 
-            if (CheckField()) {
+            if (checkField()) {
                 String tmp_id = UsernameTextField.getText();
 
-                librarian.Set_tmp_ID(tmp_id);
-                librarian.Set_Librarian_type();
+                librarian.setTmpID(tmp_id);
+                librarian.setLibrarianType();
 
-                int confirmed_tmp_acc = Integer.parseInt(librarian.GetParametricInformation("CONFIRMED", librarian.GetDefaultType(), librarian.GetID()));
+                int confirmed_tmp_acc = Integer.parseInt(librarian.getParametricInformation("CONFIRMED", librarian.getDefaultType(), librarian.getID()));
 
                 if (confirmed_tmp_acc == 0) {
-                    UpdateLabel(LoginErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Account non ancora attivato");
+                    updateLabel(LoginErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Account non ancora attivato");
 
                     this.setEnabled(false);
                     ConfirmationCodeDialog.setVisible(true);
 
                 } else { 
 
-                    librarian.SetUtente(librarian.GetUtentebyID(librarian.GetID(), librarian.GetDefaultType()));
+                    librarian.setUtente(librarian.getUtentebyID(librarian.getID(), librarian.getDefaultType()));
 
-                    UpdateLabel(LoginErrorLabel, LibrarianStyle.SUCCESS_COLOR, "LOG IN EFFETTUATO");
-                    librarian.SendCommunicationServer("[LIB-" + librarian.GetID() + "] LOG IN effettuato con successo");
+                    updateLabel(LoginErrorLabel, LibrarianStyle.SUCCESS_COLOR, "LOG IN EFFETTUATO");
+                    librarian.sendCommunicationServer("[LIB-" + librarian.getID() + "] LOG IN effettuato con successo");
 
                     appLibrarian application = new appLibrarian(librarian);
 
@@ -593,10 +593,10 @@ public class appLibrarianLoginForm extends javax.swing.JFrame {
     private void OKConfirmationButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OKConfirmationButtonActionPerformed
 
         if (librarian.checker.userChecker.checkCodice(ConfirmationCodeField.getText()) != 0) {
-            UpdateLabel(ConfirmationDiagErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Codice Inserito non rispetta i requisiti");
+            updateLabel(ConfirmationDiagErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Codice Inserito non rispetta i requisiti");
         } else {
 
-            String tmp_account_code = librarian.GetParametricInformation("CODICE", librarian.GetDefaultType(), librarian.GetID());
+            String tmp_account_code = librarian.getParametricInformation("CODICE", librarian.getDefaultType(), librarian.getID());
             String real_account_code = "";
 
             for (int i = 0; i < tmp_account_code.length(); i++) {
@@ -608,10 +608,10 @@ public class appLibrarianLoginForm extends javax.swing.JFrame {
 
             if (real_account_code.equals(ConfirmationCodeField.getText())) {
 
-                UpdateLabel(ConfirmationDiagErrorLabel, LibrarianStyle.SUCCESS_COLOR, "Codice Confermato");
-                UpdateLabel(LoginErrorLabel, LibrarianStyle.SUCCESS_COLOR, "Codice Confermato, effettuare log in");
+                updateLabel(ConfirmationDiagErrorLabel, LibrarianStyle.SUCCESS_COLOR, "Codice Confermato");
+                updateLabel(LoginErrorLabel, LibrarianStyle.SUCCESS_COLOR, "Codice Confermato, effettuare log in");
 
-                librarian.UpdateUserInfo(librarian.GetID(), "CONFIRMED", "1", librarian.GetDefaultType());
+                librarian.updateUserInfo(librarian.getID(), "CONFIRMED", "1", librarian.getDefaultType());
 
                 try {
 
@@ -624,25 +624,25 @@ public class appLibrarianLoginForm extends javax.swing.JFrame {
                 ConfirmationCodeDialog.dispose();
                 this.setEnabled(true);
                 
-                librarian.SendCommunicationServer("[LIB-" + librarian.GetID() + "] codice di registrazione: confermato");
+                librarian.sendCommunicationServer("[LIB-" + librarian.getID() + "] codice di registrazione: confermato");
 
             } else {
-                librarian.UpdateDecrementAttempsLogIn(librarian.GetID(), librarian.GetDefaultType());
+                librarian.updateDecrementAttempsLogIn(librarian.getID(), librarian.getDefaultType());
 
-                int attempts = Integer.parseInt(librarian.GetParametricInformation("TENTATIVI", librarian.GetDefaultType(), librarian.GetID()));
+                int attempts = Integer.parseInt(librarian.getParametricInformation("TENTATIVI", librarian.getDefaultType(), librarian.getID()));
 
                 if (attempts == 0) {
-                    librarian.SendCommunicationServer("[LIB-" + librarian.GetID() + "] errore, account cancellato");
-                    librarian.DeleteUserAccount(librarian.GetID(), "USERID", librarian.GetDefaultType());
+                    librarian.sendCommunicationServer("[LIB-" + librarian.getID() + "] errore, account cancellato");
+                    librarian.deleteUserAccount(librarian.getID(), "USERID", librarian.getDefaultType());
 
                     ConfirmationCodeDialog.dispose();
                     this.setEnabled(true);
 
-                    UpdateLabel(LoginErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "ERRORE FATALE: account cancellato");
+                    updateLabel(LoginErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "ERRORE FATALE: account cancellato");
                 }
 
-                UpdateLabel(ConfirmationDiagErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Codice non Corrisponde ! tentativi : " + attempts);
-                librarian.SendCommunicationServer("[LIB-" + librarian.GetID() + "] codice di registrazione: errato");
+                updateLabel(ConfirmationDiagErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Codice non Corrisponde ! tentativi : " + attempts);
+                librarian.sendCommunicationServer("[LIB-" + librarian.getID() + "] codice di registrazione: errato");
             }
 
         }
@@ -661,34 +661,34 @@ public class appLibrarianLoginForm extends javax.swing.JFrame {
         String context_user_id;
 
         if (librarian.checker.userChecker.checkCodiceFiscale(forgotpswUserTxtField.getText()) != 0) {
-            UpdateLabel(forgotErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "UserID non rispetta i requisiti");
+            updateLabel(forgotErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "UserID non rispetta i requisiti");
         } else {
 
             context_user_id = forgotpswUserTxtField.getText();
 
-            if (librarian.CheckParametricExisting("USERID", context_user_id, librarian.GetDefaultType())) {
-                int confirmed_acc = Integer.parseInt(librarian.GetParametricInformation("CONFIRMED", librarian.GetDefaultType(), context_user_id));
+            if (librarian.checkParametricExisting("USERID", context_user_id, librarian.getDefaultType())) {
+                int confirmed_acc = Integer.parseInt(librarian.getParametricInformation("CONFIRMED", librarian.getDefaultType(), context_user_id));
 
                 if (confirmed_acc == 1) {
-                    char[] generated_new_psw = librarian.GeneratePassword();
-                    char[] generated_new_user_code = librarian.GenerateUserCode(context_user_id);
+                    char[] generated_new_psw = librarian.generatePassword();
+                    char[] generated_new_user_code = librarian.generateUserCode(context_user_id);
 
-                    librarian.SendCommunicationServer("[LIB-" + context_user_id + "] reset della password completato");
+                    librarian.sendCommunicationServer("[LIB-" + context_user_id + "] reset della password completato");
                     
-                    librarian.UpdateUserPassword(context_user_id, generated_new_psw, librarian.GetDefaultType());
-                    librarian.UpdateUserInfo(context_user_id, "CONFIRMED", "0", librarian.GetDefaultType());
-                    librarian.UpdateUserInfo(context_user_id, "TENTATIVI", "5", librarian.GetDefaultType());
-                    librarian.UpdateUserInfo(context_user_id, "CODICE", Arrays.toString(generated_new_user_code), librarian.GetDefaultType());
+                    librarian.updateUserPassword(context_user_id, generated_new_psw, librarian.getDefaultType());
+                    librarian.updateUserInfo(context_user_id, "CONFIRMED", "0", librarian.getDefaultType());
+                    librarian.updateUserInfo(context_user_id, "TENTATIVI", "5", librarian.getDefaultType());
+                    librarian.updateUserInfo(context_user_id, "CODICE", Arrays.toString(generated_new_user_code), librarian.getDefaultType());
 
 
-                    librarian.SendNewPassword(context_user_id, librarian.GetDefaultType());
+                    librarian.sendNewPassword(context_user_id, librarian.getDefaultType());
                     
                     
                 } else {
-                    UpdateLabel(forgotErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "UserID non ancora attivato");
+                    updateLabel(forgotErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "UserID non ancora attivato");
                 }
             } else {
-                UpdateLabel(forgotErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "UserID non presente nel DB");
+                updateLabel(forgotErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "UserID non presente nel DB");
             }
 
         }

@@ -57,6 +57,14 @@ public class SQLSupporter {
 
     private static ServerView logger;
 
+    /**
+     * Costruttore della classe
+     *
+     * @param url URL del database
+     * @param user l'USERNAME del database
+     * @param psw la PASSWORD del database
+     * @param log la ServerView per gestire gli output
+     * */
     public SQLSupporter(String url, String user, String psw, ServerView log)
     {
         DB_URL = url;
@@ -65,6 +73,13 @@ public class SQLSupporter {
         logger = log;
     }
 
+    /**
+     * Ritorna una Stringa con il nome della tabella secondo un tipo dato
+     *
+     * @param type numero identatificativo della tabella
+     *
+     * @return Stringa con il nome della tabella
+     * */
     public static String defineTablebyType(int type) {
 
         switch (type) {
@@ -84,6 +99,11 @@ public class SQLSupporter {
 
     }
 
+    /**
+     * Stabilisce la connessione con il datablase
+     *
+     * @return Connection se la connessione è andata a buon fine
+     * */
     public static Connection enstablishConnection()
     {
         try {
@@ -94,12 +114,19 @@ public class SQLSupporter {
 
         } catch (Exception e) {
             e.printStackTrace();
-            logger.Write("> ERRORE CRITICO: Impossibile stabilire connessione con DB " + e.getMessage());
+            logger.write("> ERRORE CRITICO: Impossibile stabilire connessione con DB " + e.getMessage());
         }
 
         return null;
     }
 
+    /**
+     * Normalizza la password in ingresseo
+     *
+     * @param to_normalize la Stringa in ingresso da normalizzare
+     *
+     * @return una Stringa normalizzata
+     * */
     public String normalizePsw(String to_normalize) {
         String normalized_psw = "";
 
@@ -114,7 +141,13 @@ public class SQLSupporter {
     }
 
 
-
+    /**
+     * Normalizza un codice in ingresseo
+     *
+     * @param to_normalize la Stringa in ingresso da normalizzare
+     *
+     * @return una Stringa normalizzata
+     * */
     public String normalizeCode(String to_normalize) {
         String normalized_code = "";
 

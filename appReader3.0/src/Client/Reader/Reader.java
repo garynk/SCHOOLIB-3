@@ -60,10 +60,10 @@ public class Reader extends UnicastRemoteObject {
      * @return int
      *
      */
-    public int GetMaxPrenotazioni() {
+    public int getMaxPrenotazioni() {
         try {
 
-            return server.GetMaxPrenotazioni();
+            return server.getMaxPrenotazioni();
 
         } catch (RemoteException ex) {
             Logger.getLogger(Reader.class.getName()).log(Level.SEVERE, null, ex);
@@ -79,7 +79,7 @@ public class Reader extends UnicastRemoteObject {
         return utente;
     }
 
-    public String GetID() {
+    public String getID() {
 
         if (!utente.GetUserID().equals("null")) {
             return utente.GetUserID();
@@ -89,17 +89,17 @@ public class Reader extends UnicastRemoteObject {
 
     }
 
-    public int GetType() {
-        return utente.GetUserType();
+    public int getType() {
+        return utente.getUserType();
     }
 
     public int GetDefaultType() {
         return Reader_Default_Type_Value;
     }
 
-    public char[] GenerateUserCode(String user_id) {
+    public char[] generateUserCode(String user_id) {
         try {
-            return server.GenerateUserCode(user_id);
+            return server.generateUserCode(user_id);
         } catch (RemoteException ex) {
             Logger.getLogger(Reader.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(new JFrame(),"ERRORE FATALE, SERVER OFFLINE");
@@ -109,9 +109,9 @@ public class Reader extends UnicastRemoteObject {
         return null;
     }
 
-    public char[] GeneratePassword() {
+    public char[] generatePassword() {
         try {
-            return server.GeneratePassword();
+            return server.generatePassword();
         } catch (RemoteException ex) {
             Logger.getLogger(Reader.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(new JFrame(),"ERRORE FATALE, SERVER OFFLINE");
@@ -121,9 +121,9 @@ public class Reader extends UnicastRemoteObject {
         return null;
     }
 
-    public void SendConfirmationCode(String user_id, int type) {
+    public void sendConfirmationCode(String user_id, int type) {
         try {
-            server.SendConfirmationCode(user_id, type);
+            server.sendConfirmationCode(user_id, type);
         } catch (RemoteException ex) {
             Logger.getLogger(Reader.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(new JFrame(),"ERRORE FATALE, SERVER OFFLINE");
@@ -131,9 +131,9 @@ public class Reader extends UnicastRemoteObject {
         }
     }
 
-    public void SendNewPassword(String user_id, int type) {
+    public void sendNewPassword(String user_id, int type) {
         try {
-            server.SendNewPasswordEmail(user_id, type);
+            server.sendNewPasswordEmail(user_id, type);
         } catch (RemoteException ex) {
             Logger.getLogger(Reader.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(new JFrame(),"ERRORE FATALE, SERVER OFFLINE");
@@ -141,9 +141,9 @@ public class Reader extends UnicastRemoteObject {
         }
     }
 
-    public void SendNewInformation(String user_id, String message, int type) {
+    public void sendNewInformation(String user_id, String message, int type) {
         try {
-            server.SendNewInformation(user_id, message, type);
+            server.sendNewInformation(user_id, message, type);
         } catch (RemoteException ex) {
             Logger.getLogger(Reader.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(new JFrame(),"ERRORE FATALE, SERVER OFFLINE");
@@ -151,10 +151,10 @@ public class Reader extends UnicastRemoteObject {
         }
     }
     
-    public void SendCommunicationServer(String communication)
+    public void sendCommunicationServer(String communication)
     {
         try {
-            server.GetClientComunication(communication);
+            server.getClientComunication(communication);
         } catch (RemoteException ex) {
             Logger.getLogger(Reader.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(new JFrame(),"ERRORE FATALE, SERVER OFFLINE");
@@ -162,21 +162,21 @@ public class Reader extends UnicastRemoteObject {
         }
     }
 
-    public void SetUtente(Utente u) {
+    public void setUtente(Utente u) {
         utente = u;
     }
 
-    public void Set_tmp_ID(String id) {
-        utente.SetUserID(id);
+    public void setTmpID(String id) {
+        utente.setUserID(id);
     }
 
-    public void Set_Reader_type() {
-        utente.SetType(Reader_Default_Type_Value);
+    public void setReaderType() {
+        utente.setType(Reader_Default_Type_Value);
     }
 
-    public boolean CheckParametricExisting(String column, String to_compare, int type) {
+    public boolean checkParametricExisting(String column, String to_compare, int type) {
         try {
-            return server.CheckExistingEasy(column, to_compare, type);
+            return server.checkExistingEasy(column, to_compare, type);
         } catch (RemoteException ex) {
             Logger.getLogger(Reader.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(new JFrame(),"ERRORE FATALE, SERVER OFFLINE");
@@ -186,9 +186,9 @@ public class Reader extends UnicastRemoteObject {
         return false;
     }
 
-    public boolean Check_Existing_Easy_PrenPres(String isbn, String userid, int type) {
+    public boolean checkExistingEasyPrenPres(String isbn, String userid, int type) {
         try {
-            return server.Check_Existing_Easy_PrenPres(isbn, userid, type);
+            return server.checkExistingEasyPrenPres(isbn, userid, type);
         } catch (RemoteException ex) {
             Logger.getLogger(Reader.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(new JFrame(),"ERRORE FATALE, SERVER OFFLINE");
@@ -198,19 +198,19 @@ public class Reader extends UnicastRemoteObject {
         return false;
     }
 
-    public boolean InserUser() throws RemoteException {
+    public boolean inserUser() throws RemoteException {
         if (utente == null) {
             System.err.println("UTENTE VUOTO");
             return false;
         } else {
-            return server.InsertUser(utente);
+            return server.insertUser(utente);
         }
     }
 
-    public boolean InsertPrenotazione(String isbn, String userid) {
+    public boolean insertPrenotazione(String isbn, String userid) {
 
         try {
-            return server.InsertPrenotazione(isbn, userid);
+            return server.insertPrenotazione(isbn, userid);
         } catch (RemoteException ex) {
             Logger.getLogger(Reader.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(new JFrame(),"ERRORE FATALE, SERVER OFFLINE");
@@ -220,9 +220,9 @@ public class Reader extends UnicastRemoteObject {
         return false;
     }
 
-    public String GetParametricInformation(String field, int type, String user_id) {
+    public String getParametricInformation(String field, int type, String user_id) {
         try {
-            return server.GetParametricInformation(field, type, user_id);
+            return server.getParametricInformation(field, type, user_id);
         } catch (RemoteException ex) {
             Logger.getLogger(Reader.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -230,9 +230,9 @@ public class Reader extends UnicastRemoteObject {
         return "NULL";
     }
 
-    public Utente GetUtentebyID(String user_id, int type) {
+    public Utente getUtentebyID(String user_id, int type) {
         try {
-            return server.GetUtenteFromDB_byID(user_id, type);
+            return server.getUtenteFromDBByID(user_id, type);
         } catch (RemoteException ex) {
             Logger.getLogger(Reader.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(new JFrame(),"ERRORE FATALE, SERVER OFFLINE");
@@ -242,10 +242,10 @@ public class Reader extends UnicastRemoteObject {
         return null;
     }
     
-     public boolean GetPrestitoSconfinantebyID(String userid)
+     public boolean getPrestitoSconfinantebyID(String userid)
      {
         try {
-            return server.GetPrestitoSconfinantebyID(userid);
+            return server.getPrestitoSconfinantebyID(userid);
         } catch (RemoteException ex) {
             Logger.getLogger(Reader.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(new JFrame(),"ERRORE FATALE, SERVER OFFLINE");
@@ -255,9 +255,9 @@ public class Reader extends UnicastRemoteObject {
         return false;
      }
 
-    public int Login_Confirmation(String userid, char[] psw, int type) {
+    public int loginConfirmation(String userid, char[] psw, int type) {
         try {
-            return server.Login_Confirmation(userid, psw, type);
+            return server.loginConfirmation(userid, psw, type);
         } catch (RemoteException ex) {
             Logger.getLogger(Reader.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(new JFrame(),"ERRORE FATALE, SERVER OFFLINE");
@@ -267,9 +267,9 @@ public class Reader extends UnicastRemoteObject {
         return -1;
     }
 
-    public boolean MatchingUserID_Password(String user_id, char[] pass, int type) {
+    public boolean matchingUserIDPassword(String user_id, char[] pass, int type) {
         try {
-            return server.Check_Password_byID(user_id, pass, type);
+            return server.checkPasswordByID(user_id, pass, type);
         } catch (RemoteException ex) {
             Logger.getLogger(Reader.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(new JFrame(),"ERRORE FATALE, SERVER OFFLINE");
@@ -279,9 +279,9 @@ public class Reader extends UnicastRemoteObject {
         return false;
     }
 
-    public DefaultTableModel BuilderBookTableModel() {
+    public DefaultTableModel builderBookTableModel() {
         try {
-            return server.BuilderBooksjTable();
+            return server.builderBooksjTable();
         } catch (RemoteException ex) {
             Logger.getLogger(Reader.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(new JFrame(),"ERRORE FATALE, SERVER OFFLINE");
@@ -291,10 +291,10 @@ public class Reader extends UnicastRemoteObject {
         return null;
     }
     
-    public DefaultTableModel GetPrenotazioniPrestitiByUserID(String userid, int request_type)
+    public DefaultTableModel getPrenotazioniPrestitiByUserID(String userid, int request_type)
     {
         try {
-            return server.GetPrenotazioniPrestitiByUserID(userid, request_type);
+            return server.getPrenotazioniPrestitiByUserID(userid, request_type);
         } catch (RemoteException ex) {
             Logger.getLogger(Reader.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(new JFrame(),"ERRORE FATALE, SERVER OFFLINE");
@@ -304,9 +304,9 @@ public class Reader extends UnicastRemoteObject {
         return null;
     }
 
-    public DefaultTableModel GetLookedBooks(String search) {
+    public DefaultTableModel getLookedBooks(String search) {
         try {
-            return server.GetLookedForBooks(search);
+            return server.getLookedForBooks(search);
         } catch (RemoteException ex) {
             Logger.getLogger(Reader.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(new JFrame(),"ERRORE FATALE, SERVER OFFLINE");
@@ -318,7 +318,7 @@ public class Reader extends UnicastRemoteObject {
 
     public boolean UpdateUserInfo(String user_id, String field, String info, int type) {
         try {
-            return server.Update_User_Information(user_id, field, info, type);
+            return server.updateUserInformation(user_id, field, info, type);
         } catch (RemoteException ex) {
             Logger.getLogger(Reader.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(new JFrame(),"ERRORE FATALE, SERVER OFFLINE");
@@ -328,9 +328,9 @@ public class Reader extends UnicastRemoteObject {
         return false;
     }
 
-    public boolean UpdateDecrementAttempsLogIn(String user_id, int type) {
+    public boolean updateDecrementAttempsLogIn(String user_id, int type) {
         try {
-            return server.Update_Attempt_Login(user_id, type);
+            return server.updateAttemptLogin(user_id, type);
         } catch (RemoteException ex) {
             Logger.getLogger(Reader.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(new JFrame(),"ERRORE FATALE, SERVER OFFLINE");
@@ -340,9 +340,9 @@ public class Reader extends UnicastRemoteObject {
         return false;
     }
 
-    public boolean UpdateUserPassword(String user_id, char[] new_psw, int type) {
+    public boolean updateUserPassword(String user_id, char[] new_psw, int type) {
         try {
-            return server.Update_User_Password(user_id, new_psw, type);
+            return server.updateUserPassword(user_id, new_psw, type);
         } catch (RemoteException ex) {
             Logger.getLogger(Reader.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(new JFrame(),"ERRORE FATALE, SERVER OFFLINE");
@@ -352,10 +352,10 @@ public class Reader extends UnicastRemoteObject {
         return false;
     }
 
-    public boolean DeleteUserAccount(String userid, String field, int type) {
+    public boolean deleteUserAccount(String userid, String field, int type) {
 
         try {
-            return server.DeleteUserAccount(userid, field, type);
+            return server.deleteUserAccount(userid, field, type);
         } catch (RemoteException ex) {
             Logger.getLogger(Reader.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(new JFrame(),"ERRORE FATALE, SERVER OFFLINE");
@@ -366,9 +366,9 @@ public class Reader extends UnicastRemoteObject {
     }
 
 
-    public boolean DeletePrestitoPrenotazioneByISBNByID(int isbn, int userid, int type) {
+    public boolean deletePrestitoPrenotazioneByISBNByID(int isbn, int userid, int type) {
         try {
-            return server.DeletePrestitoPrenotazioneByISBNByID(isbn, userid, type);
+            return server.deletePrestitoPrenotazioneByISBNByID(isbn, userid, type);
         } catch (RemoteException ex) {
             Logger.getLogger(Reader.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(new JFrame(),"ERRORE FATALE, SERVER OFFLINE");
@@ -378,9 +378,9 @@ public class Reader extends UnicastRemoteObject {
         return false;
     }
 
-    public int Count_PrenotazioniPrestitiByID(String userid, int type) {
+    public int countPrenotazioniPrestitiByID(String userid, int type) {
         try {
-            return server.Count_PrenotazioniPrestitiByID(userid, type);
+            return server.countPrenotazioniPrestitiByID(userid, type);
         } catch (RemoteException ex) {
             Logger.getLogger(Reader.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(new JFrame(),"ERRORE FATALE, SERVER OFFLINE");

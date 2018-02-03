@@ -70,11 +70,11 @@ public class Utente implements Serializable {
         confirmed = 0;
     }
 
-    public String GetNome() {
+    public String getNome() {
         return nome;
     }
 
-    public String GetCognome() {
+    public String getCognome() {
         return cognome;
     }
 
@@ -82,70 +82,70 @@ public class Utente implements Serializable {
         return codice_fiscale;
     }
 
-    public String GetEmail() {
+    public String getEmail() {
         return email;
     }
 
-    public String GetInquadramento() {
+    public String getInquadramento() {
         return inquadramento;
     }
 
-    public String GetNumeroTelefono() {
+    public String getNumeroTelefono() {
         return numero_telefono;
     }
 
-    public char[] GetPassword() {
+    public char[] getPassword() {
         return password;
 
     }
 
-    public char[] GetCode() {
+    public char[] getCode() {
         return code;
     }
 
-    public int GetConfirmed() {
+    public int getConfirmed() {
         return confirmed;
     }
 
-    public int GetUserType() {
+    public int getUserType() {
         return USER_TYPE;
     }
 
 
 
-    public void SetNome(String n) {
+    public void setNome(String n) {
         nome = n;
     }
 
-    public void SetCognome(String g) {
+    public void setCognome(String g) {
         cognome = g;
     }
 
-    public void SetUserID(String id) {
+    public void setUserID(String id) {
         codice_fiscale = id;
     }
 
-    public void SetEmail(String em) {
+    public void setEmail(String em) {
         email = em.toLowerCase();
     }
 
-    public void SetInquadramento(String in) {
+    public void setInquadramento(String in) {
         inquadramento = in.toLowerCase();
     }
 
-    public void SetNumeroTelefono(String num) {
+    public void setNumeroTelefono(String num) {
         numero_telefono = num;
     }
 
-    public void SetPassword(char[] psw) {
+    public void setPassword(char[] psw) {
         password = psw;
     }
 
-    public void SetCode(char[] c) {
+    public void setCode(char[] c) {
         code = c;
     }
 
-    public void SetConfirmed(int status) {
+    public void setConfirmed(int status) {
         confirmed = status;
     }
 

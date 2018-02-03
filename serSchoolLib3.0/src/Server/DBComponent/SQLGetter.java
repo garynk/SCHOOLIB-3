@@ -20,13 +20,25 @@ public class SQLGetter {
 
     SQLSupporter supporter;
 
+    /**
+     * Costruttore della Classe
+     *
+     * @param support Oggetto SQLSupporter per le operazioni utili
+     * @param log Oggetto ServerView per gestire gli output
+     * */
     public SQLGetter(SQLSupporter support, ServerView log)
     {
         supporter = support;
         logger = log;
     }
 
-
+    /**
+     * Ritorna un vettore di stringe con le sole colonne da una query in ingresso
+     *
+     * @param query la Query in ingresso
+     *
+     * @return Vettore di Stringhe con le sole colonne
+     * */
     private Vector<String> getColumnFromQuery(String query) {
 
         PreparedStatement stmt = null;
@@ -53,7 +65,7 @@ public class SQLGetter {
 
         } catch (SQLException ex) {
             Logger.getLogger(SQLCORE.class.getName()).log(Level.SEVERE, null, ex);
-            logger.Write("*Errore SQL [Interno]: GetColumn Fail, query > " + query + " < fallisce");
+            logger.write("*Errore SQL [Interno]: GetColumn Fail, query > " + query + " < fallisce");
         } catch (Exception ex) {
             Logger.getLogger(SQLCORE.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -61,6 +73,15 @@ public class SQLGetter {
         return columns_name;
     }
 
+    /**
+     * Ritorna una generica informazione da un generico utente
+     *
+     * @param field_to_take il campo dell'informazione
+     * @param type il tipo di utente
+     * @param user_id l'id dell'utente
+     *
+     * @return Stringa contente l'informazione
+     * */
     synchronized public String getParametricInformationByID(String field_to_take, int type, String user_id) {
 
         String table_to_use = supporter.defineTablebyType(type);
@@ -83,12 +104,20 @@ public class SQLGetter {
 
         } catch (Exception ex) {
             Logger.getLogger(SQLCORE.class.getName()).log(Level.SEVERE, null, ex);
-            logger.Write("*Errore SQL: ParametricReturn() -> " + ex.getMessage());
+            logger.write("*Errore SQL: ParametricReturn() -> " + ex.getMessage());
         }
 
         return "NULL";
     }
 
+    /**
+     * Ritorna una lista di Utente partendo da un ISBN e verificando o in prenotazioni o in prestiti secondo un tipo in ingresso
+     *
+     * @param isbn l'ISBN del libro in oggetto
+     * @param type la tabella che si vuole consultare (Prenotazione o Prestito)
+     *
+     * @return Lista di Stringhe contenenti tutti gli ID utente che hanno prenotato/che hanno in prestito un libro isbn
+     * */
     synchronized public Vector<String> getUserIDFromPrenPrestByISBN(String isbn, int type) {
 
         String table_to_use = supporter.defineTablebyType(type);
@@ -117,43 +146,58 @@ public class SQLGetter {
 
         } catch (Exception ex) {
             Logger.getLogger(SQLCORE.class.getName()).log(Level.SEVERE, null, ex);
-            logger.Write("*Errore SQL: GetUserID from Pren/Prestiti -> " + ex.getMessage());
+            logger.write("*Errore SQL: GetUserID from Pren/Prestiti -> " + ex.getMessage());
         }
 
         return fillin;
     }
 
+    /**
+     * Ritorna un oggetto Utente generico secondo un tipo specificato con tutte le informazioni a lui relative
+     *
+     * @param id l'Id dell'utente di cui si vogliono le info
+     * @param type la tabella utente che si vuole consultare (Reader o Librarian)
+     *
+     * @return Oggetto Utente costruito
+     * */
     synchronized public Utente getUserDataFromID(String id, int type) {
         Utente to_return = new Utente();
 
         try {
 
-            to_return.SetUserID(getParametricInformationByID(supporter.USERID, type, id));
+            to_return.setUserID(getParametricInformationByID(supporter.USERID, type, id));
 
-            to_return.SetNome(getParametricInformationByID(supporter.NOME, type, id));
+            to_return.setNome(getParametricInformationByID(supporter.NOME, type, id));
 
-            to_return.SetCognome(getParametricInformationByID(supporter.COGNOME, type, id));
+            to_return.setCognome(getParametricInformationByID(supporter.COGNOME, type, id));
 
-            to_return.SetInquadramento(getParametricInformationByID(supporter.INQUADRAMENTO, type, id));
+            to_return.setInquadramento(getParametricInformationByID(supporter.INQUADRAMENTO, type, id));
 
-            to_return.SetEmail(getParametricInformationByID(supporter.EMAIL, type, id));
+            to_return.setEmail(getParametricInformationByID(supporter.EMAIL, type, id));
 
-            to_return.SetNumeroTelefono(getParametricInformationByID(supporter.NUMERO, type, id));
+            to_return.setNumeroTelefono(getParametricInformationByID(supporter.NUMERO, type, id));
 
-            to_return.SetPassword(getParametricInformationByID(supporter.PASSWORD, type, id).toCharArray());
+            to_return.setPassword(getParametricInformationByID(supporter.PASSWORD, type, id).toCharArray());
 
-            to_return.SetConfirmed(Integer.parseInt(getParametricInformationByID(supporter.CONFIRMED, type, id)));
+            to_return.setConfirmed(Integer.parseInt(getParametricInformationByID(supporter.CONFIRMED, type, id)));
 
-            to_return.SetCode(getParametricInformationByID(supporter.CODICE, type, id).toCharArray());
+            to_return.setCode(getParametricInformationByID(supporter.CODICE, type, id).toCharArray());
 
         } catch (Exception er) {
             er.printStackTrace();
-            logger.Write("*Errore SQL: Impossibile Ricavare utente: *" + id + "* -> " + er.getMessage());
+            logger.write("*Errore SQL: Impossibile Ricavare utente: *" + id + "* -> " + er.getMessage());
         }
 
         return to_return;
     }
 
+    /**
+     * Ritorna una booleana che indica se l'utente userid ha un prestito sconfinante
+     *
+     * @param userid ID dell'utente da verificare
+     *
+     * @return true se è sconfinante false altrimenti
+     * */
     synchronized public boolean getPrestitoSconfinantebyID(String userid) {
         PreparedStatement stmt = null;
 
@@ -179,12 +223,20 @@ public class SQLGetter {
 
         } catch (Exception ex) {
             Logger.getLogger(SQLCORE.class.getName()).log(Level.SEVERE, null, ex);
-            logger.Write("*Errore SQL: GetPrestitoSconfinante -> " + ex.getMessage());
+            logger.write("*Errore SQL: GetPrestitoSconfinante -> " + ex.getMessage());
         }
 
         return false;
     }
 
+    /**
+     * Ritorna una generica informazione associata a un Libro con isbn in ingresso
+     *
+     * @param field il campo di interesse per quel libro
+     * @param isbn l'isbn del libro interessato
+     *
+     * @return una Stringa con l'informazione
+     * */
     synchronized public String getBookInformation(String field, String isbn) {
 
         try {
@@ -210,12 +262,17 @@ public class SQLGetter {
 
         } catch (Exception er) {
             er.printStackTrace();
-            logger.Write("*Errore SQL: getBookInformation Fallisce per isbn: " + isbn + " -> " + er.getMessage());
+            logger.write("*Errore SQL: getBookInformation Fallisce per isbn: " + isbn + " -> " + er.getMessage());
         }
 
         return "";
     }
 
+    /**
+     * Ritorna un oggetto DefaultTableModel costruito con tutti i libri nel database e verificando anche le prenotazioni attive
+     *
+     * @return DefaultTableModel, un modello di JTable con colonne e libri presi dalla tabella Libri
+     * */
     public DefaultTableModel getBooksInTable() {
 
         PreparedStatement stmt = null;
@@ -249,12 +306,19 @@ public class SQLGetter {
 
         } catch (Exception ex) {
             Logger.getLogger(SQLCORE.class.getName()).log(Level.SEVERE, null, ex);
-            logger.Write("*Errore SQL: getBooksInTable Fallisce -> " + ex.getMessage());
+            logger.write("*Errore SQL: getBooksInTable Fallisce -> " + ex.getMessage());
         }
 
         return model;
     }
 
+    /**
+     * Ritorna un oggetto DefaultTableModel costruito a partire da una Stringa di ricerca secondo titolo,autore o categoria
+     *
+     * @param search la Stringa con il parametro da ricercare
+     *
+     * @return DefaultTableModel, un modello di JTable con i libri costruiti secondo ricerca
+     * */
     public DefaultTableModel getLookedForBooks(String search) {
 
         if (search.isEmpty()) {
@@ -294,12 +358,22 @@ public class SQLGetter {
 
         } catch (Exception ex) {
             Logger.getLogger(SQLCORE.class.getName()).log(Level.SEVERE, null, ex);
-            logger.Write("*Errore SQL: GetLookedBooks Fallisce -> " + ex.getMessage());
+            logger.write("*Errore SQL: GetLookedBooks Fallisce -> " + ex.getMessage());
         }
 
         return model;
     }
 
+    /**
+     * Ritorna un oggetto DefaultTableModel costruito a partire da un ID Utente e un tipo di richiesta per differenziare
+     * le query e i tipi di tabella da analizzare
+     *
+     * @param user_id l'ID utente da cui costruire la tabella
+     * @param request_type intero con il tipo di richiesta
+     *
+     * @return DefaultTableModel, un modello di JTable costruito a seconda del tipo di richiesta contente le informazioni di
+     * Prenotazione/Prestito relative all'utnete user_ide
+     */
     public DefaultTableModel getPrenotazioniPrestitiByUserID(String user_id, int request_type) {
 
 
@@ -368,7 +442,7 @@ public class SQLGetter {
 
         try {
 
-            if(query.equals("NULL")) {logger.Write("*Errore SQL: getPrenotazioniPrestitiByUserID query nulla"); return null; }
+            if(query.equals("NULL")) {logger.write("*Errore SQL: getPrenotazioniPrestitiByUserID query nulla"); return null; }
 
             conn = supporter.enstablishConnection();
 
@@ -395,12 +469,21 @@ public class SQLGetter {
 
         } catch (Exception ex) {
             Logger.getLogger(SQLCORE.class.getName()).log(Level.SEVERE, null, ex);
-            logger.Write("*Errore SQL:  getPrenotazioniPrestitiByUserID fallisce per userid: " + user_id + " -> " + ex.getMessage());
+            logger.write("*Errore SQL:  getPrenotazioniPrestitiByUserID fallisce per userid: " + user_id + " -> " + ex.getMessage());
         }
 
         return model;
     }
 
+
+    /**
+     * Ritorna un oggetto DefaultTableModel costruito a partire da un tipo di richiesta per differenziare
+     * le query, tipi di tabella e i diversi ordinamenti
+     *
+     * @param request_type intero con il tipo di richiesta
+     *
+     * @return DefaultTableModel, un modello di JTable costruito a seconda del tipo di richiesta contente le informazioni ordinate e classificate
+     */
     public DefaultTableModel getClassificaLibri(int request_type) {
 
         PreparedStatement stmt = null;
@@ -447,7 +530,7 @@ public class SQLGetter {
 
         try {
 
-            if(query.equals("NULL")) {logger.Write("*Errore SQL: GeClassificaLibri query nulla"); return null; }
+            if(query.equals("NULL")) {logger.write("*Errore SQL: GeClassificaLibri query nulla"); return null; }
 
             conn = supporter.enstablishConnection();
 
@@ -472,7 +555,7 @@ public class SQLGetter {
 
         } catch (Exception ex) {
             Logger.getLogger(SQLCORE.class.getName()).log(Level.SEVERE, null, ex);
-            logger.Write("*Errore SQL:  getClassificaLibri fallisce per request_type: " + request_type + " -> " + ex.getMessage());
+            logger.write("*Errore SQL:  getClassificaLibri fallisce per request_type: " + request_type + " -> " + ex.getMessage());
         }
 
         return model;

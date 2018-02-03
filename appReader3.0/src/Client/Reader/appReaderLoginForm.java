@@ -7,13 +7,9 @@ package Client.Reader;
 
 import javax.swing.*;
 import javax.swing.border.MatteBorder;
-import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.rmi.RemoteException;
 import java.util.Arrays;
 import java.util.logging.Level;
@@ -44,7 +40,7 @@ public class appReaderLoginForm extends javax.swing.JFrame {
         initLabels();
 
 
-        reader.SendCommunicationServer("[READER] client nuovo aperto");
+        reader.sendCommunicationServer("[READER] client nuovo aperto");
         
     }
 
@@ -495,11 +491,11 @@ public class appReaderLoginForm extends javax.swing.JFrame {
         ConfirmationDiagErrorLabel.setVisible(false);
         forgotErrorLabel.setVisible(false);
 
-        SetConfirmDialogCloseSafe();
-        SetForgotPsWDialogCloseSafe();
+        setConfirmDialogCloseSafe();
+        setForgotPsWDialogCloseSafe();
     }
 
-    private void SetConfirmDialogCloseSafe() {
+    private void setConfirmDialogCloseSafe() {
         ConfirmationCodeDialog.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosed(WindowEvent e) {
@@ -509,7 +505,7 @@ public class appReaderLoginForm extends javax.swing.JFrame {
         });
     }
 
-    private void SetForgotPsWDialogCloseSafe() {
+    private void setForgotPsWDialogCloseSafe() {
         ForgotPasswordDialog.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosed(WindowEvent e) {
@@ -520,32 +516,32 @@ public class appReaderLoginForm extends javax.swing.JFrame {
         });
     }
 
-    private void UpdateLabel(javax.swing.JLabel label_to_update, java.awt.Color foreground_color, String message) {
+    private void updateLabel(javax.swing.JLabel label_to_update, java.awt.Color foreground_color, String message) {
         label_to_update.setForeground(foreground_color);
         label_to_update.setText(message);
         label_to_update.setVisible(true);
 
     }
 
-    private boolean CheckField() throws RemoteException {
+    private boolean checkField() throws RemoteException {
 
         MatteBorder exceptionborder = new MatteBorder(0, 0, 1, 0, ReaderStyle.EXCEPTION_COLOR);
 
-        int controller = reader.Login_Confirmation(UsernameTextField.getText(), PasswordTextField.getPassword(), reader.GetType());
+        int controller = reader.loginConfirmation(UsernameTextField.getText(), PasswordTextField.getPassword(), reader.getType());
 
         if (controller != 0) {
             if (controller == -1) {
-                UpdateLabel(LoginErrorLabel, ReaderStyle.EXCEPTION_COLOR, "Errore Sconosciuto");
+                updateLabel(LoginErrorLabel, ReaderStyle.EXCEPTION_COLOR, "Errore Sconosciuto");
             }
             if (controller == 1) {
                 UsernameTextField.setBorder(exceptionborder);
 
-                UpdateLabel(LoginErrorLabel, ReaderStyle.EXCEPTION_COLOR, "Errore: Username Errato");
+                updateLabel(LoginErrorLabel, ReaderStyle.EXCEPTION_COLOR, "Errore: Username Errato");
             }
             if (controller == 2) {
                 PasswordTextField.setBorder(exceptionborder);
 
-                UpdateLabel(LoginErrorLabel, ReaderStyle.EXCEPTION_COLOR, "Errore: Password Errata");
+                updateLabel(LoginErrorLabel, ReaderStyle.EXCEPTION_COLOR, "Errore: Password Errata");
             }
         } else {
             return true;
@@ -566,26 +562,26 @@ public class appReaderLoginForm extends javax.swing.JFrame {
 
         try {
 
-            if (CheckField()) {
+            if (checkField()) {
                 String tmp_id = UsernameTextField.getText();
 
-                reader.Set_tmp_ID(tmp_id);
-                reader.Set_Reader_type();
+                reader.setTmpID(tmp_id);
+                reader.setReaderType();
 
-                int confirmed_tmp_acc = Integer.parseInt(reader.GetParametricInformation("CONFIRMED", reader.GetType(), reader.GetID()));
+                int confirmed_tmp_acc = Integer.parseInt(reader.getParametricInformation("CONFIRMED", reader.getType(), reader.getID()));
 
                 if (confirmed_tmp_acc == 0) {
-                    UpdateLabel(LoginErrorLabel, ReaderStyle.EXCEPTION_COLOR, "Account non ancora attivato");
+                    updateLabel(LoginErrorLabel, ReaderStyle.EXCEPTION_COLOR, "Account non ancora attivato");
 
                     this.setEnabled(false);
                     ConfirmationCodeDialog.setVisible(true);
 
                 } else {
 
-                    reader.SetUtente(reader.GetUtentebyID(reader.GetID(), reader.GetType()));
+                    reader.setUtente(reader.getUtentebyID(reader.getID(), reader.getType()));
 
-                    UpdateLabel(LoginErrorLabel, ReaderStyle.SUCCESS_COLOR, "LOG IN EFFETTUATO");
-                    reader.SendCommunicationServer("[READER-" + reader.GetID() + "] logged in Successfull");
+                    updateLabel(LoginErrorLabel, ReaderStyle.SUCCESS_COLOR, "LOG IN EFFETTUATO");
+                    reader.sendCommunicationServer("[READER-" + reader.getID() + "] logged in Successfull");
                     
                     appReader application = new appReader(reader);
 
@@ -596,7 +592,7 @@ public class appReaderLoginForm extends javax.swing.JFrame {
                 }
 
             } else {
-                UpdateLabel(LoginErrorLabel, ReaderStyle.EXCEPTION_COLOR, "Campi non Confermati");
+                updateLabel(LoginErrorLabel, ReaderStyle.EXCEPTION_COLOR, "Campi non Confermati");
             }
 
         } catch (RemoteException ex) {
@@ -609,10 +605,10 @@ public class appReaderLoginForm extends javax.swing.JFrame {
     private void OKConfirmationButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OKConfirmationButtonActionPerformed
 
         if (reader.checker.userChecker.checkCodice(ConfirmationCodeField.getText()) != 0) {
-            UpdateLabel(ConfirmationDiagErrorLabel, ReaderStyle.EXCEPTION_COLOR, "Codice Inserito non rispetta i requisiti");
+            updateLabel(ConfirmationDiagErrorLabel, ReaderStyle.EXCEPTION_COLOR, "Codice Inserito non rispetta i requisiti");
         } else {
 
-            String tmp_account_code = reader.GetParametricInformation("CODICE", reader.GetType(), reader.GetID());
+            String tmp_account_code = reader.getParametricInformation("CODICE", reader.getType(), reader.getID());
             String real_account_code = "";
 
             for (int i = 0; i < tmp_account_code.length(); i++) {
@@ -624,10 +620,10 @@ public class appReaderLoginForm extends javax.swing.JFrame {
 
             if (real_account_code.equals(ConfirmationCodeField.getText())) {
 
-                UpdateLabel(ConfirmationDiagErrorLabel, ReaderStyle.SUCCESS_COLOR, "Codice Confermato");
-                UpdateLabel(LoginErrorLabel, ReaderStyle.SUCCESS_COLOR, "Codice Confermato, effettuare log in");
+                updateLabel(ConfirmationDiagErrorLabel, ReaderStyle.SUCCESS_COLOR, "Codice Confermato");
+                updateLabel(LoginErrorLabel, ReaderStyle.SUCCESS_COLOR, "Codice Confermato, effettuare log in");
                 
-                reader.UpdateUserInfo(reader.GetID(), "CONFIRMED", "1", reader.GetType());
+                reader.UpdateUserInfo(reader.getID(), "CONFIRMED", "1", reader.getType());
 
                 try {
 
@@ -637,28 +633,28 @@ public class appReaderLoginForm extends javax.swing.JFrame {
                     Logger.getLogger(appReaderLoginForm.class.getName()).log(Level.SEVERE, null, ex);
                 }
 
-                reader.SendCommunicationServer("[READER-" + reader.GetID() + "] codice verificato");
+                reader.sendCommunicationServer("[READER-" + reader.getID() + "] codice verificato");
                 
                 ConfirmationCodeDialog.dispose();
                 this.setEnabled(true);
 
             } else {
-                reader.UpdateDecrementAttempsLogIn(reader.GetID(), reader.GetType());
+                reader.updateDecrementAttempsLogIn(reader.getID(), reader.getType());
 
-                int attempts = Integer.parseInt(reader.GetParametricInformation("TENTATIVI", reader.GetType(), reader.GetID()));
+                int attempts = Integer.parseInt(reader.getParametricInformation("TENTATIVI", reader.getType(), reader.getID()));
 
                 if (attempts == 0) {
-                    reader.DeleteUserAccount(reader.GetID(), "USERID", reader.GetType());
+                    reader.deleteUserAccount(reader.getID(), "USERID", reader.getType());
 
                     ConfirmationCodeDialog.dispose();
                     this.setEnabled(true);
 
-                    UpdateLabel(LoginErrorLabel, ReaderStyle.EXCEPTION_COLOR, "ERRORE FATALE: account cancellato");
-                    reader.SendCommunicationServer("[READER-" + reader.GetID() + "] account canellato, tentativi superati");
+                    updateLabel(LoginErrorLabel, ReaderStyle.EXCEPTION_COLOR, "ERRORE FATALE: account cancellato");
+                    reader.sendCommunicationServer("[READER-" + reader.getID() + "] account canellato, tentativi superati");
                 
                 }
 
-                UpdateLabel(ConfirmationDiagErrorLabel, ReaderStyle.EXCEPTION_COLOR, "Codice non Corrisponde ! tentativi : " + attempts);
+                updateLabel(ConfirmationDiagErrorLabel, ReaderStyle.EXCEPTION_COLOR, "Codice non Corrisponde ! tentativi : " + attempts);
             }
 
         }
@@ -677,32 +673,32 @@ public class appReaderLoginForm extends javax.swing.JFrame {
         String context_user_id;
 
         if (reader.checker.userChecker.checkCodiceFiscale(forgotpswUserTxtField.getText()) != 0) {
-            UpdateLabel(forgotErrorLabel, ReaderStyle.EXCEPTION_COLOR, "UserID non rispetta i requisiti");
+            updateLabel(forgotErrorLabel, ReaderStyle.EXCEPTION_COLOR, "UserID non rispetta i requisiti");
         } else {
 
             context_user_id = forgotpswUserTxtField.getText();
 
-            if (reader.CheckParametricExisting("USERID", context_user_id, reader.GetDefaultType())) {
-                int confirmed_acc = Integer.parseInt(reader.GetParametricInformation("CONFIRMED", reader.GetDefaultType(), context_user_id));
+            if (reader.checkParametricExisting("USERID", context_user_id, reader.GetDefaultType())) {
+                int confirmed_acc = Integer.parseInt(reader.getParametricInformation("CONFIRMED", reader.GetDefaultType(), context_user_id));
 
                 if (confirmed_acc == 1) {
-                    char[] generated_new_psw = reader.GeneratePassword();
-                    char[] generated_new_user_code = reader.GenerateUserCode(context_user_id);
+                    char[] generated_new_psw = reader.generatePassword();
+                    char[] generated_new_user_code = reader.generateUserCode(context_user_id);
 
-                    reader.SendCommunicationServer("[READER-" + reader.GetID() + "] password reimpostata");
+                    reader.sendCommunicationServer("[READER-" + reader.getID() + "] password reimpostata");
                     
-                    reader.UpdateUserPassword(context_user_id, generated_new_psw, reader.GetDefaultType());
+                    reader.updateUserPassword(context_user_id, generated_new_psw, reader.GetDefaultType());
                     reader.UpdateUserInfo(context_user_id, "CONFIRMED", "0", reader.GetDefaultType());
                     reader.UpdateUserInfo(context_user_id, "TENTATIVI", "5", reader.GetDefaultType());
                     reader.UpdateUserInfo(context_user_id, "CODICE", Arrays.toString(generated_new_user_code), reader.GetDefaultType());
 
-                    reader.SendNewPassword(context_user_id, reader.GetDefaultType());
+                    reader.sendNewPassword(context_user_id, reader.GetDefaultType());
 
                 } else {
-                    UpdateLabel(forgotErrorLabel, ReaderStyle.EXCEPTION_COLOR, "UserID non ancora attivato");
+                    updateLabel(forgotErrorLabel, ReaderStyle.EXCEPTION_COLOR, "UserID non ancora attivato");
                 }
             } else {
-                UpdateLabel(forgotErrorLabel, ReaderStyle.EXCEPTION_COLOR, "UserID non presente nel DB");
+                updateLabel(forgotErrorLabel, ReaderStyle.EXCEPTION_COLOR, "UserID non presente nel DB");
             }
 
         }

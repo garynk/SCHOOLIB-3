@@ -16,12 +16,26 @@ public class SQLCounter {
 
     SQLSupporter supporter;
 
+    /**
+     * Costruttore di Classe
+     *
+     * @param support Oggetto SQLSupporter per ottenere le operazioni utili
+     * @param log Oggetto ServerView per gestire gli Output
+     * */
     public SQLCounter(SQLSupporter support, ServerView log)
     {
         supporter = support;
         logger = log;
     }
 
+    /**
+     * Conta il numero di Prenotazione o Prestiti presenti appartenenti a un certo ID_Utente
+     *
+     * @param userid ID dell'utente in oggett
+     * @param type Tipo di richiesta (se prenotaz o prestiti)
+     *
+     * @return il numero di Prenotaz/Prestiti attivi su ID utente
+     * */
     synchronized public int countPrenotazioniPrestitiByID(String userid, int type) {
 
 
@@ -50,7 +64,7 @@ public class SQLCounter {
 
         } catch (Exception er) {
             er.printStackTrace();
-            logger.Write("*Errore SQL: countPrenotazioniPrestitiByID fallisce per userid: " + userid + " -> " + er.getMessage());
+            logger.write("*Errore SQL: countPrenotazioniPrestitiByID fallisce per userid: " + userid + " -> " + er.getMessage());
         }
 
         return -1;

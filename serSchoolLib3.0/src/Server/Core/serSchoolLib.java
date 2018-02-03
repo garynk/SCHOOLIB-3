@@ -56,7 +56,7 @@ public class serSchoolLib extends UnicastRemoteObject implements ServerInterface
 
             reg.rebind("SERVERLIB", server);
 
-            logger_pane.Write("   ### SERSCHOOLLIB v." + VERSION + " STARTED ###");
+            logger_pane.write("   ### SERSCHOOLLIB v." + VERSION + " STARTED ###");
 
         } catch (Exception e) {
             System.out.println("SERVER error on start: " + e.getMessage());
@@ -66,13 +66,13 @@ public class serSchoolLib extends UnicastRemoteObject implements ServerInterface
     private void initSQLDatabase() {
 
         try {
-            logger_pane.Write("SQL Manager - initing connection 1/2");
+            logger_pane.write("SQL Manager - initing connection 1/2");
 
             sqlmanager = new SQLCORE(logger_pane);
 
         } catch (Exception ex) {
             Logger.getLogger(serSchoolLib.class.getName()).log(Level.SEVERE, null, ex);
-            logger_pane.Write("* Errore Connessione SQL (server context) ");
+            logger_pane.write("* Errore Connessione SQL (server context) ");
 
         }
 
@@ -99,28 +99,28 @@ public class serSchoolLib extends UnicastRemoteObject implements ServerInterface
 
     }
 
-    public int GetMaxPrenotazioni() {
+    public int getMaxPrenotazioni() {
         return MAX_PRENOTAZIONI_PERUSER;
     }
 
-    public int GetMaxPrestiti() {
+    public int getMaxPrestiti() {
         return MAX_PRESTITI_PERUSER;
     }
 
     
-    public void GetClientComunication(String communication) 
+    public void getClientComunication(String communication)
     {
-       logger_pane.Write(communication);
+       logger_pane.write(communication);
     }
     
-    public void SetLogger(ServerView ServerView)
+    public void setLogger(ServerView ServerView)
     {
         emailsender = new EmailSender2();
         logger_pane = ServerView;
-        emailsender.SetLogger(logger_pane);
+        emailsender.setlogger(logger_pane);
     }
     
-    public char[] GenerateUserCode(String user_id) {
+    public char[] generateUserCode(String user_id) {
         final int first_part_size = 4;
         final int second_part_size = 3;
         final int third_part_size = 2;
@@ -169,7 +169,7 @@ public class serSchoolLib extends UnicastRemoteObject implements ServerInterface
 
     }
 
-    public char[] GeneratePassword() {
+    public char[] generatePassword() {
         char[] psw_generated;
 
         int random_psw_posix = ThreadLocalRandom.current().nextInt(0, PASSWORD_WORD_ARRAY.length - 1);
@@ -232,7 +232,7 @@ public class serSchoolLib extends UnicastRemoteObject implements ServerInterface
         
     }
 
-    public void SendConfirmationCode(String user_id, int type) {
+    public void sendConfirmationCode(String user_id, int type) {
         String code = sqlmanager.getParametricInformationByID("CODICE", type, user_id);
         String email_to = sqlmanager.getParametricInformationByID("EMAIL", type, user_id);
 
@@ -245,10 +245,10 @@ public class serSchoolLib extends UnicastRemoteObject implements ServerInterface
             }
         }
 
-        EmailSender2.Send_Confirmation_Email(email_to, real_code);
+        EmailSender2.sendConfirmationEmail(email_to, real_code);
     }
     
-    public void SendNewPasswordEmail(String user_id, int type) {
+    public void sendNewPasswordEmail(String user_id, int type) {
         String code = sqlmanager.getParametricInformationByID("CODICE", type, user_id);
         String psw = sqlmanager.getParametricInformationByID("PASSWORD", type, user_id);
         String email_to = sqlmanager.getParametricInformationByID("EMAIL", type, user_id);
@@ -270,114 +270,114 @@ public class serSchoolLib extends UnicastRemoteObject implements ServerInterface
             }
         }
 
-        EmailSender2.Send_NewPassword_Email(email_to, real_code, real_psw);
+        EmailSender2.sendNewPasswordEmail(email_to, real_code, real_psw);
     }
 
-    public void SendNewInformation(String user_id, String message, int type) {
+    public void sendNewInformation(String user_id, String message, int type) {
         String email_to = sqlmanager.getParametricInformationByID("EMAIL", type, user_id);
 
-        EmailSender2.Send_Information_Update(email_to, message);
+        EmailSender2.sendInformationUpdate(email_to, message);
     }
 
-    public void SendDeletedPrenotazioneEmail(String user_id, String book_code, int type) {
+    public void sendDeletedPrenotazioneEmail(String user_id, String book_code, int type) {
         String email_to = sqlmanager.getParametricInformationByID("EMAIL", type, user_id);
 
-        EmailSender2.Send_DeletePrenotazione_Email(email_to, book_code);
+        EmailSender2.sendDeletePrenotazioneEmail(email_to, book_code);
     }
 
-    public void SendLibroDisponibileEmail(String user_id, String book_code, int type) {
+    public void sendLibroDisponibileEmail(String user_id, String book_code, int type) {
         String email_to = sqlmanager.getParametricInformationByID("EMAIL", type, user_id);
         String titolo = sqlmanager.getBookInformation("TITOLO", book_code);
 
-        EmailSender2.Send_LibroDisponibile_Email(email_to, book_code, titolo);
+        EmailSender2.sendLibroDisponibileEmail(email_to, book_code, titolo);
     }
     
-    public boolean SetEmailMasterUser(String email_from)
+    public boolean setEmailMasterUser(String email_from)
     {
-       return emailsender.SetEmailMasterUser(email_from);
+       return emailsender.setEmailMasterUser(email_from);
     }
     
-    public void SetPasswordMasterUser(String psw)
+    public void setPasswordMasterUser(String psw)
     {
-        emailsender.SetPasswordMasterUser(psw);
+        emailsender.setPasswordMasterUser(psw);
     }
 
-    public boolean CheckExistingEasy(String column, String to_compare, int type) {
+    public boolean checkExistingEasy(String column, String to_compare, int type) {
         return sqlmanager.checkExistingEasy(column, to_compare, type);
     }
 
-    public boolean Check_Existing_Easy_PrenPres(String isbn, String userid, int type) throws RemoteException {
+    public boolean checkExistingEasyPrenPres(String isbn, String userid, int type) throws RemoteException {
 
         return sqlmanager.checkExistingEasyPrenPres(isbn, userid, type);
     }
 
-    public Utente GetUtenteFromDB_byID(String id, int type) throws RemoteException {
+    public Utente getUtenteFromDBByID(String id, int type) throws RemoteException {
         return sqlmanager.getUserDataFromID(id, type);
     }
 
-    public String GetParametricInformation(String field_to_take, int type, String element_to_compare) {
+    public String getParametricInformation(String field_to_take, int type, String element_to_compare) {
         return sqlmanager.getParametricInformationByID(field_to_take, type, element_to_compare);
     }
 
-    public Vector<String> GetUserIDFromPrenPrest_byISBN(String isbn, int type) {
+    public Vector<String> getUserIDFromPrenPrestByISBN(String isbn, int type) {
         return sqlmanager.getUserIDFromPrenPrestByISBN(isbn, type);
     }
 
-    public boolean GetPrestitoSconfinantebyID(String userid) {
+    public boolean getPrestitoSconfinantebyID(String userid) {
         return sqlmanager.getPrestitoSconfinantebyID(userid);
     }
 
-    synchronized public int Login_Confirmation(String user_id, char[] pass, int type) throws RemoteException {
+    synchronized public int loginConfirmation(String user_id, char[] pass, int type) throws RemoteException {
         return sqlmanager.checkLoginUser(user_id, pass, type);
     }
 
-    public boolean Check_Password_byID(String user_id, char[] pass, int type) {
+    public boolean checkPasswordByID(String user_id, char[] pass, int type) {
         return sqlmanager.checkPasswordByID(user_id, pass, type);
 
     }
 
-    public DefaultTableModel BuilderBooksjTable() {
+    public DefaultTableModel builderBooksjTable() {
         return sqlmanager.getBooksInTable();
     }
 
-    public String GetBookInformationbyISBN(String field, String isbn) {
+    public String getBookInformationbyISBN(String field, String isbn) {
         return sqlmanager.getBookInformation(field, isbn);
     }
 
-    public DefaultTableModel GetLookedForBooks(String search) {
+    public DefaultTableModel getLookedForBooks(String search) {
         return sqlmanager.getLookedForBooks(search);
     }
 
-    public DefaultTableModel GetPrenotazioniPrestitiByUserID(String user_id, int request_type) {
+    public DefaultTableModel getPrenotazioniPrestitiByUserID(String user_id, int request_type) {
         return sqlmanager.getPrenotazioniPrestitiByUserID(user_id, request_type);
     }
     
-    public DefaultTableModel GetClassificaLibri(int request_type)
+    public DefaultTableModel getClassificaLibri(int request_type)
     {
         return sqlmanager.getClassificaLibri(request_type);
     }
 
-    public boolean InsertUser(Utente u) {
+    public boolean insertUser(Utente u) {
         return sqlmanager.insertUser(u);
     }
 
-    public boolean InsertNewBook(Libro lib) {
+    public boolean insertNewBook(Libro lib) {
         return sqlmanager.insertBook(lib);
     }
 
-    public boolean InsertPrenotazione(String isbn, String userid) {
+    public boolean insertPrenotazione(String isbn, String userid) {
         return sqlmanager.insertPrenotazione(isbn, userid);
     }
 
-    public boolean InsertPrestito(String isbn, String userid) {
+    public boolean insertPrestito(String isbn, String userid) {
         return sqlmanager.insertPrestito(isbn, userid);
     }
 
-    public boolean InsertPrestitoStorico(String isbn, String userid) {
+    public boolean insertPrestitoStorico(String isbn, String userid) {
         return sqlmanager.insertPrestitoStorico(isbn, userid);
     }
 
-    public boolean Update_User_Password(String user_id, char[] new_psw, int type) {
+    public boolean updateUserPassword(String user_id, char[] new_psw, int type) {
 
         try {
 
@@ -390,15 +390,15 @@ public class serSchoolLib extends UnicastRemoteObject implements ServerInterface
         return false;
     }
 
-    public boolean Update_Attempt_Login(String user_id, int type) {
+    public boolean updateAttemptLogin(String user_id, int type) {
         return sqlmanager.updateAttemptLogin(user_id, type);
     }
 
-    public boolean Update_User_Information(String field, String user_id, String info, int type) {
+    public boolean updateUserInformation(String field, String user_id, String info, int type) {
         return sqlmanager.updateUserInformation(field, user_id, info, type);
     }
 
-    public boolean Update_User_Registration_Code(String user_id, char[] code, int type) {
+    public boolean updateUserRegistrationCode(String user_id, char[] code, int type) {
         try {
 
             return sqlmanager.updateRegistrationCode(user_id, code, type);
@@ -410,11 +410,11 @@ public class serSchoolLib extends UnicastRemoteObject implements ServerInterface
         return false;
     }
 
-    public boolean UpdateBookStatus(String isbn, int status) {
+    public boolean updateBookStatus(String isbn, int status) {
         return sqlmanager.updateBookStatus(isbn, status);
     }
 
-    public boolean DeleteUserAccount(String user_id, String field, int type) {
+    public boolean deleteUserAccount(String user_id, String field, int type) {
         try {
 
             return sqlmanager.deleteUserAccount(user_id, field, type);
@@ -426,7 +426,7 @@ public class serSchoolLib extends UnicastRemoteObject implements ServerInterface
         return false;
     }
 
-    public boolean DeleteBook_byISBN(int isbn) {
+    public boolean deleteBookByISBN(int isbn) {
         try {
 
             return sqlmanager.deleteBookByISBN(isbn);
@@ -438,7 +438,7 @@ public class serSchoolLib extends UnicastRemoteObject implements ServerInterface
         return false;
     }
 
-    public boolean DeletePrestitoPrenotazioneByISBNByID(int isbn, int userid, int type) {
+    public boolean deletePrestitoPrenotazioneByISBNByID(int isbn, int userid, int type) {
         try {
             return sqlmanager.deletePrenotazioneByISBNByID(isbn, userid, type);
         } catch (Exception ex) {
@@ -449,7 +449,7 @@ public class serSchoolLib extends UnicastRemoteObject implements ServerInterface
     }
 
     @Override
-    public int Count_PrenotazioniPrestitiByID(String userid, int type) {
+    public int countPrenotazioniPrestitiByID(String userid, int type) {
 
         return sqlmanager.countPrenotazioniPrestitiByID(userid, type);
     }
@@ -457,11 +457,11 @@ public class serSchoolLib extends UnicastRemoteObject implements ServerInterface
 
     public void CREATE_BOOK_TEST()
     {
-        logger_pane.Write("  -- Inizializzo Biblioteca -- ");
+        logger_pane.write("  -- Inizializzo Biblioteca -- ");
         sqlmanager.insertBook(new Libro("110","In Nome della Rosa","Non Saprei","Delphi","1700","Romanzi","Italiano"));
         sqlmanager.insertBook(new Libro("111","Balcone con Vista","Riccardina","Achette","2010","Didattica","Spagnolo"));
         sqlmanager.insertBook(new Libro("112","Biciclette","Dario Fossi","DeAgostini","2004","2010","Romanzi","Italiano"));
-        logger_pane.Write("  -- Biblioteca Riempieta -- ");
+        logger_pane.write("  -- Biblioteca Riempieta -- ");
     } 
     
 }
