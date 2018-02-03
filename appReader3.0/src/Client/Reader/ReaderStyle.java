@@ -9,6 +9,7 @@ import javax.swing.border.MatteBorder;
 import java.awt.*;
 
 /**
+ *E' una classe contente il font, i colori e le grandezze delle scritte usate in tutta l'interfaccia grafica di Reader
  *
  * @author Lorenzo Gavazzeni
  */

@@ -21,6 +21,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
+ * Per i metodi qui non descritti si faccia riferimento ai medesimi metodi nella classe serSchoolLib
  *
  * @author Lorenzo Gavazzeni
  */

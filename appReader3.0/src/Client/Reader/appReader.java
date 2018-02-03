@@ -30,6 +30,7 @@ import static javax.swing.JOptionPane.YES_NO_OPTION;
 public class appReader extends javax.swing.JFrame {
 
     private static final int MAX_ROW_PER_PAGE = 10;
+    private static final char pswEchoChar = '\u2022';
 
     private Vector<Vector<Vector<Object>>> page_vector;
     private Vector<String> Columns;
@@ -37,6 +38,12 @@ public class appReader extends javax.swing.JFrame {
 
     private static Reader local_reader;
 
+    /**
+     * Costruttore di form, accetta in ingresso un Reader precostruito e autenticato  in fase di login
+     * inizializza il BackEnd e i componenti grafici
+     *
+     * @param reader_user_loggedin Utente Reader già autenticato in login
+     * */
     public appReader(Reader reader_user_loggedin) {
 
         local_reader = reader_user_loggedin;
@@ -324,7 +331,7 @@ public class appReader extends javax.swing.JFrame {
         OldPasswordTxtField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         OldPasswordTxtField.setToolTipText("password");
         OldPasswordTxtField.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
-        OldPasswordTxtField.setEchoChar('\u2022');
+        OldPasswordTxtField.setEchoChar(pswEchoChar);
         OldPasswordTxtField.setName("passwordTextField"); // NOI18N
         OldPasswordTxtField.setSelectionColor(new java.awt.Color(153, 153, 255));
 
@@ -337,7 +344,7 @@ public class appReader extends javax.swing.JFrame {
         NewPasswordTextField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         NewPasswordTextField.setToolTipText("password");
         NewPasswordTextField.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
-        NewPasswordTextField.setEchoChar('\u2022');
+        NewPasswordTextField.setEchoChar(pswEchoChar);
         NewPasswordTextField.setName("passwordTextField"); // NOI18N
         NewPasswordTextField.setSelectionColor(new java.awt.Color(153, 153, 255));
 
@@ -1019,7 +1026,7 @@ public class appReader extends javax.swing.JFrame {
         });
     }
 
-     private void setCurrentPage(javax.swing.JLabel label_page_num, int index) {
+    private void setCurrentPage(javax.swing.JLabel label_page_num, int index) {
         label_page_num.setText(Integer.toString(index + 1));
     }
 

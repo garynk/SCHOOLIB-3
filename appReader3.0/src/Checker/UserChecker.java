@@ -6,6 +6,7 @@
 package Checker;
 
 /**
+ * Si occupa di fare i controlli per i parametri utente nella loro validità di Stringa (non verifica in DB)
  *
  * @author Lorenzo Gavazzeni
  */
@@ -14,6 +15,14 @@ public class UserChecker {
     public UserChecker() {
     }
 
+    /**
+     * Verifica che la stringa Nome o Cognome rispetti i parametri di lunghezza e correttezza nei caratteri
+     *
+     * @param nmcg Stringa da verificare
+     *
+     * @return un intero con codici di errori diversificati:
+     * 1) se vuota, 2) se troppo lunga, 3) se i caratteri non sono coerenti, 0) se è corretto
+     * */
     public int checkAvaliableNomeCognome(String nmcg) {
         if (nmcg.isEmpty()) {
             return Checker.EMPTY_CODE;
@@ -36,6 +45,14 @@ public class UserChecker {
 
     }
 
+    /**
+     * Verifica che la stringa CodiceFiscale rispetti i parametri di lunghezza e correttezza nei caratteri
+     *
+     * @param cod Stringa da verificare
+     *
+     * @return un intero con codici di errori diversificati:
+     * 1) se vuota, 2) se troppo corta, 3) se troppo lunga, 0) se è corretto
+     * */
     public int checkCodiceFiscale(String cod) {
         if (cod.isEmpty()) {
             return Checker.EMPTY_CODE;
@@ -51,6 +68,15 @@ public class UserChecker {
         return 0;
     }
 
+    /**
+     * Verifica che la Mail inserita rispetti i parametri di lunghezza e correttezza nei caratteri
+     *
+     * @param email Stringa email da verificare
+     *
+     * @return un intero con codici di errori diversificati:
+     * 1) se vuota, 2) se troppo lunga, 3) se non contiene la '@', 4) se compare meno di 1 carattere prima di '@'
+     * 5) se dopo la '@' non compaiono caratteri, 6) se dopo il '.' non compaiono caratteri, 0) se corretto
+     * */
     public int checkEmail(String email) {
 
         if (email.isEmpty()) {
@@ -102,6 +128,14 @@ public class UserChecker {
 
     }
 
+    /**
+     * Verifica che la parte classe+sezione inserita sia corretta
+     *
+     * @param classe_inq Stringa con classe + sezione da verificare
+     *
+     * @return un intero con codici di errori diversificati:
+     * 1) se vuoto, 2) se la lunghezza di 2 non è rispettata, 0) se corretto (lunghezza = 2)
+     * */
     public int checkInquadramentoClasse(String classe_inq) {
 
         String inquadramento_tmp = classe_inq.toLowerCase();
@@ -118,16 +152,25 @@ public class UserChecker {
 
     }
 
-    public int checkNumero(String s) {
-        if (s.isEmpty()) {
+    /**
+     * Verifica che il numero sia corretto
+     *
+     * @param numero Stringa con il numero da verificare
+     *
+     * @return un intero con codici di errori diversificati:
+     * 1) se vuoto, 2) se la lunghezza eccede il limite(15), 3) se contiene caratteri diversi da numeri
+     * 4) se troppo corto, 0) se corretto
+     * */
+    public int checkNumero(String numero) {
+        if (numero.isEmpty()) {
             return Checker.EMPTY_CODE;
         }
 
-        if (s.length() > 15) {
+        if (numero.length() > 15) {
             return 2;
         }
 
-        char[] checknum = s.toCharArray();
+        char[] checknum = numero.toCharArray();
 
         for (char c : checknum) {
             if (!Character.isDigit(c)) {
@@ -135,13 +178,21 @@ public class UserChecker {
             }
         }
 
-        if (s.length() < 5) {
+        if (numero.length() < 5) {
             return 4;
         }
 
         return 0;
     }
 
+    /**
+     * Verifica che la password sia corretta
+     *
+     * @param psw array di caratteri da verificare
+     *
+     * @return un intero con codici di errori diversificati:
+     * 1) se vuoto, 2) se troppo corta, 3) se non contiene numeri, 4) se non contiene maiuscole, 5) se troppo lunga, 0) se corretto
+     * */
     public int checkPassword(char[] psw) {
         int counter_number = 0;
         int counter_maiusc = 0;
@@ -176,16 +227,24 @@ public class UserChecker {
         return 0;
     }
 
-    public int checkCodice(String s) {
-        if (s.isEmpty()) {
+    /**
+     * Verifica il codice generato rispetti i requisiti
+     *
+     * @param codice codice da verificare
+     *
+     * @return un intero con codici di errori diversificati:
+     * 1) se vuoto, 2) se troppo lungo, 3) se contiene caratteri errati, 4) se troppo corto, 0) se corretto
+     * */
+    public int checkCodice(String codice) {
+        if (codice.isEmpty()) {
             return Checker.EMPTY_CODE;
         }
 
-        if (s.length() > 10) {
+        if (codice.length() > 10) {
             return 2;
         }
 
-        char[] checknum = s.toCharArray();
+        char[] checknum = codice.toCharArray();
 
         for (char c : checknum) {
             if (!Character.isDigit(c)) {
@@ -193,7 +252,7 @@ public class UserChecker {
             }
         }
 
-        if (s.length() < 5) {
+        if (codice.length() < 5) {
             return 4;
         }
 

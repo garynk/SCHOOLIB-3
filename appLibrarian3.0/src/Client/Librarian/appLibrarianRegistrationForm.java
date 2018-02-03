@@ -14,6 +14,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
+ * Form di Registrazione per un utente Librarian
  *
  * @author Lorenzo Gavazzeni
  */
@@ -24,10 +25,16 @@ public class appLibrarianRegistrationForm extends javax.swing.JFrame {
      */
     private static final int TOTAL_FIELD = 6;
 
+    private static final char pswEchoChar = '\u2022';
+
     private Librarian librarian;
     private UtenteLibrarian librarian_user;
     private boolean registration_success = false;
 
+    /**
+     *  Esegue questo Thread all'avvenuta registrazione, ritorna alla schermata di Login
+     *
+     * */
     Thread SuccessThread = new Thread(new Runnable() {
         @Override
         public void run() {
@@ -50,6 +57,13 @@ public class appLibrarianRegistrationForm extends javax.swing.JFrame {
         }
     });
 
+
+    /**
+     * Costruttore di form, accetta in ingresso un Librarian precostruito in fase di login
+     * inizializza componenti e le label della form
+     *
+     * @param lib Utente Librarian precostruito nella form di Login
+     * */
     public appLibrarianRegistrationForm(Librarian lib) {
 
         initComponents();
@@ -166,7 +180,7 @@ public class appLibrarianRegistrationForm extends javax.swing.JFrame {
         PasswordField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         PasswordField.setToolTipText("password");
         PasswordField.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
-        PasswordField.setEchoChar('•');
+        PasswordField.setEchoChar(pswEchoChar);
         PasswordField.setName("passwordTextField"); // NOI18N
         PasswordField.setSelectionColor(new java.awt.Color(153, 153, 255));
 

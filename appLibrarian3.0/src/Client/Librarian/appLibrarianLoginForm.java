@@ -14,12 +14,15 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
+ * Genera l'interfaccia grafica per il LogIn di un utente Librarian
  *
  * @author Lorenzo Gavazzeni
  */
 public class appLibrarianLoginForm extends javax.swing.JFrame {
 
     private static Librarian librarian;
+
+    private static final char pswEchoChar = '\u2022';
 
     /**
      * Creates new form LibrarianForm
@@ -310,7 +313,7 @@ public class appLibrarianLoginForm extends javax.swing.JFrame {
         PasswordTextField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         PasswordTextField.setToolTipText("password");
         PasswordTextField.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(0, 0, 0)));
-        PasswordTextField.setEchoChar('•');
+        PasswordTextField.setEchoChar(pswEchoChar);
         PasswordTextField.setName("passwordTextField"); // NOI18N
         PasswordTextField.setSelectionColor(new java.awt.Color(153, 153, 255));
 

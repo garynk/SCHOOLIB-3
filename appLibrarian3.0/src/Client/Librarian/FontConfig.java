@@ -4,6 +4,11 @@ import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * Configura il font usato dal programma
+ *
+ * @author Gerald Shyti
+ * */
 public class FontConfig{
     private File plainPath;
     private File boldPath;

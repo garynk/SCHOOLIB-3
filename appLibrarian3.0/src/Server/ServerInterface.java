@@ -13,6 +13,7 @@ import java.util.Vector;
 import javax.swing.table.DefaultTableModel;
 
 /**
+ * Interfaccia del Server Remoto, contiene tutti i metodi associati al Server
  *
  * @author Lorenzo Gavazzeni
  */

@@ -31,6 +31,7 @@ import java.util.logging.Logger;
 import static javax.swing.JOptionPane.YES_NO_OPTION;
 
 /**
+ * Crea la form principale appLibrarian con tutte le funzionalità core
  *
  * @author Lorenzo Gavazzeni
  */
@@ -38,6 +39,8 @@ public class appLibrarian extends javax.swing.JFrame {
 
     private static final int MAX_ROW_PER_PAGE = 10;
     private static final int TOTAL_BOOK_FIELD = 8;
+
+    private static final char pswEchoChar = '\u2022';
 
     private Vector<Vector<Vector<Object>>> page_vector;
     private Vector<String> Columns;
@@ -47,6 +50,12 @@ public class appLibrarian extends javax.swing.JFrame {
 
     private static Librarian local_librarian;
 
+    /**
+     * Costruttore di form, accetta in ingresso un Librarian precostruito e autenticato in fase di login
+     * inizializza backend e componenti grafici
+     *
+     * @param librarian_user_loggedin Utente Librarian già autenticato in login
+     * */
     public appLibrarian(Librarian librarian_user_loggedin) {
 
         local_librarian = librarian_user_loggedin;
@@ -445,7 +454,7 @@ public class appLibrarian extends javax.swing.JFrame {
         OldPasswordTxtField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         OldPasswordTxtField.setToolTipText("password");
         OldPasswordTxtField.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
-        OldPasswordTxtField.setEchoChar('•');
+        OldPasswordTxtField.setEchoChar(pswEchoChar);
         OldPasswordTxtField.setName("passwordTextField"); // NOI18N
         OldPasswordTxtField.setSelectionColor(new java.awt.Color(153, 153, 255));
 
@@ -458,7 +467,7 @@ public class appLibrarian extends javax.swing.JFrame {
         NewPasswordTextField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         NewPasswordTextField.setToolTipText("password");
         NewPasswordTextField.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
-        NewPasswordTextField.setEchoChar('•');
+        NewPasswordTextField.setEchoChar(pswEchoChar);
         NewPasswordTextField.setName("passwordTextField"); // NOI18N
         NewPasswordTextField.setSelectionColor(new java.awt.Color(153, 153, 255));
 
@@ -2288,6 +2297,10 @@ public class appLibrarian extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Esegue il Thread se il libro che è stato creato è corretto
+     *
+     * */
     Thread BookInsertSuccessThread = new Thread(new Runnable() {
         @Override
         public void run() {

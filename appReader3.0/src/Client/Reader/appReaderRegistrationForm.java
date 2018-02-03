@@ -17,6 +17,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
+ * Form di Registrazione per un utente Reader
  *
  * @author Lorenzo Gavazzeni
  */
@@ -27,11 +28,17 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
      */
     private static final int TOTAL_FIELD = 7;
 
+    private static final char pswEchoChar = '\u2022';
+
     private Reader reader;
     private UtenteReader reader_user;
     private boolean registration_success = false;
     private boolean need_classe_sezione = false;
 
+    /**
+     *  Esegue questo Thread all'avvenuta registrazione, ritorna alla schermata di Login
+     *
+     * */
     Thread SuccessThread = new Thread(new Runnable() {
         @Override
         public void run() {
@@ -54,11 +61,17 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
         }
     });
 
-    public appReaderRegistrationForm(Reader lib) {
+    /**
+     * Costruttore di form, accetta in ingresso un Reader precostruito in fase di login
+     * inizializza componenti e le label della form
+     *
+     * @param reader Utente Readder precostruito nella form di Login
+     * */
+    public appReaderRegistrationForm(Reader reader) {
 
         initComponents();
         initLabels();
-        reader = lib;
+        this.reader = reader;
 
     }
 
@@ -176,7 +189,7 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
         PasswordField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         PasswordField.setToolTipText("password");
         PasswordField.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
-        PasswordField.setEchoChar('•');
+        PasswordField.setEchoChar(pswEchoChar);
         PasswordField.setName("passwordTextField"); // NOI18N
         PasswordField.setSelectionColor(new java.awt.Color(153, 153, 255));
 
@@ -655,7 +668,7 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
 
     }
 
-    ItemListener selectedStudentItemListener()
+   private ItemListener selectedStudentItemListener()
     {
         ItemListener return_Listener = new ItemListener() {
             @Override
