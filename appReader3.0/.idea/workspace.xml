@@ -49,8 +49,8 @@
       <file leaf-file-name="appReader.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Client/Reader/appReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="41" column="86" lean-forward="false" selection-start-line="41" selection-start-column="86" selection-end-line="41" selection-end-column="86" />
+            <state relative-caret-position="-748">
+              <caret line="25" column="3" lean-forward="false" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
               <folding>
                 <element signature="e#1981#2070#0" expanded="true" />
                 <element signature="method#initBackEnd#0;class#appReader#0" expanded="false" />
@@ -92,8 +92,8 @@
       <file leaf-file-name="ReaderStyle.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Client/Reader/ReaderStyle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="11" column="118" lean-forward="false" selection-start-line="11" selection-start-column="118" selection-end-line="11" selection-end-column="118" />
+            <state relative-caret-position="323">
+              <caret line="29" column="106" lean-forward="false" selection-start-line="29" selection-start-column="106" selection-end-line="29" selection-end-column="106" />
               <folding />
             </state>
           </provider>
@@ -162,16 +162,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sendcon</find>
-      <find>dialog</find>
-      <find>row_</find>
-      <find>v</find>
-      <find>vECCH</find>
-      <find>vECCHIA</find>
-      <find>vECCHIA p</find>
-      <find>V</find>
-      <find>Vecc</find>
-      <find>Erro</find>
       <find>Errore Di</find>
       <find>Errore D</find>
       <find>Errore</find>
@@ -192,6 +182,16 @@
       <find>SetEc</find>
       <find>SetEch</find>
       <find>SetEcho</find>
+      <find>.</find>
+      <find>.ICO</find>
+      <find>.IC</find>
+      <find>.I</find>
+      <find>.ico</find>
+      <find>.ic</find>
+      <find>.i</find>
+      <find>i</find>
+      <find>ico</find>
+      <find>icon</find>
     </findStrings>
     <replaceStrings>
       <replace>ReaderStyle</replace>
@@ -215,12 +215,12 @@
         <option value="$PROJECT_DIR$/src/Common/Utente.java" />
         <option value="$PROJECT_DIR$/src/Common/Libro.java" />
         <option value="$PROJECT_DIR$/src/Checker/UserChecker.java" />
-        <option value="$PROJECT_DIR$/src/Client/Reader/ReaderStyle.java" />
         <option value="$PROJECT_DIR$/src/Client/Reader/Reader.java" />
         <option value="$PROJECT_DIR$/src/Client/Reader/FontConfig.java" />
         <option value="$PROJECT_DIR$/src/Client/Reader/appReaderRegistrationForm.java" />
         <option value="$PROJECT_DIR$/src/Client/Reader/appReaderLoginForm.java" />
         <option value="$PROJECT_DIR$/src/Client/Reader/appReader.java" />
+        <option value="$PROJECT_DIR$/src/Client/Reader/ReaderStyle.java" />
       </list>
     </option>
   </component>
@@ -228,8 +228,8 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1195" />
-    <option name="width" value="1372" />
+    <option name="x" value="1451" />
+    <option name="width" value="1116" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -685,12 +685,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1195" y="0" width="1372" height="1047" extended-state="0" />
+    <frame x="1451" y="0" width="1116" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963988" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32524273" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -702,7 +703,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24771342" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30776516" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.026258206" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -715,7 +716,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32885087" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32524273" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
     </layout>
@@ -916,14 +916,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Client/Reader/ReaderStyle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="11" column="118" lean-forward="false" selection-start-line="11" selection-start-column="118" selection-end-line="11" selection-end-column="118" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Client/Reader/Reader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-594">
@@ -966,10 +958,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Client/Reader/ReaderStyle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="29" column="106" lean-forward="false" selection-start-line="29" selection-start-column="106" selection-end-line="29" selection-end-column="106" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Client/Reader/appReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="41" column="86" lean-forward="false" selection-start-line="41" selection-start-column="86" selection-end-line="41" selection-end-column="86" />
+        <state relative-caret-position="-748">
+          <caret line="25" column="3" lean-forward="false" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
           <folding>
             <element signature="e#1981#2070#0" expanded="true" />
             <element signature="method#initBackEnd#0;class#appReader#0" expanded="false" />

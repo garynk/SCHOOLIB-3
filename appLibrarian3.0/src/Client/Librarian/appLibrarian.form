@@ -39,29 +39,12 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <Component id="ModifyLayer1" min="-2" pref="918" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              </Group>
-              <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="0" pref="328" max="32767" attributes="0"/>
-                      <Component id="AskinDeletingOptionPane" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="328" max="32767" attributes="0"/>
-                  </Group>
-              </Group>
+              <Component id="ModifyLayer1" alignment="1" min="-2" pref="918" max="-2" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="ModifyLayer1" min="-2" pref="550" max="-2" attributes="0"/>
-              <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="0" pref="230" max="32767" attributes="0"/>
-                      <Component id="AskinDeletingOptionPane" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="230" max="32767" attributes="0"/>
-                  </Group>
-              </Group>
+              <Component id="ModifyLayer1" alignment="1" min="-2" pref="550" max="-2" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
@@ -90,10 +73,6 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="ModifyTitle" min="-2" pref="329" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
-                          </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace min="-2" pref="171" max="-2" attributes="0"/>
                               <Component id="ModifyExitButton" min="-2" pref="155" max="-2" attributes="0"/>
@@ -102,33 +81,19 @@
                               <EmptySpace min="-2" pref="200" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="UserLockedInfo" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                                              <Component id="DeleteAccButton" min="-2" pref="155" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Component id="UserEditableInfo" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="178" max="-2" attributes="0"/>
-                                      <Component id="oldvalLabel" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="32767" attributes="0"/>
-                                      <Component id="newvalLabel" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
-                                  </Group>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="UserEditableInfo" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="ModifyTitle" alignment="0" min="-2" pref="329" max="-2" attributes="0"/>
+                                  <Component id="UserLockedInfo" alignment="0" max="32767" attributes="0"/>
                               </Group>
+                              <EmptySpace max="32767" attributes="0"/>
                               <Component id="PasswordModifyContext" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="232" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="250" max="-2" attributes="0"/>
                       <Component id="ModifyReporterLabel" min="-2" pref="381" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
@@ -139,26 +104,22 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                       <Component id="ModifyTitle" min="-2" pref="31" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="UserLockedInfo" min="-2" max="-2" attributes="0"/>
-                                  <Component id="DeleteAccButton" min="-2" pref="34" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="oldvalLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                                  <Component id="newvalLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="UserEditableInfo" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                              <Component id="PasswordModifyContext" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="PasswordModifyContext" max="32767" attributes="0"/>
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="UserLockedInfo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="UserEditableInfo" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                      <Component id="ModifyReporterLabel" min="-2" pref="14" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
+                      <Component id="ModifyReporterLabel" min="-2" pref="14" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="ModifyConfirmButton" pref="44" max="32767" attributes="0"/>
                           <Component id="ModifyExitButton" max="32767" attributes="0"/>
@@ -203,11 +164,20 @@
                           </Group>
                           <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="DynamicLabelID" min="-2" max="-2" attributes="0"/>
-                              <Component id="DynamicLabelCognome" min="-2" max="-2" attributes="0"/>
-                              <Component id="DynamicLabelNome" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Component id="DynamicLabelCognome" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="DeleteAccButton" min="-2" pref="155" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="DynamicLabelNome" min="-2" max="-2" attributes="0"/>
+                                      <Component id="DynamicLabelID" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
                           </Group>
-                          <EmptySpace pref="30" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -225,11 +195,14 @@
                               <Component id="DynamicLabelNome" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="staticLabelCognome" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="DynamicLabelCognome" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="staticLabelCognome" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="DynamicLabelCognome" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="DeleteAccButton" alignment="0" min="-2" pref="34" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -279,7 +252,7 @@
                       <Connection component="UserLockedInfo" name="font" type="property"/>
                     </Property>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection code="local_librarian.getUser().GetNome()" type="code"/>
+                      <Connection code="local_librarian.getUser().getNome()" type="code"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -303,9 +276,31 @@
                       <Connection component="UserLockedInfo" name="font" type="property"/>
                     </Property>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection code="local_librarian.getUser().GetCognome()" type="code"/>
+                      <Connection code="local_librarian.getUser().getCognome()" type="code"/>
                     </Property>
                   </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="DeleteAccButton">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="LibrarianStyle.BUTTON_DEFAULT_COLOR" type="code"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="LibrarianStyle.BUTTON_FONT" type="code"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Elimina"/>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
+                        <EtchetBorder/>
+                      </Border>
+                    </Property>
+                    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                      <Color id="Cursore mano"/>
+                    </Property>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DeleteAccButtonActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>
@@ -322,33 +317,48 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="staticLabelNumber" min="-2" pref="59" max="-2" attributes="0"/>
                               <Component id="staticLabelInquadramento" min="-2" pref="91" max="-2" attributes="0"/>
                               <Component id="staticLabelEmail" alignment="0" min="-2" pref="42" max="-2" attributes="0"/>
+                              <Component id="staticLabelNumber" min="-2" pref="59" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="DynamicLabelEmail" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="DynamicLabelInquadramento" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="DynamicLabelNumber" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="DynamicLabelEmail" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="DynamicLabelInquadramento" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="DynamicLabelNumber" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="ModifyNumberTextField" max="32767" attributes="0"/>
+                                      <Component id="ModifyEmailTextField" max="32767" attributes="0"/>
+                                      <Component id="ModifyInquadTextField" alignment="0" min="-2" pref="138" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="oldvalLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="newvalLabel" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="ModifyNumberTextField" pref="138" max="32767" attributes="0"/>
-                              <Component id="ModifyEmailTextField" max="32767" attributes="0"/>
-                              <Component id="ModifyInquadTextField" max="32767" attributes="0"/>
-                          </Group>
-                          <EmptySpace pref="40" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="oldvalLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="newvalLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="staticLabelEmail" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="DynamicLabelEmail" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -356,17 +366,17 @@
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="staticLabelNumber" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="DynamicLabelNumber" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="ModifyNumberTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="staticLabelNumber" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="staticLabelInquadramento" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="DynamicLabelInquadramento" alignment="3" min="-2" pref="14" max="-2" attributes="0"/>
                               <Component id="ModifyInquadTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="staticLabelInquadramento" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="37" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -392,7 +402,7 @@
                       <Connection component="UserLockedInfo" name="font" type="property"/>
                     </Property>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection code="local_librarian.getUser().GetNumeroTelefono()" type="code"/>
+                      <Connection code="local_librarian.getUser().getNumeroTelefono()" type="code"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -416,7 +426,7 @@
                       <Connection component="UserLockedInfo" name="font" type="property"/>
                     </Property>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection code="local_librarian.getUser().GetInquadramento()" type="code"/>
+                      <Connection code="local_librarian.getUser().getInquadramento()" type="code"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -440,7 +450,7 @@
                       <Connection component="UserLockedInfo" name="font" type="property"/>
                     </Property>
                     <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection code="local_librarian.getUser().GetEmail()" type="code"/>
+                      <Connection code="local_librarian.getUser().getEmail()" type="code"/>
                     </Property>
                   </Properties>
                 </Component>
@@ -495,24 +505,24 @@
                     </Property>
                   </Properties>
                 </Component>
+                <Component class="javax.swing.JLabel" name="oldvalLabel">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection component="UserEditableInfo" name="font" type="property"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="valore attuale"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="newvalLabel">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection component="UserEditableInfo" name="font" type="property"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="nuovo valore"/>
+                  </Properties>
+                </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JLabel" name="oldvalLabel">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection component="UserEditableInfo" name="font" type="property"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="valore attuale"/>
-              </Properties>
-            </Component>
-            <Component class="javax.swing.JLabel" name="newvalLabel">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection component="UserEditableInfo" name="font" type="property"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="nuovo valore"/>
-              </Properties>
-            </Component>
             <Container class="javax.swing.JPanel" name="PasswordModifyContext">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
@@ -526,44 +536,30 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Component id="newPswLabel" alignment="1" min="-2" pref="229" max="-2" attributes="0"/>
+                              <Component id="oldPswLabel" min="-2" pref="229" max="-2" attributes="0"/>
+                              <Component id="NewPasswordTextField" alignment="1" min="-2" pref="210" max="-2" attributes="0"/>
+                              <Component id="OldPasswordTxtField" min="-2" pref="209" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                      </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
+                              <Component id="jSeparator3" alignment="0" min="-2" pref="284" max="-2" attributes="0"/>
+                              <Component id="jSeparator2" alignment="0" min="-2" pref="284" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
                                   <Component id="TitoloCambioPsw" min="-2" pref="131" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jSeparator3" min="-2" pref="260" max="-2" attributes="0"/>
-                                      <Component id="jSeparator2" min="-2" pref="260" max="-2" attributes="0"/>
-                                  </Group>
+                                  <EmptySpace min="-2" pref="90" max="-2" attributes="0"/>
+                                  <Component id="PSWConfirmButton" min="-2" pref="96" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="NewPasswordTextField" min="-2" pref="210" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="PSWConfirmButton" min="-2" pref="96" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="OldPasswordTxtField" min="-2" pref="209" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="newPswLabel" alignment="1" min="-2" pref="229" max="-2" attributes="0"/>
-                                          <Component id="oldPswLabel" min="-2" pref="229" max="-2" attributes="0"/>
-                                      </Group>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -584,9 +580,9 @@
                           <Component id="NewPasswordTextField" min="-2" pref="24" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                           <Component id="jSeparator3" min="-2" pref="10" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="PSWConfirmButton" min="-2" pref="37" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="42" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -754,43 +750,8 @@
                 <Property name="text" type="java.lang.String" value="REPORTERRRRRRRRRRRRRRRRRRRRRRRRR"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="DeleteAccButton">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="LibrarianStyle.BUTTON_DEFAULT_COLOR" type="code"/>
-                </Property>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="LibrarianStyle.BUTTON_FONT" type="code"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Elimina"/>
-                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                  <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
-                    <EtchetBorder/>
-                  </Border>
-                </Property>
-                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                  <Color id="Cursore mano"/>
-                </Property>
-              </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="DeleteAccButtonActionPerformed"/>
-              </Events>
-            </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JOptionPane" name="AskinDeletingOptionPane">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="LibrarianStyle.BACKGROUD_DEFAULT_1" type="code"/>
-            </Property>
-            <Property name="message" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="&quot;Sei sicuro di eliminare questo account ?&quot;" type="code"/>
-            </Property>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection code="LibrarianStyle.DISCORSIVE_LABEL_FONT" type="code"/>
-            </Property>
-          </Properties>
-        </Component>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JDialog" name="addNewBookDialog">
@@ -803,17 +764,18 @@
         </Property>
         <Property name="focusable" type="boolean" value="false"/>
         <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[428, 670]"/>
+          <Dimension value="[650, 580]"/>
         </Property>
         <Property name="modalExclusionType" type="java.awt.Dialog$ModalExclusionType" editor="org.netbeans.modules.form.editors.EnumEditor">
           <Value id="APPLICATION_EXCLUDE"/>
         </Property>
+        <Property name="name" type="java.lang.String" value="AddnewBookDialog" noResource="true"/>
         <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
           <Dimension value="[428, 670]"/>
         </Property>
         <Property name="resizable" type="boolean" value="false"/>
         <Property name="size" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-          <Dimension value="[428, 670]"/>
+          <Dimension value="[650, 580]"/>
         </Property>
       </Properties>
       <AuxValues>
@@ -846,29 +808,32 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="newBookLayer2" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                      <Component id="ModifyTitle1" min="-2" pref="329" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="newBookLayer2" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="133" max="-2" attributes="0"/>
+                      <Component id="newBookLayer3" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="31" max="32767" attributes="0"/>
-                      <Component id="newBookLayer3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="ModifyTitle1" min="-2" pref="329" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
-                      <Component id="ModifyTitle1" min="-2" pref="22" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="ModifyTitle1" min="-2" pref="33" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="newBookLayer2" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Component id="newBookLayer3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="49" max="32767" attributes="0"/>
+                      <EmptySpace pref="22" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -896,50 +861,29 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="TitleError" min="-2" pref="18" max="-2" attributes="0"/>
-                              <Component id="CodeError" alignment="0" min="-2" pref="18" max="-2" attributes="0"/>
-                              <Component id="AutorError" alignment="0" min="-2" pref="18" max="-2" attributes="0"/>
-                              <Component id="EditriceError" alignment="0" min="-2" pref="18" max="-2" attributes="0"/>
-                              <Component id="AnnoError" alignment="0" min="-2" pref="18" max="-2" attributes="0"/>
-                              <Component id="RistampaError" alignment="0" min="-2" pref="18" max="-2" attributes="0"/>
-                              <Component id="CategoriaError" alignment="0" min="-2" pref="18" max="-2" attributes="0"/>
-                              <Component id="LinguaError" alignment="0" min="-2" pref="18" max="-2" attributes="0"/>
-                              <Component id="ScaffaleError" alignment="0" min="-2" pref="18" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="optionalFieldsLabel" min="-2" pref="137" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="staticLabeTitle" alignment="0" min="-2" pref="42" max="-2" attributes="0"/>
-                                      <Component id="staticLabelCode" alignment="0" min="-2" pref="42" max="-2" attributes="0"/>
-                                      <Component id="staticLabelScaffale" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="staticLabelLingua" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="staticLabelCategoria" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="staticLabelRistampa" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="staticLabelPubblicaz" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="staticLabelAutore" alignment="0" min="-2" pref="42" max="-2" attributes="0"/>
-                                      <Component id="staticLabelEditrice" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                      <Component id="jPanel13" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jPanel11" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jPanel4" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jPanel7" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="jPanel9" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="ScaffaleTextField" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="LinguaTextField" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="RistampaTextField" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="PubblicazTextField" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="EditriceTextField" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="TitoloTextField" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="CodeTextField" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="AutoreTextField" max="32767" attributes="0"/>
-                                      <Component id="CategorieComboBox" alignment="0" pref="138" max="32767" attributes="0"/>
+                                      <Component id="jPanel6" max="32767" attributes="0"/>
+                                      <Component id="jPanel8" max="32767" attributes="0"/>
+                                      <Component id="jPanel10" max="32767" attributes="0"/>
+                                      <Component id="jPanel12" max="32767" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="67" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="optionalFieldsLabel" min="-2" pref="137" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -949,310 +893,35 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="staticLabelCode" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                              <Component id="CodeTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="CodeError" alignment="3" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jPanel4" max="32767" attributes="0"/>
+                              <Component id="jPanel6" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jPanel7" max="32767" attributes="0"/>
+                              <Component id="jPanel8" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="staticLabeTitle" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                              <Component id="TitoloTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="TitleError" alignment="3" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jPanel9" max="32767" attributes="0"/>
+                              <Component id="jPanel10" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="staticLabelAutore" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                              <Component id="AutoreTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="AutorError" alignment="3" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jPanel11" max="32767" attributes="0"/>
+                              <Component id="jPanel12" pref="0" max="32767" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="staticLabelEditrice" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                              <Component id="EditriceTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="EditriceError" alignment="3" max="32767" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="staticLabelPubblicaz" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                              <Component id="PubblicazTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="AnnoError" alignment="3" max="32767" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="staticLabelRistampa" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                              <Component id="RistampaTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="RistampaError" alignment="3" max="32767" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="staticLabelCategoria" alignment="3" max="32767" attributes="0"/>
-                              <Component id="CategoriaError" alignment="3" max="32767" attributes="0"/>
-                              <Component id="CategorieComboBox" pref="23" max="32767" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="staticLabelLingua" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                              <Component id="LinguaTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="LinguaError" alignment="3" max="32767" attributes="0"/>
-                          </Group>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="staticLabelScaffale" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
-                              <Component id="ScaffaleTextField" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="ScaffaleError" alignment="3" max="32767" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                          <Component id="jPanel13" max="32767" attributes="0"/>
+                          <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                           <Component id="optionalFieldsLabel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="staticLabelCode">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection component="ModifyLayer1" name="background" type="property"/>
-                    </Property>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection component="UserLockedInfo" name="font" type="property"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Codice "/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="CodeTextField">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection component="newBookLayer2" name="background" type="property"/>
-                    </Property>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection code="LibrarianStyle.LABEL_FONT_3" type="code"/>
-                    </Property>
-                    <Property name="horizontalAlignment" type="int" value="2"/>
-                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-                        <MatteColorBorder bottom="1" left="0" right="0" top="0">
-                          <Color PropertyName="color" blue="66" green="66" red="66" type="rgb"/>
-                        </MatteColorBorder>
-                      </Border>
-                    </Property>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="staticLabelAutore">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection component="ModifyLayer1" name="background" type="property"/>
-                    </Property>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection component="UserLockedInfo" name="font" type="property"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Autore "/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="AutoreTextField">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection component="newBookLayer2" name="background" type="property"/>
-                    </Property>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection code="LibrarianStyle.LABEL_FONT_3" type="code"/>
-                    </Property>
-                    <Property name="horizontalAlignment" type="int" value="2"/>
-                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-                        <MatteColorBorder bottom="1" left="0" right="0" top="0">
-                          <Color PropertyName="color" blue="66" green="66" red="66" type="rgb"/>
-                        </MatteColorBorder>
-                      </Border>
-                    </Property>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="staticLabeTitle">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection component="ModifyLayer1" name="background" type="property"/>
-                    </Property>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection component="UserLockedInfo" name="font" type="property"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Titolo "/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="TitoloTextField">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection component="newBookLayer2" name="background" type="property"/>
-                    </Property>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection code="LibrarianStyle.LABEL_FONT_3" type="code"/>
-                    </Property>
-                    <Property name="horizontalAlignment" type="int" value="2"/>
-                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-                        <MatteColorBorder bottom="1" left="0" right="0" top="0">
-                          <Color PropertyName="color" blue="66" green="66" red="66" type="rgb"/>
-                        </MatteColorBorder>
-                      </Border>
-                    </Property>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="staticLabelEditrice">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection component="ModifyLayer1" name="background" type="property"/>
-                    </Property>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection component="UserLockedInfo" name="font" type="property"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Casa Editrice"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="EditriceTextField">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection component="newBookLayer2" name="background" type="property"/>
-                    </Property>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection code="LibrarianStyle.LABEL_FONT_3" type="code"/>
-                    </Property>
-                    <Property name="horizontalAlignment" type="int" value="2"/>
-                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-                        <MatteColorBorder bottom="1" left="0" right="0" top="0">
-                          <Color PropertyName="color" blue="66" green="66" red="66" type="rgb"/>
-                        </MatteColorBorder>
-                      </Border>
-                    </Property>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="staticLabelPubblicaz">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection component="ModifyLayer1" name="background" type="property"/>
-                    </Property>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection component="UserLockedInfo" name="font" type="property"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Anno Pubblicazione "/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="PubblicazTextField">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection component="newBookLayer2" name="background" type="property"/>
-                    </Property>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection code="LibrarianStyle.LABEL_FONT_3" type="code"/>
-                    </Property>
-                    <Property name="horizontalAlignment" type="int" value="2"/>
-                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-                        <MatteColorBorder bottom="1" left="0" right="0" top="0">
-                          <Color PropertyName="color" blue="66" green="66" red="66" type="rgb"/>
-                        </MatteColorBorder>
-                      </Border>
-                    </Property>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="staticLabelRistampa">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection component="ModifyLayer1" name="background" type="property"/>
-                    </Property>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection component="UserLockedInfo" name="font" type="property"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Anno Ristampa* "/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="RistampaTextField">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection component="newBookLayer2" name="background" type="property"/>
-                    </Property>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection code="LibrarianStyle.LABEL_FONT_3" type="code"/>
-                    </Property>
-                    <Property name="horizontalAlignment" type="int" value="2"/>
-                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-                        <MatteColorBorder bottom="1" left="0" right="0" top="0">
-                          <Color PropertyName="color" blue="66" green="66" red="66" type="rgb"/>
-                        </MatteColorBorder>
-                      </Border>
-                    </Property>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="staticLabelCategoria">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection component="ModifyLayer1" name="background" type="property"/>
-                    </Property>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection component="UserLockedInfo" name="font" type="property"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Categoria: "/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="staticLabelLingua">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection component="ModifyLayer1" name="background" type="property"/>
-                    </Property>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection component="UserLockedInfo" name="font" type="property"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Lingua:"/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="LinguaTextField">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection component="newBookLayer2" name="background" type="property"/>
-                    </Property>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection code="LibrarianStyle.LABEL_FONT_3" type="code"/>
-                    </Property>
-                    <Property name="horizontalAlignment" type="int" value="2"/>
-                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-                        <MatteColorBorder bottom="1" left="0" right="0" top="0">
-                          <Color PropertyName="color" blue="66" green="66" red="66" type="rgb"/>
-                        </MatteColorBorder>
-                      </Border>
-                    </Property>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="staticLabelScaffale">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection component="ModifyLayer1" name="background" type="property"/>
-                    </Property>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection component="UserLockedInfo" name="font" type="property"/>
-                    </Property>
-                    <Property name="text" type="java.lang.String" value="Scaffale* "/>
-                  </Properties>
-                </Component>
-                <Component class="javax.swing.JTextField" name="ScaffaleTextField">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection component="newBookLayer2" name="background" type="property"/>
-                    </Property>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection code="LibrarianStyle.LABEL_FONT_3" type="code"/>
-                    </Property>
-                    <Property name="horizontalAlignment" type="int" value="2"/>
-                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
-                        <MatteColorBorder bottom="1" left="0" right="0" top="0">
-                          <Color PropertyName="color" blue="66" green="66" red="66" type="rgb"/>
-                        </MatteColorBorder>
-                      </Border>
-                    </Property>
-                  </Properties>
-                </Component>
                 <Component class="javax.swing.JLabel" name="optionalFieldsLabel">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
@@ -1264,124 +933,722 @@
                     <Property name="text" type="java.lang.String" value="* campi facoltativi"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="TitleError">
+                <Container class="javax.swing.JPanel" name="jPanel4">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                       <Connection component="newBookLayer2" name="background" type="property"/>
                     </Property>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection code="LibrarianStyle.POINT_CUSTOM_FONT" type="code"/>
-                    </Property>
-                    <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="&#x2022;"/>
                   </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="CodeError">
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="CodeError" min="-2" pref="18" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="staticLabelCode" min="-2" pref="42" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="CodeTextField" min="-2" pref="130" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="staticLabelCode" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                                  <Component id="CodeError" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="CodeTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="staticLabelCode">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection component="ModifyLayer1" name="background" type="property"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection component="UserLockedInfo" name="font" type="property"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Codice "/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="CodeTextField">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection component="newBookLayer2" name="background" type="property"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="LibrarianStyle.LABEL_FONT_3" type="code"/>
+                        </Property>
+                        <Property name="horizontalAlignment" type="int" value="2"/>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
+                            <MatteColorBorder bottom="1" left="0" right="0" top="0">
+                              <Color PropertyName="color" blue="66" green="66" red="66" type="rgb"/>
+                            </MatteColorBorder>
+                          </Border>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="CodeError">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection component="newBookLayer2" name="background" type="property"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="LibrarianStyle.POINT_CUSTOM_FONT" type="code"/>
+                        </Property>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="errorChar" type="code"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="jPanel6">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                       <Connection component="newBookLayer2" name="background" type="property"/>
                     </Property>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection code="LibrarianStyle.POINT_CUSTOM_FONT" type="code"/>
-                    </Property>
-                    <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="&#x2022;"/>
                   </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="AutorError">
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="TitleError" min="-2" pref="18" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="staticLabeTitle" min="-2" pref="42" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="TitoloTextField" min="-2" pref="153" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="staticLabeTitle" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                                  <Component id="TitleError" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="TitoloTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="TitleError">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection component="newBookLayer2" name="background" type="property"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="LibrarianStyle.POINT_CUSTOM_FONT" type="code"/>
+                        </Property>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="errorChar" type="code"/>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="staticLabeTitle">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection component="ModifyLayer1" name="background" type="property"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection component="UserLockedInfo" name="font" type="property"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Titolo "/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="TitoloTextField">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection component="newBookLayer2" name="background" type="property"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="LibrarianStyle.LABEL_FONT_3" type="code"/>
+                        </Property>
+                        <Property name="horizontalAlignment" type="int" value="2"/>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
+                            <MatteColorBorder bottom="1" left="0" right="0" top="0">
+                              <Color PropertyName="color" blue="66" green="66" red="66" type="rgb"/>
+                            </MatteColorBorder>
+                          </Border>
+                        </Property>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="jPanel7">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                       <Connection component="newBookLayer2" name="background" type="property"/>
                     </Property>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection code="LibrarianStyle.POINT_CUSTOM_FONT" type="code"/>
-                    </Property>
-                    <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="&#x2022;"/>
                   </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="EditriceError">
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="AutorError" min="-2" pref="18" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="staticLabelAutore" min="-2" pref="42" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="AutoreTextField" min="-2" pref="130" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="staticLabelAutore" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                                  <Component id="AutorError" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="AutoreTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="staticLabelAutore">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection component="ModifyLayer1" name="background" type="property"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection component="UserLockedInfo" name="font" type="property"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Autore "/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="AutoreTextField">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection component="newBookLayer2" name="background" type="property"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="LibrarianStyle.LABEL_FONT_3" type="code"/>
+                        </Property>
+                        <Property name="horizontalAlignment" type="int" value="2"/>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
+                            <MatteColorBorder bottom="1" left="0" right="0" top="0">
+                              <Color PropertyName="color" blue="66" green="66" red="66" type="rgb"/>
+                            </MatteColorBorder>
+                          </Border>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="AutorError">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection component="newBookLayer2" name="background" type="property"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="LibrarianStyle.POINT_CUSTOM_FONT" type="code"/>
+                        </Property>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="text" type="java.lang.String" value="&#x2022;"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="jPanel8">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                       <Connection component="newBookLayer2" name="background" type="property"/>
                     </Property>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection code="LibrarianStyle.POINT_CUSTOM_FONT" type="code"/>
-                    </Property>
-                    <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="&#x2022;"/>
                   </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="AnnoError">
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="EditriceError" min="-2" pref="18" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="staticLabelEditrice" min="-2" pref="71" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="EditriceTextField" min="-2" pref="130" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="staticLabelEditrice" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                                  <Component id="EditriceError" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="EditriceTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="staticLabelEditrice">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection component="ModifyLayer1" name="background" type="property"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection component="UserLockedInfo" name="font" type="property"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Casa Editrice"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="EditriceTextField">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection component="newBookLayer2" name="background" type="property"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="LibrarianStyle.LABEL_FONT_3" type="code"/>
+                        </Property>
+                        <Property name="horizontalAlignment" type="int" value="2"/>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
+                            <MatteColorBorder bottom="1" left="0" right="0" top="0">
+                              <Color PropertyName="color" blue="66" green="66" red="66" type="rgb"/>
+                            </MatteColorBorder>
+                          </Border>
+                        </Property>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EditriceTextFieldActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="EditriceError">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection component="newBookLayer2" name="background" type="property"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="LibrarianStyle.POINT_CUSTOM_FONT" type="code"/>
+                        </Property>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="text" type="java.lang.String" value="&#x2022;"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="jPanel9">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                       <Connection component="newBookLayer2" name="background" type="property"/>
                     </Property>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection code="LibrarianStyle.POINT_CUSTOM_FONT" type="code"/>
-                    </Property>
-                    <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="&#x2022;"/>
                   </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="RistampaError">
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="AnnoError" min="-2" pref="18" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="staticLabelPubblicaz" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="PubblicazTextField" min="-2" pref="90" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="staticLabelPubblicaz" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                                  <Component id="AnnoError" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="PubblicazTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="AnnoError">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection component="newBookLayer2" name="background" type="property"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="LibrarianStyle.POINT_CUSTOM_FONT" type="code"/>
+                        </Property>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="text" type="java.lang.String" value="&#x2022;"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="staticLabelPubblicaz">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection component="ModifyLayer1" name="background" type="property"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection component="UserLockedInfo" name="font" type="property"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Anno Pubblicazione "/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="PubblicazTextField">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection component="newBookLayer2" name="background" type="property"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="LibrarianStyle.LABEL_FONT_3" type="code"/>
+                        </Property>
+                        <Property name="horizontalAlignment" type="int" value="2"/>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
+                            <MatteColorBorder bottom="1" left="0" right="0" top="0">
+                              <Color PropertyName="color" blue="66" green="66" red="66" type="rgb"/>
+                            </MatteColorBorder>
+                          </Border>
+                        </Property>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="jPanel10">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                       <Connection component="newBookLayer2" name="background" type="property"/>
                     </Property>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection code="LibrarianStyle.POINT_CUSTOM_FONT" type="code"/>
-                    </Property>
-                    <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="&#x2022;"/>
                   </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="CategoriaError">
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="RistampaError" min="-2" pref="18" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="staticLabelRistampa" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
+                              <Component id="RistampaTextField" min="-2" pref="90" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="staticLabelRistampa" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                                  <Component id="RistampaError" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="RistampaTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JTextField" name="RistampaTextField">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection component="newBookLayer2" name="background" type="property"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="LibrarianStyle.LABEL_FONT_3" type="code"/>
+                        </Property>
+                        <Property name="horizontalAlignment" type="int" value="2"/>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
+                            <MatteColorBorder bottom="1" left="0" right="0" top="0">
+                              <Color PropertyName="color" blue="66" green="66" red="66" type="rgb"/>
+                            </MatteColorBorder>
+                          </Border>
+                        </Property>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="RistampaTextFieldActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="staticLabelRistampa">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection component="ModifyLayer1" name="background" type="property"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection component="UserLockedInfo" name="font" type="property"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Anno Ristampa* "/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="RistampaError">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection component="newBookLayer2" name="background" type="property"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="LibrarianStyle.POINT_CUSTOM_FONT" type="code"/>
+                        </Property>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="text" type="java.lang.String" value="&#x2022;"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="jPanel11">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                       <Connection component="newBookLayer2" name="background" type="property"/>
                     </Property>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection code="LibrarianStyle.POINT_CUSTOM_FONT" type="code"/>
-                    </Property>
-                    <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="&#x2022;"/>
                   </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="LinguaError">
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="CategoriaError" min="-2" pref="18" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="staticLabelCategoria" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="CategorieComboBox" min="-2" pref="128" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="CategoriaError" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="staticLabelCategoria" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="CategorieComboBox" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JComboBox" name="CategorieComboBox">
+                      <Properties>
+                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(Libro.Categorie_List)" type="code"/>
+                        </Property>
+                      </Properties>
+                      <AuxValues>
+                        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                      </AuxValues>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="CategoriaError">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection component="newBookLayer2" name="background" type="property"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="LibrarianStyle.POINT_CUSTOM_FONT" type="code"/>
+                        </Property>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="text" type="java.lang.String" value="&#x2022;"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="staticLabelCategoria">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection component="ModifyLayer1" name="background" type="property"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection component="UserLockedInfo" name="font" type="property"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Categoria: "/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="jPanel12">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                       <Connection component="newBookLayer2" name="background" type="property"/>
                     </Property>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection code="LibrarianStyle.POINT_CUSTOM_FONT" type="code"/>
-                    </Property>
-                    <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="&#x2022;"/>
                   </Properties>
-                </Component>
-                <Component class="javax.swing.JLabel" name="ScaffaleError">
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="LinguaError" min="-2" pref="18" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="staticLabelLingua" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="LinguaTextField" min="-2" pref="130" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="staticLabelLingua" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                                  <Component id="LinguaError" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="LinguaTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="278" pref="278" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="staticLabelLingua">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection component="ModifyLayer1" name="background" type="property"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection component="UserLockedInfo" name="font" type="property"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Lingua:"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="LinguaTextField">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection component="newBookLayer2" name="background" type="property"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="LibrarianStyle.LABEL_FONT_3" type="code"/>
+                        </Property>
+                        <Property name="horizontalAlignment" type="int" value="2"/>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
+                            <MatteColorBorder bottom="1" left="0" right="0" top="0">
+                              <Color PropertyName="color" blue="66" green="66" red="66" type="rgb"/>
+                            </MatteColorBorder>
+                          </Border>
+                        </Property>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="LinguaError">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection component="newBookLayer2" name="background" type="property"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="LibrarianStyle.POINT_CUSTOM_FONT" type="code"/>
+                        </Property>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="text" type="java.lang.String" value="&#x2022;"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Container class="javax.swing.JPanel" name="jPanel13">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                       <Connection component="newBookLayer2" name="background" type="property"/>
                     </Property>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection code="LibrarianStyle.POINT_CUSTOM_FONT" type="code"/>
-                    </Property>
-                    <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="&#x2022;"/>
                   </Properties>
-                </Component>
-                <Component class="javax.swing.JComboBox" name="CategorieComboBox">
-                  <Properties>
-                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                      <Connection code="new javax.swing.DefaultComboBoxModel&lt;&gt;(Libro.Categorie_List)" type="code"/>
-                    </Property>
-                  </Properties>
-                  <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
-                  </AuxValues>
-                </Component>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="ScaffaleError" min="-2" pref="18" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="staticLabelScaffale" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="ScaffaleTextField" min="-2" pref="78" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="staticLabelScaffale" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                                  <Component id="ScaffaleError" alignment="3" max="32767" attributes="0"/>
+                                  <Component id="ScaffaleTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="ScaffaleError">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection component="newBookLayer2" name="background" type="property"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="LibrarianStyle.POINT_CUSTOM_FONT" type="code"/>
+                        </Property>
+                        <Property name="horizontalAlignment" type="int" value="0"/>
+                        <Property name="text" type="java.lang.String" value="&#x2022;"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JTextField" name="ScaffaleTextField">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection component="newBookLayer2" name="background" type="property"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="LibrarianStyle.LABEL_FONT_3" type="code"/>
+                        </Property>
+                        <Property name="horizontalAlignment" type="int" value="2"/>
+                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                          <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
+                            <MatteColorBorder bottom="1" left="0" right="0" top="0">
+                              <Color PropertyName="color" blue="66" green="66" red="66" type="rgb"/>
+                            </MatteColorBorder>
+                          </Border>
+                        </Property>
+                      </Properties>
+                      <Events>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ScaffaleTextFieldActionPerformed"/>
+                      </Events>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="staticLabelScaffale">
+                      <Properties>
+                        <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection component="ModifyLayer1" name="background" type="property"/>
+                        </Property>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection component="UserLockedInfo" name="font" type="property"/>
+                        </Property>
+                        <Property name="text" type="java.lang.String" value="Scaffale* "/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="newBookLayer3">
@@ -1396,15 +1663,15 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace pref="41" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="ReporterNewBookLabel" max="32767" attributes="0"/>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="AnnullaNewBookButton" min="-2" pref="89" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
-                                  <Component id="AddBookButton" min="-2" pref="94" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
+                          <Component id="AnnullaNewBookButton" min="-2" pref="89" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="83" max="-2" attributes="0"/>
+                          <Component id="AddBookButton" min="-2" pref="94" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+                          <Component id="ReporterNewBookLabel" min="-2" pref="266" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -2065,25 +2332,24 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                                       <Component id="InputPanel" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                                       <Component id="IndietroStatisticheButton" min="-2" pref="102" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Component id="TablePanel" max="32767" attributes="0"/>
                           </Group>
-                          <Group type="102" attributes="0">
-                              <Component id="TitleLabel1" min="-2" pref="358" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="TitleLabel1" min="-2" pref="370" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -2177,6 +2443,9 @@
                 </Component>
                 <Container class="javax.swing.JPanel" name="jPanel2">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection component="InputPanel" name="background" type="property"/>
+                    </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
                         <EtchetBorder/>
@@ -2609,6 +2878,19 @@
         </Container>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JOptionPane" name="AskinDeletingOptionPane">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="LibrarianStyle.BACKGROUD_DEFAULT_1" type="code"/>
+        </Property>
+        <Property name="message" type="java.lang.Object" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="&quot;Sei sicuro di eliminare questo account ?&quot;" type="code"/>
+        </Property>
+        <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="LibrarianStyle.DISCORSIVE_LABEL_FONT" type="code"/>
+        </Property>
+      </Properties>
+    </Component>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
@@ -2878,7 +3160,7 @@
                   <Connection component="UserContextPanel" name="font" type="property"/>
                 </Property>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="local_librarian.getUser().GetInquadramento()" type="code"/>
+                  <Connection code="local_librarian.getUser().getInquadramento()" type="code"/>
                 </Property>
               </Properties>
             </Component>
@@ -2916,7 +3198,7 @@
                   <Connection component="UserContextPanel" name="font" type="property"/>
                 </Property>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="local_librarian.getUser().GetNome()" type="code"/>
+                  <Connection code="local_librarian.getUser().getNome()" type="code"/>
                 </Property>
               </Properties>
             </Component>
@@ -2934,7 +3216,7 @@
                   <Connection component="UserContextPanel" name="font" type="property"/>
                 </Property>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="local_librarian.getUser().GetCognome()" type="code"/>
+                  <Connection code="local_librarian.getUser().getCognome()" type="code"/>
                 </Property>
               </Properties>
             </Component>
@@ -2952,7 +3234,7 @@
                   <Connection component="UserContextPanel" name="font" type="property"/>
                 </Property>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="local_librarian.getUser().GetEmail()" type="code"/>
+                  <Connection code="local_librarian.getUser().getEmail()" type="code"/>
                 </Property>
               </Properties>
             </Component>
@@ -2970,7 +3252,7 @@
                   <Connection component="UserContextPanel" name="font" type="property"/>
                 </Property>
                 <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="local_librarian.getUser().GetNumeroTelefono()" type="code"/>
+                  <Connection code="local_librarian.getUser().getNumeroTelefono()" type="code"/>
                 </Property>
               </Properties>
             </Component>

@@ -41,7 +41,8 @@ public class appLibrarian extends javax.swing.JFrame {
     private static final int TOTAL_BOOK_FIELD = 8;
 
     private static final char pswEchoChar = '\u2022';
-
+    private static final String errorChar = "•";
+   
     private Vector<Vector<Vector<Object>>> page_vector;
     private Vector<String> Columns;
     private int PageTableIndex = 0;
@@ -93,6 +94,7 @@ public class appLibrarian extends javax.swing.JFrame {
         DynamicLabelNome = new javax.swing.JLabel();
         staticLabelCognome = new javax.swing.JLabel();
         DynamicLabelCognome = new javax.swing.JLabel();
+        DeleteAccButton = new javax.swing.JButton();
         UserEditableInfo = new javax.swing.JPanel();
         staticLabelNumber = new javax.swing.JLabel();
         DynamicLabelNumber = new javax.swing.JLabel();
@@ -117,40 +119,47 @@ public class appLibrarian extends javax.swing.JFrame {
         ModifyConfirmButton = new javax.swing.JButton();
         ModifyExitButton = new javax.swing.JButton();
         ModifyReporterLabel = new javax.swing.JLabel();
-        DeleteAccButton = new javax.swing.JButton();
-        AskinDeletingOptionPane = new javax.swing.JOptionPane();
         addNewBookDialog = new javax.swing.JDialog(this);
         newBookLayer1 = new javax.swing.JPanel();
         ModifyTitle1 = new javax.swing.JLabel();
         newBookLayer2 = new javax.swing.JPanel();
+        optionalFieldsLabel = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
         staticLabelCode = new javax.swing.JLabel();
         CodeTextField = new javax.swing.JTextField();
-        staticLabelAutore = new javax.swing.JLabel();
-        AutoreTextField = new javax.swing.JTextField();
+        CodeError = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        TitleError = new javax.swing.JLabel();
         staticLabeTitle = new javax.swing.JLabel();
         TitoloTextField = new javax.swing.JTextField();
+        jPanel7 = new javax.swing.JPanel();
+        staticLabelAutore = new javax.swing.JLabel();
+        AutoreTextField = new javax.swing.JTextField();
+        AutorError = new javax.swing.JLabel();
+        jPanel8 = new javax.swing.JPanel();
         staticLabelEditrice = new javax.swing.JLabel();
         EditriceTextField = new javax.swing.JTextField();
+        EditriceError = new javax.swing.JLabel();
+        jPanel9 = new javax.swing.JPanel();
+        AnnoError = new javax.swing.JLabel();
         staticLabelPubblicaz = new javax.swing.JLabel();
         PubblicazTextField = new javax.swing.JTextField();
-        staticLabelRistampa = new javax.swing.JLabel();
+        jPanel10 = new javax.swing.JPanel();
         RistampaTextField = new javax.swing.JTextField();
+        staticLabelRistampa = new javax.swing.JLabel();
+        RistampaError = new javax.swing.JLabel();
+        jPanel11 = new javax.swing.JPanel();
+        CategorieComboBox = new javax.swing.JComboBox<>();
+        CategoriaError = new javax.swing.JLabel();
         staticLabelCategoria = new javax.swing.JLabel();
+        jPanel12 = new javax.swing.JPanel();
         staticLabelLingua = new javax.swing.JLabel();
         LinguaTextField = new javax.swing.JTextField();
-        staticLabelScaffale = new javax.swing.JLabel();
-        ScaffaleTextField = new javax.swing.JTextField();
-        optionalFieldsLabel = new javax.swing.JLabel();
-        TitleError = new javax.swing.JLabel();
-        CodeError = new javax.swing.JLabel();
-        AutorError = new javax.swing.JLabel();
-        EditriceError = new javax.swing.JLabel();
-        AnnoError = new javax.swing.JLabel();
-        RistampaError = new javax.swing.JLabel();
-        CategoriaError = new javax.swing.JLabel();
         LinguaError = new javax.swing.JLabel();
+        jPanel13 = new javax.swing.JPanel();
         ScaffaleError = new javax.swing.JLabel();
-        CategorieComboBox = new javax.swing.JComboBox<>();
+        ScaffaleTextField = new javax.swing.JTextField();
+        staticLabelScaffale = new javax.swing.JLabel();
         newBookLayer3 = new javax.swing.JPanel();
         AnnullaNewBookButton = new javax.swing.JButton();
         ReporterNewBookLabel = new javax.swing.JLabel();
@@ -207,6 +216,7 @@ public class appLibrarian extends javax.swing.JFrame {
         statsNextPageTableButton = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         statsTable = new javax.swing.JTable();
+        AskinDeletingOptionPane = new javax.swing.JOptionPane();
         appMainPanel = new javax.swing.JPanel();
         UserContextPanel = new javax.swing.JPanel();
         RuoloLabel = new javax.swing.JLabel();
@@ -314,6 +324,17 @@ public class appLibrarian extends javax.swing.JFrame {
         DynamicLabelCognome.setFont(UserLockedInfo.getFont());
         DynamicLabelCognome.setText(local_librarian.getUser().getCognome());
 
+        DeleteAccButton.setBackground(LibrarianStyle.BUTTON_DEFAULT_COLOR);
+        DeleteAccButton.setFont(LibrarianStyle.BUTTON_FONT);
+        DeleteAccButton.setText("Elimina");
+        DeleteAccButton.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        DeleteAccButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        DeleteAccButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DeleteAccButtonActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout UserLockedInfoLayout = new javax.swing.GroupLayout(UserLockedInfo);
         UserLockedInfo.setLayout(UserLockedInfoLayout);
         UserLockedInfoLayout.setHorizontalGroup(
@@ -326,10 +347,16 @@ public class appLibrarian extends javax.swing.JFrame {
                     .addComponent(staticLabelID, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(98, 98, 98)
                 .addGroup(UserLockedInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(DynamicLabelID)
-                    .addComponent(DynamicLabelCognome)
-                    .addComponent(DynamicLabelNome))
-                .addContainerGap(30, Short.MAX_VALUE))
+                    .addGroup(UserLockedInfoLayout.createSequentialGroup()
+                        .addComponent(DynamicLabelCognome)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(DeleteAccButton, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(UserLockedInfoLayout.createSequentialGroup()
+                        .addGroup(UserLockedInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(DynamicLabelNome)
+                            .addComponent(DynamicLabelID))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         UserLockedInfoLayout.setVerticalGroup(
             UserLockedInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -343,10 +370,12 @@ public class appLibrarian extends javax.swing.JFrame {
                     .addComponent(staticLabelNome)
                     .addComponent(DynamicLabelNome, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(UserLockedInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(staticLabelCognome)
-                    .addComponent(DynamicLabelCognome, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(24, 24, 24))
+                .addGroup(UserLockedInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(UserLockedInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(staticLabelCognome)
+                        .addComponent(DynamicLabelCognome, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(DeleteAccButton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
 
         UserEditableInfo.setBackground(LibrarianStyle.BACKGROUD_DEFAULT_1);
@@ -388,54 +417,65 @@ public class appLibrarian extends javax.swing.JFrame {
         ModifyInquadTextField.setFont(LibrarianStyle.LABEL_FONT_3);
         ModifyInquadTextField.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(102, 102, 102)));
 
+        oldvalLabel.setFont(UserEditableInfo.getFont());
+        oldvalLabel.setText("valore attuale");
+
+        newvalLabel.setFont(UserEditableInfo.getFont());
+        newvalLabel.setText("nuovo valore");
+
         javax.swing.GroupLayout UserEditableInfoLayout = new javax.swing.GroupLayout(UserEditableInfo);
         UserEditableInfo.setLayout(UserEditableInfoLayout);
         UserEditableInfoLayout.setHorizontalGroup(
             UserEditableInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(UserEditableInfoLayout.createSequentialGroup()
-                .addGap(24, 24, 24)
+                .addGap(23, 23, 23)
                 .addGroup(UserEditableInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(staticLabelNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(staticLabelInquadramento, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(staticLabelEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(staticLabelEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(staticLabelNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(68, 68, 68)
                 .addGroup(UserEditableInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(DynamicLabelEmail)
-                    .addComponent(DynamicLabelInquadramento)
-                    .addComponent(DynamicLabelNumber))
-                .addGap(78, 78, 78)
-                .addGroup(UserEditableInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(ModifyNumberTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
-                    .addComponent(ModifyEmailTextField)
-                    .addComponent(ModifyInquadTextField))
-                .addContainerGap(40, Short.MAX_VALUE))
+                    .addGroup(UserEditableInfoLayout.createSequentialGroup()
+                        .addGroup(UserEditableInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(DynamicLabelEmail)
+                            .addComponent(DynamicLabelInquadramento)
+                            .addComponent(DynamicLabelNumber))
+                        .addGap(78, 78, 78)
+                        .addGroup(UserEditableInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(ModifyNumberTextField)
+                            .addComponent(ModifyEmailTextField)
+                            .addComponent(ModifyInquadTextField, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(UserEditableInfoLayout.createSequentialGroup()
+                        .addComponent(oldvalLabel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(newvalLabel)
+                        .addGap(68, 68, 68))))
         );
         UserEditableInfoLayout.setVerticalGroup(
             UserEditableInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(UserEditableInfoLayout.createSequentialGroup()
-                .addGap(27, 27, 27)
+                .addContainerGap()
+                .addGroup(UserEditableInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(oldvalLabel)
+                    .addComponent(newvalLabel))
+                .addGap(31, 31, 31)
                 .addGroup(UserEditableInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(staticLabelEmail)
                     .addComponent(DynamicLabelEmail)
                     .addComponent(ModifyEmailTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(UserEditableInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(staticLabelNumber)
                     .addComponent(DynamicLabelNumber)
-                    .addComponent(ModifyNumberTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ModifyNumberTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(staticLabelNumber))
                 .addGap(18, 18, 18)
                 .addGroup(UserEditableInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(staticLabelInquadramento)
                     .addComponent(DynamicLabelInquadramento, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ModifyInquadTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(37, Short.MAX_VALUE))
+                    .addComponent(ModifyInquadTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(staticLabelInquadramento))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        oldvalLabel.setFont(UserEditableInfo.getFont());
-        oldvalLabel.setText("valore attuale");
-
-        newvalLabel.setFont(UserEditableInfo.getFont());
-        newvalLabel.setText("nuovo valore");
 
         PasswordModifyContext.setBackground(UserEditableInfo.getBackground());
         PasswordModifyContext.setFont(UserEditableInfo.getFont());
@@ -454,7 +494,7 @@ public class appLibrarian extends javax.swing.JFrame {
         OldPasswordTxtField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         OldPasswordTxtField.setToolTipText("password");
         OldPasswordTxtField.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
-        OldPasswordTxtField.setEchoChar(pswEchoChar);
+        OldPasswordTxtField.setEchoChar('•');
         OldPasswordTxtField.setName("passwordTextField"); // NOI18N
         OldPasswordTxtField.setSelectionColor(new java.awt.Color(153, 153, 255));
 
@@ -467,7 +507,7 @@ public class appLibrarian extends javax.swing.JFrame {
         NewPasswordTextField.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         NewPasswordTextField.setToolTipText("password");
         NewPasswordTextField.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
-        NewPasswordTextField.setEchoChar(pswEchoChar);
+        NewPasswordTextField.setEchoChar('•');
         NewPasswordTextField.setName("passwordTextField"); // NOI18N
         NewPasswordTextField.setSelectionColor(new java.awt.Color(153, 153, 255));
 
@@ -486,33 +526,25 @@ public class appLibrarian extends javax.swing.JFrame {
         PasswordModifyContext.setLayout(PasswordModifyContextLayout);
         PasswordModifyContextLayout.setHorizontalGroup(
             PasswordModifyContextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PasswordModifyContextLayout.createSequentialGroup()
-                .addGroup(PasswordModifyContextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(PasswordModifyContextLayout.createSequentialGroup()
-                        .addGap(86, 86, 86)
-                        .addComponent(TitoloCambioPsw, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(PasswordModifyContextLayout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addGroup(PasswordModifyContextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PasswordModifyContextLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(PasswordModifyContextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(newPswLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(oldPswLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(NewPasswordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(OldPasswordTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(37, 37, 37))
+            .addGroup(PasswordModifyContextLayout.createSequentialGroup()
                 .addGroup(PasswordModifyContextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PasswordModifyContextLayout.createSequentialGroup()
-                        .addComponent(NewPasswordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(56, 56, 56))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PasswordModifyContextLayout.createSequentialGroup()
-                        .addComponent(PSWConfirmButton, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(102, 102, 102))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PasswordModifyContextLayout.createSequentialGroup()
-                        .addGroup(PasswordModifyContextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(OldPasswordTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(PasswordModifyContextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(newPswLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(oldPswLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(37, 37, 37))))
+                    .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 284, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(PasswordModifyContextLayout.createSequentialGroup()
+                        .addGap(68, 68, 68)
+                        .addComponent(TitoloCambioPsw, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(PasswordModifyContextLayout.createSequentialGroup()
+                        .addGap(90, 90, 90)
+                        .addComponent(PSWConfirmButton, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         PasswordModifyContextLayout.setVerticalGroup(
             PasswordModifyContextLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -531,9 +563,9 @@ public class appLibrarian extends javax.swing.JFrame {
                 .addComponent(NewPasswordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31)
                 .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(PSWConfirmButton, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
 
         PSWConfirmButton.getAccessibleContext().setAccessibleName("ConfermationPswButton");
@@ -564,17 +596,6 @@ public class appLibrarian extends javax.swing.JFrame {
         ModifyReporterLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ModifyReporterLabel.setText("REPORTERRRRRRRRRRRRRRRRRRRRRRRRR");
 
-        DeleteAccButton.setBackground(LibrarianStyle.BUTTON_DEFAULT_COLOR);
-        DeleteAccButton.setFont(LibrarianStyle.BUTTON_FONT);
-        DeleteAccButton.setText("Elimina");
-        DeleteAccButton.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        DeleteAccButton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        DeleteAccButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DeleteAccButtonActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout ModifyLayer1Layout = new javax.swing.GroupLayout(ModifyLayer1);
         ModifyLayer1.setLayout(ModifyLayer1Layout);
         ModifyLayer1Layout.setHorizontalGroup(
@@ -582,9 +603,6 @@ public class appLibrarian extends javax.swing.JFrame {
             .addGroup(ModifyLayer1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(ModifyLayer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ModifyLayer1Layout.createSequentialGroup()
-                        .addComponent(ModifyTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(ModifyLayer1Layout.createSequentialGroup()
                         .addGap(171, 171, 171)
                         .addComponent(ModifyExitButton, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -592,25 +610,15 @@ public class appLibrarian extends javax.swing.JFrame {
                         .addComponent(ModifyConfirmButton, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(200, 200, 200))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, ModifyLayer1Layout.createSequentialGroup()
-                        .addGroup(ModifyLayer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(ModifyLayer1Layout.createSequentialGroup()
-                                .addGroup(ModifyLayer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(ModifyLayer1Layout.createSequentialGroup()
-                                        .addComponent(UserLockedInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(36, 36, 36)
-                                        .addComponent(DeleteAccButton, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(UserEditableInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(ModifyLayer1Layout.createSequentialGroup()
-                                .addGap(178, 178, 178)
-                                .addComponent(oldvalLabel)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(newvalLabel)
-                                .addGap(92, 92, 92)))
+                        .addGroup(ModifyLayer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(UserEditableInfo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(ModifyTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(UserLockedInfo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(PasswordModifyContext, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(47, 47, 47))))
             .addGroup(ModifyLayer1Layout.createSequentialGroup()
-                .addGap(232, 232, 232)
+                .addGap(250, 250, 250)
                 .addComponent(ModifyReporterLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 381, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
@@ -619,53 +627,34 @@ public class appLibrarian extends javax.swing.JFrame {
             .addGroup(ModifyLayer1Layout.createSequentialGroup()
                 .addGap(23, 23, 23)
                 .addComponent(ModifyTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
-                .addGroup(ModifyLayer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(ModifyLayer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(ModifyLayer1Layout.createSequentialGroup()
-                        .addGroup(ModifyLayer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(UserLockedInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(DeleteAccButton, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(32, 32, 32)
-                        .addGroup(ModifyLayer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(oldvalLabel)
-                            .addComponent(newvalLabel))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(UserEditableInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(PasswordModifyContext, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(31, 31, 31)
-                .addComponent(ModifyReporterLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26)
+                        .addComponent(PasswordModifyContext, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(ModifyLayer1Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(UserLockedInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(UserEditableInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(31, 31, 31)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(ModifyReporterLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(ModifyLayer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(ModifyConfirmButton, javax.swing.GroupLayout.DEFAULT_SIZE, 44, Short.MAX_VALUE)
                     .addComponent(ModifyExitButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
-        AskinDeletingOptionPane.setBackground(LibrarianStyle.BACKGROUD_DEFAULT_1);
-        AskinDeletingOptionPane.setMessage("Sei sicuro di eliminare questo account ?");
-        AskinDeletingOptionPane.setFont(LibrarianStyle.DISCORSIVE_LABEL_FONT);
-
         javax.swing.GroupLayout ModifyDialogLayout = new javax.swing.GroupLayout(ModifyDialog.getContentPane());
         ModifyDialog.getContentPane().setLayout(ModifyDialogLayout);
         ModifyDialogLayout.setHorizontalGroup(
             ModifyDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(ModifyDialogLayout.createSequentialGroup()
-                .addComponent(ModifyLayer1, javax.swing.GroupLayout.PREFERRED_SIZE, 918, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(ModifyDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(ModifyDialogLayout.createSequentialGroup()
-                    .addGap(0, 328, Short.MAX_VALUE)
-                    .addComponent(AskinDeletingOptionPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 328, Short.MAX_VALUE)))
+            .addComponent(ModifyLayer1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 918, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         ModifyDialogLayout.setVerticalGroup(
             ModifyDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(ModifyLayer1, javax.swing.GroupLayout.PREFERRED_SIZE, 550, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGroup(ModifyDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(ModifyDialogLayout.createSequentialGroup()
-                    .addGap(0, 230, Short.MAX_VALUE)
-                    .addComponent(AskinDeletingOptionPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 230, Short.MAX_VALUE)))
+            .addComponent(ModifyLayer1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 550, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         addNewBookDialog.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -673,11 +662,12 @@ public class appLibrarian extends javax.swing.JFrame {
         addNewBookDialog.setAlwaysOnTop(true);
         addNewBookDialog.setBackground(LibrarianStyle.BACKGROUD_DEFAULT_1);
         addNewBookDialog.setFocusable(false);
-        addNewBookDialog.setMinimumSize(new java.awt.Dimension(428, 670));
+        addNewBookDialog.setMinimumSize(new java.awt.Dimension(650, 580));
         addNewBookDialog.setModalExclusionType(java.awt.Dialog.ModalExclusionType.APPLICATION_EXCLUDE);
+        addNewBookDialog.setName("AddnewBookDialog"); // NOI18N
         addNewBookDialog.setPreferredSize(new java.awt.Dimension(428, 670));
         addNewBookDialog.setResizable(false);
-        addNewBookDialog.setSize(new java.awt.Dimension(428, 670));
+        addNewBookDialog.setSize(new java.awt.Dimension(650, 580));
 
         newBookLayer1.setBackground(addNewBookDialog.getBackground());
         newBookLayer1.setFont(LibrarianStyle.LABEL_FONT_2);
@@ -689,6 +679,12 @@ public class appLibrarian extends javax.swing.JFrame {
 
         newBookLayer2.setBackground(LibrarianStyle.BACKGROUD_DEFAULT_2);
 
+        optionalFieldsLabel.setBackground(newBookLayer2.getBackground());
+        optionalFieldsLabel.setFont(LibrarianStyle.DISCORSIVE_LABEL_FONT);
+        optionalFieldsLabel.setText("* campi facoltativi");
+
+        jPanel4.setBackground(newBookLayer2.getBackground());
+
         staticLabelCode.setBackground(ModifyLayer1.getBackground());
         staticLabelCode.setFont(UserLockedInfo.getFont());
         staticLabelCode.setText("Codice ");
@@ -698,14 +694,41 @@ public class appLibrarian extends javax.swing.JFrame {
         CodeTextField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         CodeTextField.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(102, 102, 102)));
 
-        staticLabelAutore.setBackground(ModifyLayer1.getBackground());
-        staticLabelAutore.setFont(UserLockedInfo.getFont());
-        staticLabelAutore.setText("Autore ");
+        CodeError.setBackground(newBookLayer2.getBackground());
+        CodeError.setFont(LibrarianStyle.POINT_CUSTOM_FONT);
+        CodeError.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        CodeError.setText(errorChar);
 
-        AutoreTextField.setBackground(newBookLayer2.getBackground());
-        AutoreTextField.setFont(LibrarianStyle.LABEL_FONT_3);
-        AutoreTextField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        AutoreTextField.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(102, 102, 102)));
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(CodeError, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(staticLabelCode, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(CodeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(staticLabelCode, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CodeError, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(CodeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        jPanel6.setBackground(newBookLayer2.getBackground());
+
+        TitleError.setBackground(newBookLayer2.getBackground());
+        TitleError.setFont(LibrarianStyle.POINT_CUSTOM_FONT);
+        TitleError.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        TitleError.setText(errorChar);
 
         staticLabeTitle.setBackground(ModifyLayer1.getBackground());
         staticLabeTitle.setFont(UserLockedInfo.getFont());
@@ -716,6 +739,72 @@ public class appLibrarian extends javax.swing.JFrame {
         TitoloTextField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         TitoloTextField.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(102, 102, 102)));
 
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(TitleError, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(staticLabeTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(TitoloTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(staticLabeTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TitleError, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(TitoloTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        jPanel7.setBackground(newBookLayer2.getBackground());
+
+        staticLabelAutore.setBackground(ModifyLayer1.getBackground());
+        staticLabelAutore.setFont(UserLockedInfo.getFont());
+        staticLabelAutore.setText("Autore ");
+
+        AutoreTextField.setBackground(newBookLayer2.getBackground());
+        AutoreTextField.setFont(LibrarianStyle.LABEL_FONT_3);
+        AutoreTextField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        AutoreTextField.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(102, 102, 102)));
+
+        AutorError.setBackground(newBookLayer2.getBackground());
+        AutorError.setFont(LibrarianStyle.POINT_CUSTOM_FONT);
+        AutorError.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        AutorError.setText("•");
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(AutorError, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(staticLabelAutore, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(AutoreTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(staticLabelAutore, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AutorError, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(AutoreTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        jPanel8.setBackground(newBookLayer2.getBackground());
+
         staticLabelEditrice.setBackground(ModifyLayer1.getBackground());
         staticLabelEditrice.setFont(UserLockedInfo.getFont());
         staticLabelEditrice.setText("Casa Editrice");
@@ -724,6 +813,47 @@ public class appLibrarian extends javax.swing.JFrame {
         EditriceTextField.setFont(LibrarianStyle.LABEL_FONT_3);
         EditriceTextField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         EditriceTextField.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(102, 102, 102)));
+        EditriceTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EditriceTextFieldActionPerformed(evt);
+            }
+        });
+
+        EditriceError.setBackground(newBookLayer2.getBackground());
+        EditriceError.setFont(LibrarianStyle.POINT_CUSTOM_FONT);
+        EditriceError.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        EditriceError.setText("•");
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(EditriceError, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(staticLabelEditrice, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(EditriceTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(staticLabelEditrice, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(EditriceError, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(EditriceTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        jPanel9.setBackground(newBookLayer2.getBackground());
+
+        AnnoError.setBackground(newBookLayer2.getBackground());
+        AnnoError.setFont(LibrarianStyle.POINT_CUSTOM_FONT);
+        AnnoError.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        AnnoError.setText("•");
 
         staticLabelPubblicaz.setBackground(ModifyLayer1.getBackground());
         staticLabelPubblicaz.setFont(UserLockedInfo.getFont());
@@ -734,18 +864,113 @@ public class appLibrarian extends javax.swing.JFrame {
         PubblicazTextField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         PubblicazTextField.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(102, 102, 102)));
 
-        staticLabelRistampa.setBackground(ModifyLayer1.getBackground());
-        staticLabelRistampa.setFont(UserLockedInfo.getFont());
-        staticLabelRistampa.setText("Anno Ristampa* ");
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(AnnoError, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(staticLabelPubblicaz)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(PubblicazTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(staticLabelPubblicaz, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(AnnoError, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PubblicazTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        jPanel10.setBackground(newBookLayer2.getBackground());
 
         RistampaTextField.setBackground(newBookLayer2.getBackground());
         RistampaTextField.setFont(LibrarianStyle.LABEL_FONT_3);
         RistampaTextField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         RistampaTextField.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(102, 102, 102)));
+        RistampaTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RistampaTextFieldActionPerformed(evt);
+            }
+        });
+
+        staticLabelRistampa.setBackground(ModifyLayer1.getBackground());
+        staticLabelRistampa.setFont(UserLockedInfo.getFont());
+        staticLabelRistampa.setText("Anno Ristampa* ");
+
+        RistampaError.setBackground(newBookLayer2.getBackground());
+        RistampaError.setFont(LibrarianStyle.POINT_CUSTOM_FONT);
+        RistampaError.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        RistampaError.setText("•");
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(RistampaError, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(staticLabelRistampa)
+                .addGap(73, 73, 73)
+                .addComponent(RistampaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(staticLabelRistampa, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(RistampaError, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(RistampaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        jPanel11.setBackground(newBookLayer2.getBackground());
+
+        CategorieComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(Libro.Categorie_List));
+
+        CategoriaError.setBackground(newBookLayer2.getBackground());
+        CategoriaError.setFont(LibrarianStyle.POINT_CUSTOM_FONT);
+        CategoriaError.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        CategoriaError.setText("•");
 
         staticLabelCategoria.setBackground(ModifyLayer1.getBackground());
         staticLabelCategoria.setFont(UserLockedInfo.getFont());
         staticLabelCategoria.setText("Categoria: ");
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(CategoriaError, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(staticLabelCategoria)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(CategorieComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(CategoriaError, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(staticLabelCategoria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(CategorieComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        jPanel12.setBackground(newBookLayer2.getBackground());
 
         staticLabelLingua.setBackground(ModifyLayer1.getBackground());
         staticLabelLingua.setFont(UserLockedInfo.getFont());
@@ -756,65 +981,79 @@ public class appLibrarian extends javax.swing.JFrame {
         LinguaTextField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
         LinguaTextField.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(102, 102, 102)));
 
-        staticLabelScaffale.setBackground(ModifyLayer1.getBackground());
-        staticLabelScaffale.setFont(UserLockedInfo.getFont());
-        staticLabelScaffale.setText("Scaffale* ");
-
-        ScaffaleTextField.setBackground(newBookLayer2.getBackground());
-        ScaffaleTextField.setFont(LibrarianStyle.LABEL_FONT_3);
-        ScaffaleTextField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        ScaffaleTextField.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(102, 102, 102)));
-
-        optionalFieldsLabel.setBackground(newBookLayer2.getBackground());
-        optionalFieldsLabel.setFont(LibrarianStyle.DISCORSIVE_LABEL_FONT);
-        optionalFieldsLabel.setText("* campi facoltativi");
-
-        TitleError.setBackground(newBookLayer2.getBackground());
-        TitleError.setFont(LibrarianStyle.POINT_CUSTOM_FONT);
-        TitleError.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        TitleError.setText("•");
-
-        CodeError.setBackground(newBookLayer2.getBackground());
-        CodeError.setFont(LibrarianStyle.POINT_CUSTOM_FONT);
-        CodeError.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        CodeError.setText("•");
-
-        AutorError.setBackground(newBookLayer2.getBackground());
-        AutorError.setFont(LibrarianStyle.POINT_CUSTOM_FONT);
-        AutorError.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        AutorError.setText("•");
-
-        EditriceError.setBackground(newBookLayer2.getBackground());
-        EditriceError.setFont(LibrarianStyle.POINT_CUSTOM_FONT);
-        EditriceError.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        EditriceError.setText("•");
-
-        AnnoError.setBackground(newBookLayer2.getBackground());
-        AnnoError.setFont(LibrarianStyle.POINT_CUSTOM_FONT);
-        AnnoError.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        AnnoError.setText("•");
-
-        RistampaError.setBackground(newBookLayer2.getBackground());
-        RistampaError.setFont(LibrarianStyle.POINT_CUSTOM_FONT);
-        RistampaError.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        RistampaError.setText("•");
-
-        CategoriaError.setBackground(newBookLayer2.getBackground());
-        CategoriaError.setFont(LibrarianStyle.POINT_CUSTOM_FONT);
-        CategoriaError.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        CategoriaError.setText("•");
-
         LinguaError.setBackground(newBookLayer2.getBackground());
         LinguaError.setFont(LibrarianStyle.POINT_CUSTOM_FONT);
         LinguaError.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         LinguaError.setText("•");
+
+        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
+        jPanel12.setLayout(jPanel12Layout);
+        jPanel12Layout.setHorizontalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(LinguaError, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(staticLabelLingua)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(LinguaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18))
+        );
+        jPanel12Layout.setVerticalGroup(
+            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel12Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(staticLabelLingua, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(LinguaError, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(LinguaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(278, 278, 278))
+        );
+
+        jPanel13.setBackground(newBookLayer2.getBackground());
 
         ScaffaleError.setBackground(newBookLayer2.getBackground());
         ScaffaleError.setFont(LibrarianStyle.POINT_CUSTOM_FONT);
         ScaffaleError.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ScaffaleError.setText("•");
 
-        CategorieComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(Libro.Categorie_List));
+        ScaffaleTextField.setBackground(newBookLayer2.getBackground());
+        ScaffaleTextField.setFont(LibrarianStyle.LABEL_FONT_3);
+        ScaffaleTextField.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        ScaffaleTextField.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(102, 102, 102)));
+        ScaffaleTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ScaffaleTextFieldActionPerformed(evt);
+            }
+        });
+
+        staticLabelScaffale.setBackground(ModifyLayer1.getBackground());
+        staticLabelScaffale.setFont(UserLockedInfo.getFont());
+        staticLabelScaffale.setText("Scaffale* ");
+
+        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
+        jPanel13.setLayout(jPanel13Layout);
+        jPanel13Layout.setHorizontalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(ScaffaleError, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(staticLabelScaffale)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(ScaffaleTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanel13Layout.setVerticalGroup(
+            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(staticLabelScaffale, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ScaffaleError, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ScaffaleTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout newBookLayer2Layout = new javax.swing.GroupLayout(newBookLayer2);
         newBookLayer2.setLayout(newBookLayer2Layout);
@@ -823,95 +1062,48 @@ public class appLibrarian extends javax.swing.JFrame {
             .addGroup(newBookLayer2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(newBookLayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(TitleError, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CodeError, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(AutorError, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(EditriceError, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(AnnoError, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(RistampaError, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CategoriaError, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(LinguaError, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ScaffaleError, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(newBookLayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(newBookLayer2Layout.createSequentialGroup()
-                        .addComponent(optionalFieldsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(newBookLayer2Layout.createSequentialGroup()
-                        .addGroup(newBookLayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(staticLabeTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(staticLabelCode, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(staticLabelScaffale)
-                            .addComponent(staticLabelLingua)
-                            .addComponent(staticLabelCategoria)
-                            .addComponent(staticLabelRistampa)
-                            .addComponent(staticLabelPubblicaz)
-                            .addComponent(staticLabelAutore, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(staticLabelEditrice, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(newBookLayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jPanel13, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel11, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(newBookLayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(ScaffaleTextField)
-                            .addComponent(LinguaTextField)
-                            .addComponent(RistampaTextField)
-                            .addComponent(PubblicazTextField)
-                            .addComponent(EditriceTextField)
-                            .addComponent(TitoloTextField)
-                            .addComponent(CodeTextField)
-                            .addComponent(AutoreTextField)
-                            .addComponent(CategorieComboBox, 0, 138, Short.MAX_VALUE))
-                        .addGap(67, 67, 67))))
+                            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(27, 27, 27))
+                    .addGroup(newBookLayer2Layout.createSequentialGroup()
+                        .addComponent(optionalFieldsLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         newBookLayer2Layout.setVerticalGroup(
             newBookLayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(newBookLayer2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(newBookLayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(staticLabelCode, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CodeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(CodeError, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(newBookLayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(12, 12, 12)
+                .addGroup(newBookLayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addGroup(newBookLayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(staticLabeTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(TitoloTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(TitleError, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(newBookLayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addGroup(newBookLayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(staticLabelAutore, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(AutoreTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(AutorError, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(newBookLayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addGroup(newBookLayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(staticLabelEditrice, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(EditriceTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(EditriceError, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(newBookLayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(staticLabelPubblicaz, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PubblicazTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(AnnoError, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(newBookLayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(staticLabelRistampa, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(RistampaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(RistampaError, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(newBookLayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(staticLabelCategoria, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(CategoriaError, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(CategorieComboBox, javax.swing.GroupLayout.DEFAULT_SIZE, 23, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(newBookLayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(staticLabelLingua, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(LinguaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(LinguaError, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(newBookLayer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(staticLabelScaffale, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ScaffaleTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ScaffaleError, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(30, 30, 30)
+                .addComponent(jPanel13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(41, 41, 41)
                 .addComponent(optionalFieldsLabel)
-                .addContainerGap())
+                .addGap(42, 42, 42))
         );
 
         newBookLayer3.setBackground(LibrarianStyle.BACKGROUD_DEFAULT_1);
@@ -949,13 +1141,14 @@ public class appLibrarian extends javax.swing.JFrame {
             newBookLayer3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, newBookLayer3Layout.createSequentialGroup()
                 .addContainerGap(41, Short.MAX_VALUE)
-                .addGroup(newBookLayer3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(ReporterNewBookLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(newBookLayer3Layout.createSequentialGroup()
-                        .addComponent(AnnullaNewBookButton, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(83, 83, 83)
-                        .addComponent(AddBookButton, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addComponent(AnnullaNewBookButton, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(83, 83, 83)
+                .addComponent(AddBookButton, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(72, 72, 72))
+            .addGroup(newBookLayer3Layout.createSequentialGroup()
+                .addGap(56, 56, 56)
+                .addComponent(ReporterNewBookLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 266, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         newBookLayer3Layout.setVerticalGroup(
             newBookLayer3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -973,26 +1166,28 @@ public class appLibrarian extends javax.swing.JFrame {
         newBookLayer1.setLayout(newBookLayer1Layout);
         newBookLayer1Layout.setHorizontalGroup(
             newBookLayer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(newBookLayer2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(newBookLayer1Layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addComponent(ModifyTitle1, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(newBookLayer2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(newBookLayer1Layout.createSequentialGroup()
+                .addGap(133, 133, 133)
+                .addComponent(newBookLayer3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, newBookLayer1Layout.createSequentialGroup()
-                .addContainerGap(31, Short.MAX_VALUE)
-                .addComponent(newBookLayer3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(ModifyTitle1, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(111, 111, 111))
         );
         newBookLayer1Layout.setVerticalGroup(
             newBookLayer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(newBookLayer1Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(ModifyTitle1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
+                .addContainerGap()
+                .addComponent(ModifyTitle1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(newBookLayer2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(newBookLayer3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout addNewBookDialogLayout = new javax.swing.GroupLayout(addNewBookDialog.getContentPane());
@@ -1310,6 +1505,7 @@ public class appLibrarian extends javax.swing.JFrame {
 
         InputPanel.setBackground(LibrarianStyle.BACKGROUD_DEFAULT_2);
 
+        jPanel2.setBackground(InputPanel.getBackground());
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         statiticheGeneraliStoricoButton.setBackground(LibrarianStyle.BUTTON_DEFAULT_COLOR);
@@ -1596,20 +1792,19 @@ public class appLibrarian extends javax.swing.JFrame {
         StatisticheLayer1Layout.setHorizontalGroup(
             StatisticheLayer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(StatisticheLayer1Layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(StatisticheLayer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(StatisticheLayer1Layout.createSequentialGroup()
                         .addGroup(StatisticheLayer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(StatisticheLayer1Layout.createSequentialGroup()
-                                .addGap(11, 11, 11)
+                                .addGap(21, 21, 21)
                                 .addComponent(InputPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(StatisticheLayer1Layout.createSequentialGroup()
-                                .addGap(31, 31, 31)
+                                .addGap(41, 41, 41)
                                 .addComponent(IndietroStatisticheButton, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(TablePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(StatisticheLayer1Layout.createSequentialGroup()
-                        .addComponent(TitleLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(TitleLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -1638,6 +1833,10 @@ public class appLibrarian extends javax.swing.JFrame {
             StatisticheDialogLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(StatisticheLayer1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
+
+        AskinDeletingOptionPane.setBackground(LibrarianStyle.BACKGROUD_DEFAULT_1);
+        AskinDeletingOptionPane.setMessage("Sei sicuro di eliminare questo account ?");
+        AskinDeletingOptionPane.setFont(LibrarianStyle.DISCORSIVE_LABEL_FONT);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -4008,6 +4207,18 @@ public class appLibrarian extends javax.swing.JFrame {
         normalizejTable(statsTable,statsPreviousPageTableButton,statsNextPageTableButton,statsPageNumTableLabel,StatsPageIndex,local_librarian.getPrenotazioniPrestitiByUserID(null, 3));
     }//GEN-LAST:event_statiticheGeneraliPrenotazioniActionPerformed
 
+    private void ScaffaleTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ScaffaleTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ScaffaleTextFieldActionPerformed
+
+    private void RistampaTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RistampaTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_RistampaTextFieldActionPerformed
+
+    private void EditriceTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditriceTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EditriceTextFieldActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -4150,8 +4361,17 @@ public class appLibrarian extends javax.swing.JFrame {
     private javax.swing.JButton disdiciPrenotazionerButton;
     private javax.swing.JLabel emailLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
