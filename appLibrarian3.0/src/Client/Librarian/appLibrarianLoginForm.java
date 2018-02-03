@@ -6,6 +6,7 @@
 package Client.Librarian;
 
 import javax.swing.border.MatteBorder;
+import java.awt.event.ActionEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.rmi.RemoteException;
@@ -209,6 +210,11 @@ public class appLibrarianLoginForm extends javax.swing.JFrame {
         forgotAnnullaButton.setText("Annulla");
         forgotAnnullaButton.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         forgotAnnullaButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        forgotAnnullaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                forgotAnnullaButtonActionPerformed(evt);
+            }
+        });
 
         forgotErrorLabel.setBackground(frgpswLayer1.getBackground());
         forgotErrorLabel.setFont(LibrarianStyle.LABEL_FONT_3);
@@ -477,6 +483,8 @@ public class appLibrarianLoginForm extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+
+
     private void initLabels() {
         LoginErrorLabel.setVisible(false);
         ConfirmationDiagErrorLabel.setVisible(false);
@@ -685,7 +693,8 @@ public class appLibrarianLoginForm extends javax.swing.JFrame {
 
 
                     librarian.sendNewPassword(context_user_id, librarian.getDefaultType());
-                    
+
+                    ForgotPasswordDialog.dispose();
                     
                 } else {
                     updateLabel(forgotErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "UserID non ancora attivato");
@@ -697,6 +706,12 @@ public class appLibrarianLoginForm extends javax.swing.JFrame {
         }
 
     }//GEN-LAST:event_forgotConfirmButtonActionPerformed
+
+    private void forgotAnnullaButtonActionPerformed(ActionEvent evt) {
+
+        ForgotPasswordDialog.dispose();
+
+    }
 
     /**
      * @param args the command line arguments

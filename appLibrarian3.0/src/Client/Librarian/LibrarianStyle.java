@@ -29,7 +29,7 @@ public class LibrarianStyle {
 
     public static final java.awt.Font BIG_TITLE_FONT = new java.awt.Font(FONT_NAME_ITALIC, Font.ITALIC, 34);
     public static final java.awt.Font MEDIUM_TITLE_FONT = new java.awt.Font(FONT_NAME_ITALIC, Font.ITALIC, 24);
-    public static final java.awt.Font POINT_CUSTOM_FONT = new java.awt.Font(FONT_NAME_BOLD, Font.BOLD, 28);
+    public static final java.awt.Font POINT_CUSTOM_FONT = new java.awt.Font(FONT_NAME_BOLD, Font.BOLD, 14);
     public static final java.awt.Font LABEL_FONT = new java.awt.Font(FONT_NAME_BOLD, Font.BOLD, 15);
     public static final java.awt.Font LABEL_FONT_2 = new java.awt.Font(FONT_NAME_PLAIN, Font.PLAIN, 12);
     public static final java.awt.Font LABEL_FONT_3 = new java.awt.Font(FONT_NAME_PLAIN, Font.PLAIN, 13);

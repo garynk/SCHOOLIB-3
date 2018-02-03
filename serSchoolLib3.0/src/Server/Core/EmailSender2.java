@@ -2,7 +2,11 @@ package Server.Core;
 
 import Server.Graphic.ServerView;
 
-import javax.mail.*;
+//import javax.mail.*;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Session;
+import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.io.IOException;
@@ -153,20 +157,21 @@ public class EmailSender2 {
             msg.setSubject(subject);
             msg.setText(body);
 
-                logger.write("Email Sent Successful");
-
                 Transport.send(msg, username, password);
             } catch (MessagingException e) {
                 e.printStackTrace();
                 logger.write("*Error Mail: Email not Sent -> " + e.getMessage());
             }
 
+
+            logger.write("Email Sent Successful");
+
         }).start();
 
 
     }
 
-
+//**TEST ONLY
     public boolean setEmailMasterUser(String email)
     {
         username = email;

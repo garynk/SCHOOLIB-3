@@ -2997,7 +2997,17 @@ public class appLibrarian extends javax.swing.JFrame {
         LinguaTextField.setText("");
         ScaffaleTextField.setText("");
 
+        CodeError.setVisible(false);
+        TitleError.setVisible(false);
+        AutorError.setVisible(false);
+        EditriceError.setVisible(false);
+        AnnoError.setVisible(false);
+        RistampaError.setVisible(false);
+        LinguaError.setVisible(false);
+        ScaffaleError.setVisible(false);
+
         ReporterNewBookLabel.setVisible(false);
+        ReporterNewBookLabel.setText("");
 
         initErrorNewBookLabels();
 
@@ -3677,8 +3687,11 @@ public class appLibrarian extends javax.swing.JFrame {
         
         try {
             if (checkBookFields()) {
+
+                Libro libro;
+
                 if (RistampaTextField.getText().isEmpty() && ScaffaleTextField.getText().isEmpty()) {
-                    Libro libro = new Libro(
+                            libro = new Libro(
                             CodeTextField.getText(),
                             TitoloTextField.getText(),
                             AutoreTextField.getText(),
@@ -3687,10 +3700,8 @@ public class appLibrarian extends javax.swing.JFrame {
                             CategorieComboBox.getSelectedItem().toString(),
                             LinguaTextField.getText());
 
-                    book_creation_success = local_librarian.insertNewBook(libro);
-                    codice_and_title = libro.getISBN() + ", '" + libro.getTitolo() + "' ";
                 } else if (!RistampaTextField.getText().isEmpty() && ScaffaleTextField.getText().isEmpty()) {
-                    Libro libro = new Libro(
+                            libro = new Libro(
                             CodeTextField.getText(),
                             TitoloTextField.getText(),
                             AutoreTextField.getText(),
@@ -3700,10 +3711,8 @@ public class appLibrarian extends javax.swing.JFrame {
                             CategorieComboBox.getSelectedItem().toString(),
                             LinguaTextField.getText());
 
-                    book_creation_success = local_librarian.insertNewBook(libro);
-                    codice_and_title = libro.getISBN() + ", '" + libro.getTitolo() + "' ";
                 } else if (RistampaTextField.getText().isEmpty() && !ScaffaleTextField.getText().isEmpty()) {
-                    Libro libro = new Libro(
+                            libro = new Libro(
                             CodeTextField.getText(),
                             TitoloTextField.getText(),
                             AutoreTextField.getText(),
@@ -3713,11 +3722,9 @@ public class appLibrarian extends javax.swing.JFrame {
                             LinguaTextField.getText(),
                             Integer.parseInt(ScaffaleTextField.getText()));
 
-                    book_creation_success = local_librarian.insertNewBook(libro);
-                    codice_and_title = libro.getISBN() + ", '" + libro.getTitolo() + "' ";
                 } else {
 
-                    Libro libro = new Libro(
+                            libro = new Libro(
                             CodeTextField.getText(),
                             TitoloTextField.getText(),
                             AutoreTextField.getText(),
@@ -3727,38 +3734,61 @@ public class appLibrarian extends javax.swing.JFrame {
                             CategorieComboBox.getSelectedItem().toString(),
                             LinguaTextField.getText(),
                             Integer.parseInt(ScaffaleTextField.getText()));
-
-                    book_creation_success = local_librarian.insertNewBook(libro);
-                    codice_and_title = libro.getISBN() + ", '" + libro.getTitolo() + "' ";
                 }
 
-                local_librarian.sendCommunicationServer("[LIB-" + local_librarian.getID() + "] Aggiunge Libro: " + codice_and_title);
-                BookInsertSuccessThread.start();
 
-                setAddBookDialog();
+                book_creation_success = local_librarian.insertNewBook(libro);
+                codice_and_title = libro.getISBN() + ", '" + libro.getTitolo() + "' ";
+
+
+                if (book_creation_success) {
+
+                    local_librarian.sendCommunicationServer("[LIB-" + local_librarian.getID() + "] Aggiunge Libro: " + codice_and_title);
+                    refreshGenericLabel(ReporterNewBookLabel, LibrarianStyle.SUCCESS_COLOR, "Libro Aggiunto con Successo");
+
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+
+                    addNewBookDialog.setVisible(false);
+                    setAddBookDialog();
+
+                    PageTableIndex = 0;
+                    setCurrentPage(PageNumLabel,PageTableIndex);
+
+                    normalizejTable(BooksTable,PreviousButton,NextPageButton,PageNumLabel,PageTableIndex,local_librarian.builderBookTableModel());
+                    BooksTable.revalidate();
+                    BooksTable.getParent().repaint();
+                    BooksTable.repaint();
+
+                } else {
+
+                    refreshGenericLabel(ReporterNewBookLabel, LibrarianStyle.EXCEPTION_COLOR, "Il libro non è stato aggiunto");
+                }
+
+        }
+        else{
 
             }
+
+
         } catch (RemoteException ex) {
             Logger.getLogger(appLibrarian.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        PageTableIndex = 0;
-        setCurrentPage(PageNumLabel,PageTableIndex);
-
-        BooksTable.setModel(new DefaultTableModel(page_vector.elementAt(PageTableIndex), Columns));
-
-        setAddBookDialog();
-
         this.setEnabled(true);
         this.revalidate();
-        this.setVisible(true);
+
     }//GEN-LAST:event_AddBookButtonActionPerformed
 
     private void AnnullaNewBookButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AnnullaNewBookButtonActionPerformed
 
-        addNewBookDialog.dispatchEvent(new WindowEvent(addNewBookDialog,WindowEvent.WINDOW_CLOSING));
 
         setAddBookDialog();
+        addNewBookDialog.dispatchEvent(new WindowEvent(addNewBookDialog,WindowEvent.WINDOW_CLOSING));
+
 
     }//GEN-LAST:event_AnnullaNewBookButtonActionPerformed
 

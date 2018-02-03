@@ -7,6 +7,7 @@ package Client.Reader;
 
 import javax.swing.*;
 import javax.swing.border.MatteBorder;
+import java.awt.event.ActionEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.io.File;
@@ -175,7 +176,7 @@ public class appReaderLoginForm extends javax.swing.JFrame {
 
         ConfirmDiagLayer1.getAccessibleContext().setAccessibleName("ConfirmDiagLayer1");
 
-        ForgotPasswordDialog.setTitle("appLibrarian - Password Dimenticata");
+        ForgotPasswordDialog.setTitle("appReader - Password Dimenticata");
         ForgotPasswordDialog.setBackground(ReaderStyle.BACKGROUD_DEFAULT_1);
         ForgotPasswordDialog.setMinimumSize(new java.awt.Dimension(365, 240));
         ForgotPasswordDialog.setResizable(false);
@@ -211,6 +212,11 @@ public class appReaderLoginForm extends javax.swing.JFrame {
         forgotAnnullaButton.setText("Annulla");
         forgotAnnullaButton.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         forgotAnnullaButton.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        forgotAnnullaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                forgotAnnullaButtonActionPerformed(evt);
+            }
+        });
 
         forgotErrorLabel.setBackground(frgpswLayer1.getBackground());
         forgotErrorLabel.setFont(ReaderStyle.LABEL_FONT_3);
@@ -268,7 +274,7 @@ public class appReaderLoginForm extends javax.swing.JFrame {
         frgpswLayer1.getAccessibleContext().setAccessibleName("");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("appLibrarian - Login");
+        setTitle("appReader - Login");
         setBackground(java.awt.SystemColor.activeCaption);
         setFont(new java.awt.Font("Trebuchet MS", 0, 18)); // NOI18N
         setForeground(java.awt.Color.white);
@@ -476,6 +482,8 @@ public class appReaderLoginForm extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+
 
     private static void initFont()
     {
@@ -697,6 +705,8 @@ public class appReaderLoginForm extends javax.swing.JFrame {
 
                     reader.sendNewPassword(context_user_id, reader.GetDefaultType());
 
+                    ForgotPasswordDialog.dispose();
+
                 } else {
                     updateLabel(forgotErrorLabel, ReaderStyle.EXCEPTION_COLOR, "UserID non ancora attivato");
                 }
@@ -706,15 +716,12 @@ public class appReaderLoginForm extends javax.swing.JFrame {
 
         }
 
-        try {
-            Thread.sleep(300);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+    }//GEN-LAST:event_forgotConfirmButtonActionPerformed
+
+    private void forgotAnnullaButtonActionPerformed(ActionEvent evt) {
 
         ForgotPasswordDialog.dispose();
-
-    }//GEN-LAST:event_forgotConfirmButtonActionPerformed
+    }
 
     /**
      * @param args the command line arguments
