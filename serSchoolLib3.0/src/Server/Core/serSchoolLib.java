@@ -213,22 +213,28 @@ public class serSchoolLib extends UnicastRemoteObject implements ServerInterface
         int last_index = 0;
 
         psw_generated = new char[PASSWORD_WORD_ARRAY[random_psw_posix].length() + 2];
-
-        for (int i = 0; i < PASSWORD_WORD_ARRAY[random_psw_posix].length(); i++) {
-            psw_generated[i] = PASSWORD_WORD_ARRAY[random_psw_posix].charAt(i);
+boolean putToLowerCase;
+         for (int i = 0; i < PASSWORD_WORD_ARRAY[random_psw_posix].length(); i++) {
+            putToLowerCase = ThreadLocalRandom.current().nextBoolean();
+            if(!putToLowerCase) {
+                psw_generated[i] = PASSWORD_WORD_ARRAY[random_psw_posix].charAt(i);
+            }
+            else{
+                psw_generated[i] = Character.toLowerCase(PASSWORD_WORD_ARRAY[random_psw_posix].charAt(i));
+            }
             last_index = i;
         }
 
         for (int i = last_index + 1; i < psw_generated.length; i++) {
             psw_generated[i] = Integer.toString(ThreadLocalRandom.current().nextInt(0, 9 + 1)).charAt(0);
         }
-        String password = new String(psw_generated);
-        String finalPassword;
-        password = passToolkit.randomLowerCase(password);
-        finalPassword = passToolkit.addRandomNumbers(password);
+       // String password = new String(psw_generated);
+        //String finalPassword;
+       // password = passToolkit.randomLowerCase(password);
+        //finalPassword = passToolkit.addRandomNumbers(password);
         //Quella sotto è la funzione che permette di effettuare l'hashing della password
        // password = passToolkit.hashPassword(password,"$(d*:>3W#"); bisogna assicurare che l'user non riceva la password hashata, bensì quella finale, che per comodità ho chiamato finalPassword
-        psw_generated = password.toCharArray();
+       // psw_generated = password.toCharArray();
 
         return psw_generated;
 
