@@ -12,6 +12,7 @@ import Server.Graphic.ServerView;
 import Server.ServerInterface;
 
 import javax.swing.table.DefaultTableModel;
+import java.io.Reader;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -33,6 +34,9 @@ public class serSchoolLib extends UnicastRemoteObject implements ServerInterface
     
     private static final int MAX_PRENOTAZIONI_PERUSER = 10;
     private static final int MAX_PRESTITI_PERUSER = 5;
+
+    private int Librarian_Counter = 0;
+    private int Reader_Counter = 0;
 
     private static final int CODE_SIZE = 9;
     private static final String[] PASSWORD_WORD_ARRAY = {"ARANCIA", "DRESANO", "BANANA", "MELONE", "BARCHETTA", "SGABELLO", "NATURALE"};
@@ -72,7 +76,7 @@ public class serSchoolLib extends UnicastRemoteObject implements ServerInterface
 
         } catch (Exception ex) {
             Logger.getLogger(serSchoolLib.class.getName()).log(Level.SEVERE, null, ex);
-            logger_pane.write("* Errore Connessione SQL (server context) ");
+            logger_pane.writeException("* Errore Connessione SQL (server context) ");
 
         }
 
@@ -107,6 +111,39 @@ public class serSchoolLib extends UnicastRemoteObject implements ServerInterface
         return MAX_PRESTITI_PERUSER;
     }
 
+    public void getLastCommunication(int id)
+    {
+        if(id == 1) {
+            Librarian_Counter--;
+            logger_pane.writeStatus(">> Stato Connessioni Attuali: ");
+            logger_pane.writeStatus("READER: " +  Reader_Counter + " | LIBRARIAN: " + Librarian_Counter);
+        }
+        else if (id == 2) {
+            Reader_Counter--;
+            logger_pane.writeStatus(">> Stato Connessioni Attuali: ");
+            logger_pane.writeStatus("READER: " +  Reader_Counter + " | LIBRARIAN: " + Librarian_Counter);
+        }
+        else{
+            logger_pane.writeStatus(">>[RICHIESTA STATO NON PREVISTA] ");
+        }
+    }
+
+    public void getFirstCommunication(int id)
+    {
+        if(id == 1) {
+            Librarian_Counter++;
+            logger_pane.writeStatus(">> Stato Connessioni Attuali: ");
+            logger_pane.writeStatus("READER: " +  Reader_Counter + " | LIBRARIAN: " + Librarian_Counter);
+        }
+        else if (id == 2) {
+            Reader_Counter++;
+            logger_pane.writeStatus(">> Stato Connessioni Attuali: ");
+            logger_pane.writeStatus("READER: " +  Reader_Counter + " | LIBRARIAN: " + Librarian_Counter);
+        }
+        else{
+            logger_pane.writeStatus(">>[RICHIESTA STATO NON PREVISTA] ");
+        }
+    }
     
     public void getClientComunication(String communication)
     {

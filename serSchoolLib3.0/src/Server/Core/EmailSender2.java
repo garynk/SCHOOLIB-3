@@ -57,7 +57,7 @@ public class EmailSender2 {
 
         } catch (MessagingException ex) {
             Logger.getLogger(EmailSender2.class.getName()).log(Level.SEVERE, null, ex);
-            logger.write("* Errore: ConfirmationEmail");
+            logger.writeException("* Errore: ConfirmationEmail");
         }
     }
 
@@ -75,7 +75,7 @@ public class EmailSender2 {
 
         } catch (MessagingException ex) {
             Logger.getLogger(EmailSender2.class.getName()).log(Level.SEVERE, null, ex);
-            logger.write("* Errore: NewPasswordEmail");
+            logger.writeException("* Errore: NewPasswordEmail");
         }
     }
 
@@ -92,7 +92,7 @@ public class EmailSender2 {
 
         } catch (MessagingException ex) {
             Logger.getLogger(EmailSender2.class.getName()).log(Level.SEVERE, null, ex);
-            logger.write("* Errore: SendInformationEmail");
+            logger.writeException("* Errore: SendInformationEmail");
         }
     }
 
@@ -109,7 +109,7 @@ public class EmailSender2 {
 
         } catch (MessagingException ex) {
             Logger.getLogger(EmailSender2.class.getName()).log(Level.SEVERE, null, ex);
-            logger.write("* Errore: DeletePrenotazioneEmail");
+            logger.writeException("* Errore: DeletePrenotazioneEmail");
         }
     }
 
@@ -127,7 +127,7 @@ public class EmailSender2 {
 
         } catch (MessagingException ex) {
             Logger.getLogger(EmailSender2.class.getName()).log(Level.SEVERE, null, ex);
-            logger.write("* Errore: LibroDisponibileEmail");
+            logger.writeException("* Errore: LibroDisponibileEmail");
         }
     }
 

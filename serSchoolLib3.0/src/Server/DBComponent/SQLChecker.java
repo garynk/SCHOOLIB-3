@@ -67,7 +67,7 @@ public class SQLChecker extends Thread{
 
         } catch (Exception er) {
             er.printStackTrace();
-            logger.write("*Errore SQL: Check_Existing in colonna: *" + column + "* con elemento: " + to_compare + " -> " + er.getMessage());
+            logger.writeException("*Errore SQL: Check_Existing in colonna: *" + column + "* con elemento: " + to_compare + " -> " + er.getMessage());
         }
 
         return false;
@@ -119,7 +119,7 @@ public class SQLChecker extends Thread{
 
         } catch (Exception er) {
             er.printStackTrace();
-            logger.write("*Errore SQL: Check_Existing_Prenotaz/Prest per isbn: *" + isbn + "* con userid: " + userid + " -> " + er.getMessage());
+            logger.writeException("*Errore SQL: Check_Existing_Prenotaz/Prest per isbn: *" + isbn + "* con userid: " + userid + " -> " + er.getMessage());
         }
 
         return false;
@@ -162,7 +162,7 @@ public class SQLChecker extends Thread{
 
         } catch (Exception er) {
             er.printStackTrace();
-            logger.write("*Errore SQL: Check_Password con userid: " + user_id + " -> " + er.getMessage());
+            logger.writeException("*Errore SQL: Check_Password con userid: " + user_id + " -> " + er.getMessage());
         }
 
         return false;
@@ -183,11 +183,11 @@ public class SQLChecker extends Thread{
                 logger.write("SQL: Utente: " + user_id + ", loggato con successo");
                 return 0;
             } else {
-                logger.write("*Errore SQL: Utente: " + user_id + ", confronto password fallito");
+                logger.writeException("*Errore SQL: Utente: " + user_id + ", confronto password fallito");
                 return 2;
             }
         } else {
-            logger.write("*Errore SQL: Utente: " + user_id + ", non presente");
+            logger.writeException("*Errore SQL: Utente: " + user_id + ", non presente");
             return 1;
         }
     }

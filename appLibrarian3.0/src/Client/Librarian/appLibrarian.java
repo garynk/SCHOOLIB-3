@@ -2492,6 +2492,18 @@ public class appLibrarian extends javax.swing.JFrame {
 
         EliminaOption.getAccessibleContext().setAccessibleName("");
 
+        this.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                local_librarian.sendLastCommunication(local_librarian.getDefaultType());
+            }
+
+            @Override
+            public void windowClosed(WindowEvent e) {
+                local_librarian.sendLastCommunication(local_librarian.getDefaultType());
+            }
+        });
+
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
@@ -2500,30 +2512,6 @@ public class appLibrarian extends javax.swing.JFrame {
      * Esegue il Thread se il libro che è stato creato è corretto
      *
      * */
-    Thread BookInsertSuccessThread = new Thread(new Runnable() {
-        @Override
-        public void run() {
-
-            try {
-                if (book_creation_success) {
-
-                    refreshGenericLabel(ReporterNewBookLabel, LibrarianStyle.SUCCESS_COLOR, "Libro Aggiunto con Successo");
-
-                    Thread.sleep(1000);
-
-                    addNewBookDialog.setVisible(false);
-                    setAddBookDialog();
-
-                } else { }
-                
-                book_creation_success = false;
-
-            } catch (InterruptedException ex) {
-                Logger.getLogger(appLibrarianRegistrationForm.class.getName()).log(Level.SEVERE, null, ex);
-            }
-
-        }
-    });
 
     private void initBackEnd() throws RemoteException {
         
@@ -3574,7 +3562,7 @@ public class appLibrarian extends javax.swing.JFrame {
                 this.setVisible(false);
                 this.dispose();
                 setModifyDialog();
-                new appLibrarianLoginForm().setVisible(true);
+                new appLibrarianLoginForm(true).setVisible(true);
 
             } else {
 
@@ -3617,7 +3605,7 @@ public class appLibrarian extends javax.swing.JFrame {
             AskinDeletingOptionPane.setVisible(false);
             ModifyDialog.setVisible(false);
             this.setVisible(false);
-            appLibrarianLoginForm app = new appLibrarianLoginForm();
+            appLibrarianLoginForm app = new appLibrarianLoginForm(true);
             app.setVisible(true);
         } else {
 

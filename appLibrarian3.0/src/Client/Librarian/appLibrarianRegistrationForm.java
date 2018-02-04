@@ -43,7 +43,7 @@ public class appLibrarianRegistrationForm extends javax.swing.JFrame {
                 if (registration_success) {
 
                     Thread.sleep(3000);
-                    appLibrarianLoginForm loginForm = new appLibrarianLoginForm();
+                    appLibrarianLoginForm loginForm = new appLibrarianLoginForm(true);
                     appLibrarianRegistrationForm.this.setVisible(false);
                     loginForm.setVisible(true);
 
@@ -606,7 +606,7 @@ public class appLibrarianRegistrationForm extends javax.swing.JFrame {
 
     private void IndietroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IndietroButtonActionPerformed
 
-        appLibrarianLoginForm loginForm = new appLibrarianLoginForm();
+        appLibrarianLoginForm loginForm = new appLibrarianLoginForm(true);
         this.setVisible(false);
         loginForm.setVisible(true);
 
@@ -702,13 +702,7 @@ public class appLibrarianRegistrationForm extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                try {
 
-                    new appLibrarianRegistrationForm(new Librarian()).setVisible(true);
-
-                } catch (RemoteException ex) {
-                    Logger.getLogger(appLibrarianRegistrationForm.class.getName()).log(Level.SEVERE, null, ex);
-                }
             }
         });
     }

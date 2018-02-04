@@ -64,7 +64,7 @@ public class SQLDeleter extends Thread{
 
         } catch (SQLException ex) {
             Logger.getLogger(SQLCORE.class.getName()).log(Level.SEVERE, null, ex);
-            logger.write("*Errore SQL: deleteUserAccount fallisce per userid: " + user_id  + " -> " + ex.getMessage());
+            logger.writeException("*Errore SQL: deleteUserAccount fallisce per userid: " + user_id  + " -> " + ex.getMessage());
         }
 
         return false;
@@ -99,7 +99,7 @@ public class SQLDeleter extends Thread{
 
         } catch (SQLException ex) {
             Logger.getLogger(SQLCORE.class.getName()).log(Level.SEVERE, null, ex);
-            logger.write("*Errore SQL:  deleteBookByISBN fallisce per isbn: " + isbn  + " -> " + ex.getMessage());
+            logger.writeException("*Errore SQL:  deleteBookByISBN fallisce per isbn: " + isbn  + " -> " + ex.getMessage());
         }
 
         return false;
@@ -139,7 +139,7 @@ public class SQLDeleter extends Thread{
 
         } catch (SQLException ex) {
             Logger.getLogger(SQLCORE.class.getName()).log(Level.SEVERE, null, ex);
-            logger.write("*Errore SQL:  deletePrenotazioneByISBNByID fallisce per isbn: " + isbn  + " e userid: " + userid + " -> " + ex.getMessage());
+            logger.writeException("*Errore SQL:  deletePrenotazioneByISBNByID fallisce per isbn: " + isbn  + " e userid: " + userid + " -> " + ex.getMessage());
         }
 
         return false;

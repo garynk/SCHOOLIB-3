@@ -47,7 +47,7 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
                 if (registration_success) {
 
                     Thread.sleep(3000);
-                    appReaderLoginForm loginForm = new appReaderLoginForm();
+                    appReaderLoginForm loginForm = new appReaderLoginForm(true);
                     appReaderRegistrationForm.this.setVisible(false);
                     loginForm.setVisible(true);
 
@@ -699,7 +699,7 @@ public class appReaderRegistrationForm extends javax.swing.JFrame {
     
     private void IndietroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IndietroButtonActionPerformed
 
-        appReaderLoginForm loginForm = new appReaderLoginForm();
+        appReaderLoginForm loginForm = new appReaderLoginForm(true);
         this.setVisible(false);
         loginForm.setVisible(true);
 

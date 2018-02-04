@@ -98,10 +98,10 @@ public class SQLCreator extends Thread{
             } catch (Exception e) {
                 System.err.println(e.getClass().getName() + ": " + e.getMessage());
 
-                logger.write("*Errore SQL: Statment Creazione Tabella *" + table_name + "* ");
+                logger.writeException("*Errore SQL: Statment Creazione Tabella *" + table_name + "* ");
             }
         } else {
-            logger.write("*SQL: Tabella *" + table_name + "* già presente \n Skipping...");
+            logger.writeException("*SQL: Tabella *" + table_name + "* già presente \n Skipping...");
         }
 
     }
@@ -140,10 +140,10 @@ public class SQLCreator extends Thread{
             } catch (Exception e) {
                 System.err.println(e.getClass().getName() + ": " + e.getMessage());
 
-                logger.write("*Errore SQL: Statment Creazione Tabella *" + table_name + "* ");
+                logger.writeException("*Errore SQL: Statment Creazione Tabella *" + table_name + "* ");
             }
         } else {
-            logger.write("*SQL: Tabella *" + table_name + "* già presente \n Skipping...");
+            logger.writeException("*SQL: Tabella *" + table_name + "* già presente \n Skipping...");
         }
 
     }
@@ -177,10 +177,10 @@ public class SQLCreator extends Thread{
             } catch (Exception e) {
                 System.err.println(e.getClass().getName() + ": " + e.getMessage());
 
-                logger.write("*Errore SQL: Statment Creazione Tabella *" + table_name + "* ");
+                logger.writeException("*Errore SQL: Statment Creazione Tabella *" + table_name + "* ");
             }
         } else {
-            logger.write("*SQL: Tabella *" + table_name + "* già presente \n Skipping...");
+            logger.writeException("*SQL: Tabella *" + table_name + "* già presente \n Skipping...");
         }
 
     }
@@ -216,10 +216,10 @@ public class SQLCreator extends Thread{
             } catch (Exception e) {
                 System.err.println(e.getClass().getName() + ": " + e.getMessage());
 
-                logger.write("*Errore SQL: Statment Creazione Tabella *" + table_name + "* ");
+                logger.writeException("*Errore SQL: Statment Creazione Tabella *" + table_name + "* ");
             }
         } else {
-            logger.write("*SQL: Tabella *" + table_name + "* già presente \n Skipping...");
+            logger.writeException("*SQL: Tabella *" + table_name + "* già presente \n Skipping...");
         }
 
     }
@@ -250,10 +250,10 @@ public class SQLCreator extends Thread{
             } catch (Exception e) {
                 System.err.println(e.getClass().getName() + ": " + e.getMessage());
 
-                logger.write("*Errore SQL: Statment Creazione Tabella *" + table_name + "* ");
+                logger.writeException("*Errore SQL: Statment Creazione Tabella *" + table_name + "* ");
             }
         } else {
-            logger.write("*SQL: Tabella *" + table_name + "* già presente \n Skipping...");
+            logger.writeException("*SQL: Tabella *" + table_name + "* già presente \n Skipping...");
         }
 
     }

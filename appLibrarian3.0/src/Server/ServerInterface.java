@@ -18,7 +18,11 @@ import javax.swing.table.DefaultTableModel;
  * @author Lorenzo Gavazzeni
  */
 public interface ServerInterface extends Remote {
-    
+
+     void getFirstCommunication(int id) throws RemoteException;
+
+     void getLastCommunication(int id) throws RemoteException;
+
      void getClientComunication(String communication) throws RemoteException;
 
      int getMaxPrenotazioni() throws RemoteException;

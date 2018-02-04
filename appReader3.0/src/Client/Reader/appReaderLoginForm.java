@@ -24,14 +24,16 @@ import java.util.logging.Logger;
 public class appReaderLoginForm extends javax.swing.JFrame {
 
     public static Reader reader;
+    private boolean isOpen;
 
     private static final char pswEchoChar = '\u2022';
 
     /**
      * Creates new form ReaderForm
      */
-    public appReaderLoginForm() {
+    public appReaderLoginForm(boolean opened) {
 
+        isOpen = opened;
 
         try {
             reader = new Reader();
@@ -44,7 +46,10 @@ public class appReaderLoginForm extends javax.swing.JFrame {
         initLabels();
 
 
-        reader.sendCommunicationServer("[READER] client nuovo aperto");
+        if(!isOpen) {
+            reader.sendCommunicationServer("[READER] client nuovo aperto");
+            reader.sendFirstCommunication(reader.GetDefaultType());
+        }
         
     }
 
@@ -479,6 +484,18 @@ public class appReaderLoginForm extends javax.swing.JFrame {
         getAccessibleContext().setAccessibleName("appLibrarianLoginForm");
         getAccessibleContext().setAccessibleDescription("");
 
+        this.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                reader.sendLastCommunication(reader.GetDefaultType());
+            }
+
+            @Override
+            public void windowClosed(WindowEvent e) {
+                reader.sendLastCommunication(reader.GetDefaultType());
+            }
+        });
+
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
@@ -756,7 +773,7 @@ public class appReaderLoginForm extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run(){
-                new appReaderLoginForm().setVisible(true);
+                new appReaderLoginForm(false).setVisible(true);
             }
 
         });

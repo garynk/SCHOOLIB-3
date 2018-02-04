@@ -151,7 +151,29 @@ public class Reader extends UnicastRemoteObject {
             System.exit(0);
         }
     }
-    
+
+    public void sendFirstCommunication(int id)
+    {
+        try {
+            server.getFirstCommunication(id);
+        } catch (RemoteException ex) {
+            Logger.getLogger(Reader.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(new JFrame(),"ERRORE FATALE, SERVER OFFLINE");
+            System.exit(0);
+        }
+    }
+
+    public void sendLastCommunication(int id)
+    {
+        try {
+            server.getLastCommunication(id);
+        } catch (RemoteException ex) {
+            Logger.getLogger(Reader.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(new JFrame(),"ERRORE FATALE, SERVER OFFLINE");
+            System.exit(0);
+        }
+    }
+
     public void sendCommunicationServer(String communication)
     {
         try {

@@ -904,6 +904,18 @@ public class appReader extends javax.swing.JFrame {
 
         getAccessibleContext().setAccessibleName("AppReader");
 
+        this.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                local_reader.sendLastCommunication(local_reader.GetDefaultType());
+            }
+
+            @Override
+            public void windowClosed(WindowEvent e) {
+                local_reader.sendLastCommunication(local_reader.GetDefaultType());
+            }
+        });
+
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
@@ -1280,7 +1292,7 @@ public class appReader extends javax.swing.JFrame {
                 this.setVisible(false);
                 this.dispose();
 
-                new appReaderLoginForm().setVisible(true);
+                new appReaderLoginForm(true).setVisible(true);
             } else {
 
                 local_reader.sendNewInformation(local_reader.GetParamUser().GetUserID(), success_message, local_reader.GetDefaultType());
@@ -1322,7 +1334,7 @@ public class appReader extends javax.swing.JFrame {
             AskinDeletingOptionPane.setVisible(false);
             ModifyDialog.setVisible(false);
             this.setVisible(false);
-            appReaderLoginForm app = new appReaderLoginForm();
+            appReaderLoginForm app = new appReaderLoginForm(true);
             app.setVisible(true);
         } else {
 

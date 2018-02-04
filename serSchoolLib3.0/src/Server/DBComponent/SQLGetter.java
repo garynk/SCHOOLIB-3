@@ -65,7 +65,7 @@ public class SQLGetter {
 
         } catch (SQLException ex) {
             Logger.getLogger(SQLCORE.class.getName()).log(Level.SEVERE, null, ex);
-            logger.write("*Errore SQL [Interno]: GetColumn Fail, query > " + query + " < fallisce");
+            logger.writeException("*Errore SQL [Interno]: GetColumn Fail, query > " + query + " < fallisce");
         } catch (Exception ex) {
             Logger.getLogger(SQLCORE.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -104,7 +104,7 @@ public class SQLGetter {
 
         } catch (Exception ex) {
             Logger.getLogger(SQLCORE.class.getName()).log(Level.SEVERE, null, ex);
-            logger.write("*Errore SQL: ParametricReturn() -> " + ex.getMessage());
+            logger.writeException("*Errore SQL: ParametricReturn() -> " + ex.getMessage());
         }
 
         return "NULL";
@@ -146,7 +146,7 @@ public class SQLGetter {
 
         } catch (Exception ex) {
             Logger.getLogger(SQLCORE.class.getName()).log(Level.SEVERE, null, ex);
-            logger.write("*Errore SQL: GetUserID from Pren/Prestiti -> " + ex.getMessage());
+            logger.writeException("*Errore SQL: GetUserID from Pren/Prestiti -> " + ex.getMessage());
         }
 
         return fillin;
@@ -185,7 +185,7 @@ public class SQLGetter {
 
         } catch (Exception er) {
             er.printStackTrace();
-            logger.write("*Errore SQL: Impossibile Ricavare utente: *" + id + "* -> " + er.getMessage());
+            logger.writeException("*Errore SQL: Impossibile Ricavare utente: *" + id + "* -> " + er.getMessage());
         }
 
         return to_return;
@@ -223,7 +223,7 @@ public class SQLGetter {
 
         } catch (Exception ex) {
             Logger.getLogger(SQLCORE.class.getName()).log(Level.SEVERE, null, ex);
-            logger.write("*Errore SQL: GetPrestitoSconfinante -> " + ex.getMessage());
+            logger.writeException("*Errore SQL: GetPrestitoSconfinante -> " + ex.getMessage());
         }
 
         return false;
@@ -262,7 +262,7 @@ public class SQLGetter {
 
         } catch (Exception er) {
             er.printStackTrace();
-            logger.write("*Errore SQL: getBookInformation Fallisce per isbn: " + isbn + " -> " + er.getMessage());
+            logger.writeException("*Errore SQL: getBookInformation Fallisce per isbn: " + isbn + " -> " + er.getMessage());
         }
 
         return "";
@@ -306,7 +306,7 @@ public class SQLGetter {
 
         } catch (Exception ex) {
             Logger.getLogger(SQLCORE.class.getName()).log(Level.SEVERE, null, ex);
-            logger.write("*Errore SQL: getBooksInTable Fallisce -> " + ex.getMessage());
+            logger.writeException("*Errore SQL: getBooksInTable Fallisce -> " + ex.getMessage());
         }
 
         return model;
@@ -358,7 +358,7 @@ public class SQLGetter {
 
         } catch (Exception ex) {
             Logger.getLogger(SQLCORE.class.getName()).log(Level.SEVERE, null, ex);
-            logger.write("*Errore SQL: GetLookedBooks Fallisce -> " + ex.getMessage());
+            logger.writeException("*Errore SQL: GetLookedBooks Fallisce -> " + ex.getMessage());
         }
 
         return model;
@@ -442,7 +442,7 @@ public class SQLGetter {
 
         try {
 
-            if(query.equals("NULL")) {logger.write("*Errore SQL: getPrenotazioniPrestitiByUserID query nulla"); return null; }
+            if(query.equals("NULL")) {logger.writeException("*Errore SQL: getPrenotazioniPrestitiByUserID query nulla"); return null; }
 
             conn = supporter.enstablishConnection();
 
@@ -469,7 +469,7 @@ public class SQLGetter {
 
         } catch (Exception ex) {
             Logger.getLogger(SQLCORE.class.getName()).log(Level.SEVERE, null, ex);
-            logger.write("*Errore SQL:  getPrenotazioniPrestitiByUserID fallisce per userid: " + user_id + " -> " + ex.getMessage());
+            logger.writeException("*Errore SQL:  getPrenotazioniPrestitiByUserID fallisce per userid: " + user_id + " -> " + ex.getMessage());
         }
 
         return model;
@@ -530,7 +530,7 @@ public class SQLGetter {
 
         try {
 
-            if(query.equals("NULL")) {logger.write("*Errore SQL: GeClassificaLibri query nulla"); return null; }
+            if(query.equals("NULL")) {logger.writeException("*Errore SQL: GeClassificaLibri query nulla"); return null; }
 
             conn = supporter.enstablishConnection();
 
@@ -555,7 +555,7 @@ public class SQLGetter {
 
         } catch (Exception ex) {
             Logger.getLogger(SQLCORE.class.getName()).log(Level.SEVERE, null, ex);
-            logger.write("*Errore SQL:  getClassificaLibri fallisce per request_type: " + request_type + " -> " + ex.getMessage());
+            logger.writeException("*Errore SQL:  getClassificaLibri fallisce per request_type: " + request_type + " -> " + ex.getMessage());
         }
 
         return model;

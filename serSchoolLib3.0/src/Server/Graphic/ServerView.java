@@ -7,6 +7,7 @@ package Server.Graphic;
 
 import Server.Core.serSchoolLib;
 
+import javax.swing.*;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
@@ -71,9 +72,10 @@ public class ServerView extends javax.swing.JFrame {
         jLabel3.setText("SERSCHOOLLIB - STATUS PANEL");
 
         Logger.setEditable(false);
-        Logger.setBackground(new java.awt.Color(102, 102, 102));
+        Logger.setBackground(new java.awt.Color(55, 55, 55));
         Logger.setFont(new java.awt.Font("Monospaced", 0, 12)); // NOI18N
         Logger.setForeground(new java.awt.Color(153, 255, 153));
+        Logger.setBorder(BorderFactory.createEmptyBorder());
         jScrollPane1.setViewportView(Logger);
         Logger.getAccessibleContext().setAccessibleName("");
 
@@ -272,13 +274,33 @@ public class ServerView extends javax.swing.JFrame {
 
         SimpleAttributeSet attributeSet = new SimpleAttributeSet();
 
-        StyleConstants.setForeground(attributeSet, java.awt.Color.getHSBColor(186,37,29));
+        StyleConstants.setForeground(attributeSet, new java.awt.Color(255,107,0));
         StyleConstants.setBackground(attributeSet, Logger.getBackground());
 
 
         try {
 
             styled.insertString(styled.getLength(),"[" + getHourMinuteString() + "] " +writeme + "\n", attributeSet);
+
+        } catch (BadLocationException ex) {
+            java.util.logging.Logger.getLogger(ServerView.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
+
+    public void writeStatus(String status)
+    {
+        StyledDocument styled = Logger.getStyledDocument();
+
+        SimpleAttributeSet attributeSet = new SimpleAttributeSet();
+
+        StyleConstants.setForeground(attributeSet, java.awt.Color.getHSBColor(255,0,208));
+        StyleConstants.setBackground(attributeSet, Logger.getBackground());
+
+
+        try {
+
+            styled.insertString(styled.getLength(),"[" + getHourMinuteString() + "] " + status + "\n", attributeSet);
 
         } catch (BadLocationException ex) {
             java.util.logging.Logger.getLogger(ServerView.class.getName()).log(Level.SEVERE, null, ex);

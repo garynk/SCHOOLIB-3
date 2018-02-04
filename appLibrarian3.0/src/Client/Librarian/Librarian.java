@@ -30,6 +30,7 @@ public class Librarian extends UnicastRemoteObject {
     private static final long serialVersionUID = 1L;
     private static final int LIBRARIAN_DEFAULT_TYPE_VALUE = 1;
 
+
     private Utente utente;
 
     private ServerInterface server;
@@ -111,6 +112,26 @@ public class Librarian extends UnicastRemoteObject {
         }
 
         return null;
+    }
+
+    public void sendFirstCommunication(int id)
+    {
+        try {
+            server.getFirstCommunication(id);
+        } catch (RemoteException ex) {
+            Logger.getLogger(Librarian.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void sendLastCommunication(int id)
+    {
+        try {
+            server.getLastCommunication(id);
+        } catch (RemoteException ex) {
+            Logger.getLogger(Librarian.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(new JFrame(),"ERRORE FATALE, SERVER OFFLINE");
+            System.exit(0);
+        }
     }
 
     public void sendCommunicationServer(String communication)

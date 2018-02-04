@@ -76,7 +76,7 @@ public class SQLInserator extends Thread {
 
         } catch (Exception e) {
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
-            logger.write("*Errore SQL: Utente *" + generico.GetUserID() + "* inserimento fallito: " + e.getMessage());
+            logger.writeException("*Errore SQL: Utente *" + generico.GetUserID() + "* inserimento fallito: " + e.getMessage());
         }
 
         return false;
@@ -92,7 +92,7 @@ public class SQLInserator extends Thread {
     synchronized public boolean insertBook(Libro lib) {
 
         if (checker.checkExistingEasy("ISBN", lib.getISBN(), lib.getObjectType())) {
-            logger.write("*Errore SQL: Libro *" + lib.getISBN() + "* già presente \n Skipping..");
+            logger.writeException("*Errore SQL: Libro *" + lib.getISBN() + "* già presente \n Skipping..");
             return false;
         } else {
         }
@@ -131,7 +131,7 @@ public class SQLInserator extends Thread {
 
         } catch (Exception e) {
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
-            logger.write("*Errore SQL: Libro *" + lib.getISBN() + "* inserimento fallito: " + e.getMessage());
+            logger.writeException("*Errore SQL: Libro *" + lib.getISBN() + "* inserimento fallito: " + e.getMessage());
 
         }
 
@@ -149,7 +149,7 @@ public class SQLInserator extends Thread {
     synchronized public boolean insertPrenotazione(String isbn, String userid) {
 
         if (checker.checkExistingEasyPrenPres(isbn, userid, 4)) {
-            logger.write("*Errore SQL: Prenotazione *" + isbn + " | " + userid  + "* già presente.");
+            logger.writeException("*Errore SQL: Prenotazione *" + isbn + " | " + userid  + "* già presente.");
             return false;
         } else {
         }
@@ -182,7 +182,7 @@ public class SQLInserator extends Thread {
 
         } catch (Exception e) {
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
-            logger.write("*Errore SQL: Prenotazione *" + userid + "|" + isbn + "* inserimento fallito: " + e.getMessage());
+            logger.writeException("*Errore SQL: Prenotazione *" + userid + "|" + isbn + "* inserimento fallito: " + e.getMessage());
         }
 
         return false;
@@ -200,7 +200,7 @@ public class SQLInserator extends Thread {
     synchronized public boolean insertPrestito(String isbn, String userid) {
 
         if (checker.checkExistingEasyPrenPres(isbn, userid, 5)) {
-            logger.write("*Errore SQL: Prestito *" + isbn + " | " + userid  + "* già presente.");
+            logger.writeException("*Errore SQL: Prestito *" + isbn + " | " + userid  + "* già presente.");
             return false;
         } else {
         }
@@ -234,7 +234,7 @@ public class SQLInserator extends Thread {
 
         } catch (Exception e) {
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
-            logger.write("*Errore SQL: Prestito *" + userid + "|" + isbn + "* inserimento fallito: " + e.getMessage());
+            logger.writeException("*Errore SQL: Prestito *" + userid + "|" + isbn + "* inserimento fallito: " + e.getMessage());
         }
 
         return false;
@@ -280,7 +280,7 @@ public class SQLInserator extends Thread {
             }
 
         } else {
-            logger.write("*Errore SQL: Prestito *" + isbn + " | " + userid  + "* non presente.");
+            logger.writeException("*Errore SQL: Prestito *" + isbn + " | " + userid  + "* non presente.");
             return false;
         }
 

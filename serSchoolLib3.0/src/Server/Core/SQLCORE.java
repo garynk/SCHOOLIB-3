@@ -63,7 +63,7 @@ public class SQLCORE extends Thread {
         } catch (Exception e) {
             e.printStackTrace();
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
-            logger.write("*Errore Connessione SQL (SQL context)" + e.getMessage());
+            logger.writeException("*Errore Connessione SQL (SQL context)" + e.getMessage());
         }
     }
 

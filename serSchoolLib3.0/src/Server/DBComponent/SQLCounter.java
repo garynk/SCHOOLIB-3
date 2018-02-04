@@ -64,7 +64,7 @@ public class SQLCounter {
 
         } catch (Exception er) {
             er.printStackTrace();
-            logger.write("*Errore SQL: countPrenotazioniPrestitiByID fallisce per userid: " + userid + " -> " + er.getMessage());
+            logger.writeException("*Errore SQL: countPrenotazioniPrestitiByID fallisce per userid: " + userid + " -> " + er.getMessage());
         }
 
         return -1;

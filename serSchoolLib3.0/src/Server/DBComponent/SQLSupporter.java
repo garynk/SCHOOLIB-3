@@ -114,7 +114,7 @@ public class SQLSupporter {
 
         } catch (Exception e) {
             e.printStackTrace();
-            logger.write("> ERRORE CRITICO: Impossibile stabilire connessione con DB " + e.getMessage());
+            logger.writeException("> ERRORE CRITICO: Impossibile stabilire connessione con DB " + e.getMessage());
         }
 
         return null;

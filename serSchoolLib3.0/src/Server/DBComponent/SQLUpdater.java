@@ -67,7 +67,7 @@ public class SQLUpdater {
 
         } catch (SQLException ex) {
             Logger.getLogger(SQLCORE.class.getName()).log(Level.SEVERE, null, ex);
-            logger.write("*Errore SQL:  updateUserPassword fallisce per userid: " + user_id + " -> " + ex.getMessage());
+            logger.writeException("*Errore SQL:  updateUserPassword fallisce per userid: " + user_id + " -> " + ex.getMessage());
         }
 
         return false;
@@ -120,13 +120,13 @@ public class SQLUpdater {
                     logger.write("SQL: Utente: " + user_id + " - tentativi aggiornati");
                     return correct > 1;
                 default:
-                    logger.write("*Errore SQL: Campo: " + field + " - non consentito");
+                    logger.writeException("*Errore SQL: Campo: " + field + " - non consentito");
                     break;
             }
 
         } catch (Exception ex) {
             Logger.getLogger(SQLCORE.class.getName()).log(Level.SEVERE, null, ex);
-            logger.write("*Errore SQL: updateUserInformation fallisce per userid: " + user_id + " e info: " + info + " -> " + ex.getMessage());
+            logger.writeException("*Errore SQL: updateUserInformation fallisce per userid: " + user_id + " e info: " + info + " -> " + ex.getMessage());
         }
 
         return false;
@@ -162,10 +162,10 @@ public class SQLUpdater {
 
         } catch (SQLException ex) {
             Logger.getLogger(SQLCORE.class.getName()).log(Level.SEVERE, null, ex);
-            logger.write("*Errore SQL: updateAttemptLogin fallisce per userid: " + user_id + " -> " + ex.getMessage());
+            logger.writeException("*Errore SQL: updateAttemptLogin fallisce per userid: " + user_id + " -> " + ex.getMessage());
         } catch (Exception ex) {
             Logger.getLogger(SQLCORE.class.getName()).log(Level.SEVERE, null, ex);
-            logger.write("*Errore: updateAttemptLogin fallisce per userid: " + user_id  + " -> " + ex.getMessage());
+            logger.writeException("*Errore: updateAttemptLogin fallisce per userid: " + user_id  + " -> " + ex.getMessage());
         }
 
         return false;
@@ -185,7 +185,7 @@ public class SQLUpdater {
         String table = SQLSupporter.defineTablebyType(type);
 
         if (code.length > 10) {
-            logger.write("*Errore SQL: Utente: " + user_id + " - tentativo codice: Fallito");
+            logger.writeException("*Errore SQL: Utente: " + user_id + " - tentativo codice: Fallito");
             return false;
         }
 
@@ -210,7 +210,7 @@ public class SQLUpdater {
 
         } catch (SQLException ex) {
             Logger.getLogger(SQLCORE.class.getName()).log(Level.SEVERE, null, ex);
-            logger.write("*Errore SQL: updateRegistrationCode fallisce per userid: " + user_id  + " -> " + ex.getMessage());
+            logger.writeException("*Errore SQL: updateRegistrationCode fallisce per userid: " + user_id  + " -> " + ex.getMessage());
         }
 
         return false;
@@ -245,7 +245,7 @@ public class SQLUpdater {
             }
         } catch (Exception ex) {
             Logger.getLogger(SQLCORE.class.getName()).log(Level.SEVERE, null, ex);
-            logger.write("*Errore SQL: updateBookStatus fallisce per isbn: " + isbn  + " -> " + ex.getMessage());
+            logger.writeException("*Errore SQL: updateBookStatus fallisce per isbn: " + isbn  + " -> " + ex.getMessage());
         }
 
         return false;

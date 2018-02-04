@@ -22,13 +22,16 @@ import java.util.logging.Logger;
 public class appLibrarianLoginForm extends javax.swing.JFrame {
 
     private static Librarian librarian;
+    private boolean isOpen;
 
     private static final char pswEchoChar = '\u2022';
 
     /**
      * Creates new form LibrarianForm
      */
-    public appLibrarianLoginForm() {
+    public appLibrarianLoginForm(boolean opened) {
+
+        isOpen = opened;
 
         try {
 
@@ -41,8 +44,15 @@ public class appLibrarianLoginForm extends javax.swing.JFrame {
 
         initComponents();
         initLabels();
-        
-        librarian.sendCommunicationServer("[LIB] nuovo client aperto");
+
+        if(!isOpen){
+            librarian.sendCommunicationServer("[LIB] nuovo client aperto");
+            librarian.sendFirstCommunication(librarian.getDefaultType());
+        }
+        else
+        {
+
+        }
 
     }
 
@@ -479,13 +489,25 @@ public class appLibrarianLoginForm extends javax.swing.JFrame {
         getAccessibleContext().setAccessibleName("appLibrarianLoginForm");
         getAccessibleContext().setAccessibleDescription("");
 
+        this.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                librarian.sendLastCommunication(librarian.getDefaultType());
+            }
+
+            @Override
+            public void windowClosed(WindowEvent e) {
+                librarian.sendLastCommunication(librarian.getDefaultType());
+            }
+        });
+
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
 
-
     private void initLabels() {
+
         LoginErrorLabel.setVisible(false);
         ConfirmationDiagErrorLabel.setVisible(false);
         forgotErrorLabel.setVisible(false);
@@ -745,7 +767,7 @@ public class appLibrarianLoginForm extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
 
-                new appLibrarianLoginForm().setVisible(true);
+                new appLibrarianLoginForm(false).setVisible(true);
 
             }
         });
