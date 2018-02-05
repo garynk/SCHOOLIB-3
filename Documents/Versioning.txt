@@ -361,16 +361,16 @@
 
 ---------------------------
 
-1.2.5 - SERSCHOOLLIB - Server 
+other version - SERSCHOOLLIB - Server 
 
 	- Bug Fixing
 
 
-1.2.1 - LIBRARIAN - Client 
+otherversion - LIBRARIAN - Client 
 
 	- Bug Fixing
 
-1.1.1 - READER - Client 	
+otherversion - READER - Client 	
 
 	- Bug Fixing
 
