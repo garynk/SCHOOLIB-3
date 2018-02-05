@@ -501,19 +501,28 @@ public class appReaderLoginForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
 
+public static void initFont() {
 
-    private static void initFont()
+    File f = new File("appLibrarian3.0/Font/avnext.ttf");
+
+        if(f.exists() && !f.isDirectory())
     {
         File plainPath = new File("appReader3.0/Font/avnext.ttf");
-        File boldPath = new File("appReader3.0/Font/avnextbld.ttf");
+        File boldPath = new File("appLReader3.0/Font/avnextbld.ttf");
         File italicPath = new File("appReader3.0/Font/avnextit.ttf");
         FontConfig FontSettingSetter = new FontConfig(plainPath,boldPath,italicPath);
         FontSettingSetter.setupPlain();
         FontSettingSetter.setupBold();
         FontSettingSetter.setupItalic();
-        
+
     }
-    
+        else {
+            ReaderStyle.FONT_NAME_BOLD = "Verdana";
+            ReaderStyle.FONT_NAME_ITALIC = "Verdana";
+            ReaderStyle.FONT_NAME_PLAIN = "Verdana";
+        }
+    }
+
     private void initLabels() {
         LoginErrorLabel.setVisible(false);
         ConfirmationDiagErrorLabel.setVisible(false);

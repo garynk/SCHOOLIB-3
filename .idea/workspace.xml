@@ -2,16 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="278b4181-2bf0-43c6-810b-2070ec07ad45" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appReader3.0/appReader3.0/Font/avnext.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appReader3.0/appReader3.0/Font/avnextbld.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appReader3.0/appReader3.0/Font/avnextit.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/Font/avnext.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/Font/avnextbld.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/Font/avnextit.ttf" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/appReader3.0/Client/Reader/FontConfig.class" afterPath="$PROJECT_DIR$/out/production/appReader3.0/Client/Reader/FontConfig.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/FontConfig.java" afterPath="$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/FontConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/LibrarianStyle.java" afterPath="$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/LibrarianStyle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/appLibrarian.java" afterPath="$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/appLibrarian.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/appLibrarianLoginForm.java" afterPath="$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/appLibrarianLoginForm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/FontConfig.java" afterPath="$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/FontConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/ReaderStyle.java" afterPath="$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/ReaderStyle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/appReader.java" afterPath="$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/appReader.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/appReaderLoginForm.java" afterPath="$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/appReaderLoginForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0/src/Server/DBComponent/SQLUpdater.java" afterPath="$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0/src/Server/DBComponent/SQLUpdater.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,31 +36,51 @@
       <file leaf-file-name="FontConfig.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/FontConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="21" />
+            <state relative-caret-position="154">
+              <caret line="30" column="66" lean-forward="false" selection-start-line="30" selection-start-column="66" selection-end-line="30" selection-end-column="66" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="appReaderLoginForm.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="appReaderLoginForm.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/appReaderLoginForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="513" column="8" lean-forward="false" selection-start-line="513" selection-start-column="8" selection-end-line="513" selection-end-column="8" />
+            <state relative-caret-position="249">
+              <caret line="511" column="45" lean-forward="false" selection-start-line="511" selection-start-column="45" selection-end-line="511" selection-end-column="45" />
               <folding>
-                <element signature="e#41128#41129#0" expanded="true" />
-                <element signature="e#41206#41207#0" expanded="true" />
+                <element signature="e#41406#41407#0" expanded="true" />
+                <element signature="e#41484#41485#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="schoolibbuildfile.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/appReader3.0/schoolibbuildfile.xml">
+      <file leaf-file-name="appLibrarianLoginForm.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/appLibrarianLoginForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="333" column="24" lean-forward="false" selection-start-line="333" selection-start-column="21" selection-end-line="333" selection-end-column="24" />
+            <state relative-caret-position="-6">
+              <caret line="512" column="5" lean-forward="true" selection-start-line="512" selection-start-column="5" selection-end-line="512" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Librarian.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/Librarian.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FontConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/FontConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="70" column="33" lean-forward="false" selection-start-line="70" selection-start-column="33" selection-end-line="70" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -68,19 +89,25 @@
       <file leaf-file-name="LibrarianStyle.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/LibrarianStyle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="13" column="28" lean-forward="true" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+            <state relative-caret-position="374">
+              <caret line="26" column="85" lean-forward="true" selection-start-line="26" selection-start-column="85" selection-end-line="26" selection-end-column="85" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="appLibrarian.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="appLibrarian.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/appLibrarian.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
+            <state relative-caret-position="22">
               <caret line="4351" column="32" lean-forward="false" selection-start-line="4351" selection-start-column="32" selection-end-line="4351" selection-end-column="32" />
-              <folding />
+              <folding>
+                <element signature="e#2473#2503#0" expanded="true" />
+                <element signature="e#171615#171854#0" expanded="true" />
+                <element signature="e#171853#171854#0" expanded="true" />
+                <element signature="e#178977#179224#0" expanded="true" />
+                <element signature="e#179223#179224#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -88,8 +115,20 @@
       <file leaf-file-name="SQLDeleter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0/src/Server/DBComponent/SQLDeleter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
+            <state relative-caret-position="2860">
               <caret line="137" column="0" lean-forward="false" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReaderStyle.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/ReaderStyle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="29" column="106" lean-forward="false" selection-start-line="29" selection-start-column="106" selection-end-line="29" selection-end-column="106" />
               <folding />
             </state>
           </provider>
@@ -98,40 +137,10 @@
       <file leaf-file-name="SQLUpdater.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0/src/Server/DBComponent/SQLUpdater.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="244" column="29" lean-forward="true" selection-start-line="244" selection-start-column="29" selection-end-line="244" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ServerInterface.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Server/ServerInterface.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-632">
-              <caret line="19" column="17" lean-forward="false" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReaderStyle.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/ReaderStyle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="29" column="106" lean-forward="false" selection-start-line="29" selection-start-column="106" selection-end-line="29" selection-end-column="106" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="appReader.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/appReader.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="938" column="61" lean-forward="false" selection-start-line="938" selection-start-column="60" selection-end-line="938" selection-end-column="61" />
+            <state relative-caret-position="5192">
+              <caret line="244" column="29" lean-forward="false" selection-start-line="244" selection-start-column="29" selection-end-line="244" selection-end-column="29" />
               <folding>
-                <element signature="e#1980#2069#0" expanded="true" />
+                <element signature="imports" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -163,12 +172,15 @@
       <list>
         <option value="$PROJECT_DIR$/../[older]Schoollib/SCHOOLIB-33/serSchoolLib3.0/schoolibbuildifle.xml" />
         <option value="$PROJECT_DIR$/serSchoolLib3.0/schoolibbuildifle.xml" />
-        <option value="$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/appReaderLoginForm.java" />
-        <option value="$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/LibrarianStyle.java" />
-        <option value="$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/ReaderStyle.java" />
         <option value="$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/appReader.java" />
         <option value="$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0/src/Server/DBComponent/SQLUpdater.java" />
         <option value="$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/appLibrarian.java" />
+        <option value="$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/FontConfig.java" />
+        <option value="$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/FontConfig.java" />
+        <option value="$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/appLibrarianLoginForm.java" />
+        <option value="$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/ReaderStyle.java" />
+        <option value="$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/LibrarianStyle.java" />
+        <option value="$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/appReaderLoginForm.java" />
       </list>
     </option>
   </component>
@@ -176,9 +188,9 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="7" />
-    <option name="y" value="50" />
-    <option name="width" value="1262" />
+    <option name="x" value="164" />
+    <option name="y" value="52" />
+    <option name="width" value="2025" />
     <option name="height" value="938" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -197,8 +209,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -497,7 +507,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -520,7 +532,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.appLibrarianLoginForm">
+  <component name="RunManager" selected="Application.appReaderLoginForm">
     <configuration default="false" name="ServerView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -813,10 +825,10 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.appLibrarianLoginForm" />
-        <item index="1" class="java.lang.String" itemvalue="Application.ServerView" />
-        <item index="2" class="java.lang.String" itemvalue="Application.appLibrarianRegistrationForm" />
-        <item index="3" class="java.lang.String" itemvalue="Application.appReaderLoginForm" />
+        <item index="0" class="java.lang.String" itemvalue="Application.appReaderLoginForm" />
+        <item index="1" class="java.lang.String" itemvalue="Application.appLibrarianLoginForm" />
+        <item index="2" class="java.lang.String" itemvalue="Application.ServerView" />
+        <item index="3" class="java.lang.String" itemvalue="Application.appLibrarianRegistrationForm" />
       </list>
     </recent_temporary>
   </component>
@@ -839,7 +851,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="7" y="50" width="1262" height="938" extended-state="0" />
+    <frame x="164" y="52" width="2025" height="938" extended-state="1" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -852,13 +864,11 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.58402663" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297619" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4326123" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2692112" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -870,6 +880,8 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297619" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -1079,14 +1091,137 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/serSchoolLib3.0/schoolibbuildifle.xml">
+    <entry file="file://$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/FontConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="352">
+          <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/appReaderLoginForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11286">
+          <caret line="513" column="8" lean-forward="false" selection-start-line="513" selection-start-column="8" selection-end-line="513" selection-end-column="8" />
+          <folding>
+            <element signature="e#41406#41407#0" expanded="true" />
+            <element signature="e#41484#41485#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appReader3.0/schoolibbuildfile.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7326">
+          <caret line="333" column="24" lean-forward="false" selection-start-line="333" selection-start-column="21" selection-end-line="333" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/LibrarianStyle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="13" column="28" lean-forward="true" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0/src/Server/DBComponent/SQLDeleter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2860">
+          <caret line="137" column="0" lean-forward="false" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0/src/Server/DBComponent/SQLUpdater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5192">
+          <caret line="244" column="29" lean-forward="true" selection-start-line="244" selection-start-column="29" selection-end-line="244" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Server/ServerInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="19" column="17" lean-forward="false" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#3704#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/ReaderStyle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="29" column="106" lean-forward="false" selection-start-line="29" selection-start-column="106" selection-end-line="29" selection-end-column="106" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/appReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1496">
+          <caret line="938" column="61" lean-forward="false" selection-start-line="938" selection-start-column="60" selection-end-line="938" selection-end-column="61" />
+          <folding>
+            <element signature="e#0#81073#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#19121#19122#0" expanded="false" />
+            <element signature="e#19189#19190#0" expanded="false" />
+            <element signature="e#24890#24891#0" expanded="false" />
+            <element signature="e#24961#24962#0" expanded="false" />
+            <element signature="e#25474#25475#0" expanded="false" />
+            <element signature="e#25542#25543#0" expanded="false" />
+            <element signature="e#26278#26279#0" expanded="false" />
+            <element signature="e#26345#26346#0" expanded="false" />
+            <element signature="e#36445#36446#0" expanded="false" />
+            <element signature="e#36509#36510#0" expanded="false" />
+            <element signature="e#43513#43514#0" expanded="false" />
+            <element signature="e#43579#43580#0" expanded="false" />
+            <element signature="e#44000#44001#0" expanded="false" />
+            <element signature="e#44066#44067#0" expanded="false" />
+            <element signature="e#44609#44610#0" expanded="false" />
+            <element signature="e#44674#44675#0" expanded="false" />
+            <element signature="e#45008#45009#0" expanded="false" />
+            <element signature="e#45073#45074#0" expanded="false" />
+            <element signature="e#45407#45408#0" expanded="false" />
+            <element signature="e#45472#45473#0" expanded="false" />
+            <element signature="e#46141#46142#0" expanded="false" />
+            <element signature="e#46205#46206#0" expanded="false" />
+            <element signature="e#46710#46711#0" expanded="false" />
+            <element signature="e#46780#46781#0" expanded="false" />
+            <element signature="e#47119#47120#0" expanded="false" />
+            <element signature="e#47185#47186#0" expanded="false" />
+            <element signature="e#59132#59133#0" expanded="false" />
+            <element signature="e#59210#59211#0" expanded="false" />
+            <element signature="e#75646#75733#0" expanded="false" />
+            <element signature="e#77171#77172#0" expanded="false" />
+            <element signature="e#77235#77236#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/appLibrarian.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95722">
+          <caret line="4351" column="32" lean-forward="false" selection-start-line="4351" selection-start-column="32" selection-end-line="4351" selection-end-column="32" />
+          <folding>
+            <element signature="e#2473#2503#0" expanded="true" />
+            <element signature="e#171615#171854#0" expanded="true" />
+            <element signature="e#171853#171854#0" expanded="true" />
+            <element signature="e#178977#179224#0" expanded="true" />
+            <element signature="e#179223#179224#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serSchoolLib3.0/schoolibbuildifle.xml" />
     <entry file="file://$PROJECT_DIR$/serSchoolLib3.0/schoolibbuildifleWIN.properties" />
     <entry file="file://$PROJECT_DIR$/../[older]Schoollib/SCHOOLIB-33/serSchoolLib3.0/schoolibbuildifle.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -1095,34 +1230,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/schoolib-3_-_copia.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appReader3.0/schoolibbuildifle.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="49" lean-forward="true" selection-start-line="4" selection-start-column="49" selection-end-line="4" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/serSchoolLib3.0/schoolibbuildifle.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/schoolib-3_-_copia.xml" />
+    <entry file="file://$PROJECT_DIR$/appReader3.0/schoolibbuildifle.xml" />
+    <entry file="file://$PROJECT_DIR$/serSchoolLib3.0/schoolibbuildifle.xml" />
     <entry file="file://$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0/src/Server/Core/SQLCORE.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2169">
           <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="99" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1138,7 +1252,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1146,92 +1259,160 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
           <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/FontConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/appReader3.0/schoolibbuildfile.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
+        <state relative-caret-position="7326">
           <caret line="333" column="24" lean-forward="false" selection-start-line="333" selection-start-column="21" selection-end-line="333" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/ReaderStyle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="29" column="106" lean-forward="false" selection-start-line="29" selection-start-column="106" selection-end-line="29" selection-end-column="106" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/appReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
+        <state relative-caret-position="1496">
           <caret line="938" column="61" lean-forward="false" selection-start-line="938" selection-start-column="60" selection-end-line="938" selection-end-column="61" />
           <folding>
-            <element signature="e#1980#2069#0" expanded="true" />
+            <element signature="e#0#81073#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#19121#19122#0" expanded="false" />
+            <element signature="e#19189#19190#0" expanded="false" />
+            <element signature="e#24890#24891#0" expanded="false" />
+            <element signature="e#24961#24962#0" expanded="false" />
+            <element signature="e#25474#25475#0" expanded="false" />
+            <element signature="e#25542#25543#0" expanded="false" />
+            <element signature="e#26278#26279#0" expanded="false" />
+            <element signature="e#26345#26346#0" expanded="false" />
+            <element signature="e#36445#36446#0" expanded="false" />
+            <element signature="e#36509#36510#0" expanded="false" />
+            <element signature="e#43513#43514#0" expanded="false" />
+            <element signature="e#43579#43580#0" expanded="false" />
+            <element signature="e#44000#44001#0" expanded="false" />
+            <element signature="e#44066#44067#0" expanded="false" />
+            <element signature="e#44609#44610#0" expanded="false" />
+            <element signature="e#44674#44675#0" expanded="false" />
+            <element signature="e#45008#45009#0" expanded="false" />
+            <element signature="e#45073#45074#0" expanded="false" />
+            <element signature="e#45407#45408#0" expanded="false" />
+            <element signature="e#45472#45473#0" expanded="false" />
+            <element signature="e#46141#46142#0" expanded="false" />
+            <element signature="e#46205#46206#0" expanded="false" />
+            <element signature="e#46710#46711#0" expanded="false" />
+            <element signature="e#46780#46781#0" expanded="false" />
+            <element signature="e#47119#47120#0" expanded="false" />
+            <element signature="e#47185#47186#0" expanded="false" />
+            <element signature="e#59132#59133#0" expanded="false" />
+            <element signature="e#59210#59211#0" expanded="false" />
+            <element signature="e#75646#75733#0" expanded="false" />
+            <element signature="e#77171#77172#0" expanded="false" />
+            <element signature="e#77235#77236#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Server/ServerInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-632">
+        <state relative-caret-position="220">
           <caret line="19" column="17" lean-forward="false" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
-          <folding />
+          <folding>
+            <element signature="e#0#3704#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0/src/Server/DBComponent/SQLDeleter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
+        <state relative-caret-position="2860">
           <caret line="137" column="0" lean-forward="false" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0/src/Server/DBComponent/SQLUpdater.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="244" column="29" lean-forward="true" selection-start-line="244" selection-start-column="29" selection-end-line="244" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/LibrarianStyle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="13" column="28" lean-forward="true" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/appReaderLoginForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="513" column="8" lean-forward="false" selection-start-line="513" selection-start-column="8" selection-end-line="513" selection-end-column="8" />
+        <state relative-caret-position="5192">
+          <caret line="244" column="29" lean-forward="false" selection-start-line="244" selection-start-column="29" selection-end-line="244" selection-end-column="29" />
           <folding>
-            <element signature="e#41128#41129#0" expanded="true" />
-            <element signature="e#41206#41207#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/appLibrarian.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
+        <state relative-caret-position="22">
           <caret line="4351" column="32" lean-forward="false" selection-start-line="4351" selection-start-column="32" selection-end-line="4351" selection-end-column="32" />
+          <folding>
+            <element signature="e#2473#2503#0" expanded="true" />
+            <element signature="e#171615#171854#0" expanded="true" />
+            <element signature="e#171853#171854#0" expanded="true" />
+            <element signature="e#178977#179224#0" expanded="true" />
+            <element signature="e#179223#179224#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/FontConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="30" column="66" lean-forward="false" selection-start-line="30" selection-start-column="66" selection-end-line="30" selection-end-column="66" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/Librarian.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/ReaderStyle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="29" column="106" lean-forward="false" selection-start-line="29" selection-start-column="106" selection-end-line="29" selection-end-column="106" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/LibrarianStyle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="26" column="85" lean-forward="true" selection-start-line="26" selection-start-column="85" selection-end-line="26" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/FontConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="70" column="33" lean-forward="false" selection-start-line="70" selection-start-column="33" selection-end-line="70" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/appLibrarianLoginForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6">
+          <caret line="512" column="5" lean-forward="true" selection-start-line="512" selection-start-column="5" selection-end-line="512" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/appReaderLoginForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="511" column="45" lean-forward="false" selection-start-line="511" selection-start-column="45" selection-end-line="511" selection-end-column="45" />
+          <folding>
+            <element signature="e#41406#41407#0" expanded="true" />
+            <element signature="e#41484#41485#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

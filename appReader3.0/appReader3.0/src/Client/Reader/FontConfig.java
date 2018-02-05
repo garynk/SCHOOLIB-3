@@ -23,6 +23,8 @@ public class FontConfig{
 
     }
 
+    //Font.createFont(Font.TRUETYPE_FONT, getClass().getClassLoader().getResourceAsStream("REVOLUTION.ttf"))
+
     public void setupPlain(){
         Font plain = null;
         try {

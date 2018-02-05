@@ -24,9 +24,16 @@ public class FontConfig{
 
     public void setupPlain(){
         Font plain = null;
+
         try {
+
             plain = Font.createFont(Font.TRUETYPE_FONT,plainPath);
+
+            LibrarianStyle.FONT_NAME_PLAIN = "AvenirNext LT Pro Regular";
+
         } catch (FontFormatException e) {
+
+
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
@@ -37,9 +44,15 @@ public class FontConfig{
         Font bold = null;
         try {
             bold = Font.createFont(Font.TRUETYPE_FONT, boldPath);
+
+            LibrarianStyle.FONT_NAME_BOLD = "AvenirNext LT Pro Regular";
+
         } catch (FontFormatException e) {
+
             e.printStackTrace();
         } catch (IOException e) {
+
+
             e.printStackTrace();
         }
         ge.registerFont(bold);
@@ -47,10 +60,16 @@ public class FontConfig{
     public void setupItalic(){
         Font italic = null;
         try {
+
             italic = Font.createFont(Font.TRUETYPE_FONT, italicPath);
+
+            LibrarianStyle.FONT_NAME_ITALIC = "AvenirNext LT Pro Regular";
+
         } catch (FontFormatException e) {
+
             e.printStackTrace();
         } catch (IOException e) {
+
             e.printStackTrace();
         }
         ge.registerFont(italic);

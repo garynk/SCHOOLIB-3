@@ -9,6 +9,7 @@ import javax.swing.border.MatteBorder;
 import java.awt.event.ActionEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.File;
 import java.rmi.RemoteException;
 import java.util.Arrays;
 import java.util.logging.Level;
@@ -42,6 +43,7 @@ public class appLibrarianLoginForm extends javax.swing.JFrame {
 
         }
 
+        initFont();
         initComponents();
         initLabels();
 
@@ -505,6 +507,31 @@ public class appLibrarianLoginForm extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+
+
+    private static void initFont()
+    {
+
+        File f = new File("appLibrarian3.0/Font/avnext.ttf");
+
+        if(f.exists() && !f.isDirectory())
+        {
+            File plainPath = new File("appLibrarian3.0/Font/avnext.ttf");
+            File boldPath = new File("appLibrarian3.0/Font/avnextbld.ttf");
+            File italicPath = new File("appLibrarian3.0/Font/avnextit.ttf");
+            FontConfig FontSettingSetter = new FontConfig(plainPath,boldPath,italicPath);
+            FontSettingSetter.setupPlain();
+            FontSettingSetter.setupBold();
+            FontSettingSetter.setupItalic();
+
+        }
+        else{
+            LibrarianStyle.FONT_NAME_BOLD = "Verdana";
+            LibrarianStyle.FONT_NAME_ITALIC = "Verdana";
+            LibrarianStyle.FONT_NAME_PLAIN = "Verdana";
+        }
+
+    }
 
     private void initLabels() {
 
