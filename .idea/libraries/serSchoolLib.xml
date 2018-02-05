@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="serSchoolLib">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/serSchoolLib3.0/release/serSchoolLib_jar/serSchoolLib.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

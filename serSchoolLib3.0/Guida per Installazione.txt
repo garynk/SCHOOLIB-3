@@ -1,7 +1,7 @@
-ÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑÑ-
-| AUTOR: Lorenzo Gavazzeni |
-|    Matricola: 728528	   |
-----------------------------
+ï»¿---------------------------------
+| AUTOR: Gerald / Lorenzo       |
+|    Matricola: 728528 / 726747 |
+---------------------------------
 
 Software: serSchoolLib
 Version: 3.0
@@ -27,7 +27,7 @@ Step 0:
 	2. digita il comando: ant -v
 
 se si ha un output simile a: "Apache Ant(TM) version 1.10.1 compiled on February 2 2017" allora
-ant-apache è installato correttamente ( si veda Step 1)
+ant-apache ï¿½ installato correttamente ( si veda Step 1)
 
 altrimenti:
 
@@ -35,11 +35,11 @@ altrimenti:
 	- aprire il file .zip
 	- estrarre il contenuto in una directory (DIR) a scelta (C:/Program Files/apache1.10... esempio)
 	- aprire la cmd.exe
-	- digitare il seguente comando (dove (DIR) è la directory scelta per apache-ant1.10):
+	- digitare il seguente comando (dove (DIR) ï¿½ la directory scelta per apache-ant1.10):
 		-> set ANT_HOME=(DIR)
 	- digitare il seguente comando
 		-> set PATH=%PATH%;%ANT_HOME%\bin
-	- verificare se ant è stato installato correttamente con il comando
+	- verificare se ant ï¿½ stato installato correttamente con il comando
 		-> ant -v
 
 Step 1:
@@ -53,7 +53,7 @@ Step 1:
 - attendere il completamente e digitare:
 	-> ant -buildfile applibrarianWIN.xml artifact.serschoollib:jar
 - attendere il completamento
-- nella cartella appena generata "release" si avrà 1 file chiamato "serSchoolLib.jar" che sarà il nostro eseguibile
+- nella cartella appena generata "release" si avrï¿½ 1 file chiamato "serSchoolLib.jar" che sarï¿½ il nostro eseguibile
 
 ----------------------
 1. MACOSX	     |
@@ -66,7 +66,7 @@ Step 0:
 	2. digita il comando: ant -version
 
 se si ha un output simile a: "Apache Ant(TM) version 1.10.1 compiled on February 2 2017" allora
-ant-apache è installato correttamente ( si veda Step 1)
+ant-apache ï¿½ installato correttamente ( si veda Step 1)
 
 altrimenti:
 
@@ -85,4 +85,4 @@ Step 1:
 - attendere il completamente e digitare:
 	-> ant -buildfile applibrarianMAC.xml artifact.serschoollib:jar
 - attendere il completamento
-- nella cartella appena generata "release" si avrà 1 file chiamato "serSchoolLib.jar" che sarà il nostro eseguibile 
+- nella cartella appena generata "release" si avrï¿½ 1 file chiamato "serSchoolLib.jar" che sarï¿½ il nostro eseguibile 

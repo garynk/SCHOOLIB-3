@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0.iml" filepath="$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0.iml" />
-      <module fileurl="file://$PROJECT_DIR$/appReader3.0/appReader3.0.iml" filepath="$PROJECT_DIR$/appReader3.0/appReader3.0.iml" />
-      <module fileurl="file://$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0.iml" filepath="$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/appLibrarian3.0.iml" filepath="$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/appLibrarian3.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/appReader3.0/appReader3.0/appReader3.0.iml" filepath="$PROJECT_DIR$/appReader3.0/appReader3.0/appReader3.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0/serSchoolLib3.0.iml" filepath="$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0/serSchoolLib3.0.iml" />
     </modules>
   </component>
 </project>

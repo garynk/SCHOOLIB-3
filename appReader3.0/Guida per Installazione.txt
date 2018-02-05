@@ -1,6 +1,7 @@
-| AUTOR: Lorenzo Gavazzeni |
-|    Matricola: 728528	   |
-----------------------------
+﻿---------------------------------
+| AUTOR: Gerald / Lorenzo       |
+|    Matricola: 728528 / 726747 |
+---------------------------------
 
 Software: appReader
 Version: 3.0
