@@ -235,13 +235,18 @@ public class SQLUpdater {
             try (Statement stmt = conn.createStatement()) {
 
                 String update = "UPDATE " + SQLSupporter.LIBRI_TABLE_NAME
-                        + " SET " + SQLSupporter.DISPONIBILE.toLowerCase() + " = '" + status + "' WHERE isbn = '" + Integer.parseInt(isbn.trim()) + "';";
+                        + " SET " + SQLSupporter.DISPONIBILE.toLowerCase() + " = " + status + " WHERE isbn = '" + Integer.parseInt(isbn.trim()) + "';";
 
                 correct = stmt.executeUpdate(update);
 
+                stmt.close();
+
+                conn.commit();
+                conn.close();
+
                 logger.write("SQL: Libro: " + isbn+ " - status: aggiornato");
 
-                return correct > 1;
+                return correct >= 1;
             }
         } catch (Exception ex) {
             Logger.getLogger(SQLCORE.class.getName()).log(Level.SEVERE, null, ex);

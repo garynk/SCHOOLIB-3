@@ -34,7 +34,6 @@ public class LibrarianStyle {
     public static final java.awt.Font LABEL_FONT_2 = new java.awt.Font(FONT_NAME_PLAIN, Font.PLAIN, 12);
     public static final java.awt.Font LABEL_FONT_3 = new java.awt.Font(FONT_NAME_PLAIN, Font.PLAIN, 13);
     public static final java.awt.Font DISCORSIVE_LABEL_FONT = new java.awt.Font(FONT_NAME_PLAIN, Font.PLAIN, 13);
-    public static final java.awt.Font OUTPUT_DEFAULT_FONT = new java.awt.Font(FONT_NAME_ITALIC, Font.ITALIC, 11);
     public static final java.awt.Font BUTTON_FONT = new java.awt.Font(FONT_NAME_BOLD, Font.BOLD, 11);
     public static final java.awt.Font EXCEPTION_FONT = new java.awt.Font(FONT_NAME_BOLD, Font.BOLD, 12);
     public static final java.awt.Font SUCCESS_LABEL_FONT = new java.awt.Font(FONT_NAME_BOLD, Font.BOLD, 14);

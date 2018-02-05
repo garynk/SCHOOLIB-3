@@ -504,9 +504,9 @@ public class appReaderLoginForm extends javax.swing.JFrame {
 
     private static void initFont()
     {
-        File plainPath = new File("Font/avnext.ttf");
-        File boldPath = new File("Font/avnextbld.ttf");
-        File italicPath = new File("Font/avnextit.ttf");
+        File plainPath = new File("appReader3.0/Font/avnext.ttf");
+        File boldPath = new File("appReader3.0/Font/avnextbld.ttf");
+        File italicPath = new File("appReader3.0/Font/avnextit.ttf");
         FontConfig FontSettingSetter = new FontConfig(plainPath,boldPath,italicPath);
         FontSettingSetter.setupPlain();
         FontSettingSetter.setupBold();

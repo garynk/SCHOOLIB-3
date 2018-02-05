@@ -27,7 +27,7 @@ public class ReaderStyle {
     public static final java.awt.Color SUCCESS_COLOR = new java.awt.Color(0, 153, 0);
     public static final java.awt.Color DEFAULT_BORDER_COLOR = new java.awt.Color(0, 0, 0);
 
-    public static final java.awt.Font BIG_TITLE_FONT = new java.awt.Font(FONT_NAME_ITALIC, Font.ITALIC, 37);
+    public static final java.awt.Font BIG_TITLE_FONT = new java.awt.Font(FONT_NAME_ITALIC, Font.ITALIC, 34);
     public static final java.awt.Font MEDIUM_TITLE_FONT = new java.awt.Font(FONT_NAME_ITALIC, Font.ITALIC, 24);
     public static final java.awt.Font LABEL_FONT = new java.awt.Font(FONT_NAME_BOLD, Font.BOLD, 15);
     public static final java.awt.Font LABEL_FONT_2 = new java.awt.Font(FONT_NAME_PLAIN, Font.PLAIN, 13);

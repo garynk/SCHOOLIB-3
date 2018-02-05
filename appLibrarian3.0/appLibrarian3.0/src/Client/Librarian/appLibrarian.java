@@ -3800,19 +3800,32 @@ public class appLibrarian extends javax.swing.JFrame {
             String selected_ISBN = getSelectedISBNFromBooksTable();
 
             if (local_librarian.checkExistingEasyPrenPres(selected_ISBN, prestitoTextField.getText(), 5)) {
+
                 local_librarian.insertPrestitoStorico(selected_ISBN, prestitoTextField.getText());
                 local_librarian.deletePrestitoPrenotazioneByISBNByID(Integer.parseInt(selected_ISBN.trim()), Integer.parseInt(prestitoTextField.getText().trim()), 5);
                 local_librarian.updateBookStatus(selected_ISBN, 1);
 
+
                 Vector<String> UserToGetUpdated = local_librarian.getUserIDFromPrenPrestByISBN(selected_ISBN, 4);
 
-                if (UserToGetUpdated.size() < 1) {
-                    local_librarian.updateBookStatus(selected_ISBN, 1);
+                if (UserToGetUpdated.size() < 1)
+                {
+                    local_librarian.sendCommunicationServer("[LIB-" + local_librarian.getID() + "] Riconsegnato Libro: " + selected_ISBN);
+
                 } else {
 
                     local_librarian.sendLibroDisponibileEmail(UserToGetUpdated.elementAt(0), selected_ISBN, 2);
                     local_librarian.sendCommunicationServer("[LIB-" + local_librarian.getID() + "] Riconsegnato Libro: " + selected_ISBN);
                 }
+
+                try {
+                    Thread.sleep(600);
+                } catch (InterruptedException ex) {
+                    Logger.getLogger(appLibrarian.class.getName()).log(Level.SEVERE, null, ex);
+                }
+
+                prestitoErrorLabel.setVisible(false);
+                prestitoTextField.setText("");
 
             } else {
                 refreshTooltipLabel(prestitoErrorLabel, LibrarianStyle.EXCEPTION_COLOR, "Prestito non attivo");
@@ -3848,7 +3861,7 @@ public class appLibrarian extends javax.swing.JFrame {
                     }
                     if (local_librarian.getUserIDFromPrenPrestByISBN(selected_ISBN, 4).size() > 0)
                     {
-                        if (local_librarian.getUserIDFromPrenPrestByISBN(selected_ISBN, 4).elementAt(0).equals(prestitoTextField.getText()))
+                        if (local_librarian.getUserIDFromPrenPrestByISBN(selected_ISBN, 4).contains(prestitoTextField.getText()))
                         {
                             local_librarian.insertPrestito(selected_ISBN, prestitoTextField.getText());
                             local_librarian.updateBookStatus(selected_ISBN, 0);

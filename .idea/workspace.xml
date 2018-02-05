@@ -2,25 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="278b4181-2bf0-43c6-810b-2070ec07ad45" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Documents/FixToDo1.0.docx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Documents/FixToDo1.0.rtf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Documents/classdiagram/appLibrarian.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Documents/~$xToDo1.0.rtf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appLibrarian3.0/Guida per Installazione.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appLibrarian3.0/schoolibbuildifle-Mac OS X.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appLibrarian3.0/schoolibbuildifle-Windows 10.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appLibrarian3.0/schoolibbuildifle.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appReader3.0/Guida per Installazione.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appReader3.0/schoolibbuildifle-Mac OS X.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appReader3.0/schoolibbuildifle-Windows 10.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appReader3.0/schoolibbuildifle.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/serSchoolLib3.0/Guida per Installazione.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/serSchoolLib3.0/schoolibbuildifle-Mac OS X.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/serSchoolLib3.0/schoolibbuildifle-Windows 10.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/serSchoolLib3.0/schoolibbuildifle.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Documents/classdiagram/serSchoolLib_ClassDiag1.0.png" afterPath="$PROJECT_DIR$/Documents/classdiagram/serSchoolLib_ClassDiag1.0.png" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/appReader3.0/appReader3.0/Font/avnext.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/appReader3.0/appReader3.0/Font/avnextbld.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/appReader3.0/appReader3.0/Font/avnextit.ttf" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Documents/Versioning.txt" afterPath="$PROJECT_DIR$/Documents/Versioning.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/LibrarianStyle.java" afterPath="$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/LibrarianStyle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/appLibrarian.java" afterPath="$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/appLibrarian.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/ReaderStyle.java" afterPath="$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/ReaderStyle.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/appReader.java" afterPath="$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/appReader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/appReaderLoginForm.java" afterPath="$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/appReaderLoginForm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0/src/Server/DBComponent/SQLUpdater.java" afterPath="$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0/src/Server/DBComponent/SQLUpdater.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,53 +21,134 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/SCHOOLIB_3$appLibrarianLoginForm.coverage" NAME="appLibrarianLoginForm Coverage Results" MODIFIED="1517850810474" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Client.Librarian.*</FILTER>
+    </SUITE>
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SQLCORE.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0/src/Server/Core/SQLCORE.java">
+      <file leaf-file-name="FontConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/FontConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2169">
-              <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="99" selection-end-column="5" />
+            <state relative-caret-position="88">
+              <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ServerView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0/src/Server/Graphic/ServerView.java">
+      <file leaf-file-name="appReaderLoginForm.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/appReaderLoginForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+            <state relative-caret-position="154">
+              <caret line="513" column="8" lean-forward="false" selection-start-line="513" selection-start-column="8" selection-end-line="513" selection-end-column="8" />
+              <folding>
+                <element signature="e#41128#41129#0" expanded="true" />
+                <element signature="e#41206#41207#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="schoolibbuildfile.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/appReader3.0/schoolibbuildfile.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="333" column="24" lean-forward="false" selection-start-line="333" selection-start-column="21" selection-end-line="333" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Utente.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0/src/Common/Utente.java">
+      <file leaf-file-name="LibrarianStyle.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/LibrarianStyle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            <state relative-caret-position="176">
+              <caret line="13" column="28" lean-forward="true" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UtenteLibrarian.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0/src/Common/UtenteLibrarian.java">
+      <file leaf-file-name="appLibrarian.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/appLibrarian.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state relative-caret-position="152">
+              <caret line="4351" column="32" lean-forward="false" selection-start-line="4351" selection-start-column="32" selection-end-line="4351" selection-end-column="32" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SQLDeleter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0/src/Server/DBComponent/SQLDeleter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="137" column="0" lean-forward="false" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SQLUpdater.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0/src/Server/DBComponent/SQLUpdater.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="223">
+              <caret line="244" column="29" lean-forward="true" selection-start-line="244" selection-start-column="29" selection-end-line="244" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ServerInterface.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Server/ServerInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-632">
+              <caret line="19" column="17" lean-forward="false" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReaderStyle.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/ReaderStyle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="127">
+              <caret line="29" column="106" lean-forward="false" selection-start-line="29" selection-start-column="106" selection-end-line="29" selection-end-column="106" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="appReader.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/appReader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="938" column="61" lean-forward="false" selection-start-line="938" selection-start-column="60" selection-end-line="938" selection-end-column="61" />
+              <folding>
+                <element signature="e#1980#2069#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>ICO</find>
+      <find>icon</find>
+      <find>Riconsegna</find>
+      <find>ATTIVA</find>
+      <find>DELETEPRE</find>
+      <find>UPDATEbook</find>
+      <find>ATTIVA@DASADAD</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -91,13 +163,22 @@
       <list>
         <option value="$PROJECT_DIR$/../[older]Schoollib/SCHOOLIB-33/serSchoolLib3.0/schoolibbuildifle.xml" />
         <option value="$PROJECT_DIR$/serSchoolLib3.0/schoolibbuildifle.xml" />
+        <option value="$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/appReaderLoginForm.java" />
+        <option value="$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/LibrarianStyle.java" />
+        <option value="$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/ReaderStyle.java" />
+        <option value="$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/appReader.java" />
+        <option value="$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0/src/Server/DBComponent/SQLUpdater.java" />
+        <option value="$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/appLibrarian.java" />
       </list>
     </option>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState />
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-235" />
-    <option name="y" value="41" />
-    <option name="width" value="1536" />
+    <option name="x" value="7" />
+    <option name="y" value="50" />
+    <option name="width" value="1262" />
     <option name="height" value="938" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -205,32 +286,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Core" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SCHOOLIB-3" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="serSchoolLib3.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -336,6 +391,110 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SCHOOLIB-3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appLibrarian3.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SCHOOLIB-3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appLibrarian3.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SCHOOLIB-3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appLibrarian3.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SCHOOLIB-3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appLibrarian3.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SCHOOLIB-3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appLibrarian3.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Client" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Librarian" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SCHOOLIB-3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appLibrarian3.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Checker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
@@ -361,7 +520,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ServerView">
+  <component name="RunManager" selected="Application.appLibrarianLoginForm">
     <configuration default="false" name="ServerView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -379,6 +538,66 @@
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="serSchoolLib3.0" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="appReaderLoginForm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Client.Reader.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="Client.Reader.appReaderLoginForm" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="appReader3.0" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="appLibrarianLoginForm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Client.Librarian.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="Client.Librarian.appLibrarianLoginForm" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="appLibrarian3.0" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="appLibrarianRegistrationForm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Client.Librarian.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="Client.Librarian.appLibrarianRegistrationForm" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="appLibrarian3.0" />
       <envs />
       <method />
     </configuration>
@@ -586,12 +805,18 @@
       <listeners />
       <method />
     </configuration>
-    <list size="1">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Application.ServerView" />
+      <item index="1" class="java.lang.String" itemvalue="Application.appReaderLoginForm" />
+      <item index="2" class="java.lang.String" itemvalue="Application.appLibrarianLoginForm" />
+      <item index="3" class="java.lang.String" itemvalue="Application.appLibrarianRegistrationForm" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.ServerView" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Application.appLibrarianLoginForm" />
+        <item index="1" class="java.lang.String" itemvalue="Application.ServerView" />
+        <item index="2" class="java.lang.String" itemvalue="Application.appLibrarianRegistrationForm" />
+        <item index="3" class="java.lang.String" itemvalue="Application.appReaderLoginForm" />
       </list>
     </recent_temporary>
   </component>
@@ -614,44 +839,239 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-235" y="41" width="1536" height="938" extended-state="1" />
-    <editor active="true" />
+    <frame x="7" y="50" width="1262" height="938" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3279503" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.58402663" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297619" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27439025" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4326123" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3726708" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/appLibrarian.java</url>
+          <line>3801</line>
+          <properties />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/appLibrarian.java</url>
+          <line>3844</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/appLibrarian.java</url>
+          <line>3846</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/appLibrarian.java</url>
+          <line>3848</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/appLibrarian.java</url>
+          <line>3852</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/appLibrarian.java</url>
+          <line>3803</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/appLibrarian.java</url>
+          <line>3854</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/appLibrarian.java</url>
+          <line>3856</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/appLibrarian.java</url>
+          <line>3861</line>
+          <properties />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/appLibrarian.java</url>
+          <line>3863</line>
+          <properties />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/appLibrarian.java</url>
+          <line>3865</line>
+          <properties />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/appLibrarian.java</url>
+          <line>3882</line>
+          <properties />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/appLibrarian.java</url>
+          <line>3808</line>
+          <properties />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/appLibrarian.java</url>
+          <line>3804</line>
+          <properties />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/appLibrarian.java</url>
+          <line>3805</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0/src/Server/DBComponent/SQLUpdater.java</url>
+          <line>236</line>
+          <properties />
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0/src/Server/DBComponent/SQLUpdater.java</url>
+          <line>237</line>
+          <properties />
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0/src/Server/DBComponent/SQLUpdater.java</url>
+          <line>239</line>
+          <properties />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0/src/Server/DBComponent/SQLUpdater.java</url>
+          <line>246</line>
+          <properties />
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/appLibrarian.java</url>
+          <line>3870</line>
+          <properties />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/appLibrarian.java</url>
+          <line>3866</line>
+          <properties />
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/appLibrarian.java</url>
+          <line>3867</line>
+          <properties />
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/appLibrarian.java</url>
+          <line>3869</line>
+          <properties />
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0/src/Server/DBComponent/SQLUpdater.java</url>
+          <line>248</line>
+          <properties />
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0/src/Server/DBComponent/SQLDeleter.java</url>
+          <line>126</line>
+          <properties />
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0/src/Server/DBComponent/SQLDeleter.java</url>
+          <line>129</line>
+          <properties />
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0/src/Server/DBComponent/SQLDeleter.java</url>
+          <line>132</line>
+          <properties />
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0/src/Server/DBComponent/SQLDeleter.java</url>
+          <line>133</line>
+          <properties />
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0/src/Server/DBComponent/SQLDeleter.java</url>
+          <line>135</line>
+          <properties />
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0/src/Server/DBComponent/SQLDeleter.java</url>
+          <line>137</line>
+          <properties />
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0/src/Server/DBComponent/SQLDeleter.java</url>
+          <line>130</line>
+          <properties />
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0/src/Server/DBComponent/SQLUpdater.java</url>
+          <line>241</line>
+          <properties />
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="34" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -725,7 +1145,92 @@
     <entry file="file://$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0/src/Common/UtenteLibrarian.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
-          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/FontConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appReader3.0/schoolibbuildfile.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="333" column="24" lean-forward="false" selection-start-line="333" selection-start-column="21" selection-end-line="333" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/ReaderStyle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="29" column="106" lean-forward="false" selection-start-line="29" selection-start-column="106" selection-end-line="29" selection-end-column="106" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/appReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="938" column="61" lean-forward="false" selection-start-line="938" selection-start-column="60" selection-end-line="938" selection-end-column="61" />
+          <folding>
+            <element signature="e#1980#2069#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Server/ServerInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-632">
+          <caret line="19" column="17" lean-forward="false" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0/src/Server/DBComponent/SQLDeleter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="137" column="0" lean-forward="false" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/serSchoolLib3.0/serSchoolLib3.0/src/Server/DBComponent/SQLUpdater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="244" column="29" lean-forward="true" selection-start-line="244" selection-start-column="29" selection-end-line="244" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/LibrarianStyle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="13" column="28" lean-forward="true" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appReader3.0/appReader3.0/src/Client/Reader/appReaderLoginForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="513" column="8" lean-forward="false" selection-start-line="513" selection-start-column="8" selection-end-line="513" selection-end-column="8" />
+          <folding>
+            <element signature="e#41128#41129#0" expanded="true" />
+            <element signature="e#41206#41207#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appLibrarian3.0/appLibrarian3.0/src/Client/Librarian/appLibrarian.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="4351" column="32" lean-forward="false" selection-start-line="4351" selection-start-column="32" selection-end-line="4351" selection-end-column="32" />
           <folding />
         </state>
       </provider>
