@@ -1,0 +1,92 @@
+﻿---------------------------------
+| AUTOR: Gerald / Lorenzo       |
+|    Matricola: 728528 / 726747 |
+---------------------------------
+
+Project: SCHOOLLIB
+Version: 3.0
+
+-----------------------
+
+Test on: Windows 10, MACOSX
+Developed on: Windows 10, MACOSX
+
+istruzioni dedicate all'installazione del software su Windows:
+---
+
+BUILD:
+
+#### 
+Sul sistema si necessita una versione di java 1.8 funzionante
+####
+
+---------
+WINDOWS |
+---------
+
+> Step 0:
+
+- Verifica che ant-apache sia installato su questo sistema
+	1. apri cmd
+	2. digita il comando: ant -v
+
+se si ha un output simile a: "Apache Ant(TM) version 1.10.1 compiled on February 2 2017" allora
+ant-apache � installato correttamente ( si veda Step 1).
+altrimenti:
+
+	- aprire la cartella qui presente: "resources"
+	- scaricare il file raggiungibile dal link nel file .txt
+	- estrarre il contenuto in una directory (DIR) a scelta (C:/Program Files/apache1.10... esempio)
+	- aprire la cmd.exe
+	- digitare il seguente comando (dove (DIR) è la directory in cui si è estratto apache-ant1.10):
+		-> set ANT_HOME=(DIR)
+	- digitare il seguente comando
+		-> set PATH=%PATH%;%ANT_HOME%\bin
+	- verificare se ant � stato installato correttamente con il comando
+		-> ant -v
+
+---------
+MAC OSX |
+---------
+
+Step 0:
+
+- Verifica che ant-apache sia installato su questo sistema
+	1. apri terminale
+	2. digita il comando: ant -version
+
+se si ha un output simile a: "Apache Ant(TM) version 1.10.1 compiled on February 2 2017" allora
+ant-apache � installato correttamente ( si veda Step 1)
+
+altrimenti:
+
+- aprire il Terminale
+- digitare il seguente comando per l'intallazione di apache/ant
+	-> brew install ant
+- attendere il completamento
+
+----------------
+CREATE JAR FILE |
+----------------
+
+Step 1:
+
+- Aprire la cmd.exe
+
+- navigare all'interno del progetto di cui si desidera avere il jar file
+	consentiti:
+		/appLibrarian3.0
+		/appReader3.0
+		/serSchoolLib3.0
+
+- una volta all'interno della directory (es: "C:/User/<nome>/java/SCHOOLIB-3/serSchoolLib3.0/")
+
+- utilizzare il seguente comando da terminale:
+	> ant -buildfile schoolibbuildfile.xml artifact.serschoollib:jar
+
+- il jar file sarà generato all'interno della directory: release/serSchoolLib_jar
+
+>> >> >>> >>>
+ PER UN CORRETTO FUNZIONAMENTO DEL PROGRAMMA, MANTENERE NELLA CARTELLA DOVE E' PRESENTE IL FILE .JAR ANCHE LA CARTELLA "Font"
+<< << <<< <<<
+

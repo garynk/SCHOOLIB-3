@@ -257,7 +257,7 @@
   </patternset>
   
   <path id="appreader3.0.module.sourcepath">
-    <dirset dir="${module.appreader3.0.basedir}/appReader3.0">
+    <dirset dir="${module.appreader3.0.basedir}">
       <include name="src"/>
     </dirset>
   </path>
@@ -275,7 +275,7 @@
     </javac>
     
     <copy todir="${appreader3.0.output.dir}">
-      <fileset dir="${module.appreader3.0.basedir}/appReader3.0/src">
+      <fileset dir="${module.appreader3.0.basedir}/src">
         <patternset refid="compiler.resources"/>
         <type type="file"/>
       </fileset>
@@ -374,7 +374,7 @@
   </patternset>
   
   <path id="serschoollib3.0.module.sourcepath">
-    <dirset dir="${module.serschoollib3.0.basedir}/serSchoolLib3.0">
+    <dirset dir="${module.serschoollib3.0.basedir}">
       <include name="src"/>
     </dirset>
   </path>
@@ -393,7 +393,7 @@
     </javac>
     
     <copy todir="${serschoollib3.0.output.dir}">
-      <fileset dir="${module.serschoollib3.0.basedir}/serSchoolLib3.0/src">
+      <fileset dir="${module.serschoollib3.0.basedir}/src">
         <patternset refid="compiler.resources"/>
         <type type="file"/>
       </fileset>

@@ -31,7 +31,7 @@ ant-apache � installato correttamente ( si veda Step 1).
 altrimenti:
 
 	- aprire la cartella qui presente: "resources"
-	- aprire il file .zip
+	- scaricare il file raggiungibile dal link nel file .txt
 	- estrarre il contenuto in una directory (DIR) a scelta (C:/Program Files/apache1.10... esempio)
 	- aprire la cmd.exe
 	- digitare il seguente comando (dove (DIR) è la directory in cui si è estratto apache-ant1.10):
